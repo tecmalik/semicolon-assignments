@@ -1,5 +1,11 @@
 /**
-pseudocode 
+pseudocode
+step 1
+prompt collect and store 3 digit
+separate the numbers each 
+add the three digit each 
+store & display result  
+ 
 step 2
 prompt the user to enter a 3 digit integer
 collect the number
@@ -16,7 +22,7 @@ display sum
 
 */
 import java.util.Scanner;
-public class Sumofdigits{
+public class Sumofdigitss{
 	public static void main(String[] args){
 		Scanner input = new Scanner(System.in);
 			System.out.print("Enter a 3 digit integer :");
