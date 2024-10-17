@@ -19,15 +19,15 @@ Step 2
 */
 
  
- import java.util.Scanner;
-public class Bmicalculator{
-	public static void main(String[] args){
-		Scanner input = new Scanner(System.in);
-		  System.out.print("Enter the weight in pounds :");
-		double weightInPounds = input.nextDouble();
-		  System.out.print("Enter the height in inches :");
-		double heightIninches = input.nextDouble();
-		  double bodyMassIndex = weightInPounds / (heightIninches * heightIninches);
-		  System.out.printf("The Body Mass Index is %.4f%n" , bodyMassIndex );
-	}
-}
+ import java.util.Scanner; //importing scanner fom java utilities library  
+public class Bmicalculator{ // declearing a public class bmiclaculator
+	public static void main(String[] args){ // main method to begin execution of java application  
+		Scanner input = new Scanner(System.in); // creating a Scanner object that reads characters typed by the user at the keyboard
+		  System.out.print("Enter the weight in pounds :"); // prompting a user to Enter a number 
+		double weightInPounds = input.nextDouble();// read the user input from the key board and storing it as weightInPounds
+		  System.out.print("Enter the height in inches :");// prompting users to enter the height in inches
+		double heightIninches = input.nextDouble();// colleting the number input from the user and storing it as heightInHeight
+		  double bodyMassIndex = weightInPounds / (heightIninches * heightIninches);// calculate and store the bodyMathsIndex 
+		  System.out.printf("The Body Mass Index is %.4f%n" , bodyMassIndex );/*display the result*/
+	}// ending main method body
+}// ending  the class body 

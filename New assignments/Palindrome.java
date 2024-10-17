@@ -22,23 +22,23 @@ step 2
 
 */
 
-import java.util.Scanner;
-public class Palindrome{
-	public static void main(String[] args){
-		Scanner input = new Scanner(System.in);
+import java.util.Scanner; // importing the class scanner from utility package from java API
+public class Palindrome{ //declearing a public class with class name Palindrome
+	public static void main(String[] args){ // declearing the main method to begin execution of java application
+		Scanner input = new Scanner(System.in);/* creating a Scanner object that reads characters typed by the user at the keyboard*/
 			System.out.print("Enter a 3 digit integer :");
-			 int integer = input.nextInt();
-			 int digitOne = integer% 10;
-			 int digitTwo = (integer/10) % 10;
-			 int digitThree = (integer/100) % 10; 
+			 int integer = input.nextInt();// read the user input from the key board and stores it as integer
+			 int digitOne = integer% 10;//seprating digit 3 calculation using Remainder operator 
+			 int digitTwo = (integer/10) % 10;//seprating digit 2 calculation using division and Remainder operator 
+			 int digitThree = (integer/100) % 10; //seprating digit 1 calculation using division and Remainder operator  
 
 			 	if (digitOne == digitThree ) {
     			System.out.println("The number is a palindrome");
-				}
+				} // ending if statement method body
 				if (digitOne != digitThree ) {
     			System.out.println("The number is not a palindrome");
-				}
+				}// ending if statement method body
 			
 		
-	}
-}
+	}// ending main method body
+}// ending  the class body 

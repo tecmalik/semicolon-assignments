@@ -1,4 +1,4 @@
-\**
+/**
 pseudocode 
 step 1
 prompt and collect the user to enter a number in foot 
@@ -13,16 +13,15 @@ step 2
 6. display numberinMeter
 
 
-
 */
 
-import java.util.Scanner;
-public class Foottometer{
-	public static void main(String[]args){
-		Scanner input = new Scanner(System.in);
-		 System.out.println("Enter Values in Foot:");
-		  double number1 = input.nextDouble(); 
-		  double numberInMeter = number1 * 0.305;
-		 System.out.printf("Value in meter is %.4f%n", numberInMeter);
-	}
-}
+import java.util.Scanner; // importing the class scanner from utility package from java API
+public class Foottometer{ //declearing a public class with class name Foottometer
+	public static void main(String[]args){// declearing the main method to begin execution of java application
+		Scanner input = new Scanner(System.in);/* creating a Scanner object that reads characters typed by the user at the keyboard*/
+		 System.out.println("Enter Values in Foot:");// prompting the user to input the value to be converted in foot
+		  double number1 = input.nextDouble(); //read the user input from the key board and stores it as number1
+		  double numberInMeter = number1 * 0.305; // calculating the coversion and storing it in numberInMeters
+		 System.out.printf("Value in meter is %.4f%n", numberInMeter); // displaying the value of the numberInMeters 
+	}// ending main method body
+}// ending  the class body 
