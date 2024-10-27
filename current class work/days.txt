@@ -1,0 +1,8 @@
+import.java.util.Date
+public class Days{
+	public static void main(String[] args){
+		Date date = new System.Getpropertie();
+		System.out.print(date)
+			
+	}
+}

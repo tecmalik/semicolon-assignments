@@ -8,23 +8,23 @@ public class largestAndSmallestNumber{
 			int smallestNumber = 0;
 			int largestNumber = 0;
 			int numberCounter = 1;
+			int nutralNumber = realNumber;
 			
 			System.out.print(" How many numbers would you like to Enter ?:");
 			int intendedNumber = input.nextInt();
 			
 			do {
-					realNumber = 0;
-					smallestNumber = 0;
-					largestNumber = 0;
+					
+					
 				 	System.out.println(" Enter "+ numberCounter + " number : ");
 						realNumber = input.nextInt();
-							realNumber = 0 + realNumber;
+							
 						numberCounter = numberCounter + 1;
 				
-					if(realNumber > realNumber ){  
+					if( realNumber > nutralNumber  ){  
 						largestNumber = realNumber;
 										}
-				 	 else if(realNumber < realNumber){
+				 	 if(realNumber < nutralNumber){
 						smallestNumber =  realNumber ;
 						
 					}
