@@ -2,7 +2,7 @@ import java.util.Scanner;
 public class RandomNumber{
 	public static void main(String[] args){
 		Scanner input = new Scanner(System.in);
-		double randomNumber = Math.random()*100;
+		int randomNumber = (int) (Math.random()*100);
 		int randomGuess = 0;
 
 		while (randomGuess != randomNumber){
