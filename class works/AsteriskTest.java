@@ -6,7 +6,7 @@ public class AsteriskTest{
 				System.out.print(" ");
 			}
 			for(int pattern = 1 ; pattern<=number ; pattern++){
-				System.out.print("*");
+				System.out.print(" ");
 			}
 
 		System.out.println();
@@ -15,11 +15,12 @@ public class AsteriskTest{
 			
 			
 			for(int pattern = 6 ; pattern>=number ; pattern--){
-				System.out.print("*");
+				System.out.print(" ");
 			}
 
 		System.out.println();
 		}
+		
 		
 
 

@@ -1,21 +1,17 @@
-import java.util.Scanner;
-public class StandardLibrary2{
-	public static void main(String[] args){
-	
-		Scanner input = new Scanner(System.in);
-	
-		int daysNumber = 0;
-		int counterNumber = 0;
+public class StandardLibrary{
+	public Static void main(string[] args){
+		 daysNumber = 0;
+		 counterNumber = 0;
 		
 		while (counterNumber < 3){
 			
 		System.out.println(" Enter number of days : ");
 		 daysNumber = input.nextInt();
 			++counterNumber;
-		if ( daysNumber == 5 ){
+		if daysNumber == 5:
 			System.out.println(" pay 50 paise ");
 		}
-		else if ( daysNumber >= 6 &&  daysNumber <= 10 ){
+		else if ( daysNumber >= 6 and daysNumber <= 10 ){
 			System.out.println(" Pay 1 rupees ");
 		}
 		
