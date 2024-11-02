@@ -6,19 +6,24 @@ public class Greetings{
 		System.out.print(" Can i greet ?");
 		
 		System.out.print(" please type out an option :\n1. Morning \n2. Afternoon \n3. Evening \n Enter :");
-		String reply = input.nextLine();
-		reply.toLowerCase();
+		String reply = input.next().toLowerCase();
+		
 
 		switch (reply){
 		case "morning":
 			System.out.print(" Good morning ");
 		break;
+
+
 		case "afternoon":
 			System.out.print(" Good afternoon ");
 		break;
+
+
 		case "evening":
 			System.out.print(" good night. ");
-			break;
+
+		break;
 		}
 		
 		
