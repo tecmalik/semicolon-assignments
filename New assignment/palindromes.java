@@ -3,9 +3,11 @@ public class palindromes{
 	public static void main(String[] args){
 	
 		Scanner input= new Scanner(System.in);
+
 		int number = 0;
 		int counter = 0;
 		int lastdigit = 0;
+
 		System.out.print("Enter 5 digit number : "); 
 		int firstnumber = input.nextInt();	
 		int firstdigit = firstnumber % 10;
@@ -16,7 +18,7 @@ public class palindromes{
 		}
 		
 		if (firstdigit == lastdigit){
-			System.out.print("number is a palindrum");		}
+			System.out.print("number is a palindrome");		}
 		else if (number!= 0){
 			System.out.print("number is not a palindrom or a five digit number");
 		}
