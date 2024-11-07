@@ -3,18 +3,21 @@ public class TwoLargeNumbers{
 	public static void main(String[] args){
 		
 		Scanner input = new Scanner(System.in);
-		int counter = 0;
-		int firstlargest = 0;
+			System.out.print("Enter number : ");
+			int number = input.nextInt();
+		int counter = 1;
+		int firstlargest = number;
 		int secondlargest = 0;
  		while (counter < 10){
 			System.out.print("Enter number : ");
-			int number = input.nextInt();
+			number = input.nextInt();
 			counter+= 1;
 			
 			if (number > firstlargest){
+				secondlargest = firstlargest;
 				firstlargest = number;
 			}
-			if (number > secondlargest && number != firstlargest){
+			if (number > secondlargest){
 
 	 		secondlargest = number; 
 			}
