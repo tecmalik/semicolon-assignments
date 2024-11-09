@@ -1,0 +1,8 @@
+write an app that prompts the user to enter temperature in Celsius use if condition to print messages based on the temperature range cold for below 10c warm for 10 -25c and hot for 25c above
+ pseudocode 
+prompt the user to enter temperature in Celsius   
+collect number 
+store as temperature 
+if temperature below 10 display warm 
+if temperature greater than equal to 10 and less then equal to 25  display warm
+if temperature greater than 25 display Hot 
