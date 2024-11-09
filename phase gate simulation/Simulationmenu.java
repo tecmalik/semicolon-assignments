@@ -3,21 +3,24 @@ public class Highestcommonfactor{
 	public static void main(String[] args ){
 		
 		Scanner input = new Scanner(System.in);
-		count = 0;
-	while(input != 4){
+		String count = "";
+		int number= 0;
+	while(number != 4){
 		System.out.println("basic menu : \n press 1 to Add \n press 2 to view \n press 3 to delete  \nAnd 4 to quit  ");
 		System.out.println("Enter option : ");
-		int Number = input.nextInt();
+		number = input.nextInt();
 		if (number == 1){
-			count++;
+			count+=1;
+		System.out.println("you sellected : "+count);
 			
 		}
 		else if (number == 2 ){
-		System.out.println(count);
+			count+=2;
+		System.out.println("you sellected : "+count);
 		}
 		else if (number == 3){
-		count*= 0;
-		System.out.print(count);
+		count = "cleared";
+		System.out.println(count);
 		}
 		
 	}
