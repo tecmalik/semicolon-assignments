@@ -38,24 +38,24 @@ public class MyersBriggsQuestionnaire{
 	    int condition = 0;
             for (int row = column; row < 20; row += 4) {
                 System.out.print(myersbriggsquestionnaire[row][0] + " " + myersbriggsquestionnaire[row][1] + "\nSelect A or B: ");
-                String response = "";
-		while (!response.equalsIgnoreCase("A") || !response.equalsIgnoreCase("B")) {
-                    response = input.next();
-                    if (response.equalsIgnoreCase("A") || response.equalsIgnoreCase("B")) {
+                String feedback = "";
+		while (!feedback.equalsIgnoreCase("A") || !feedback.equalsIgnoreCase("B")) {
+                    feedback = input.next();
+                    if (feedback.equalsIgnoreCase("A") || feedback.equalsIgnoreCase("B")) {
                         break;
                     	}
 			else {
                         System.out.print("Invalid input. Please select A or B: ");
                     	}
                 }
-                if (response.equalsIgnoreCase("A")) {
+                if (feedback.equalsIgnoreCase("A")) {
                     counter++;
                	 }
             }
             array[column] = counter;
             System.out.println("The number of A selected is: " + counter);
             System.out.println("The number of B selected is: " + (5 - counter));
-            System.out.println();
+           System.out.println();
         }
 
        String mbtiType = "";
