@@ -5,26 +5,26 @@ public class MyersBriggsQuestionnaire{
 		Scanner input = new Scanner(System.in);
 		
 		String[][] myersbriggsquestionnaire = {
-	{"A. expend energy, enjoy groups" , "B. conserve energy, enjoy one on one\n"},
-	{"A. Interpret literally" , "B. look for meaning and possibilities\n"},
-	{"A. Logical, thinking, questioning" , "B. Empathetic, feeling, accommodating\n"},
-	{"A. organized, orderly", "B. Flexible, adaptable\n"},
-	{"A. more outgoing, think out loud" , "B. more reserved, think to yourself\n"},
-	{"A. Practical, realistic, experiential" , "B. Imaginative, innovative, theoretical\n"},
-	{"A. Candid, straight forward, frank" , "B. Tactful, kind, encouraging\n"},
-	{"A. Plan, schedule" , "B. unplanned, Spontaneous\n"},
-	{"A. Seek many tasks, public activities, interaction with others" , "B. seek private, solitary activities with quiet to concentrate\n"},
-	{"A. Standard, usual, conventional" , "B. Different, novel, unique\n"},
-	{"A. firm, tend to criticize, hold the line" , "B. gentle, tend to appreciate, conciliate\n"},
-	{"A. regulated, structured" , "B. Easy-going, live and let live\n"},
-	{"A. External, communicative, express yourself" , "B. Internal, reticent, keep to yourself\n"},
-	{"A. Focus on here-and-now" , "B. Look to the future, global perspective, big picture\n"},
-	{"A. tough-minded, just" , "B. tender-hearted, merciful\n"},
-	{"A. preparation, plan ahead" , "B. go with the flow, adapt as you go\n"},
-	{"A. Active, initiate" , "B. reflective, deliberate\n"},
-	{"A. facts, things, what is" , "B. ideas, dreams , what could be, philosophical\n"},
-	{"A. matter of fact, issue-oriented" , "B. sensitive, people-oriented, compassionate\n"},
-	{"A. control, govern" , "B. latitude, freedom\n"},
+	{"A. expend energy, enjoy groups" , "B. conserve energy, enjoy one on one" , "c.Questions\n"},
+	{"A. Interpret literally" , "B. look for meaning and possibilities", "c.Questions \n"},
+	{"A. Logical, thinking, questioning" , "B. Empathetic, feeling, accommodating", "c.Questions\n"},
+	{"A. organized, orderly", "B. Flexible, adaptable ", "c.Questions\n"},
+	{"A. more outgoing, think out loud" , "B. more reserved, think to yourself" , "c.Questions\n"},
+	{"A. Practical, realistic, experiential" , "B. Imaginative, innovative, theoretical", "c.Questions\n"},
+	{"A. Candid, straight forward, frank" , "B. Tactful, kind, encouraging", "c.Questions\n"},
+	{"A. Plan, schedule" , "B. unplanned, Spontaneous", "c.Questions\n"},
+	{"A. Seek many tasks, public activities, interaction with others" , "B. seek private, solitary activities with quiet to concentrate", "c.Questions\n"},
+	{"A. Standard, usual, conventional" , "B. Different, novel, unique", "c.Questions\n"},
+	{"A. firm, tend to criticize, hold the line" , "B. gentle, tend to appreciate, conciliate", "c.Questionsn"},
+	{"A. regulated, structured" , "B. Easy-going" , "live and let live\n"},
+	{"A. External, communicative, express yourself" , "B. Internal, reticent, keep to yourself" , "c.Questions\n"},
+	{"A. Focus on here-and-now" , "B. Look to the future, global perspective, big picture" , "c.Questions\n"},
+	{"A. tough-minded, just" , "B. tender-hearted, merciful" , "c.Questions\n"},
+	{"A. preparation, plan ahead" , "B. go with the flow, adapt as you go" , "c.Questions\n"},
+	{"A. Active, initiate" , "B. reflective, deliberate", "c.Questions\n"},
+	{"A. facts, things, what is" , "B. ideas, dreams , what could be, philosophical", "c.Questions\n"},
+	{"A. matter of fact, issue-oriented" , "B. sensitive, people-oriented, compassionate", "c.Questions \n"},
+	{"A. control, govern" , "B. latitude, freedom", "c.Questions\n"}
 
 	};
 	  int[] array = new int[4];
@@ -34,31 +34,42 @@ public class MyersBriggsQuestionnaire{
 	
 
         for (int column = 0; column < 4; column++) {
-            int counter = 0;
+            int counterA = 0;
+	    int counterB = 0;
+	    int counterC = 0;
 	    int condition = 0;
             for (int row = column; row < 20; row += 4) {
-                System.out.print(myersbriggsquestionnaire[row][0] + " " + myersbriggsquestionnaire[row][1] + "\nSelect A or B: ");
+                System.out.print(myersbriggsquestionnaire[row][0] + " " + myersbriggsquestionnaire[row][1] + " " +myersbriggsquestionnaire[row][2]+"\nSelect A or B or C: ");
                 String feedback = "";
-		while (!feedback.equalsIgnoreCase("A") || !feedback.equalsIgnoreCase("B")) {
+		while (!feedback.equalsIgnoreCase("A") || !feedback.equalsIgnoreCase("B") || !feedback.equalsIgnoreCase("C")) {
                     feedback = input.next();
-                    if (feedback.equalsIgnoreCase("A") || feedback.equalsIgnoreCase("B")) {
+                    if (feedback.equalsIgnoreCase("A") || feedback.equalsIgnoreCase("B") || feedback.equalsIgnoreCase("C")) {
                         break;
                     	}
 			else {
-                        System.out.print("Invalid input. Please select A or B: ");
+                        System.out.print("Invalid input. Please select A or B or C: ");
                     	}
                 }
                 if (feedback.equalsIgnoreCase("A")) {
-                    counter++;
+                    counterA++;
                	 }
+		if (feedback.equalsIgnoreCase("C")) {
+                    counterC++;
+               	 }
+		if (feedback.equalsIgnoreCase("B")) {
+                    counterB++;
+               	 }
+
+
             }
-            array[column] = counter;
-            System.out.println("The number of A selected is: " + counter);
-            System.out.println("The number of B selected is: " + (5 - counter));
+            array[column] = counterA;
+            System.out.println("The number of A selected is: " + counterA);
+            System.out.println("The number of B selected is: " + counterB);
+	    System.out.println("The number of c selected is: " + counterC);
            System.out.println();
         }
 
-       String mbtiType = "";
+        String mbtiType = "";
 	if (array[0] > 2) {
     		mbtiType += "E";
 	} 
