@@ -1,0 +1,11 @@
+pseudocode 
+display Asterisk 1 times 
+repeat the display incrementing by 1 for each step 
+display spaces 5 times 
+decrease the display by one for each step 
+display spaces 5 times 
+decrease the display by one for each step 
+display Asterisk 1 times 
+repeat the display incrementing by 1 for each step 
+display spaces 5 times 
+disply

@@ -1,0 +1,29 @@
+
+Develop a Java program to calculate the insurance premium for a vehicle based on its type and age.
+- Vehicle type: Car/Truck/Motorcycle
+- Vehicle age: Various ranges (0-5 years, 6-10 years, above 10 years)
+- Apply nested conditions for:
+    - 10% discount for cars below 5 years
+    - 5% discount for trucks above 10 years
+    - Additional 2% loyalty discount for repeat customers
+
+pseudocode 
+
+prompt the user to Enter your type of car
+collect the type
+store as vehicleType
+prompt the user to Enter the Vehicles age :
+collect number 
+store as vehiclesAge
+prompt the user to Enter number of times you have been here :
+collect number 
+store as loyalty
+if viecle age <=5 
+	 10% discount for the vehicleType
+else if age >5 and <= 10
+	5% discount for the  vehicleType
+else if age 10> 
+	5% discount for vehicleType
+ 
+if visit more than 1
+	Additional 2% discount for you

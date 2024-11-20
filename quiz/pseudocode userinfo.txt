@@ -1,0 +1,16 @@
+pseudocode 
+
+prompt he user to Enter a name 
+collect name 
+store as name 
+prompt the user to Enter a number for sex : /n.1 for male /n.2 female
+collect number store as sex
+prompt the user to Enter Age 
+collect number
+store as age
+prompt the user to Enter user height 
+collect number 
+store as height 
+if sex is equal to 1 and age is less then equal to 43 and height is greater then 56
+	display name you are eligible	
+	
