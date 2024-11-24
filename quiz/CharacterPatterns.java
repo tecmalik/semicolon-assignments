@@ -7,9 +7,19 @@ public class CharacterPatterns{
 		while(alphabet<count ){
 			System.out.print(alphabet);
 			 alphabet++;
-		}
+		} alphabet = 'A';
 		
+		while( count < 'E'){
+		 count++;
+		alphabet = count;
+		while(alphabet<count ){
+			System.out.print(alphabet);
+			 alphabet++;
+		} alphabet = 'A';
 		
+	}
+	
+
 	System.out.println();
 	}
 	

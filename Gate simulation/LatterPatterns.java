@@ -5,7 +5,7 @@ public class LatterPatterns{
 			
 		
 			for(char number = 'A' ; number < 'E' ; number++){
-				System.out.print("3");
+				System.out.print();
 		}
 		
 			System.out.println(numbers);

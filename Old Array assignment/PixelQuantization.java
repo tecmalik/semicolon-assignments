@@ -7,6 +7,9 @@ public class PixelQuantization{
 		if (counter == 9){
 		System.out.printf("%5d :", 190 );
 		}
+		else if (counter==0){
+		System.out.printf("%02d-%02d :", counter*20 , counter*20);
+		}
 		else{
 		System.out.printf("%02d-%02d :", counter*20+1 , counter*20);
 		

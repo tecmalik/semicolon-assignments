@@ -18,17 +18,8 @@ public class Frequency{
 	
 	System.out.printf("%s%10s%n","Rating","frequency");
 	for(int display=0; display<setOfNumbers.length; display++){
-		
-
-		
-	try{ 
-		++frequency[setOfNumbers[display]]; }
-		catch(ArrayIndexOutOfBoundsException e){
-		System.out.print(e);
-		
-		}
-	
-	}
+		++frequency[setOfNumbers[display]]; 
+			}
 	for(int count =0; count< frequency.length ; count++){
 		System.out.printf("%6d%10d%n", count , frequency[count]);
 	}
