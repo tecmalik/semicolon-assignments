@@ -5,9 +5,10 @@ public class AlphabetChecker{
 		return false;
 		}
 	
+	
 		int checked = 0;
 		for(int count= 0 ; count < 26; count++){
-			char alphabet = 'A';
+			char alphabet = 'a';
 			for(int counter = 0; counter< sentence.length() ; counter++){
 			
 				if(alphabet == sentence.charAt(counter)){
