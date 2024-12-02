@@ -1,0 +1,53 @@
+Menstrual App pseudocode
+prompt the user to enter his/her name 
+collect the name
+store as usersName
+display welcome message 
+prompt the user to select an option 1.female 2.male 
+case 1 male :
+
+	display want to keep track 1. with your partners period 2, with your partner mood ? 
+		case 1 enter her code 
+		case 2 enter her code 
+	
+case 2 female:
+	
+	prompt the user to enter her age  
+	collect the age  
+	store as userAge
+	prompt the user to enter the length of her circle 
+	collect the length 
+	store as lengthOfcycle 
+	prompt the user to enter period duration 
+	collect the period duration 
+	store as periodDuration
+	prompt the user to enter the last period date
+	collect the date 
+	store date as lastPeriodDate
+	calculate the next period days on the calenda 
+	calculate the nextPeriodStart = lastperiodDate + cyclelength 
+	calculate nextLastDayofBleeding = nextPeriodStart + periodDuration
+	calculate nextEndofCycleDate =  nextPeriodStart + cyclelength
+	calculate nextOvulationDate =  nextEndofCycleDate + 14
+	calculate safePeriod3 = nextOvulationDate + 1 days
+	calculate safePeriod4 = nextOvulationDate + 7 days
+	calculate safeperiod1 = nextLastDayofBleeding + 1 days
+	calculate safeperiod2 = nextLastDayofBleeding + 7 days
+
+	display the result 
+		display your next End of Cycle Date
+		display your next Last Day of Bleeding date	
+		display your next Period Start date
+		display your next end of cucledate Date is nextEndofCycleDate
+		display your next Safe Period before ovulation starts safeperiod1
+		display your next Safe Period before ovulation ends safeperiod2
+		display your next Ovulation date is nextOvulationDate
+		display your next Safe Period after ovulation starts safePeriod3
+		display your next Safe Period after ovulation ends safePeriod4	
+
+	display thank you message  	
+
+case 3 default 
+	display invalid input 
+	repeat the options again 
+ 

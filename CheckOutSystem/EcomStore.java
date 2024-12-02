@@ -31,7 +31,7 @@ public class EcomStore{
 	}
 	public static void checkOut(ArrayList<String> itemsPurchased, ArrayList<Double> itemsPrices, ArrayList<Integer> itemsNumber){
 		
-		printOut("Add more Items ?");
+		printOut("Add more Items ?\n (yes or no)");
 	printNextLine();
 	String moreItemsOption = input.next().toLowerCase();
 	
@@ -120,13 +120,13 @@ public class EcomStore{
 		System.out.println();
 	}
 	public static void sum( ArrayList<String> itemsPurchased, ArrayList<Double> itemsPrices,ArrayList<Integer> itemsNumber ){
-		for(int count=0; count<itemsPurchased.size(); count++){
+		/**for(int count=0; count<itemsPurchased.size(); count++){
 			System.out.printf("%11d%12d%14.4f%20.4f",  itemsPurchased(count), itemsNumber(count), itemsPrices(count) , itemsNumber(count)*itemsPrices(count) );
 		
-		}	
+		}*/	
 	}
 	
-
+	
 	
 
 
