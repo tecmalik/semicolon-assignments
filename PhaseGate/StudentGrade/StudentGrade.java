@@ -31,17 +31,16 @@ public class StudentGrade{
 		for(int count = 0; count<studentNames.length ; count++){
 				
 			System.out.print("Enter grade studentNames[count]");
-			for(counter = 0; counter<studentSubjects.length ; count++){
+			for(int counter = 0; counter<studentSubjects.length ; count++){
 				
 				System.out.print("Enter studentSubjects[counter] grade :");
 					studentGrade[count][counter]  = input.nextInt();
-	
 			}
 			
 		}
+			
 		
-		for()
-	
+				
 
 
 
@@ -52,8 +51,10 @@ public class StudentGrade{
 
 	
 	
-	
-
+	public static int total(int[] scoreList ){
+		for(int scores = 0); scores<scoreList.length; scores++){
+		
+	}
 
 
 	
