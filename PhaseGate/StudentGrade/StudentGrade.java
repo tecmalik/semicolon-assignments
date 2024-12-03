@@ -63,8 +63,8 @@ public class StudentGrade{
 				
 	System.out.println("========================================================================== ");
 	System.out.print("Student");
-		for(int count=0 ; int count<studentNumber ; count++){
-		System.out.print("   ",studentSubjects[count]);
+		for(int count=0 ; count<studentNumber; count++){
+		System.out.printf("   ",studentSubjects[count]);
 	}
 	System.out.print("========================================================================== ");
 
