@@ -14,7 +14,7 @@ public class StudentGrade{
 		String[] sortstudentNames = new String[studentNumber];
 		String[] studentSubjects = new String[numberOfSubjects];
 		int[][] studentGrade = new int[studentNumber][numberOfSubjects]; 
-		int[][] passes = new int[studentNumber][2];
+		
 		input.nextLine();
 		for(int count = 0; count<studentNames.length ; count++){
 			
