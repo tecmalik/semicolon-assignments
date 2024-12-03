@@ -39,6 +39,12 @@ public class StudentGrade{
 			
 		}
 			
+		for(int count = 0; count<studentNumber.length ; count++ ){
+
+	
+	
+	
+		}
 		
 				
 
@@ -48,12 +54,16 @@ public class StudentGrade{
 
 
 	}
+	
+	
 
 	
-	
-	public static int total(int[] scoreList ){
-		for(int scores = 0); scores<scoreList.length; scores++){
-		
+	public static int listTotal( int[] scoresList ){
+		int total = 0;
+		for(int scores = 0; scores<scoresList.length; scores++){
+			total+=scoresList[scores]; 
+		}
+		return total;
 	}
 
 
