@@ -15,9 +15,9 @@ public class StudentGrade{
 		String[] studentSubjects = new String[numberOfSubjects];
 		int[][] studentGrade = new int[studentNumber][numberOfSubjects]; 
 		int[][] passes = new int[studentNumber][2];
-		
+		input.nextLine();
 		for(int count = 0; count<studentNames.length ; count++){
-		
+			
 			System.out.println("Enter names of Students : ");
 			studentNames[count] = input.nextLine();
 			sortstudentNames[count] = studentNames[count];
@@ -31,18 +31,18 @@ public class StudentGrade{
 	
 	
 	
-		for(int count = 0; count<studentNames.length ; count++){
+		for(int count = 0; count<studentNumber ; count++){
 				
-			System.out.println("Enter grade studentNames[count]");
+			System.out.println("Enter grade "+ studentNames[count] );
 			
-			for(int counter = 0; counter<studentSubjects.length ; count++){
+			for(int counter = 0; counter<numberOfSubjects ; count++){
 				
-				System.out.println("Enter studentSubjects[counter] grade :");
+				System.out.println("Enter "+ studentSubjects[counter] + " grade :");
 				
 					studentGrade[count][counter]  = input.nextInt();
 					if (studentGrade[count][counter]<0 || studentGrade[count][counter]>100){
 						System.out.print(" invalid !!! \nEnter a valid grade !!!");
-						counter--;
+						--counter;
 					}
 				System.out.println("Saving>>>>>>>>>>>>>>>>>>>>");
 			}
@@ -78,7 +78,7 @@ public class StudentGrade{
 					studentNames[counter-1] = studentNames[counter];
 
 					studentTotal[counter] = container;
-					studentNames[counter-1] = namesContainer;
+					studentNames[counter] = namesContainer;
 				
 				}
 			
@@ -101,9 +101,9 @@ public class StudentGrade{
 	System.out.print("Student");
 		for(int count=0 ; count<studentNumber; count++){
 		System.out.printf("   %d ",studentSubjects[count]);
-		System.out.print("pos");
+		System.out.println("pos");
 	}
-	System.out.print("========================================================================== ");
+	System.out.println("========================================================================== ");
 
 		for(int count=0 ; count< studentNumber ; count++){
 			System.out.print(studentNames[count]);
