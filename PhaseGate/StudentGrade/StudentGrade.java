@@ -49,10 +49,11 @@ public class StudentGrade{
 			
 		}
 			int[] studentTotal = new int[studentNumber];
+			int[] sortedStudentTotal = new int[studentNumber];
 		for(int count = 0; count<studentTotal.length ; count++ ){
 		
 			studentTotal[count] = listTotal(studentGrade[count]); 
-	
+			sortedStudentTotal[count]= studentTotal[count];
 		}
 		
 		
@@ -75,10 +76,10 @@ public class StudentGrade{
 				int container = studentTotal[counter+1]; 
 				String namesContainer = studentNames[counter+1];
 					studentTotal[counter+1] = studentTotal[counter];
-					studentNames[counter+1] = studentNames[counter];
+					sortstudentNames[counter+1] = sortstudentNames[counter];
 
 					studentTotal[counter] = container;
-					studentNames[counter] = namesContainer;
+					sortstudentNames[counter] = namesContainer;
 				
 				}
 			
@@ -100,10 +101,10 @@ public class StudentGrade{
 	System.out.println("========================================================================== ");
 	System.out.print("Student");
 		for(int count=0 ; count<studentNumber; count++){
-		System.out.print("      "+studentSubjects[count]);
+		System.out.print("	"+studentSubjects[count]);
 		
 		}
-	System.out.print("      pos");
+	System.out.println("      pos");
 	System.out.println("========================================================================== ");
 
 
@@ -111,12 +112,12 @@ public class StudentGrade{
 			System.out.print(studentNames[count]);
 			for(int index = 0 ; index < studentSubjects.length ; index++){
 			
-				System.out.printf("     " + studentGrade[count][index] ); 
+				System.out.printf("	" + studentGrade[count][index] ); 
 				
 			} 
-			System.out.print("    "+studentTotal[count]);
-			System.out.print("    "+studentAverage[count]);
-			System.out.print(" position  ");
+			System.out.print("	"+studentTotal[count]);
+			System.out.printf("	 %.2f",studentAverage[count]);
+			System.out.print(sortstudentNames[count]+"  "+ studentTotal[count]+ is "+ count +" position ");
 			
 		System.out.println();		
 		}
