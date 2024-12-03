@@ -5,9 +5,9 @@ public class StudentGrade{
 
 		Scanner input = new Scanner(System.in);
 	 
-		System.out.print("Enter number of Students");
+		System.out.println("Enter number of Students");
 		int studentNumber = input.nextInt();
-		System.out.print("Enter number of Subjects");
+		System.out.println("Enter number of Subjects");
 		int numberOfSubjects = input.nextInt();
 		
 		String[] studentNames = new String[studentNumber];
@@ -17,13 +17,13 @@ public class StudentGrade{
 		
 		for(int count = 0; count<studentNames.length ; count++){
 		
-			System.out.print("Enter names of Students : ");
+			System.out.println("Enter names of Students : ");
 			studentNames[count] = input.nextLine();
 		}	
 		
 		for(int count = 0; count<studentSubjects.length ; count++){
 		
-			System.out.print("Enter names of subject Students : ");
+			System.out.println("Enter names of subject Students : ");
 			studentSubjects[count] = input.nextLine();
 		}	
 	
@@ -31,18 +31,18 @@ public class StudentGrade{
 	
 		for(int count = 0; count<studentNames.length ; count++){
 				
-			System.out.print("Enter grade studentNames[count]");
+			System.out.println("Enter grade studentNames[count]");
 			
 			for(int counter = 0; counter<studentSubjects.length ; count++){
 				
-				System.out.print("Enter studentSubjects[counter] grade :");
+				System.out.println("Enter studentSubjects[counter] grade :");
 				
 					studentGrade[count][counter]  = input.nextInt();
 					if (studentGrade[count][counter]<0 || studentGrade[count][counter]>100){
 						System.out.print(" invalid !!! \nEnter a valid grade !!!");
 						counter--;
 					}
-				System.out.print("Saving>>>>>>>>>>>>>>>>>>>>");
+				System.out.println("Saving>>>>>>>>>>>>>>>>>>>>");
 			}
 			
 		}
@@ -61,6 +61,12 @@ public class StudentGrade{
 	
 		}
 				
+	System.out.println("========================================================================== ");
+	System.out.print("Student");
+		for(int count=0 ; int count<studentNumber ; count++){
+		System.out.print("   ",studentSubjects[count]);
+	}
+	System.out.print("========================================================================== ");
 
 		
 
