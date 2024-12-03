@@ -86,7 +86,7 @@ public class StudentGrade{
 
 				
 
-				if (sortedStudentTotal[counter] < sortedStudentTotal[counter+1]){
+				if (sortedStudentTotal[counter] > sortedStudentTotal[counter+1]){
 				int container = sortedStudentTotal[counter+1]; 
 				String namesContainer = sortstudentNames[counter+1];
 					sortedStudentTotal[counter+1] = sortedStudentTotal[counter];
@@ -101,11 +101,6 @@ public class StudentGrade{
 	
 	
 		}
-
-
-
-
-
 
 
 
@@ -140,11 +135,10 @@ public class StudentGrade{
 
 		
 		for(int count=0 ; count< studentNumber ; count++){
-			for(int index = 0 ; index < studentSubjects.length ; index++){ 
-				System.out.printf("	passed : " + passesAndfaliures[count][0] +" failed:"+passesAndfaliures[count][1]);
-				
-			} 			
-		System.out.println();		
+		
+			System.out.printf(" studentNames[count]	passed : " + passesAndfaliures[count][0] +" failed:"+passesAndfaliures[count][1]);
+			
+			System.out.println();		
 		}
 
 		
