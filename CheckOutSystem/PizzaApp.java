@@ -41,7 +41,7 @@ public class PizzaApp{
 			printOut("Enter pizza type : ");
 	printLine();
 	String pizzaType = input.nextLine().toLowerCase();
-	if (pizzaType.equalsIgnoreCase("sapa pizza")){
+	if (pizzaType.equalsIgnoreCase("sapa size")){
 
 	printOut("Enter the number of Guest you have : ");
 	printLine();
