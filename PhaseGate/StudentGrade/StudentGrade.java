@@ -72,7 +72,7 @@ public class StudentGrade{
 
 				
 
-				if (sortedStudentTotal[counter] > sortedStudentTotal[counter+1]){
+				if (sortedStudentTotal[counter] < sortedStudentTotal[counter+1]){
 				int container = sortedStudentTotal[counter+1]; 
 				String namesContainer = sortstudentNames[counter+1];
 					sortedStudentTotal[counter+1] = sortedStudentTotal[counter];
@@ -104,7 +104,9 @@ public class StudentGrade{
 		System.out.print("	"+studentSubjects[count]);
 		
 		}
-	System.out.println("      pos");
+	System.out.print("      ToT");
+	System.out.print("      AVE");
+	System.out.println("    	  pos");
 	System.out.println("========================================================================== ");
 
 
@@ -117,7 +119,7 @@ public class StudentGrade{
 			} 
 			System.out.print("	"+studentTotal[count]);
 			System.out.printf("	 %.2f",studentAverage[count]);
-			System.out.print(sortstudentNames[count]+"  "+ studentTotal[count]+" is "+ count +" position ");
+			System.out.print(sortstudentNames[count]+"  "+ studentTotal[count]+" is "+ count+1 +" position ");
 			
 		System.out.println();		
 		}
