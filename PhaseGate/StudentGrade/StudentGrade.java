@@ -67,15 +67,15 @@ public class StudentGrade{
 		
 		for(int count = 0; count<studentTotal.length ; count++){ 
 		
-			for(int counter = 1; counter < studentTotal.length; counter++){
+			for(int counter = 1; counter < studentTotal.length-1-count; counter++){
 
-				int container = studentTotal[counter-1]; 
-				String namesContainer = studentNames[counter-1];
+				
 
-				if (studentTotal[counter-1] > studentTotal[counter]){
-
-					studentTotal[counter-1] = studentTotal[counter];
-					studentNames[counter-1] = studentNames[counter];
+				if (studentTotal[counter] > studentTotal[counter]){
+				int container = studentTotal[counter+1]; 
+				String namesContainer = studentNames[counter+1];
+					studentTotal[counter+1] = studentTotal[counter];
+					studentNames[counter+1] = studentNames[counter];
 
 					studentTotal[counter] = container;
 					studentNames[counter] = namesContainer;
