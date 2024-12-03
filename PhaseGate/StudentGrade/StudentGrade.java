@@ -68,16 +68,20 @@ public class StudentGrade{
 	}
 	System.out.print("========================================================================== ");
 
-		for(count=0 ; count< studentNumber ; count++){
+		for(int count=0 ; count< studentNumber ; count++){
 			System.out.print(studentNames[count]);
 			for(int index = 0 ; index < studentSubjects.length ; index++){
 			
-				System.out.printf("    %d ",studentGrade[count][index]); 
+				System.out.printf("    %d ", studentGrade[count][index] ); 
 				
 			} 
+			System.out.printf("    ",studentTotal[count]);
+			System.out.print("    "+studentAverage[count]);
+			System.out.printf(" position  ");
+			
 		System.out.println();		
 		}
-	
+		
 
 
 
