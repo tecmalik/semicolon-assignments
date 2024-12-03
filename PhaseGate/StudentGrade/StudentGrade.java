@@ -13,6 +13,7 @@ public class StudentGrade{
 		String[] studentNames = new String[studentNumber];
 		String[] studentSubjects = new String[numberOfSubjects];
 		int[][] studentGrade = new int[studentNumber][numberOfSubjects]; 
+		int[][] passes = new int[studentNumber][2];
 		
 		for(int count = 0; count<studentNames.length ; count++){
 		
@@ -38,14 +39,20 @@ public class StudentGrade{
 			}
 			
 		}
-			
-		for(int count = 0; count<studentNumber.length ; count++ ){
-
+			int[] studentTotal = new int[studentNumber];
+		for(int count = 0; count<studentTotal.length ; count++ ){
 	
-	
+			studentTotal[count] = listTotal(studentGrade[count]); 
 	
 		}
 		
+		
+		float[] studentAverage = new float[studentNumber];
+		for(int count = 0; count<studentAverage.length ; count++ ){
+	
+			studentAverage[count] = studentTotal[count]/(float)numberOfSubjects; 
+	
+		}
 				
 
 
@@ -65,6 +72,8 @@ public class StudentGrade{
 		}
 		return total;
 	}
+	
+	
 
 
 	
