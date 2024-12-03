@@ -60,6 +60,20 @@ public class StudentGrade{
 			studentAverage[count] = studentTotal[count]/(float)numberOfSubjects; 
 	
 		}
+
+
+	
+		for(int count = 0, count< 0 
+
+
+
+
+
+
+
+
+
+
 				
 	System.out.println("========================================================================== ");
 	System.out.print("Student");
