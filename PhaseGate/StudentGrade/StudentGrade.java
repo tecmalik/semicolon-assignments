@@ -66,19 +66,19 @@ public class StudentGrade{
 
 		
 		
-		for(int count = 0; count<studentTotal.length ; count++){ 
+		for(int count = 0; count<sortedStudentTotal.length ; count++){ 
 		
-			for(int counter = 1; counter < studentTotal.length-1-count; counter++){
+			for(int counter = 1; counter < sortedStudentTotal.length-1-count; counter++){
 
 				
 
-				if (studentTotal[counter] > studentTotal[counter]){
-				int container = studentTotal[counter+1]; 
-				String namesContainer = studentNames[counter+1];
-					studentTotal[counter+1] = studentTotal[counter];
+				if (sortedStudentTotal[counter] > sortedStudentTotal[counter+1]){
+				int container = sortedStudentTotal[counter+1]; 
+				String namesContainer = sortstudentNames[counter+1];
+					sortedStudentTotal[counter+1] = sortedStudentTotal[counter];
 					sortstudentNames[counter+1] = sortstudentNames[counter];
 
-					studentTotal[counter] = container;
+					sortedStudentTotal[counter] = container;
 					sortstudentNames[counter] = namesContainer;
 				
 				}
@@ -117,7 +117,7 @@ public class StudentGrade{
 			} 
 			System.out.print("	"+studentTotal[count]);
 			System.out.printf("	 %.2f",studentAverage[count]);
-			System.out.print(sortstudentNames[count]+"  "+ studentTotal[count]+ is "+ count +" position ");
+			System.out.print(sortstudentNames[count]+"  "+ studentTotal[count]+" is "+ count +" position ");
 			
 		System.out.println();		
 		}
