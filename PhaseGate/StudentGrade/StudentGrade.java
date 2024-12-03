@@ -32,16 +32,23 @@ public class StudentGrade{
 		for(int count = 0; count<studentNames.length ; count++){
 				
 			System.out.print("Enter grade studentNames[count]");
+			
 			for(int counter = 0; counter<studentSubjects.length ; count++){
 				
 				System.out.print("Enter studentSubjects[counter] grade :");
+				
 					studentGrade[count][counter]  = input.nextInt();
+					if (studentGrade[count][counter]<0 || studentGrade[count][counter]>100){
+						System.out.print(" invalid !!! \nEnter a valid grade !!!");
+						counter--;
+					}
+				System.out.print("Saving>>>>>>>>>>>>>>>>>>>>");
 			}
 			
 		}
 			int[] studentTotal = new int[studentNumber];
 		for(int count = 0; count<studentTotal.length ; count++ ){
-	
+		
 			studentTotal[count] = listTotal(studentGrade[count]); 
 	
 		}
@@ -55,7 +62,7 @@ public class StudentGrade{
 		}
 				
 
-
+		
 
 
 
