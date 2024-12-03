@@ -35,9 +35,9 @@ public class StudentGrade{
 				
 			System.out.println("Enter grade "+ studentNames[count] );
 			
-			for(int counter = 0; counter<numberOfSubjects ; count++){
+			for(int counter = 0; counter<numberOfSubjects ; counter++){
 				
-				System.out.println("Enter "+ studentSubjects[counter] + " grade :");
+				System.out.printf("Enter %s  grade :",studentSubjects[counter]);
 				
 					studentGrade[count][counter]  = input.nextInt();
 					if (studentGrade[count][counter]<0 || studentGrade[count][counter]>100){
