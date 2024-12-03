@@ -62,8 +62,21 @@ public class StudentGrade{
 		}
 
 
+		
+		for(int count = 0; count<studentTotal.length ; count++){ 
+		
+			for(int counter = 1; counter < studentTotal.length; counter++){
+				int container = studentTotal[counter-1];
+				if (studentTotal[counter-1] > studentTotal[counter]){
+					studentTotal[counter-1] = studentTotal[counter];
+					studentTotal[counter] = container;
+				
+				}
+			
+			}
 	
-		for(int count = 0, count< 0 
+	
+		}
 
 
 
