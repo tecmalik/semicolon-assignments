@@ -11,6 +11,7 @@ public class StudentGrade{
 		int numberOfSubjects = input.nextInt();
 		
 		String[] studentNames = new String[studentNumber];
+		String[] sortstudentNames = new String[studentNumber];
 		String[] studentSubjects = new String[numberOfSubjects];
 		int[][] studentGrade = new int[studentNumber][numberOfSubjects]; 
 		int[][] passes = new int[studentNumber][2];
@@ -19,6 +20,7 @@ public class StudentGrade{
 		
 			System.out.println("Enter names of Students : ");
 			studentNames[count] = input.nextLine();
+			sortstudentNames[count] = studentNames[count];
 		}	
 		
 		for(int count = 0; count<studentSubjects.length ; count++){
@@ -66,10 +68,17 @@ public class StudentGrade{
 		for(int count = 0; count<studentTotal.length ; count++){ 
 		
 			for(int counter = 1; counter < studentTotal.length; counter++){
-				int container = studentTotal[counter-1];
+
+				int container = studentTotal[counter-1]; 
+				String namesContainer = studentNames[counter-1];
+
 				if (studentTotal[counter-1] > studentTotal[counter]){
+
 					studentTotal[counter-1] = studentTotal[counter];
+					studentNames[counter-1] = studentNames[counter];
+
 					studentTotal[counter] = container;
+					studentNames[counter-1] = namesContainer;
 				
 				}
 			
@@ -92,6 +101,7 @@ public class StudentGrade{
 	System.out.print("Student");
 		for(int count=0 ; count<studentNumber; count++){
 		System.out.printf("   %d ",studentSubjects[count]);
+		System.out.print("pos");
 	}
 	System.out.print("========================================================================== ");
 
