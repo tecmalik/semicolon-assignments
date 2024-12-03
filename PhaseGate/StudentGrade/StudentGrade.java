@@ -10,10 +10,12 @@ public class StudentGrade{
 		System.out.println("Enter number of Subjects");
 		int numberOfSubjects = input.nextInt();
 		
+		
 		String[] studentNames = new String[studentNumber];
 		String[] sortstudentNames = new String[studentNumber];
 		String[] studentSubjects = new String[numberOfSubjects];
 		int[][] studentGrade = new int[studentNumber][numberOfSubjects]; 
+		int[][] passesAndfaliures = new int[studentNumber][2];
 		
 		input.nextLine();
 		for(int count = 0; count<studentNames.length ; count++){
@@ -36,7 +38,8 @@ public class StudentGrade{
 			System.out.println("Enter grade "+ studentNames[count] );
 			
 			for(int counter = 0; counter<numberOfSubjects ; counter++){
-				
+				int passes = 0;
+				int failures = 0;
 				System.out.printf("Enter %s  grade :",studentSubjects[counter]);
 				
 					studentGrade[count][counter]  = input.nextInt();
@@ -44,8 +47,19 @@ public class StudentGrade{
 						System.out.print(" invalid !!! \nEnter a valid grade !!!");
 						--counter;
 					}
+					else if ( studentGrade[count][counter] > 45  ){
+						++passes;
+						passesAndfaliures[count][0] = passes;
+					}
+					else if ( studentGrade[count][counter] < 45  ){
+						++failures;
+						passesAndfaliures[count][1] = failures ;
+					}
+			
+				
 				System.out.println("Saving>>>>>>>>>>>>>>>>>>>>");
 			}
+			
 			
 		}
 			int[] studentTotal = new int[studentNumber];
@@ -115,7 +129,7 @@ public class StudentGrade{
 			for(int index = 0 ; index < studentSubjects.length ; index++){
 			
 				System.out.printf("	" + studentGrade[count][index] ); 
-				
+								
 			} 
 			System.out.print("	"+studentTotal[count]);
 			System.out.printf("	 %.2f",studentAverage[count]);
@@ -123,6 +137,16 @@ public class StudentGrade{
 			
 		System.out.println();		
 		}
+
+		
+		for(int count=0 ; count< studentNumber ; count++){
+			for(int index = 0 ; index < studentSubjects.length ; index++){ 
+				System.out.printf("	passed : " + passesAndfaliures[count][0] +" failed:"+passesAndfaliures[count][1]);
+				
+			} 			
+		System.out.println();		
+		}
+
 		
 
 

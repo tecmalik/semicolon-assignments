@@ -2,7 +2,7 @@ studentNumber = int(input("Enter number of Students :"))
 numberOfSubjects = int(input("Enter number of Subjects :"))
 studentNames = []
 studentSubjects = []
-studentGrade = []
+studentGrade = [][]
 studentTotal = []
 
 def listtotal(numbers:list):
@@ -17,6 +17,6 @@ for count in range (numberOfSubjects):
 	studentSubjects.append(input("Enter student Subjects : "))
 for count in range (studentNumber):
 	print("Enter grade "+ studentNames[count])
-for index in range(numberOfSubjects):
-	studentGrade.append(int(input("Enter Grade of Student : ")))
+	for index in range(numberOfSubjects):
+		studentGrade[count][index] = (int(input("Enter Grade of Student : ")))
 	print("Saving>>>>>>>>>>>>")
