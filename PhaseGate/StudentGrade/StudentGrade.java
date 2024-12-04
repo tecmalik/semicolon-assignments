@@ -82,8 +82,11 @@ public class StudentGrade{
 		 int[] newTotal = getSort(sortedStudentTotal);
 		int[] position = new int[newTotal.length];
 		for(int count = 0; count<sortedStudentTotal.length ;count++){
+				
 			for(int index = 0; index < sortedStudentTotal.length; index++){
-				if ( sortedStudentTotal[count] == studentTotal[index] ){
+				
+				if ( newTotal[count] == studentTotal[index] ){
+					
 					position[count] = count;
 					
 				}
