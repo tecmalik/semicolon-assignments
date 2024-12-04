@@ -100,7 +100,7 @@ public class StudentGrade{
 	System.out.println("========================================================================== ");
 	System.out.print("Student");
 		for(int count=0 ; count<studentNumber; count++){
-		System.out.printf("	%d",studentSubjects[count]);
+		System.out.printf("	%s",studentSubjects[count]);
 		
 		}
 	System.out.printf("%9s ","ToT");
@@ -173,7 +173,27 @@ public class StudentGrade{
 		return sortedStudentTotal;
 	}
 	
+	public Static int highestInteger(int[] numbers){
+		largest = numbers[0];
+		for(int count = 0; counter<numbers.length;count++){
+			if(numbers[count]>largest){
+				largest = numbers[count];
+			}
+		} 
+	return largest 
+	
+	}
+	public Static int lowestInteger(int[] numbers){
+		lowest = numbers[0];
+		for(int count = 0; counter<numbers.length;count++){
+			if(numbers[count]<lowest){
+				lowest = numbers[count];
+			}
+		} 
+	return largest 
+	
+	}
 
-
+	
 	
 }
