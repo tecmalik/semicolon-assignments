@@ -1,9 +1,12 @@
 import java.util.Arraylist;
 import java.util.Scanner;
 public class PhoneBook{
+	
+	static Scanner input = new Scanner(System.in);
+
 	public static void main(String[] args){
 	
-	Scanner input = new Scanner(System.in);
+	
 	ArrayList<Integer> phoneNumber = new ArrayList<Integer>();
 	ArrayList<String> adress = new ArrayList<String>();
 	ArrayList<String> contactName = new ArrayList<String>();
@@ -14,7 +17,7 @@ public class PhoneBook{
 	
 	 while(){
 	
-	menu(choice);
+		menu(choice);
 		
 	
 	}
@@ -26,13 +29,18 @@ public class PhoneBook{
 
 
 	public static int menu(choice){
-	System.out.print("SELLECT AN OPTION: \n1. Add Contact \n2. Remove Contact \n3. Find contact by phonenumber \n4. Find contact by last name \n5. Edit contact by \nlast name \n6. Edit contact \n");
+	System.out.print("SELLECT AN OPTION: \n1. Add Contact \n2. Remove Contact \n3. Find contact by phonenumber \n4. Find contact by lastname \n5. Edit contact by \nlast name \n6. Edit contact \n");
 	int choice = input.nextInt(); 
 		if(choice == 1){
 			
 		}
 		else if(choice == 2){
-			 addToCart();
+			System.out.print("Enter ContactName :");
+			String contactName = input.nextLine();
+			System.out.print("Enter ContactName :");
+			int contactName = input.nextInt();
+			
+			addToCart(contactName,phonenumber,	);
 		}
 		else if(choice == 3){
 			removeFromCart(contactToRemove);
@@ -53,9 +61,9 @@ public class PhoneBook{
 
 	}
 	
-	public static void addToCart(contactToAdd){
+	public static void addToCart(String name, int phoneNumber, String adress, String email){
 	
-	
+		
 	
 	}
 	public static void removeFromCart(contactToRemove){
