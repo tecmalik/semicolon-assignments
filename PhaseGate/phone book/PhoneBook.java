@@ -7,15 +7,16 @@ public class PhoneBook{
 	public static void main(String[] args){
 	
 	
-	ArrayList<Integer> phoneNumber = new ArrayList<Integer>();
-	ArrayList<String> adress = new ArrayList<String>();
-	ArrayList<String> contactName = new ArrayList<String>();
-	ArrayList<String> emailAdress = new ArrayList<String>();
+	ArrayList<Integer> phoneNumbers = new ArrayList<Integer>();
+	ArrayList<String> contactEmails = new ArrayList<String>();
+	ArrayList<String> contactFirstNames = new ArrayList<String>();
+	ArrayList<String> contactLastNames = new ArrayList<String>();
+	ArrayList<String> contactAdresses = new ArrayList<String>();
 
 	
 	
 	
-	 while(){
+	 while( ){
 	
 		menu(choice);
 		
@@ -35,15 +36,21 @@ public class PhoneBook{
 			
 		}
 		else if(choice == 2){
-			System.out.print("Enter ContactName :");
-			String contactName = input.nextLine();
-			System.out.print("Enter ContactName :");
-			int contactName = input.nextInt();
+			System.out.print("Enter First Name :");
+			String contactFirstName  = input.nextLine();
+			System.out.print("Enter Last Name :");
+			String contactLastName  = input.nextLine();
+			System.out.print("Enter Phone Number :");
+			int phoneNumber = input.nextInt();
+			System.out.print("Enter Contact Adress :");
+			String contactAdress = input.nextLine();
+			System.out.print("Enter Contact Email :");
+			String contactEmail = input.nextLine();
 			
-			addToCart(contactName,phonenumber,	);
+			addToCart(contactFirstName,contactLastName,phoneNumber,contactAdress,contactEmail);
 		}
 		else if(choice == 3){
-			removeFromCart(contactToRemove);
+			removeFromCart();
 		}
 		else if(choice == 4){
 			
@@ -61,9 +68,16 @@ public class PhoneBook{
 
 	}
 	
-	public static void addToCart(String name, int phoneNumber, String adress, String email){
+	public static void addToCart(String contactFirstName,String contactLastName,int phoneNumber,String contactAdress,String contactEmail){
 	
 		
+			contactFirstNames.add(contactFirstName);
+			contactLastNames.add(contactLastName);
+			phoneNumbers.add(phoneNumber);
+			contactAdresses.add(String contactAdress);
+			contactEmails.add(String contactEmail); 
+			
+			
 	
 	}
 	public static void removeFromCart(contactToRemove){
