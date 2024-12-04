@@ -78,20 +78,17 @@ public class StudentGrade{
 	
 		}
   
-		
-		
-		int[] sortedTotals = getSort(studentTotal);
-	
-		int[] position = new int[sortedTotals.length];
+			
+		 int[] newTotal = getSort(sortedStudentTotal);
+		int[] position = new int[newTotal.length];
 		for(int count = 0; count<sortedStudentTotal.length ;count++){
 			for(int index = 0; index < sortedStudentTotal.length; index++){
-				if ( sortedTotals[count] == studentTotal[index] ){
+				if ( sortedStudentTotal[count] == studentTotal[index] ){
 					position[count] = count;
 					
 				}
 			}
 		}
-
 
 
 
@@ -118,7 +115,7 @@ public class StudentGrade{
 				System.out.printf("	" + studentGrade[count][index] ); 
 								
 			} 
-			System.out.printf("%10d	",studentTotal[studentNumber-1-count]);
+			System.out.printf("%10d	",studentTotal[count]);
 			System.out.printf("%11.2f",studentAverage[count]);
 			System.out.printf("%14d", position[count]+1);
 		
@@ -133,7 +130,7 @@ public class StudentGrade{
 			System.out.printf(studentNames[count]+"	passed : " + passesAndfaliures[count][0] +" failed:"+passesAndfaliures[count][1]);
 			
 			System.out.println();
-			System.out.print(sortedTotals[count]);		
+			System.out.print(studentTotal[studentNumber-1-count]);		
 		}
 		
 
