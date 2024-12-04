@@ -22,7 +22,6 @@ public class StudentGrade{
 			
 			System.out.println("Enter names of Students : ");
 			studentNames[count] = input.nextLine();
-			sortstudentNames[count] = studentNames[count];
 		}	
 		
 		for(int count = 0; count<studentSubjects.length ; count++){
@@ -81,31 +80,16 @@ public class StudentGrade{
   
 		
 		
-		for(int count = 0; count<sortedStudentTotal.length ; count++){ 
-		
-			for(int counter = 1; counter > sortedStudentTotal.length-1-count; counter++){
-
-				if (sortedStudentTotal[counter] < sortedStudentTotal[counter+1]){
-				int container = sortedStudentTotal[counter+1]; 
-				String namesContainer = sortstudentNames[counter+1];
-					sortedStudentTotal[counter+1] = sortedStudentTotal[counter];
-					sortstudentNames[counter+1] = sortstudentNames[counter];
-
-					sortedStudentTotal[counter] = container;
-					sortstudentNames[counter] = namesContainer;
-				
-				}
+		sort(sortedStudentTotal);
+	
 			
-			}
-	
-	
-		}
-
-
+		int[] posiition = new int[studentNumber];
 		for(int count = 0; count<sortedStudentTotal.length ;count++){
-			
+			sort(sortedStudentTotal)[count];
 			for(int index = 0; index < sortedStudentTotal.length; index++){
-				index 
+				if ( sort(sortedStudentTotal)[count] == studentTotal[count] ){
+					count = posiition[count];
+				}
 			}
 		}
 
@@ -166,6 +150,25 @@ public class StudentGrade{
 	}
 	
 	
+	public static int[] sort(int[] sortedStudentTotal){
+		for(int count = 0; count < sortedStudentTotal.length ; count++){ 
+		
+			for(int counter = 1; counter < sortedStudentTotal.length-1-count; counter++){
+
+				if (sortedStudentTotal[counter] > sortedStudentTotal[counter+1]){
+				int container = sortedStudentTotal[counter+1]; 
+				sortedStudentTotal[counter+1] = sortedStudentTotal[counter];
+				sortedStudentTotal[counter] = container;
+					
+				
+				}
+			
+			}
+	
+	
+		}
+		return sortedStudentTotal;
+	}
 
 
 	
