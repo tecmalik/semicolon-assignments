@@ -47,7 +47,7 @@ public class StudentGrade{
 						System.out.print(" invalid !!! \nEnter a valid grade !!!");
 						--counter;
 					}
-					if (studentGrade[count][counter] > 45){
+					if (studentGrade[count][counter] >= 45){
 						passes +=1;
 						passesAndfaliures[count][0] = passes;
 					}
@@ -80,15 +80,14 @@ public class StudentGrade{
   
 		
 		
-		sort(sortedStudentTotal);
+		int[] sortedTotals = sort(sortedStudentTotal);
 	
-			
-		int[] posiition = new int[studentNumber];
+		int[] position = new int[studentNumber];
 		for(int count = 0; count<sortedStudentTotal.length ;count++){
-			sort(sortedStudentTotal)[count];
 			for(int index = 0; index < sortedStudentTotal.length; index++){
-				if ( sort(sortedStudentTotal)[count] == studentTotal[count] ){
-					count = posiition[count];
+				if ( sortedTotals[count] == studentTotal[index] ){
+					position[count] = index ;
+					break;
 				}
 			}
 		}
@@ -104,14 +103,14 @@ public class StudentGrade{
 		System.out.print("	"+studentSubjects[count]);
 		
 		}
-	System.out.print("      ToT");
-	System.out.print("      AVE");
+	System.out.print("   	   ToT");
+	System.out.print("    	  AVE");
 	System.out.println("    	  pos");
 	System.out.println("========================================================================== ");
 
 
 		for(int count=0 ; count< studentNumber ; count++){
-			int position = 1;
+		
 			System.out.print(studentNames[count]);
 			for(int index = 0 ; index < studentSubjects.length ; index++){
 			
@@ -120,10 +119,12 @@ public class StudentGrade{
 			} 
 			System.out.print("	"+studentTotal[count]);
 			System.out.printf("	 %.2f",studentAverage[count]);
-			System.out.print("	"+sortstudentNames[count]+" "+ studentTotal[count]+" is "+ position +" position ");
-			++position;
+			System.out.print("		"+ position[count]);
+		
 		System.out.println();		
 		}
+		
+		
 		System.out.println("========================================================================== ");
 		
 		for(int count=0 ; count< studentNumber ; count++){
@@ -131,7 +132,7 @@ public class StudentGrade{
 			System.out.printf(studentNames[count]+"	passed : " + passesAndfaliures[count][0] +" failed:"+passesAndfaliures[count][1]);
 			
 			System.out.println();
-			System.out.print(studentTotal[count]);		
+			System.out.print(sort(studentTotal)[count]);		
 		}
 		
 
