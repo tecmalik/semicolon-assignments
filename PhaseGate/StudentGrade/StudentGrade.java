@@ -100,12 +100,13 @@ public class StudentGrade{
 	System.out.println("========================================================================== ");
 	System.out.print("Student");
 		for(int count=0 ; count<studentNumber; count++){
-		System.out.print("	"+studentSubjects[count]);
+		System.out.printf("	%d",studentSubjects[count]);
 		
 		}
-	System.out.print("   	   ToT");
-	System.out.print("    	  AVE");
-	System.out.println("    	  pos");
+	System.out.printf("%9s ","ToT");
+	System.out.printf("%11s","AVE");
+	System.out.printf("%14s ","pos");
+	System.out.println();
 	System.out.println("========================================================================== ");
 
 
@@ -117,9 +118,9 @@ public class StudentGrade{
 				System.out.printf("	" + studentGrade[count][index] ); 
 								
 			} 
-			System.out.print("	"+studentTotal[count]);
-			System.out.printf("	 %.2f",studentAverage[count]);
-			System.out.printf("		%d", position[count]+1);
+			System.out.printf("%10d	",studentTotal[count]);
+			System.out.printf("%11.2f",studentAverage[count]);
+			System.out.printf("%14d", position[count]+1);
 		
 		System.out.println();		
 		}
@@ -168,7 +169,7 @@ public class StudentGrade{
 			}
 	
 	
-		}
+		} 
 		return sortedStudentTotal;
 	}
 	
