@@ -120,7 +120,7 @@ public class StudentGrade{
 			} 
 			System.out.printf("%10d	",studentTotal[count]);
 			System.out.printf("%11.2f",studentAverage[count]);
-			System.out.printf("%14d", position[count]+1);
+			System.out.printf("%14d",position[count]+1);
 		
 		System.out.println();		
 		}
