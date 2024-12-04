@@ -80,7 +80,7 @@ public class StudentGrade{
   
 		
 		
-		int[] sortedTotals = sort(sortedStudentTotal);
+		int[] sortedTotals = sort(studentTotal);
 	
 		int[] position = new int[studentNumber];
 		for(int count = 0; count<sortedStudentTotal.length ;count++){
@@ -152,21 +152,18 @@ public class StudentGrade{
 	
 	
 	public static int[] sort(int[] sortedStudentTotal){
-		for(int count = 0; count < sortedStudentTotal.length ; count++){ 
+		for(int count = 0; count < sortedStudentTotal.length-1 ; count++){ 
 		
-			for(int counter = 1; counter < sortedStudentTotal.length-1-count; counter++){
+			for(int counter = 0; counter < sortedStudentTotal.length-1-count; counter++){
 
-				if (sortedStudentTotal[counter] < sortedStudentTotal[counter - 1]){
-				int container = sortedStudentTotal[counter - 1]; 
-				sortedStudentTotal[counter - 1] = sortedStudentTotal[counter];
+				if (sortedStudentTotal[counter] < sortedStudentTotal[counter + 1]){
+				int container = sortedStudentTotal[counter + 1]; 
+				sortedStudentTotal[counter + 1] = sortedStudentTotal[counter];
 				sortedStudentTotal[counter] = container;
 					
 				
 				}
-				else{
 			
-		
-				}
 			
 			}
 	
