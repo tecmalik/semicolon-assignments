@@ -1,4 +1,4 @@
-import java.util.Arrays;
+
 import java.util.Scanner;
 public class StudentGrade{
 	
@@ -10,11 +10,6 @@ public class StudentGrade{
 		int studentNumber = input.nextInt();
 		System.out.println("Enter number of Subjects : ");
 		int numberOfSubjects = input.nextInt();
-		int[] male = {45,76,65,54,87,43,56,};
-		System.out.print(Arrays.toString(sort(male)));
-	
-		System.out.print(highestInteger(male));
-		System.out.print(lowestInteger(male));
 		
 		String[] studentNames = new String[studentNumber];
 		String[] sortstudentNames = new String[studentNumber];
@@ -85,14 +80,14 @@ public class StudentGrade{
   
 		
 		
-		int[] sortedTotals = sort(studentTotal);
+		int[] sortedTotals = getSort(studentTotal);
 	
-		int[] position = new int[studentNumber];
+		int[] position = new int[sortedTotals.length];
 		for(int count = 0; count<sortedStudentTotal.length ;count++){
 			for(int index = 0; index < sortedStudentTotal.length; index++){
 				if ( sortedTotals[count] == studentTotal[index] ){
 					position[count] = count;
-					break;
+					
 				}
 			}
 		}
@@ -123,7 +118,7 @@ public class StudentGrade{
 				System.out.printf("	" + studentGrade[count][index] ); 
 								
 			} 
-			System.out.printf("%10d	",studentTotal[count]);
+			System.out.printf("%10d	",studentTotal[studentNumber-1-count]);
 			System.out.printf("%11.2f",studentAverage[count]);
 			System.out.printf("%14d", position[count]+1);
 		
@@ -138,7 +133,7 @@ public class StudentGrade{
 			System.out.printf(studentNames[count]+"	passed : " + passesAndfaliures[count][0] +" failed:"+passesAndfaliures[count][1]);
 			
 			System.out.println();
-			System.out.print(sort(studentTotal)[count]);		
+			System.out.print(sortedTotals[count]);		
 		}
 		
 
@@ -157,7 +152,7 @@ public class StudentGrade{
 	}
 	
 	
-	public static int[] sort(int[] sortedStudentTotal){
+	public static int[] getSort(int[] sortedStudentTotal){
 		for(int count = 0; count < sortedStudentTotal.length-1 ; count++){ 
 		
 			for(int counter = 0; counter < sortedStudentTotal.length-1-count; counter++){
@@ -179,7 +174,7 @@ public class StudentGrade{
 	}
 	
 	public static int highestInteger(int[] numbers){
-		int largest = 0;
+		int largest = numbers[0];
 		for(int count = 0; count<numbers.length;count++){
 			if(numbers[count]>largest){
 				largest = numbers[count];
@@ -190,7 +185,7 @@ public class StudentGrade{
 	}
 
 	public static int lowestInteger(int[] numbers){
-		int lowest = 0;
+		int lowest = numbers[0];
 		for(int count = 0; count<numbers.length;count++){
 			if(numbers[count]<lowest){
 				lowest = numbers[count];
