@@ -1,0 +1,26 @@
+pseudocode
+create a menu function 
+1. Add Contact
+2. Remove Contact
+3. Find contact by phone number 
+4. Find contact by last name 
+5. Edit contact by last name 
+6. Edit contact
+create a list to store names
+create a list to store number  
+create a list to store Address
+create a list to store Email
+
+prompt the user to enter a name
+collect name 
+append Namelist
+prompt the user to enter an Address
+collect number
+append Addresslist
+prompt the user to enter a telephone number 
+collect number
+append number
+prompt the user to enter a telephone email 
+collect email
+append email
+

@@ -150,8 +150,9 @@ public class StudentGrade{
 			System.out.printf("the highest student is %s \n with average of %.4f", studentNames[count],(float)highestInteger(studentTotal)/numberOfSubjects);
 					
 				}
-			System.out.println();
+			
 			}
+			System.out.println();
 		
 						for(int count=0; count< studentTotal.length; count++){
 				int lowest = lowestInteger(studentTotal);
@@ -161,8 +162,9 @@ public class StudentGrade{
 			System.out.printf("the lowest student is %s \n with average of %.4f", studentNames[count],(float)lowestInteger(studentTotal)/numberOfSubjects);
 					
 				}
-			System.out.println();
+			
 			}
+			System.out.println();
 
 
 
