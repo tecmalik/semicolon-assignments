@@ -141,12 +141,7 @@ public class StudentGrade{
 					
 				}
 			
-		
-
-
-
-
-		}
+			}
 
 
 
@@ -167,7 +162,37 @@ public class StudentGrade{
 		
 		System.out.println("");
 		
+			for(int count=0; count< studentTotal.length; count++){
+				int highest = highestInteger(studentTotal);
+				
+				if( highest == studentTotal[count]){
+					
+			System.out.printf("the highest student is %s \n with average of %.4f", studentNames[count],(float)highestInteger(studentTotal)/numberOfSubjects);
+					
+				}
+			
+			}
 		
+						for(int count=0; count< studentTotal.length; count++){
+				int highest = highestInteger(studentTotal);
+				
+				if( highest == studentTotal[count]){
+					
+			System.out.printf("the highest student is %s \n with average of %.4f", studentNames[count],(float)highestInteger(studentTotal)/numberOfSubjects);
+					
+				}
+			
+			}
+
+
+
+
+
+
+
+
+
+
 	
 	
 
