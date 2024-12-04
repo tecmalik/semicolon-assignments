@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 public class StudentGrade{
 	
@@ -10,7 +11,10 @@ public class StudentGrade{
 		System.out.println("Enter number of Subjects : ");
 		int numberOfSubjects = input.nextInt();
 		int[] male = {45,76,65,54,87,43,56,};
-		System.out.print(sort(male))
+		System.out.print(Arrays.toString(sort(male)));
+	
+		System.out.print(highestInteger(male));
+		System.out.print(lowestInteger(male));
 		
 		String[] studentNames = new String[studentNumber];
 		String[] sortstudentNames = new String[studentNumber];
@@ -175,8 +179,8 @@ public class StudentGrade{
 	}
 	
 	public static int highestInteger(int[] numbers){
-		largest = numbers[0];
-		for(int count = 0; counter<numbers.length;count++){
+		int largest = 0;
+		for(int count = 0; count<numbers.length;count++){
 			if(numbers[count]>largest){
 				largest = numbers[count];
 			}
@@ -186,8 +190,8 @@ public class StudentGrade{
 	}
 
 	public static int lowestInteger(int[] numbers){
-		lowest = numbers[0];
-		for(int count = 0; counter<numbers.length;count++){
+		int lowest = 0;
+		for(int count = 0; count<numbers.length;count++){
 			if(numbers[count]<lowest){
 				lowest = numbers[count];
 			}
