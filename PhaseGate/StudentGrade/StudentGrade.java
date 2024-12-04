@@ -9,7 +9,8 @@ public class StudentGrade{
 		int studentNumber = input.nextInt();
 		System.out.println("Enter number of Subjects : ");
 		int numberOfSubjects = input.nextInt();
-		
+		int[] male = {45,76,65,54,87,43,56,};
+		System.out.print(sort(male))
 		
 		String[] studentNames = new String[studentNumber];
 		String[] sortstudentNames = new String[studentNumber];
@@ -173,24 +174,25 @@ public class StudentGrade{
 		return sortedStudentTotal;
 	}
 	
-	public Static int highestInteger(int[] numbers){
+	public static int highestInteger(int[] numbers){
 		largest = numbers[0];
 		for(int count = 0; counter<numbers.length;count++){
 			if(numbers[count]>largest){
 				largest = numbers[count];
 			}
 		} 
-	return largest 
+	return largest; 
 	
 	}
-	public Static int lowestInteger(int[] numbers){
+
+	public static int lowestInteger(int[] numbers){
 		lowest = numbers[0];
 		for(int count = 0; counter<numbers.length;count++){
 			if(numbers[count]<lowest){
 				lowest = numbers[count];
 			}
 		} 
-	return largest 
+	return lowest;
 	
 	}
 
