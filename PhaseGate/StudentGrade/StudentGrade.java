@@ -5,9 +5,9 @@ public class StudentGrade{
 
 		Scanner input = new Scanner(System.in);
 	 
-		System.out.println("Enter number of Students");
+		System.out.println("Enter number of Students : ");
 		int studentNumber = input.nextInt();
-		System.out.println("Enter number of Subjects");
+		System.out.println("Enter number of Subjects : ");
 		int numberOfSubjects = input.nextInt();
 		
 		
@@ -36,10 +36,11 @@ public class StudentGrade{
 		for(int count = 0; count<studentNumber ; count++){
 				
 			System.out.println("Enter grade "+ studentNames[count] );
-			
+			int failures = 0;
+			int passes = 0;
 			for(int counter = 0; counter<numberOfSubjects ; counter++){
-				int passes = 0;
-				int failures = 0;
+				
+				
 				System.out.printf("Enter %s  grade :",studentSubjects[counter]);
 				
 					studentGrade[count][counter]  = input.nextInt();
@@ -77,16 +78,14 @@ public class StudentGrade{
 			studentAverage[count] = studentTotal[count]/(float)numberOfSubjects; 
 	
 		}
-
+  
 		
 		
 		for(int count = 0; count<sortedStudentTotal.length ; count++){ 
 		
-			for(int counter = 1; counter < sortedStudentTotal.length-1-count; counter++){
+			for(int counter = 1; counter > sortedStudentTotal.length-1-count; counter++){
 
-				
-
-				if (sortedStudentTotal[counter] > sortedStudentTotal[counter+1]){
+				if (sortedStudentTotal[counter] < sortedStudentTotal[counter+1]){
 				int container = sortedStudentTotal[counter+1]; 
 				String namesContainer = sortstudentNames[counter+1];
 					sortedStudentTotal[counter+1] = sortedStudentTotal[counter];
@@ -100,6 +99,14 @@ public class StudentGrade{
 			}
 	
 	
+		}
+
+
+		for(int count = 0; count<sortedStudentTotal.length ;count++){
+			
+			for(int index = 0; index < sortedStudentTotal.length; index++){
+				index 
+			}
 		}
 
 
@@ -129,7 +136,7 @@ public class StudentGrade{
 			} 
 			System.out.print("	"+studentTotal[count]);
 			System.out.printf("	 %.2f",studentAverage[count]);
-			System.out.print(sortstudentNames[count]+" "+ studentTotal[count]+" is "+ position +" position ");
+			System.out.print("	"+sortstudentNames[count]+" "+ studentTotal[count]+" is "+ position +" position ");
 			++position;
 		System.out.println();		
 		}
@@ -139,12 +146,10 @@ public class StudentGrade{
 		
 			System.out.printf(studentNames[count]+"	passed : " + passesAndfaliures[count][0] +" failed:"+passesAndfaliures[count][1]);
 			
-			System.out.println();		
+			System.out.println();
+			System.out.print(studentTotal[count]);		
 		}
 		
-
-		
-
 
 
 	}
