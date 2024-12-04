@@ -2,7 +2,7 @@ studentNumber = int(input("Enter number of Students :"))
 numberOfSubjects = int(input("Enter number of Subjects :"))
 studentNames = []
 studentSubjects = []
-studentGrade = [][]
+studentGrade = []
 studentTotal = []
 
 def listtotal(numbers:list):

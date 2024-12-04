@@ -86,7 +86,7 @@ public class StudentGrade{
 		for(int count = 0; count<sortedStudentTotal.length ;count++){
 			for(int index = 0; index < sortedStudentTotal.length; index++){
 				if ( sortedTotals[count] == studentTotal[index] ){
-					position[count] = index ;
+					position[count] = count;
 					break;
 				}
 			}
@@ -119,7 +119,7 @@ public class StudentGrade{
 			} 
 			System.out.print("	"+studentTotal[count]);
 			System.out.printf("	 %.2f",studentAverage[count]);
-			System.out.print("		"+ position[count]);
+			System.out.printf("		%d", position[count]+1);
 		
 		System.out.println();		
 		}
@@ -156,12 +156,16 @@ public class StudentGrade{
 		
 			for(int counter = 1; counter < sortedStudentTotal.length-1-count; counter++){
 
-				if (sortedStudentTotal[counter] > sortedStudentTotal[counter+1]){
-				int container = sortedStudentTotal[counter+1]; 
-				sortedStudentTotal[counter+1] = sortedStudentTotal[counter];
+				if (sortedStudentTotal[counter] < sortedStudentTotal[counter - 1]){
+				int container = sortedStudentTotal[counter - 1]; 
+				sortedStudentTotal[counter - 1] = sortedStudentTotal[counter];
 				sortedStudentTotal[counter] = container;
 					
 				
+				}
+				else{
+			
+		
 				}
 			
 			}
@@ -170,6 +174,7 @@ public class StudentGrade{
 		}
 		return sortedStudentTotal;
 	}
+	
 
 
 	

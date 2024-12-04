@@ -13,8 +13,10 @@ collect the scores for every student and every Subjects
 store the scores ina n array
 calculate the total of grade of all subject for each student 
 calculate the average for all Student total/number of subject
-display each studenr grade 
+sort the total array 
+display each student grade 
 display the class summary 
+
 
 
 N.B
