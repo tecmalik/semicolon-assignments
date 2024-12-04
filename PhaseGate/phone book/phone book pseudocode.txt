@@ -11,15 +11,19 @@ create a list to store number
 create a list to store Address
 create a list to store Email
 
+if user selects one 
 prompt the user to enter a name
 collect name 
 append Namelist
+else if user selects 2
 prompt the user to enter an Address
 collect number
 append Addresslist
+else if user selects 3
 prompt the user to enter a telephone number 
 collect number
 append number
+else if user selects 4
 prompt the user to enter a telephone email 
 collect email
 append email
