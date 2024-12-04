@@ -85,7 +85,7 @@ public class StudentGrade{
 				
 			for(int index = 0; index < sortedStudentTotal.length; index++){
 				
-				if ( newTotal[count] == studentTotal[index] ){
+				if (newTotal[count] == studentTotal[index]){
 					
 					position[count] = count;
 					
@@ -94,7 +94,7 @@ public class StudentGrade{
 		}
 
 
-
+		
 
 				
 	System.out.println("========================================================================== ");
@@ -136,9 +136,22 @@ public class StudentGrade{
 			System.out.print(studentTotal[studentNumber-1-count]);		
 		}
 		
-
-
+		System.out.println("");
+	
+	}	
+				
+	for(int count = 0 ; count<studentTotal.length ; count++){
+				
+		if (highestInteger(studentTotal) == studentTotal[count]){
+					
+			System.out.printf("the highest student is %d \n with average of %.4f",studentNames[count],highestInteger(studentTotal)/numberOfSubjects);
+					
+		}
 	}
+
+
+
+	
 	
 	
 
