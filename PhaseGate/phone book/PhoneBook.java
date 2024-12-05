@@ -23,7 +23,7 @@ public class PhoneBook{
 
 
 	public static void menu(){
-	System.out.println("SELLECT AN OPTION: \n1. Add Contact \n2. Remove Contact \n3. Find contact by phonenumber \n4. Find contact by lastname \n5. Edit contact by last name \n6. Edit contact \nEnter number :");
+	System.out.println("SELECT AN OPTION: \n1. Add Contact \n2. Remove Contact \n3. Find contact by phonenumber \n4. Find contact by lastname \n5. Edit contact by last name \n6. Edit contact \nEnter number :");
 	int choice = input.nextInt(); 
 		if(choice == 1){
 			addToCart();
@@ -34,6 +34,8 @@ public class PhoneBook{
 			menu();
 		}
 		else if(choice == 3){
+			int positionIndex = findName(contactFirstNames);
+			System.out.printf("%s %s%n%s%n%s%n%s",contactFirstNames(positionIndex),contactLastNames(positionIndex),phoneNumbers(positionIndex),contactAdresses(positionIndex),contactEmails(positionIndex));
 			menu();
 		}
 		else if(choice == 4){
@@ -104,10 +106,11 @@ public class PhoneBook{
 	
 	}
 	
-	public static void findContact( ArrayList<String> allFirstName ){
+	public static int findName(ArrayList<String> allFirstName ){
 		System.out.printf("Enter First Name to search in contact : ");
-		String firstNameToSearch  = input.nextline();
-		contactFirstNames.indexOf(firstNameToSearch);
+		String nameToSearch  = input.nextLine();
+		int index = allFirstName.indexOf(nameToSearch);
+		return index;
 	}
 
 
