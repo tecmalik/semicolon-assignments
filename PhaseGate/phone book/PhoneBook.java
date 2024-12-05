@@ -1,4 +1,4 @@
-import java.util.Arraylist;
+import java.util.ArrayList;
 import java.util.Scanner;
 public class PhoneBook{
 	
@@ -14,14 +14,7 @@ public class PhoneBook{
 	ArrayList<String> contactAdresses = new ArrayList<String>();
 
 	
-	
-	
-	 while( ){
-	
-		menu(choice);
-		
-	
-	}
+		menu();
 
 		
 	
@@ -29,25 +22,17 @@ public class PhoneBook{
 	
 
 
-	public static int menu(choice){
+	public static void menu(){
 	System.out.print("SELLECT AN OPTION: \n1. Add Contact \n2. Remove Contact \n3. Find contact by phonenumber \n4. Find contact by lastname \n5. Edit contact by \nlast name \n6. Edit contact \n");
 	int choice = input.nextInt(); 
 		if(choice == 1){
 			
 		}
 		else if(choice == 2){
-			System.out.print("Enter First Name :");
-			String contactFirstName  = input.nextLine();
-			System.out.print("Enter Last Name :");
-			String contactLastName  = input.nextLine();
-			System.out.print("Enter Phone Number :");
-			int phoneNumber = input.nextInt();
-			System.out.print("Enter Contact Adress :");
-			String contactAdress = input.nextLine();
-			System.out.print("Enter Contact Email :");
-			String contactEmail = input.nextLine();
+			
 			
 			addToCart(contactFirstName,contactLastName,phoneNumber,contactAdress,contactEmail);
+			menu();
 		}
 		else if(choice == 3){
 			removeFromCart();
@@ -68,24 +53,41 @@ public class PhoneBook{
 
 	}
 	
-	public static void addToCart(String contactFirstName,String contactLastName,int phoneNumber,String contactAdress,String contactEmail){
+	public static void addToCart( ){
+			System.out.print("Enter First Name :");
+			String contactFirstName  = input.nextLine();
+			System.out.print("Enter Last Name :");
+			String contactLastName  = input.nextLine();
+			System.out.print("Enter Phone Number :");
+			int phoneNumber = input.nextInt();
+			System.out.print("Enter Contact Adress :");
+			String contactAdress = input.nextLine();
+			System.out.print("Enter Contact Email :");
+			String contactEmail = input.nextLine();
+			System.out.print("saved>>>>>>>>>>>>>>>");
 	
-		
 			contactFirstNames.add(contactFirstName);
 			contactLastNames.add(contactLastName);
 			phoneNumbers.add(phoneNumber);
-			contactAdresses.add(String contactAdress);
-			contactEmails.add(String contactEmail); 
+			contactAdresses.add(contactAdress);
+			contactEmails.add(contactEmail); 
+			System.out.printf("you Added %s to contact",contactFirstName);
+	}
+	public static void removeFromCart(int number()){
 			
-			
+	
+	
 	
 	}
-	public static void removeFromCart(contactToRemove){
-	
-	
+	public Static void View(){
+			System.out.print("you Added contactFirstNames.add(contactFirstName);
+			contactLastNames.add(contactLastName);
+			phoneNumbers.add(phoneNumber);
+			contactAdresses.add(contactAdress);
+			contactEmails.add(contactEmail); 
+		
 	
 	}
-
 
 	
 }
