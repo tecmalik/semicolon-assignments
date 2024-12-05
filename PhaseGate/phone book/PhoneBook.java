@@ -3,15 +3,17 @@ import java.util.Scanner;
 public class PhoneBook{
 	
 	static Scanner input = new Scanner(System.in);
+	
 
 	public static void main(String[] args){
-	
-	
+
 	ArrayList<Integer> phoneNumbers = new ArrayList<Integer>();
 	ArrayList<String> contactEmails = new ArrayList<String>();
 	ArrayList<String> contactFirstNames = new ArrayList<String>();
 	ArrayList<String> contactLastNames = new ArrayList<String>();
 	ArrayList<String> contactAdresses = new ArrayList<String>();
+	
+	
 
 	
 		menu();
