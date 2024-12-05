@@ -2,7 +2,7 @@ phone_book_menu()
 
 
 def phone_book_menu(){
-	choice = int(input("SELLECT AN OPTION: \n1. Add Contact \n2. Remove Contact \n3. Find contact by phonenumber \n4. Find contact by lastname \n5. Edit contact by \nlast name \n6. Edit contact \n"))
+	choice = int(input("SELLECT AN OPTION: \n1. Add Contact \n2. Remove Contact \n3. Find contact by phonenumber \n4. Find contact by First Name \n5. Edit contact by Last Name \n6. Edit contact \n"))
 	if choice == 1:
 	else if(choice == 2){
 			

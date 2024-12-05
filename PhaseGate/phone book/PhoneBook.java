@@ -23,7 +23,7 @@ public class PhoneBook{
 
 
 	public static void menu(){
-	System.out.println("SELECT AN OPTION: \n1. Add Contact \n2. Remove Contact \n3. Find contact by phonenumber \n4. Find contact by lastname \n5. Edit contact by last name \n6. Edit contact \nEnter number :");
+	System.out.println("SELECT AN OPTION: \n1. Add Contact \n2. Remove Contact \n3. Find contact by Phone Number \n4. Find contact by First Name \n5. Edit contact by Last Name \n6. Edit contact \nEnter Number :");
 	int choice = input.nextInt(); 
 		if(choice == 1){
 			addToCart();
@@ -35,8 +35,15 @@ public class PhoneBook{
 		}
 		else if(choice == 3){
 			int positionIndex = findName(contactFirstNames);
-			System.out.printf("%s %s%n%s%n%s%n%s",contactFirstNames(positionIndex),contactLastNames(positionIndex),phoneNumbers(positionIndex),contactAdresses(positionIndex),contactEmails(positionIndex));
+			if (positionIndex > -1){
+			System.out.println(positionIndex);
+		/**System.out.printf("%s %s%n%s%n%s%n%s",contactFirstNames(positionIndex),contactLastNames(positionIndex),phoneNumbers(positionIndex),contactAdresses(positionIndex),contactEmails(positionIndex));*/
 			menu();
+			}
+			else{ 
+				System.out.print("contact mismatch try again !!!")
+				menu();
+			}
 		}
 		else if(choice == 4){
 			menu();
@@ -108,9 +115,10 @@ public class PhoneBook{
 	
 	public static int findName(ArrayList<String> allFirstName ){
 		System.out.printf("Enter First Name to search in contact : ");
+		input.nextLine();
 		String nameToSearch  = input.nextLine();
-		int index = allFirstName.indexOf(nameToSearch);
-		return index;
+		int nameSearched = allFirstName.indexOf(nameToSearch);
+		return nameSearched;
 	}
 
 
