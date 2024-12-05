@@ -34,14 +34,14 @@ public class PhoneBook{
 			menu();
 		}
 		else if(choice == 3){
-			
+			menu();
 		}
 		else if(choice == 4){
-			
+			menu();
 		}
 
 		else if(choice == 5){
-			
+			menu();
 		}
 		else if(choice == 6){
 			
@@ -80,13 +80,13 @@ public class PhoneBook{
 		System.out.println("enter a number to delete the Contact : ");
 		int index = input.nextInt();
 					
-		if(index < contactFirstNames.size() && index > 0 ){
+		if(index <= contactFirstNames.size() && index > 0 ){
 			
-			contactFirstNames.remove(index);
-			contactLastNames.remove(index);
-			phoneNumbers.remove(index);
-			contactAdresses.remove(index);
-			contactEmails.remove(index); 
+			contactFirstNames.remove(index-1);
+			contactLastNames.remove(index-1);
+			phoneNumbers.remove(index-1);
+			contactAdresses.remove(index-1);
+			contactEmails.remove(index-1); 
 		display(contactFirstNames,contactLastNames,phoneNumbers,contactAdresses,contactEmails);
 		}
 		else{ 
@@ -95,14 +95,20 @@ public class PhoneBook{
 		}
 	}
 	public static void display(ArrayList<String> content1,ArrayList<String> content2,ArrayList<String> content3,ArrayList<String> content4,ArrayList<String> content5){
-		System.out.printf("YOUR CONTACT LIST :);
+		System.out.printf("YOUR CONTACT LIST : ");
+		System.out.println();
 		for(int count = 0; count < content1.size() ; count++){
-			System.out.printf("%d %s %s %s%n%s%n%s%n", count+1,content1,content2,content3,content4,content5);
+			System.out.printf("%d. %s %s%n %s%n%s%n%s%n", count+1,content1.get(count),content2.get(count),content3.get(count),content4.get(count),content5.get(count));
+		System.out.println();
 		}
 	
 	}
 	
-
+	public static void findContact(){
+		
+		
+		
+	}
 
 
 
