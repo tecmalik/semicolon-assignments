@@ -130,7 +130,23 @@ public class PhoneBook{
 	
 	}
 
+	public static void findPhoneNumber(){
+	
+		int positionIndex = findName(phoneNumbers);
+			if (positionIndex > -1){
+			System.out.println(positionIndex);
+		System.out.printf("Here's you go:\n contact %s %s%n%s%n%s%n%s",contactFirstNames.get(positionIndex),contactLastNames.get(positionIndex),phoneNumbers.get(positionIndex),contactAdresses.get(positionIndex),contactEmails.get(positionIndex));
+			menu();
+			}
+			else{ 
+				System.out.print("contact mismatch try again !!!");
+				menu();
+			}
+	
 
+	
+	
+	} 
 
 
 
