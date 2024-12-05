@@ -104,10 +104,10 @@ public class PhoneBook{
 	
 	}
 	
-	public static void findContact(){
-		
-		
-		
+	public static void findContact( ArrayList<String> allFirstName ){
+		System.out.printf("Enter First Name to search in contact : ");
+		String firstNameToSearch  = input.nextline();
+		contactFirstNames.indexOf(firstNameToSearch);
 	}
 
 
