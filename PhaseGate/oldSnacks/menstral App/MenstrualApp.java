@@ -31,10 +31,10 @@ public class MenstrualApp{
 		printOut("Enter your Age :");
 		printLine();
 		int userAge = input.nextInt();
-		printOut("Enter the length of your cycle e.g 28/27 days: ");
+		printOut("Enter the length of your cycle e.g 28|27 days: ");
 		printLine();
 		int cyclelength = input.nextInt();
-		printOut("Enter period duration:\n e.g 4/7 ");
+		printOut("Enter period duration:\n e.g 4|7 ");
 		int periodDuration = input.nextInt();
 		printLine();
 		printOut("Enter the date of the first day of your last period using \"yyyy-mm-dd\" format : ");
