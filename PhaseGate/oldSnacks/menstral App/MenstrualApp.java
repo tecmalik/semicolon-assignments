@@ -38,9 +38,10 @@ public class MenstrualApp{
 		int periodDuration = input.nextInt();
 		printLine();
 		printOut("Enter the date of the first day of your last period using \"yyyy-mm-dd\" format : ");
+		 input.nextLine();
 		String lastPeriodDate = input.nextLine();
 		printLine();
-		
+		LocalDate date = LocalDate.now();
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 		
 		LocalDate lastDate = LocalDate.parse(lastPeriodDate, formatter);	
@@ -56,19 +57,27 @@ public class MenstrualApp{
 		LocalDate safeperiod2 = nextLastDayofBleeding.plusDays(7);
 		
 		printOut(" your next End of Cycle Date"+nextEndofCycleDate);
-		printOut(" your next Last Day of Bleeding"+nextLastDayofBleeding);	
+		System.out.println();
+		printOut(" your next Last Day of Bleeding"+nextLastDayofBleeding);
+		System.out.println();	
 		printOut(" your next Period starts on "+ nextPeriodStart);
+		System.out.println();
 		printOut(" your next end of cucledate Date is "+nextEndofCycleDate);
+		System.out.println();
 		printOut(" your next Safe Period before ovulation starts "+safeperiod1);
+		System.out.println();
 		printOut(" your next Safe Period before ovulation ends "+safeperiod2);
+		System.out.println();
 		printOut(" your next Ovulation date is "+nextOvulationDate);
+		System.out.println();
 		printOut(" your next Safe Period after ovulation starts "+ safePeriod3);
+		System.out.println();
 		printOut(" your next Safe Period after ovulation ends "+safePeriod4);
 	
 			
 	}
 	public static void gender(){
-		printOut("Sellect Gender:   \n1. male \n2. female \n");
+		printOut("Select Gender:   \n1. male \n2. female \n");
 		printLine();
 		int gender = input.nextInt();
 		switch(gender){
