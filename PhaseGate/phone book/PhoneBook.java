@@ -34,19 +34,11 @@ public class PhoneBook{
 			menu();
 		}
 		else if(choice == 3){
-			int positionIndex = findName(contactFirstNames);
-			if (positionIndex > -1){
-			System.out.println(positionIndex);
-		/**System.out.printf("%s %s%n%s%n%s%n%s",contactFirstNames(positionIndex),contactLastNames(positionIndex),phoneNumbers(positionIndex),contactAdresses(positionIndex),contactEmails(positionIndex));*/
 			menu();
-			}
-			else{ 
-				System.out.print("contact mismatch try again !!!")
-				menu();
-			}
 		}
 		else if(choice == 4){
-			menu();
+			findFirstName();
+			
 		}
 
 		else if(choice == 5){
@@ -122,7 +114,21 @@ public class PhoneBook{
 	}
 
 
-
+	public static void findFirstName(){
+	
+		int positionIndex = findName(contactFirstNames);
+			if (positionIndex > -1){
+			System.out.println(positionIndex);
+		/**System.out.printf("%s %s%n%s%n%s%n%s",contactFirstNames(positionIndex),contactLastNames(positionIndex),phoneNumbers(positionIndex),contactAdresses(positionIndex),contactEmails(positionIndex));*/
+			menu();
+			}
+			else{ 
+				System.out.print("contact mismatch try again !!!");
+				menu();
+			}
+	
+	
+	}
 
 
 
