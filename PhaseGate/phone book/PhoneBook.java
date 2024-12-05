@@ -119,7 +119,7 @@ public class PhoneBook{
 		int positionIndex = findName(contactFirstNames);
 			if (positionIndex > -1){
 			System.out.println(positionIndex);
-		/**System.out.printf("%s %s%n%s%n%s%n%s",contactFirstNames(positionIndex),contactLastNames(positionIndex),phoneNumbers(positionIndex),contactAdresses(positionIndex),contactEmails(positionIndex));*/
+		System.out.printf("Here's you go:\n contact %s %s%n%s%n%s%n%s",contactFirstNames.get(positionIndex),contactLastNames.get(positionIndex),phoneNumbers.get(positionIndex),contactAdresses.get(positionIndex),contactEmails.get(positionIndex));
 			menu();
 			}
 			else{ 
