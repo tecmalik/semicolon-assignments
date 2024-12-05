@@ -30,11 +30,11 @@ public class PhoneBook{
 			menu();
 		}
 		else if(choice == 2){
-			
-			
+			removeFromCart();
+			menu();
 		}
 		else if(choice == 3){
-			removeFromCart();
+			
 		}
 		else if(choice == 4){
 			
@@ -68,14 +68,15 @@ public class PhoneBook{
 	
 			contactFirstNames.add(contactFirstName);
 			contactLastNames.add(contactLastName);
-			//phoneNumbers.add(phoneNumber);
+			phoneNumbers.add(phoneNumber);
 			contactAdresses.add(contactAdress);
 			contactEmails.add(contactEmail); 
 			System.out.printf("you Added %s to contact",contactFirstName);
 	}
 	public static void removeFromCart(){
 		
-		//display();
+		display(contactFirstNames,contactLastNames,phoneNumbers,contactAdresses,contactEmails);
+
 		System.out.println("enter a number to delete the Contact : ");
 		int index = input.nextInt();
 					
@@ -86,7 +87,7 @@ public class PhoneBook{
 			phoneNumbers.remove(index);
 			contactAdresses.remove(index);
 			contactEmails.remove(index); 
-		//display();
+		display(contactFirstNames,contactLastNames,phoneNumbers,contactAdresses,contactEmails);
 		}
 		else{ 
 		System.out.print("invalid input !!!");
@@ -94,8 +95,9 @@ public class PhoneBook{
 		}
 	}
 	public static void display(ArrayList<String> content1,ArrayList<String> content2,ArrayList<String> content3,ArrayList<String> content4,ArrayList<String> content5){
+		System.out.printf("YOUR CONTACT LIST :);
 		for(int count = 0; count < content1.size() ; count++){
-			System.out.printf("YOUR CONTACT LIST :\n%d. %s%s%s%s%s", content1,content2,content3,content4,content5);
+			System.out.printf("%d %s %s %s%n%s%n%s%n", count+1,content1,content2,content3,content4,content5);
 		}
 	
 	}
