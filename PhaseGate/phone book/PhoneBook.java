@@ -53,7 +53,7 @@ public class PhoneBook{
 
 	}
 	
-	public static void addToCart( ){
+	public static void addToCart(){
 			System.out.print("Enter First Name :");
 			String contactFirstName  = input.nextLine();
 			System.out.print("Enter Last Name :");
@@ -73,21 +73,39 @@ public class PhoneBook{
 			contactEmails.add(contactEmail); 
 			System.out.printf("you Added %s to contact",contactFirstName);
 	}
-	public static void removeFromCart(int number()){
-			
+	public static void removeFromCart(){
+		System.out.print("enter Contact first Name : ");
+		String removeFirstName = input.nextLine();
+		System.out.print("enter Contact Last Name : ");
+		String removeLastName = input.nextLine();
+
+		for(int index = 0; index<contactFirstNames.length ; index++){
+			if(removeFirstName.equalsIgnoreCase(contactFirstNames[index]) && removeFirstName.equalsIgnoreCase(contactFirstNames[index])){
+				contactFirstNames.remove(contactFirstNames[index]);
+				contactLastNames.remove(contactLastNames[index]);
+				phoneNumbers.remove(phoneNumbers[index]);
+				contactAdresses.remove(contactAdresses[index]);
+				contactEmails.remove(contactEmails[index]); 
+			System.out.printf("you removed %s %s from contact",removeFirstName,removeLastName);
+			}
+			else{ 
+			System.out.print("invalid input !!!");
+			removeFromCart();
+			}
 	
 	
-	
-	}
-	public Static void View(){
-			System.out.print("you Added contactFirstNames.add(contactFirstName);
-			contactLastNames.add(contactLastName);
-			phoneNumbers.add(phoneNumber);
-			contactAdresses.add(contactAdress);
-			contactEmails.add(contactEmail); 
-		
+		}
 	
 	}
 
-	
+
+
+
+
+
+
+
+
+
+
 }
