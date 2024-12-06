@@ -161,7 +161,7 @@ public class PhoneBook{
 			if (positionIndex > -1){
 			System.out.println(positionIndex);
 		System.out.printf("Editing Name:\n%s %s%n%s%n%s%n%s",contactFirstNames.get(positionIndex),contactLastNames.get(positionIndex),phoneNumbers.get(positionIndex),contactAdresses.get(positionIndex),contactEmails.get(positionIndex));
-				input.nextLine();
+				
 			System.out.print("Edit First Name :");
 			String contactFirstNameEdit  = input.nextLine();
 			System.out.print("Edit Last Name :");
@@ -207,9 +207,56 @@ public class PhoneBook{
 		}
 
 	
+	public static void editContact(){
 	
+		display(contactFirstNames,contactLastNames,phoneNumbers,contactAdresses,contactEmails);
+		System.out.print("Enter number of contact to edit : ");
+		int userPositionIndex = input.nextInt();
+		int positionIndex = userPositionIndex-1;
+			if (positionIndex <= contactFirstNames.size() && positionIndex > 0 ){
+			
+		System.out.printf("Editing Name:\n%s %s%n%s%n%s%n%s",contactFirstNames.get(positionIndex),contactLastNames.get(positionIndex),phoneNumbers.get(positionIndex),contactAdresses.get(positionIndex),contactEmails.get(positionIndex));
+				
+			System.out.print("Edit First Name :");
+			String contactFirstNameEdit  = input.nextLine();
+			System.out.print("Edit Last Name :");
+			String contactLastNameEdit  = input.nextLine();
+			System.out.print("Edit Phone Number :");
+			String phoneNumberEdit = input.nextLine();
+			System.out.print("Edit Contact Adress :");
+			String contactAdressEdit = input.nextLine();
+			System.out.print("Edit Contact Email :");
+			String contactEmailEdit = input.nextLine();
+			System.out.print("saved>>>>>>>>>>>>>>>");
+	
+			contactFirstNames.add(positionIndex,contactFirstNameEdit);
+			contactLastNames.add(positionIndex,contactLastNameEdit);
+			phoneNumbers.add(positionIndex,phoneNumberEdit);
+			contactAdresses.add(positionIndex,contactAdressEdit);
+			contactEmails.add(positionIndex,contactEmailEdit); 
+			System.out.printf("you Added %s to contact",contactFirstNameEdit);
+			
+			contactFirstNames.remove(positionIndex+1);
+			contactLastNames.remove(positionIndex+1);
+			phoneNumbers.remove(positionIndex+1);
+			contactAdresses.remove(positionIndex+1);
+			contactEmails.remove(positionIndex+1); 
 
+		
+			System.out.printf("Editing Name:\n%s %s%n%s%n%s%n%s",contactFirstNames.get(positionIndex),contactLastNames.get(positionIndex),phoneNumbers.get(positionIndex),contactAdresses.get(positionIndex),contactEmails.get(positionIndex));
 
+			display(contactFirstNames,contactLastNames,phoneNumbers,contactAdresses,contactEmails);
+			menu();
+			}
+			else{ 
+				System.out.print("contact mismatch try again !!!");
+				menu();
+			}
+	} 
+		
+
+	
+	
 
 
 
