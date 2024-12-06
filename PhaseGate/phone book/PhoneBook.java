@@ -34,18 +34,22 @@ public class PhoneBook{
 			menu();
 		}
 		else if(choice == 3){
+			findPhoneNumber();
 			menu();
 		}
 		else if(choice == 4){
 			findFirstName();
-			
+			menu();
 		}
 
 		else if(choice == 5){
+			editlastName();
 			menu();
 		}
 		else if(choice == 6){
 			
+		}else {
+			System.out.print("Invalid input !!!");
 		}
 
 
@@ -119,7 +123,7 @@ public class PhoneBook{
 		int positionIndex = findName(contactFirstNames);
 			if (positionIndex > -1){
 			System.out.println(positionIndex);
-		System.out.printf("Here's you go:\n contact %s %s%n%s%n%s%n%s",contactFirstNames.get(positionIndex),contactLastNames.get(positionIndex),phoneNumbers.get(positionIndex),contactAdresses.get(positionIndex),contactEmails.get(positionIndex));
+		System.out.printf("Here you go:\n contact %s %s%n%s%n%s%n%s",contactFirstNames.get(positionIndex),contactLastNames.get(positionIndex),phoneNumbers.get(positionIndex),contactAdresses.get(positionIndex),contactEmails.get(positionIndex));
 			menu();
 			}
 			else{ 
@@ -132,21 +136,71 @@ public class PhoneBook{
 
 	public static void findPhoneNumber(){
 	
-		int positionIndex = findName(phoneNumbers);
+		int positionIndex = findPhoneNumber(phoneNumbers);
 			if (positionIndex > -1){
 			System.out.println(positionIndex);
-		System.out.printf("Here's you go:\n contact %s %s%n%s%n%s%n%s",contactFirstNames.get(positionIndex),contactLastNames.get(positionIndex),phoneNumbers.get(positionIndex),contactAdresses.get(positionIndex),contactEmails.get(positionIndex));
+		System.out.printf("Here you go:\n%s %s%n%s%n%s%n%s",contactFirstNames.get(positionIndex),contactLastNames.get(positionIndex),phoneNumbers.get(positionIndex),contactAdresses.get(positionIndex),contactEmails.get(positionIndex));
 			menu();
 			}
 			else{ 
 				System.out.print("contact mismatch try again !!!");
 				menu();
 			}
+	} 
+		public static int findPhoneNumber(ArrayList<String> allFirstName ){
+		System.out.printf("Enter Phone Number to search in contact : ");
+		input.nextLine();
+		String nameToSearch  = input.nextLine();
+		int nameSearched = allFirstName.indexOf(nameToSearch);
+		return nameSearched;
+		}
 	
+	public static void editlastName(){
+	
+		int positionIndex = editLastName(contactLastNames);
+			if (positionIndex > -1){
+			System.out.println(positionIndex);
+		System.out.printf("Editing Name:\n%s %s%n%s%n%s%n%s",contactFirstNames.get(positionIndex),contactLastNames.get(positionIndex),phoneNumbers.get(positionIndex),contactAdresses.get(positionIndex),contactEmails.get(positionIndex));
+				input.nextLine();
+			System.out.print("Edit First Name :");
+			String contactFirstNameEdit  = input.nextLine();
+			System.out.print("Edit Last Name :");
+			String contactLastNameEdit  = input.nextLine();
+			System.out.print("Edit Phone Number :");
+			String phoneNumberEdit = input.nextLine();
+			System.out.print("Edit Contact Adress :");
+			String contactAdressEdit = input.nextLine();
+			System.out.print("Edit Contact Email :");
+			String contactEmailEdit = input.nextLine();
+			System.out.print("saved>>>>>>>>>>>>>>>");
+	
+			contactFirstNames.add(positionIndex,contactFirstNameEdit);
+			contactLastNames.add(positionIndex,contactLastNameEdit);
+			phoneNumbers.add(positionIndex,phoneNumberEdit);
+			contactAdresses.add(positionIndex,contactAdressEdit);
+			contactEmails.add(positionIndex,contactEmailEdit); 
+			System.out.printf("you Added %s to contact",contactFirstName);
+		
+			System.out.printf("Editing Name:\n%s %s%n%s%n%s%n%s",contactFirstNames.get(positionIndex),contactLastNames.get(positionIndex),phoneNumbers.get(positionIndex),contactAdresses.get(positionIndex),contactEmails.get(positionIndex));
+
+			
+			menu();
+			}
+			else{ 
+				System.out.print("contact mismatch try again !!!");
+				menu();
+			}
+	} 
+		public static int editLastName(ArrayList<String> allFirstName ){
+		System.out.printf("Enterlast name to Edit in contact : ");
+		input.nextLine();
+		String nameToSearch  = input.nextLine();
+		int nameSearched = allFirstName.indexOf(nameToSearch);
+		return nameSearched;
+		}
 
 	
 	
-	} 
 
 
 
