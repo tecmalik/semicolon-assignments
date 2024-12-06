@@ -63,30 +63,31 @@ import java.util.Scanner;
 	}
 	
 	public static long getSummedSquareOfReversedEvenPosition(long[] numbers){
-		long totalOfSquares = 0;
+		long totalOfEvenSquares = 0;
 		for(int count = numbers.length; count > 0 ; count--){
-			if( (numbers[numbers.length-2] * numbers[numbers.length-2]) < 10){ 
-				totalOfSquares += (numbers[numbers.length-2] * numbers[numbers.length-2]);
+		
+			if( (numbers[numbers.length-1-count] * numbers[numbers.length-1-count]) < 10){ 
+				totalOfEvenSquares += (numbers[numbers.length-1-count] * numbers[numbers.length-1-count]);
 			
 			}else{
 			
-				totalOfSquares += (numbers[numbers.length-2] * numbers[numbers.length-2])%10;
-				totalOfSquares +=(numbers[numbers.length-2] * numbers[numbers.length-2])/10;
+				totalOfEvenSquares += (numbers[numbers.length-1-count] * numbers[numbers.length-1-count])%10;
+				totalOfEvenSquares +=(numbers[numbers.length-1-count] * numbers[numbers.length-1-count])/10;
 
 			
 			}
+		
 		}
 		
 			
-	return totalOfSquares;
+	return totalOfEvenSquares;
 	}
 
+	//public Static long getSummedSquareOfReversedOddPosition(long[] numbers){
 
 
 
-
-
-
+	//}
 
 
 }
