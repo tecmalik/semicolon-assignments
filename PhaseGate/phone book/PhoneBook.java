@@ -179,7 +179,14 @@ public class PhoneBook{
 			phoneNumbers.add(positionIndex,phoneNumberEdit);
 			contactAdresses.add(positionIndex,contactAdressEdit);
 			contactEmails.add(positionIndex,contactEmailEdit); 
-			System.out.printf("you Added %s to contact",contactFirstName);
+			System.out.printf("you Added %s to contact",contactFirstNameEdit);
+			
+			contactFirstNames.remove(positionIndex+1);
+			contactLastNames.remove(positionIndex+1);
+			phoneNumbers.remove(positionIndex+1);
+			contactAdresses.remove(positionIndex+1);
+			contactEmails.remove(positionIndex+1); 
+
 		
 			System.out.printf("Editing Name:\n%s %s%n%s%n%s%n%s",contactFirstNames.get(positionIndex),contactLastNames.get(positionIndex),phoneNumbers.get(positionIndex),contactAdresses.get(positionIndex),contactEmails.get(positionIndex));
 
@@ -192,7 +199,7 @@ public class PhoneBook{
 			}
 	} 
 		public static int editLastName(ArrayList<String> allFirstName ){
-		System.out.printf("Enterlast name to Edit in contact : ");
+		System.out.printf("Enter Last name to Edit in contact : ");
 		input.nextLine();
 		String nameToSearch  = input.nextLine();
 		int nameSearched = allFirstName.indexOf(nameToSearch);
