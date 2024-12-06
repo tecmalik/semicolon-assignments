@@ -7,34 +7,37 @@ import java.util.Scanner;
 	
 		System.out.print("Enter Credit-Card number : ");
 		long cardNumber = input.nextLong();
-		
-		
+		if (cardLength(cardNumber) == true){
+
+			long[] CardDigits = firstDigitValue(cardNumber);
+			
+
+
+		}
+		else{System.out.print("Card is Not Valid");}
+
 			
 	}
 	
 	public static boolean cardLength(long cardNumber){
 		int numberlength = String.valueOf(cardNumber).length();
 		
-			if (counter<13 || counter>16){
+			if (numberlength<13 || numberlength>16){
 				return false;
 			}
+			
 		return true;
 	}
 	
-	public static void cardtype(long cardNumber){
-		int numberlength = String.valueOf(cardNumber).length();
-			numberlength
-		if(number){
-			
-		}
 	
-	}
-	
-	public static int firstDigitValue(long numbers){
-		int firstDigit = 0;
-		while(number > 10){
-			numbers/10
+	public static long[] firstDigitValue(long numbers){
+		long[] firstDigit = new long[String.valueOf(numbers).length()];
+		int count = 0;
+		while(numbers > 0){
+			firstDigit[count] = numbers % 10;
+			numbers = numbers/10;
+			count++;
 		}
-	return 
+	return firstDigit;
 	}
 }
