@@ -10,11 +10,26 @@ import java.util.Scanner;
 		if (cardLength(cardNumber) == true){
 
 			long[] CardDigits = firstDigitValue(cardNumber);
-			
+			if (cardDigits[0] == 4){	
+				
+			}
+			else if (cardDigits[0] == 5){	
+				
+			}
+			else if (cardDigits[0] == 3 && cardDigits[1]== 7 ){
+				
+			}
+			else if (cardDigits[0] == 6){
+				
+			}
+			else{
+				System.out.print("Card is Not Valid");
+			}
 
 
 		}
-		else{System.out.print("Card is Not Valid");}
+		else{System.out.print("Card is Not Valid");
+		}
 
 			
 	}
