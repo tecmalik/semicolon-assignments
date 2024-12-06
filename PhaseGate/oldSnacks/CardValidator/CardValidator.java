@@ -12,11 +12,12 @@ import java.util.Scanner;
 			
 	}
 	
-	public class boolean cardLength(long cardNumber){
+	public static boolean cardLength(long cardNumber){
+		int numberlength = String.valueOf(cardNumber).length();
 		
-		for(int count = 0; count<(String)cardNumber.length; count++){
-		if count
-		}
-		
+			if (counter<13 || counter>16){
+				return false;
+			}
+		return true;
 	}
 }
