@@ -20,4 +20,21 @@ import java.util.Scanner;
 			}
 		return true;
 	}
+	
+	public static void cardtype(long cardNumber){
+		int numberlength = String.valueOf(cardNumber).length();
+			numberlength
+		if(number){
+			
+		}
+	
+	}
+	
+	public static int firstDigitValue(long numbers){
+		int firstDigit = 0;
+		while(number > 10){
+			numbers/10
+		}
+	return 
+	}
 }
