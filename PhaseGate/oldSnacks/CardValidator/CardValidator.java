@@ -9,28 +9,31 @@ import java.util.Scanner;
 		long cardNumber = input.nextLong();
 		if (cardLength(cardNumber) == true){
 
-			long[] CardDigits = firstDigitValue(cardNumber);
-			if (cardDigits[0] == 4){	
+			long[] cardDigits = firstDigitValue(cardNumber);
+		for(int count = 0; count < cardDigits.length ; count++){
+				if (cardDigits[0] == 4){	
 				
-			}
-			else if (cardDigits[0] == 5){	
+				}
+				else if (cardDigits[0] == 5){	
 				
-			}
-			else if (cardDigits[0] == 3 && cardDigits[1]== 7 ){
+				}
+				else if (cardDigits[0] == 3 && cardDigits[1]== 7 ){
 				
-			}
-			else if (cardDigits[0] == 6){
+				}
+				else if (cardDigits[0] == 6){
 				
-			}
-			else{
-				System.out.print("Card is Not Valid");
-			}
-
-
-		}
-		else{System.out.print("Card is Not Valid");
+				}
+				else{
+					System.out.print("Card is Not Valid");
+				}
 		}
 
+			}
+			else{System.out.print("Card is Not Valid");
+			}
+		
+	
+	
 			
 	}
 	
@@ -56,17 +59,17 @@ import java.util.Scanner;
 	return firstDigit;
 	}
 	
-	public static long[] getSummedSquareOfReversedEvenPosition(long[] numbers){
-		
-		long[] = new long[numbers.length/2]
-		for(int count = numbers.length; count>0 ; count--){
-			if( numbers[numbers.length-2] * numbers[numbers.length-2]){ 
-				
+	public static long getSummedSquareOfReversedEvenPosition(long[] numbers){
+		long totalOfSquares = 0;
+		for(int count = numbers.length; count > 0 ; count--){
+			if( (numbers[numbers.length-2] * numbers[numbers.length-2]) < 10){ 
+				totalOfSquares += (numbers[numbers.length-2] * numbers[numbers.length-2]);
+			
 			}
 		}
 		
 			
-	
+	return totalOfSquares;
 	}
 
 
