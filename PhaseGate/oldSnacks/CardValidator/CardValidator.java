@@ -55,4 +55,26 @@ import java.util.Scanner;
 		}
 	return firstDigit;
 	}
+	
+	public static long[] getSummedSquareOfReversedEvenPosition(long[] numbers){
+		
+		long[] = new long[numbers.length/2]
+		for(int count = numbers.length; count>0 ; count--){
+			if( numbers[numbers.length-2] * numbers[numbers.length-2]){ 
+				
+			}
+		}
+		
+			
+	
+	}
+
+
+
+
+
+
+
+
+
 }
