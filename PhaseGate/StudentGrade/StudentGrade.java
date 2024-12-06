@@ -79,15 +79,15 @@ public class StudentGrade{
 		}
   
 			
-		 int[] newTotal = getSort(sortedStudentTotal);
+		int[] newTotal = getSort(sortedStudentTotal);
 		int[] position = new int[newTotal.length];
 		for(int count = 0; count<sortedStudentTotal.length ;count++){
-				
+				int check = newTotal[count]; 
 			for(int index = 0; index < sortedStudentTotal.length; index++){
 				
-				if (newTotal[count] == studentTotal[index]){
+				if ( check == studentTotal[index]){
 					
-					position[count] = count;
+					position[count] = count ;
 					
 				}
 			}
@@ -154,7 +154,7 @@ public class StudentGrade{
 			}
 			System.out.println();
 		
-						for(int count=0; count< studentTotal.length; count++){
+				for(int count=0; count< studentTotal.length; count++){
 				int lowest = lowestInteger(studentTotal);
 				
 				if( lowest == studentTotal[count]){
@@ -168,17 +168,10 @@ public class StudentGrade{
 
 
 
-
-
-
-
-
-
-	
-	
-
 	}	
 		
+
+
 
 
 
