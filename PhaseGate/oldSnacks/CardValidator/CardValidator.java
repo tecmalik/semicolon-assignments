@@ -12,16 +12,19 @@ import java.util.Scanner;
 			long[] cardDigits = firstDigitValue(cardNumber);
 		for(int count = 0; count < cardDigits.length ; count++){
 				if (cardDigits[0] == 4){	
-				
+					getSummedSquareOfReversedEvenPosition(cardDigits);
 				}
 				else if (cardDigits[0] == 5){	
-				
+					getSummedSquareOfReversedEvenPosition(cardDigits);
+
 				}
 				else if (cardDigits[0] == 3 && cardDigits[1]== 7 ){
-				
+					getSummedSquareOfReversedEvenPosition(cardDigits);
+
 				}
 				else if (cardDigits[0] == 6){
-				
+					getSummedSquareOfReversedEvenPosition(cardDigits);
+
 				}
 				else{
 					System.out.print("Card is Not Valid");
@@ -64,6 +67,12 @@ import java.util.Scanner;
 		for(int count = numbers.length; count > 0 ; count--){
 			if( (numbers[numbers.length-2] * numbers[numbers.length-2]) < 10){ 
 				totalOfSquares += (numbers[numbers.length-2] * numbers[numbers.length-2]);
+			
+			}else{
+			
+				totalOfSquares += (numbers[numbers.length-2] * numbers[numbers.length-2])%10;
+				totalOfSquares +=(numbers[numbers.length-2] * numbers[numbers.length-2])/10;
+
 			
 			}
 		}
