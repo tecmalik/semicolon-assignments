@@ -1,0 +1,12 @@
+pseudocode 
+prompt the user to enter card number
+collect card input store as cardNumber
+check if its greater the 13 or less than or equal to 16
+else invalid 
+check if its Starts with 4 or 5 or 37 or 6
+else invalid 
+check it digit from left to right if doubling of the digit results in a two-digit number Add up the two digits to get a single-digit numbers 
+add all digits in even position collected form step above
+add all the digits in the odd places from right to left in the card number 
+sum the result from both steps above 
+if result id divisible by 10 the card is valid else invalid 
