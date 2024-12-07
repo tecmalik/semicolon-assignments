@@ -15,29 +15,30 @@ import java.util.Scanner;
 		if (cardLength(cardNumber) == true){
 
 			long[] cardDigits = firstDigitValue(cardNumber);
-		for(int count = 0; count < cardDigits.length ; count++){
+			for(int count = 0; count<cardDigits.length;count++){ System.out.print(cardDigits[count]);}
+		
 				if (cardDigits[0] == 4){	
-					getSumOfReversedEvenAndOddPositions(cardDigits);
+				System.out.print(getValidity(cardDigits));
 				}
 				else if (cardDigits[0] == 5){	
-					getSumOfReversedEvenAndOddPositions(cardDigits);
+				System.out.print(getValidity(cardDigits));
 
 				}
 				else if (cardDigits[0] == 3 && cardDigits[1]== 7 ){
-					getSumOfReversedEvenAndOddPositions(cardDigits);
+				System.out.print(getValidity(cardDigits));
 
 				}
 				else if (cardDigits[0] == 6){
-					getSumOfReversedEvenAndOddPositions(cardDigits);
+				System.out.print(getValidity(cardDigits));
 
 				}
 				else{
 					System.out.print("Card is Not Valid");
 				}
-		}
+		
 
-			}
-			else{System.out.print("Card is Not Valid");
+		}
+			else{System.out.print("Card is Not Valid !!!");
 			}
 		
 	
@@ -73,12 +74,14 @@ import java.util.Scanner;
 	
 	
 	public static long[] firstDigitValue(long numbers){
-		long[] firstDigit = new long[String.valueOf(numbers).length()];
-		int count = 0;
+		int size =String.valueOf(numbers).length();
+		long[] firstDigit = new long[size];
+		int count = size;
 		while(numbers > 0){
-			firstDigit[count] = numbers % 10;
+			
+			firstDigit[count-1] = numbers % 10;
 			numbers = numbers/10;
-			count++;
+			count--;
 		}
 	return firstDigit;
 	}
