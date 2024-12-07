@@ -17,22 +17,18 @@ import java.util.Scanner;
 			long[] cardDigits = firstDigitValue(cardNumber);
 		for(int count = 0; count < cardDigits.length ; count++){
 				if (cardDigits[0] == 4){	
-					getSummedSquareOfReversedEvenPosition(cardDigits);
-					getSumOfReversedOddPosition(cardDigits);
+					getSumOfReversedEvenAndOddPositions(cardDigits);
 				}
 				else if (cardDigits[0] == 5){	
-					getSummedSquareOfReversedEvenPosition(cardDigits);
-					 getSumOfReversedOddPosition(cardDigits);
+					getSumOfReversedEvenAndOddPositions(cardDigits);
 
 				}
 				else if (cardDigits[0] == 3 && cardDigits[1]== 7 ){
-					getSummedSquareOfReversedEvenPosition(cardDigits);
-					 getSumOfReversedOddPosition(cardDigits);
+					getSumOfReversedEvenAndOddPositions(cardDigits);
 
 				}
 				else if (cardDigits[0] == 6){
-					getSummedSquareOfReversedEvenPosition(cardDigits);
-					getSumOfReversedOddPosition(cardDigits);
+					getSumOfReversedEvenAndOddPositions(cardDigits);
 
 				}
 				else{
@@ -48,6 +44,22 @@ import java.util.Scanner;
 	
 			
 	}
+	
+	public static String getValidity(long[] value){
+		boolean validity = divisibilityBy10Checker(getSumOfReversedEvenAndOddPositions(value));
+		if (validity == true){
+			return "Valid";
+		}
+		
+	return "Invalid";
+	}
+	
+	public static long getSumOfReversedEvenAndOddPositions(long[] numbers){
+		long sum = 0;
+		sum = getSummedSquareOfReversedEvenPosition(numbers) + getSumOfReversedOddPosition(numbers) ;
+		return sum;
+	}
+
 	
 	public static boolean cardLength(long cardNumber){
 		int numberlength = String.valueOf(cardNumber).length();
@@ -101,6 +113,7 @@ import java.util.Scanner;
 			
 	return totalOfOddPosition;
 	}
+	
 	
 	public static boolean divisibilityBy10Checker(long number){
 		if (number%10 == 0){
