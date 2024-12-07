@@ -5,6 +5,11 @@ import java.util.Scanner;
 
 	public static void main(String... args){
 	
+		long[] test = {4,3,8,8,5,7,6,0,1,8,4,0,2,6,2,6};
+		System.out.println(getSummedSquareOfReversedEvenPosition(test));
+	System.out.println(getSumOfReversedOddPosition(test));
+
+	
 		System.out.print("Enter Credit-Card number : ");
 		long cardNumber = input.nextLong();
 		if (cardLength(cardNumber) == true){
@@ -64,14 +69,14 @@ import java.util.Scanner;
 	
 	public static long getSummedSquareOfReversedEvenPosition(long[] numbers){
 		long totalOfEvenSquares = 0;
-		for(int count = numbers.length-1; count > 0 ; count-=2){
+		for(int count = numbers.length-2; count > 0 ; count-=2){
 		
-			if( (numbers[count] * numbers[count]) < 10){ 
+			if( (numbers[count] * 2 < 10){ 
 				totalOfEvenSquares += (numbers[numbers.length-1-count] * numbers[numbers.length-1-count]);
 			
 			}else{
 			
-				totalOfEvenSquares += ([count] * numbers[count])%10;
+				totalOfEvenSquares += (numbers[count] * numbers[count])%10;
 				totalOfEvenSquares +=(numbers[count] * numbers[count])/10;
 
 			
@@ -83,11 +88,17 @@ import java.util.Scanner;
 	return totalOfEvenSquares;
 	}
 
-	//public Static long getSummedSquareOfReversedOddPosition(long[] numbers){
+	public static long getSumOfReversedOddPosition(long[] numbers){
+		long totalOfOddPosition = 0;
+		for(int count = numbers.length-1 ; count > 0 ; count-=2){
 
+				totalOfOddPosition += numbers[count];
+		}
+		
+			
+	return totalOfOddPosition;
+	}
 
-
-	//}
 
 
 }
