@@ -18,17 +18,21 @@ import java.util.Scanner;
 		for(int count = 0; count < cardDigits.length ; count++){
 				if (cardDigits[0] == 4){	
 					getSummedSquareOfReversedEvenPosition(cardDigits);
+					getSumOfReversedOddPosition(cardDigits);
 				}
 				else if (cardDigits[0] == 5){	
 					getSummedSquareOfReversedEvenPosition(cardDigits);
+					 getSumOfReversedOddPosition(cardDigits);
 
 				}
 				else if (cardDigits[0] == 3 && cardDigits[1]== 7 ){
 					getSummedSquareOfReversedEvenPosition(cardDigits);
+					 getSumOfReversedOddPosition(cardDigits);
 
 				}
 				else if (cardDigits[0] == 6){
 					getSummedSquareOfReversedEvenPosition(cardDigits);
+					getSumOfReversedOddPosition(cardDigits);
 
 				}
 				else{
@@ -97,7 +101,14 @@ import java.util.Scanner;
 			
 	return totalOfOddPosition;
 	}
+	
+	public static boolean divisibilityBy10Checker(long number){
+		if (number%10 == 0){
+			return true;
+			}
 
+	return false;
+	}
 
 
 }
