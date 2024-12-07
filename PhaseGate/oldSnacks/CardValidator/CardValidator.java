@@ -5,17 +5,19 @@ import java.util.Scanner;
 
 	public static void main(String... args){
 	
-		long[] test = {4,3,8,8,5,7,6,0,1,8,4,0,2,6,2,6};
-		System.out.println(getSummedSquareOfReversedEvenPosition(test));
-	System.out.println(getSumOfReversedOddPosition(test));
+		cardValidatorChecker();
 
 	
+			
+	}
+	
+	public static void cardValidatorChecker(){
+		
 		System.out.print("Enter Credit-Card number : ");
 		long cardNumber = input.nextLong();
 		if (cardLength(cardNumber) == true){
 
 			long[] cardDigits = firstDigitValue(cardNumber);
-			for(int count = 0; count<cardDigits.length;count++){ System.out.print(cardDigits[count]);}
 		
 				if (cardDigits[0] == 4){	
 				System.out.print(getValidity(cardDigits));
@@ -40,11 +42,9 @@ import java.util.Scanner;
 		}
 			else{System.out.print("Card is Not Valid !!!");
 			}
-		
 	
 	
-			
-	}
+	} 
 	
 	public static String getValidity(long[] value){
 		boolean validity = divisibilityBy10Checker(getSumOfReversedEvenAndOddPositions(value));
