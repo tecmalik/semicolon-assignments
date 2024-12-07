@@ -18,21 +18,47 @@ import java.util.Scanner;
 		if (cardLength(cardNumber) == true){
 
 			long[] cardDigits = firstDigitValue(cardNumber);
-		
+				
 				if (cardDigits[0] == 4){	
+				System.out.println("************************************************* ");
+				System.out.print(" Credit card type : Visa Card ");
+				System.out.println(" Credit card type : ");
+				System.out.printf(" Credit card Number : %d%n",cardNumber);
+				System.out.printf(" Credit card length : %d%n",cardDigits.length);
+				System.out.print(" Credit card Status : ");
 				System.out.print(getValidity(cardDigits));
+				System.out.println("************************************************* ");
 				}
 				else if (cardDigits[0] == 5){	
-				System.out.print(getValidity(cardDigits));
+				System.out.println("************************************************* ");
+				System.out.print(" Credit card type : Master card");
+				System.out.println(" Credit card type : ");
+				System.out.printf(" Credit card Number : %d%n",cardNumber);
+				System.out.printf(" Credit card length : %d%n",cardDigits.length);
+				System.out.print(" Credit card Status : ");
+				System.out.println(getValidity(cardDigits));
+				System.out.println("************************************************* ");
 
 				}
 				else if (cardDigits[0] == 3 && cardDigits[1]== 7 ){
-				System.out.print(getValidity(cardDigits));
-
+				System.out.println("************************************************* ");
+				System.out.print(" Credit card type : American Express Card");
+				System.out.println(" Credit card type : ");
+				System.out.printf(" Credit card Number : %d%n",cardNumber);
+				System.out.printf(" Credit card length : %d%n",cardDigits.length);
+				System.out.print(" Credit card Status : ");
+				System.out.println(getValidity(cardDigits));
+				System.out.println("************************************************* ");
 				}
 				else if (cardDigits[0] == 6){
-				System.out.print(getValidity(cardDigits));
-
+				System.out.println("************************************************* ");
+				System.out.print(" Credit card type : Discover Card");
+				System.out.println(" Credit card type : ");
+				System.out.printf(" Credit card Number : %d%n",cardNumber);
+				System.out.printf(" Credit card length : %d%n",cardDigits.length);
+				System.out.print(" Credit card Status : ");
+				System.out.println(getValidity(cardDigits));
+				System.out.println("************************************************* ");
 				}
 				else{
 					System.out.print("Card is Not Valid");
