@@ -64,15 +64,15 @@ import java.util.Scanner;
 	
 	public static long getSummedSquareOfReversedEvenPosition(long[] numbers){
 		long totalOfEvenSquares = 0;
-		for(int count = numbers.length; count > 0 ; count--){
+		for(int count = numbers.length-1; count > 0 ; count-=2){
 		
-			if( (numbers[numbers.length-1-count] * numbers[numbers.length-1-count]) < 10){ 
+			if( (numbers[count] * numbers[count]) < 10){ 
 				totalOfEvenSquares += (numbers[numbers.length-1-count] * numbers[numbers.length-1-count]);
 			
 			}else{
 			
-				totalOfEvenSquares += (numbers[numbers.length-1-count] * numbers[numbers.length-1-count])%10;
-				totalOfEvenSquares +=(numbers[numbers.length-1-count] * numbers[numbers.length-1-count])/10;
+				totalOfEvenSquares += ([count] * numbers[count])%10;
+				totalOfEvenSquares +=(numbers[count] * numbers[count])/10;
 
 			
 			}
