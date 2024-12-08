@@ -131,6 +131,64 @@ public class StudentGrade{
 
 
 
+
+
+
+
+
+int[][] highestAndLowest = new int [studentTotal.length][2] 
+for(int index=0; index< .length ; index++){
+	for(int counter = 0; counter<2 ; counter++){
+		
+		studentGrade[]
+		highestAndLowest[index][1] = ;
+		highestAndLowest[index][2] = ;
+	}
+}
+
+highestInteger( lowestInteger(
+
+
+
+
+
+
+		System.out.println("STUDENT SUMMARY");
+		for(int counter = 0; counter <studentTotal.length; counter++  ){
+			for(int count=0; count < studentTotal.length ; count++){
+				if(sortedStudentTotal[0] == ){
+				System.out.println("Highest Scoring Student is %d :",);					
+				System.out.println("lowest Scoring Student is %d :",);
+				System.out.println(" AverageScore is : %d :",);
+				System.out.println(" Number of Passes: %d \n Number of failures %d :", );
+				bumber 
+				break;
+				}
+				if(sortedStudentTotal[sortedStudentTotal.length-1] == ){
+			System.out.println("Hihest Scoring Student is ");					break;
+
+			} 
+			}
+			
+		
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		
 		for(int count=0 ; count< studentNumber ; count++){
 		
