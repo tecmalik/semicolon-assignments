@@ -101,8 +101,8 @@ public class StudentGrade{
 				
 	System.out.println("========================================================================== ");
 	System.out.print("Student");
-		for(int count=0 ; count<studentNumber; count++){
-		System.out.printf("	%s",studentSubjects[count]);
+		for(int count=0 ; count<studentSubjects.length; count++){
+			System.out.printf("	%s",studentSubjects[count]);
 		
 		}
 	System.out.printf("%9s ","ToT");
