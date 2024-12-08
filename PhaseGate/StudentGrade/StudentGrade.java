@@ -153,8 +153,14 @@ public class StudentGrade{
 			for(int count=0; count < studentTotal.length ; count++){
 	
 				System.out.println(" Subject[] ");
-				System.out.println("Highest Scoring Student is %s Scoring %d :",);					
-				System.out.println("lowest Scoring Student is %s Scoring %d :",);
+				System.out.println("Highest Scoring Student is %s Scoring %d :",);
+					if(highestAndLowestPreStudent[][] == ){
+						
+					}
+				System.out.println("lowest Scoring Student is %s Scoring %d :",);	
+						if(highestAndLowestPreStudent[][] == ){
+							
+						}
 				System.out.println(" AverageScore Score is : %d :",);
 				System.out.println(" Number of Passes: %d \n Number of failures %d :", );
 				bumber 
