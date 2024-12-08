@@ -150,17 +150,22 @@ public class StudentGrade{
 
 		System.out.println("STUDENT SUMMARY");
 		for(int counter = 0; counter<studentTotal.length; counter++){
-			for(int count=0; count < studentTotal.length ; count++){
+			
 	
 				System.out.println(" Subject[] ");
 				System.out.println("Highest Scoring Student is %s Scoring %d :",);
-					if(highestAndLowestPreStudent[][] == ){
-						
+				for(int count=0; count < studentTotal.length ; count++){
+					if(highestAndLowestPreStudent[][1] == ){
+						System.out.print();
 					}
-				System.out.println("lowest Scoring Student is %s Scoring %d :",);	
-						if(highestAndLowestPreStudent[][] == ){
-							
-						}
+				}
+				System.out.println("lowest Scoring Student is %s Scoring %d :",);
+				for(int count=0; count < studentTotal.length ; count++){
+	
+					if(highestAndLowestPreStudent[][2] == ){
+						System.out.print();
+					}
+				}
 				System.out.println(" AverageScore Score is : %d :",);
 				System.out.println(" Number of Passes: %d \n Number of failures %d :", );
 				bumber 
