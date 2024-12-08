@@ -136,6 +136,9 @@ public class StudentGrade{
 
 
 
+
+
+
 		int[][] highestAndLowestPreStudent = new int [studentTotal.length][2] 
 		for(int index=0; index<studentTotal.length ; index++){
 		
@@ -143,12 +146,6 @@ public class StudentGrade{
 		highestAndLowestPreStudent[index][2] = lowestInteger(studentGrade[index]);
 		
 		}
-
- 
-
-
-
-
 
 
 		System.out.println("STUDENT SUMMARY");
