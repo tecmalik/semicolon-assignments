@@ -136,17 +136,15 @@ public class StudentGrade{
 
 
 
-int[][] highestAndLowest = new int [studentTotal.length][2] 
-for(int index=0; index< .length ; index++){
-	for(int counter = 0; counter<2 ; counter++){
+		int[][] highestAndLowestPreStudent = new int [studentTotal.length][2] 
+		for(int index=0; index<studentTotal.length ; index++){
 		
-		studentGrade[]
-		highestAndLowest[index][1] = ;
-		highestAndLowest[index][2] = ;
-	}
-}
+		highestAndLowestPreStudent[index][1] = highestInteger(studentGrade[index]);
+		highestAndLowestPreStudent[index][2] = lowestInteger(studentGrade[index]);
+		
+		}
 
-highestInteger( lowestInteger(
+ 
 
 
 
