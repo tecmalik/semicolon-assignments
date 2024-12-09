@@ -151,9 +151,9 @@ public class StudentGrade{
 		int[] totalPreSubject = new int [numberOfSubjects.length][2] 
 		for(int index=0; index<numberOfSubjects.length ; index++){
 			totalPreSubject[index] = listTotal(eachSubjects[index]);
-		
+			
 		}
-
+		
 
 
 
@@ -182,8 +182,9 @@ public class StudentGrade{
 						System.out.println();
 					}
 				}
-				System.out.println(" Total Score is : %d",);
-				System.out.println(" Average Score Score is : %d",);
+				System.out.printf(" Total Score is : %d",totalPreSubject[index]);
+				System.out.println();
+				System.out.printf(" Average Score Score is : %.3f%n",(float)totalPreSubject[index]/studentNumber);
 				System.out.println(" Number of Passes: %d \n Number of failures is : %d" ,  ); 
 				break;
 		
