@@ -147,6 +147,13 @@ public class StudentGrade{
 		highestAndLowestPreSubject[index][2] = lowestInteger(eachSubjects[index]);
 		
 		}
+		
+		int[] totalPreSubject = new int [numberOfSubjects.length][2] 
+		for(int index=0; index<numberOfSubjects.length ; index++){
+			totalPreSubject[index] = listTotal(eachSubjects[index]);
+		
+		}
+
 
 
 
@@ -175,9 +182,9 @@ public class StudentGrade{
 						System.out.println();
 					}
 				}
-
-				System.out.println(" AverageScore Score is : %d :",);
-				System.out.println(" Number of Passes: %d \n Number of failures %d :" ,  ); 
+				System.out.println(" Total Score is : %d",);
+				System.out.println(" Average Score Score is : %d",);
+				System.out.println(" Number of Passes: %d \n Number of failures is : %d" ,  ); 
 				break;
 		
 				if(sortedStudentTotal[sortedStudentTotal.length-1] == ){
