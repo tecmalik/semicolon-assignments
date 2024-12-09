@@ -161,7 +161,7 @@ public class StudentGrade{
 					passesAndFailuresOfEachSubjects[index][1] +=1;
 				}
 				else{
-					passesAndFailuresOfEachSubjects[index][2] +=1 
+					passesAndFailuresOfEachSubjects[index][2] +=1; 
 				}
 			}
 		}
@@ -182,8 +182,7 @@ public class StudentGrade{
 				for(int count=0; count < studentTotal.length ; count++){
 
 					if(highestAndLowestPreSubject[count][1] == studentGrade[index][count]){
-						System.out.printf( %s Scoring %d :",studentNames[count] ,highestAndLowestPreSubject[count][1]);
-						System.out.println();
+						System.out.prinf( %s Scoring :%d%n",studentNames[count] ,highestAndLowestPreSubject[count][1]);
 					}
 				}
 				System.out.println("lowest Scoring Student is");
@@ -198,26 +197,9 @@ public class StudentGrade{
 				System.out.printf(" Average Score Score is : %.3f%n",(float)totalPreSubject[index]/studentNumber);
 				System.out.printf(" Number of Passes: %d \n Number of failures is : %d%n",passesAndFailuresOfEachSubjects[index][1] ,passesAndFailuresOfEachSubjects[index][2] ); 
 
-				} 
-			}
+		} 
+
 			
-		
-		}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 		
@@ -236,7 +218,7 @@ public class StudentGrade{
 				
 				if( highest == studentTotal[count]){
 					
-			System.out.printf("the highest student is %s \n with average of %.4f", studentNames[count],(float)highestInteger(studentTotal)/numberOfSubjects);
+					System.out.printf("the highest student is %s \n with average of %.4f", studentNames[count],(float)highestInteger(studentTotal)/numberOfSubjects);
 					
 				}
 			
@@ -248,7 +230,7 @@ public class StudentGrade{
 				
 				if( lowest == studentTotal[count]){
 					
-			System.out.printf("the lowest student is %s \n with average of %.4f", studentNames[count],(float)lowestInteger(studentTotal)/numberOfSubjects);
+					System.out.printf("the lowest student is %s \n with average of %.4f", studentNames[count],(float)lowestInteger(studentTotal)/numberOfSubjects);
 					
 				}
 			
