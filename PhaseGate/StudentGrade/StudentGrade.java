@@ -162,7 +162,7 @@ public class StudentGrade{
 				System.out.print("Highest Scoring Student is",);
 				for(int count=0; count < studentTotal.length ; count++){
 
-					if(highestAndLowestPreSubject[counter][1] == studentGrade[][counter]){
+					if(highestAndLowestPreSubject[counter][1] == studentGrade[index][counter]){
 						System.out.println( %s Scoring %d :",studentNames[counter] ,highestAndLowestPreSubject[counter][1]);
 					}
 				}
