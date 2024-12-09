@@ -174,7 +174,7 @@ public class StudentGrade{
 
 
 		System.out.println("STUDENT SUMMARY");
-		for(int index = 0; index < studentNumber  ; index++){
+		for(int index = 0; index < numberOfSubjects ; index++){
 			
 	
 				System.out.println( studentSubjects[index] );
