@@ -133,6 +133,12 @@ public class StudentGrade{
 
 
 
+		int[][] eachSubjects = new int[numberOfSubjects][studentNumber];
+		for(int index = 0 ; index<studentTotal.length ; index++){
+			for(int count = 0 ; count<studentNumber.length ; count++){
+				eachSubjects[index][count] = studentGrade[count][]
+			}		
+		}
 
 
 
@@ -152,17 +158,17 @@ public class StudentGrade{
 		for(int counter = 0; counter<studentTotal.length; counter++){
 			
 	
-				System.out.println(" Subject[] ");
-				System.out.println("Highest Scoring Student is %s Scoring %d :",);
+				System.out.println( studentSubjects[counter] );
+				System.out.print("Highest Scoring Student is",);
 				for(int count=0; count < studentTotal.length ; count++){
-					if(highestAndLowestPreStudent[][1] == ){
-						System.out.print();
+					if(highestAndLowestPreStudent[counter][1] == studentGrade[counter][count]){
+						System.out.print( %s Scoring %d :",studentNames[] ,highestAndLowestPreStudent[counter][1]);
 					}
 				}
 				System.out.println("lowest Scoring Student is %s Scoring %d :",);
 				for(int count=0; count < studentTotal.length ; count++){
 	
-					if(highestAndLowestPreStudent[][2] == ){
+					if(highestAndLowestPreStudent[counter][2] == studentGrade[][]){
 						System.out.print();
 					}
 				}
