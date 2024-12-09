@@ -134,42 +134,43 @@ public class StudentGrade{
 
 
 		int[][] eachSubjects = new int[numberOfSubjects][studentNumber];
-		for(int index = 0 ; index<studentTotal.length ; index++){
+		for(int index = 0 ; index<numberOfSubjects.length ; index++){
 			for(int count = 0 ; count<studentNumber.length ; count++){
-				eachSubjects[index][count] = studentGrade[count][]
+				eachSubjects[index][count] = studentGrade[count][index];
 			}		
 		}
 
-
-
-
-
-
-		int[][] highestAndLowestPreStudent = new int [studentTotal.length][2] 
-		for(int index=0; index<studentTotal.length ; index++){
+		int[][] highestAndLowestPreSubject = new int [numberOfSubjects.length][2] 
+		for(int index=0; index<numberOfSubjects.length ; index++){
 		
-		highestAndLowestPreStudent[index][1] = highestInteger(studentGrade[index]);
-		highestAndLowestPreStudent[index][2] = lowestInteger(studentGrade[index]);
+		highestAndLowestPreSubject[index][1] = highestInteger(eachSubjects[index]);
+		highestAndLowestPreSubject[index][2] = lowestInteger(eachSubjects[index]);
 		
 		}
 
 
+
+
+		
+
+
 		System.out.println("STUDENT SUMMARY");
-		for(int counter = 0; counter<studentTotal.length; counter++){
+		for(int index = 0; index<numberOfSubjects.length; index++){
 			
 	
-				System.out.println( studentSubjects[counter] );
+				System.out.println( studentSubjects[index] );
 				System.out.print("Highest Scoring Student is",);
 				for(int count=0; count < studentTotal.length ; count++){
-					if(highestAndLowestPreStudent[counter][1] == studentGrade[counter][count]){
-						System.out.print( %s Scoring %d :",studentNames[] ,highestAndLowestPreStudent[counter][1]);
+
+					if(highestAndLowestPreSubject[counter][1] == studentGrade[][counter]){
+						System.out.println( %s Scoring %d :",studentNames[counter] ,highestAndLowestPreSubject[counter][1]);
 					}
 				}
 				System.out.println("lowest Scoring Student is %s Scoring %d :",);
 				for(int count=0; count < studentTotal.length ; count++){
 	
-					if(highestAndLowestPreStudent[counter][2] == studentGrade[][]){
-						System.out.print();
+					if(highestAndLowestPreSubject[counter][2] == studentGrade[][]){
+						System.out.print( %s Scoring %d :",studentNames[counter],highestAndLowestPreSubject[counter][1]);
 					}
 				}
 				System.out.println(" AverageScore Score is : %d :",);
