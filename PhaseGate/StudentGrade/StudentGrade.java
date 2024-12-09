@@ -159,20 +159,23 @@ public class StudentGrade{
 			
 	
 				System.out.println( studentSubjects[index] );
-				System.out.print("Highest Scoring Student is",);
+				System.out.print("Highest Scoring Student is");
 				for(int count=0; count < studentTotal.length ; count++){
 
-					if(highestAndLowestPreSubject[counter][1] == studentGrade[index][counter]){
-						System.out.println( %s Scoring %d :",studentNames[counter] ,highestAndLowestPreSubject[counter][1]);
+					if(highestAndLowestPreSubject[count][1] == studentGrade[index][count]){
+						System.out.printf( %s Scoring %d :",studentNames[count] ,highestAndLowestPreSubject[count][1]);
+						System.out.println();
 					}
 				}
-				System.out.println("lowest Scoring Student is %s Scoring %d :",);
+				System.out.println("lowest Scoring Student is");
 				for(int count=0; count < studentTotal.length ; count++){
-	
-					if(highestAndLowestPreSubject[counter][2] == studentGrade[][]){
-						System.out.print( %s Scoring %d :",studentNames[counter],highestAndLowestPreSubject[counter][1]);
+
+					if(highestAndLowestPreSubject[count][2] == studentGrade[index][count]){
+						System.out.printf( %s Scoring %d :",studentNames[count] ,highestAndLowestPreSubject[count][2]);
+						System.out.println();
 					}
 				}
+
 				System.out.println(" AverageScore Score is : %d :",);
 				System.out.println(" Number of Passes: %d \n Number of failures %d :", );
 				bumber 
