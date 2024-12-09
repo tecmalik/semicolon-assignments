@@ -182,14 +182,14 @@ public class StudentGrade{
 				for(int count=0; count < studentTotal.length ; count++){
 
 					if(highestAndLowestPreSubject[count][0] == studentGrade[index][count]){
-						System.out.printf("%s Scoring :%d%n",studentNames[count],highestAndLowestPreSubject[count][1]);
+						System.out.printf("%s Scoring :%d%n",studentNames[count],highestAndLowestPreSubject[count][0]);
 					}
 				}
 				System.out.println("lowest Scoring Student is");
 				for(int count=0; count < studentTotal.length ; count++){
 
 					if(highestAndLowestPreSubject[count][1] == studentGrade[index][count]){
-						System.out.printf("%s Scoring :%d%n",studentNames[count] ,highestAndLowestPreSubject[count][2]);
+						System.out.printf("%s Scoring :%d%n",studentNames[count] ,highestAndLowestPreSubject[count][1]);
 					}
 				}
 				System.out.printf(" Total Score is : %d",totalPreSubject[index]);
