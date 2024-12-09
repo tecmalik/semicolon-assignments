@@ -179,7 +179,7 @@ public class StudentGrade{
 	
 				System.out.println( studentSubjects[index] );
 				System.out.print("Highest Scoring Student is");
-				for(int count=0; count <  numberOfSubjects ; count++){
+				for(int count=0; count <  studentNumber ; count++){
 					if(highestAndLowestPreSubject[count][0] == studentGrade[index][count]){
 						System.out.printf("%s Scoring :%d%n",studentNames[count],highestAndLowestPreSubject[count][0]);
 					}
