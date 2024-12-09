@@ -177,8 +177,7 @@ public class StudentGrade{
 				}
 
 				System.out.println(" AverageScore Score is : %d :",);
-				System.out.println(" Number of Passes: %d \n Number of failures %d :", );
-				bumber 
+				System.out.println(" Number of Passes: %d \n Number of failures %d :" ,  ); 
 				break;
 		
 				if(sortedStudentTotal[sortedStudentTotal.length-1] == ){
