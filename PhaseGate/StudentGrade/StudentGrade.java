@@ -140,7 +140,7 @@ public class StudentGrade{
 			}		
 		}
 
-		int[][] highestAndLowestPreSubject = new int [numberOfSubjects.length][2] 
+		int[][] highestAndLowestPreSubject = new int [numberOfSubjects.length][2]; 
 		for(int index=0; index<numberOfSubjects.length ; index++){
 		
 		highestAndLowestPreSubject[index][1] = highestInteger(eachSubjects[index]);
@@ -148,13 +148,25 @@ public class StudentGrade{
 		
 		}
 		
-		int[] totalPreSubject = new int [numberOfSubjects.length][2] 
+		int[] totalPreSubject = new int [numberOfSubjects.length][2]; 
 		for(int index=0; index<numberOfSubjects.length ; index++){
 			totalPreSubject[index] = listTotal(eachSubjects[index]);
 			
 		}
 		
-
+		int[][] passesAndFailuresOfEachSubjects = new int[numberOfSubjects.length][2];
+		for(int index=0;index<numberOfSubjects.length; index++){
+			for(int innerIndex=0; innerIndex<studentNumber.length;innerIndex++){
+				if(eachSubjects[index][innerIndex] > 45){
+					passesAndFailuresOfEachSubjects[index][1] +=1;
+				}
+				else{
+					passesAndFailuresOfEachSubjects[index][2] +=1 
+				}
+			}
+		}
+			
+		
 
 
 
@@ -186,12 +198,8 @@ public class StudentGrade{
 				System.out.println();
 				System.out.printf(" Average Score Score is : %.3f%n",(float)totalPreSubject[index]/studentNumber);
 				System.out.println(" Number of Passes: %d \n Number of failures is : %d" ,  ); 
-				break;
-		
-				if(sortedStudentTotal[sortedStudentTotal.length-1] == ){
-			System.out.println("Hihest Scoring Student is ");					break;
 
-			} 
+				} 
 			}
 			
 		
