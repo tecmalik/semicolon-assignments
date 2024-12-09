@@ -190,14 +190,13 @@ public class StudentGrade{
 				for(int count=0; count < studentTotal.length ; count++){
 
 					if(highestAndLowestPreSubject[count][2] == studentGrade[index][count]){
-						System.out.printf( %s Scoring %d :",studentNames[count] ,highestAndLowestPreSubject[count][2]);
-						System.out.println();
+						System.out.printf( %s Scoring :%d%n",studentNames[count] ,highestAndLowestPreSubject[count][2]);
 					}
 				}
 				System.out.printf(" Total Score is : %d",totalPreSubject[index]);
 				System.out.println();
 				System.out.printf(" Average Score Score is : %.3f%n",(float)totalPreSubject[index]/studentNumber);
-				System.out.println(" Number of Passes: %d \n Number of failures is : %d" ,  ); 
+				System.out.printf(" Number of Passes: %d \n Number of failures is : %d%n",passesAndFailuresOfEachSubjects[index][1] ,passesAndFailuresOfEachSubjects[index][2] ); 
 
 				} 
 			}
