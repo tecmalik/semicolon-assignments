@@ -31,9 +31,9 @@ for subject in studentSubject:
 print("%-10s%11s%13s " %("Total" , "AVE" ,"POS"))
 print("=================================================================================")
 for grades in studentGrade:
-	print(f"{grades}")
+	print(f"{grades}",end="")
 	for count in grades:
-		print("		%s"%(count),end="")
+		print("	     %d" %(count),end="")
 	print()
 
 
