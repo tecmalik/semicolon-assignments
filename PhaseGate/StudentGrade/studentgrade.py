@@ -20,12 +20,23 @@ for name in studentNames:
 	for subject in studentSubject:
 		grade = int(input(f"Enter {name} grade for {subject} :"))
 		studentGrade[name][subject] = grade 
+		print("Saving >>>>>>>>>>>>>>>>>>>>>>>>>>")
+		print("Saved Suceessfully")
+
+
+Print("=================================================================================")
+print("Student")
+for subject in studentSubject:
+	print(f"	{subject}" )
+
+
+ print(" %10s%11s%13s% " %("total" , "AVE" , "POS" ))
+
 
 
 
 	
 
-print(studentGrade)
 
 
 
