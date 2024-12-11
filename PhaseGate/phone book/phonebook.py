@@ -39,40 +39,30 @@ def addToCart():
 	phoneNumber = input("Enter Phone Number :")
 	phoneNumbers.append(phoneNumber)
 	contactAdress = input("Enter Contact Adress :")
-	contactAdresses.apend(contactAdress)
-			System.out.print("Enter Contact Email :");
-			String contactEmail = input.nextLine();
-			System.out.print("saved>>>>>>>>>>>>>>>");
-	
-			
-			;
-			;
-			;
-			contactEmails.add(contactEmail); 
-			System.out.printf("you Added %s to contact",contactFirstName);
-	}
-	public static void removeFromCart(){
-		
-		display(contactFirstNames,contactLastNames,phoneNumbers,contactAdresses,contactEmails);
+	contactAdresses.append(contactAdress)
+	contactEmail = input("Enter Contact Email :")
+	contactEmails.append(contactEmail)
+	print("saved>>>>>>>>>>>>>>>")
+	print("you Added %s to contact"%(contactFirstName))
 
-		System.out.println("enter a number to delete the Contact : ");
-		int index = input.nextInt();
-					
-		if(index <= contactFirstNames.size() && index > 0 ){
-			
-			contactFirstNames.remove(index-1);
-			contactLastNames.remove(index-1);
-			phoneNumbers.remove(index-1);
-			contactAdresses.remove(index-1);
-			contactEmails.remove(index-1); 
-		display(contactFirstNames,contactLastNames,phoneNumbers,contactAdresses,contactEmails);
-		}
-		else{ 
-		System.out.print("invalid input !!!");
-		removeFromCart();
-		}
-	}
-	public static void display(ArrayList<String> content1,ArrayList<String> content2,ArrayList<String> content3,ArrayList<String> content4,ArrayList<String> content5){
+	
+def removeFromCart(){
+	display(contactFirstNames,contactLastNames,phoneNumbers,contactAdresses,contactEmails)
+	print
+	index = int(input("enter a number to delete the Contact : "))
+	if index <= len(contactFirstNames) && index > 0 :
+		contactFirstNames.remove(index-1);
+		contactLastNames.remove(index-1);
+		phoneNumbers.remove(index-1);
+		contactAdresses.remove(index-1)
+		contactEmails.remove(index-1)
+		display(contactFirstNames,contactLastNames,phoneNumbers,contactAdresses,contactEmails)
+	else:
+		print("invalid input !!!")
+		removeFromCart()
+
+
+public static void display(ArrayList<String> content1,ArrayList<String> content2,ArrayList<String> content3,ArrayList<String> content4,ArrayList<String> content5){
 		System.out.printf("YOUR CONTACT LIST : ");
 		System.out.println();
 		for(int count = 0; count < content1.size() ; count++){
