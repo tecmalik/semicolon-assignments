@@ -3,15 +3,25 @@ studentnumber = int(input("Enter number of Students :"))
 numberOfSubjects = int(input("Enter number of Subjects :"))
 studentNames = []
 studentSubject = []
+eachStudentScores = {}
 
 
 
 
 for count in range(studentnumber):
-	StudentNames = input("Enter Student names : ")
+	name = input("Enter Student names : ")
+	studentNames.append(name)
 
 for count in range(numberOfSubjects);
-	studentSubject = unput("Enter Students Subjects : ") 
+	subject = input("Enter Students Subjects : ") 
+	studentSubject.append(Subject)
+
+for names in studentNames:
+	for subject in studentSubject
+		eachStudentScores[name] = int(input(f"Enter {names} grade for {subject} :"))
+
+
+	
 
 
 
