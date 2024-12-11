@@ -8,12 +8,12 @@ studentSubject = []
 
 
 for count in range(studentnumber):
-	name = input("Enter {count+1} Student names : ")
+	name = input(f"Enter {count+1} Student names : ")
 	studentNames.append(name)
 
-for count in range(numberOfSubjects);
+for count in range(numberOfSubjects):
 	subject = input(f"Enter Students Subjects {count+1} : ") 
-	studentSubject.append(Subject)
+	studentSubject.append(subject)
 
 for names in studentNames:
 	studentGrade[name] = {}
@@ -25,46 +25,7 @@ for names in studentNames:
 
 	
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+print(studentgrade)
 
 
 
