@@ -32,22 +32,22 @@ dev menu():
 
 	
 def addToCart():
-			System.out.print("Enter First Name :");
-			String contactFirstName  = input.nextLine();
-			System.out.print("Enter Last Name :");
-			String contactLastName  = input.nextLine();
-			System.out.print("Enter Phone Number :");
-			String phoneNumber = input.nextLine();
-			System.out.print("Enter Contact Adress :");
-			String contactAdress = input.nextLine();
+	contactFirstName = input("Enter First Name :")
+	contactFirstNames.append(contactFirstName)
+	contactLastName  = input("Enter Last Name :")
+	contactLastNames.append(contactLastName)
+	phoneNumber = input("Enter Phone Number :")
+	phoneNumbers.append(phoneNumber)
+	contactAdress = input("Enter Contact Adress :")
+	contactAdresses.apend(contactAdress)
 			System.out.print("Enter Contact Email :");
 			String contactEmail = input.nextLine();
 			System.out.print("saved>>>>>>>>>>>>>>>");
 	
-			contactFirstNames.add(contactFirstName);
-			contactLastNames.add(contactLastName);
-			phoneNumbers.add(phoneNumber);
-			contactAdresses.add(contactAdress);
+			
+			;
+			;
+			;
 			contactEmails.add(contactEmail); 
 			System.out.printf("you Added %s to contact",contactFirstName);
 	}
