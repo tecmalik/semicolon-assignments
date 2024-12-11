@@ -23,16 +23,18 @@ for name in studentNames:
 		print("Saving >>>>>>>>>>>>>>>>>>>>>>>>>>")
 		print("Saved Suceessfully")
 
-
-Print("=================================================================================")
-print("Student")
+print("=================================================================================")
+print("Student",end="")
 for subject in studentSubject:
-	print(f"	{subject}" )
+	print(f"	{subject}",end="" )
 
-
- print(" %10s%11s%13s% " %("total" , "AVE" , "POS" ))
-
-
+print("%-10s%11s%13s " %("Total" , "AVE" ,"POS"))
+print("=================================================================================")
+for grades in studentGrade:
+	print(f"{grades}")
+	for count in grades:
+		print("		%s"%(count),end="")
+	print()
 
 
 	
