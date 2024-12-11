@@ -15,17 +15,17 @@ for count in range(numberOfSubjects):
 	subject = input(f"Enter Students Subjects {count+1} : ") 
 	studentSubject.append(subject)
 
-for names in studentNames:
+for name in studentNames:
 	studentGrade[name] = {}
 	for subject in studentSubject:
-		grade = int(input(f"Enter {names} grade for {subject} :"))
+		grade = int(input(f"Enter {name} grade for {subject} :"))
 		studentGrade[name][subject] = grade 
 
 
 
 	
 
-print(studentgrade)
+print(studentGrade)
 
 
 
