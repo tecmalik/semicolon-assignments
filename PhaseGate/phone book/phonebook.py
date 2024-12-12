@@ -60,15 +60,15 @@ def removeFromCart():
 		removeFromCart()
 
 
-def display(ArrayList<String> content1,ArrayList<String> content2,ArrayList<String> content3,ArrayList<String> content4,ArrayList<String> content5):
+def display(content1:list,content2:list,content3:list,content4:list,content5:list):
 	print("YOUR CONTACT LIST : ")
 	for count in range (len(content1)):
-	print("%d. %s %s%n %s%n%s%n%s%n", %(count+1,content1.get(count),content2.get(count),content3.get(count),content4.get(count),content5.get(count)))
+		print("%d. %s %s%n %s%n%s%n%s%n", %(count+1,content1.get(count),content2.get(count),content3.get(count),content4.get(count),content5.get(count)))
 	
 def findName([] allFirstName):
-	nameToSearch  = input("Enter First Name to search in contact : ")
-	nameSearched = allFirstName.index(nameToSearch)
-	return nameSearched
+		nameToSearch  = input("Enter First Name to search in contact : ")
+		nameSearched = allFirstName.index(nameToSearch)
+		return nameSearched
 
 def findFirstName():
 	int positionIndex = findName(contactFirstNames)
@@ -84,7 +84,7 @@ def findPhoneNumber():
 	int positionIndex = findPhoneNumber(phoneNumbers);
 	if positionIndex > -1:
 		print(positionIndex)
-		print("Here you go:\n%s %s%n%s%n%s%n%s",%(contactFirstNames.get(positionIndex),contactLastNames.get(positionIndex),phoneNumbers.get(positionIndex),contactAdresses.get(positionIndex),contactEmails.get(positionIndex)))
+		print("Here you go:\n%s %s%n%s%n%s%n%s"%(contactFirstNames.get(positionIndex),contactLastNames.get(positionIndex),phoneNumbers.get(positionIndex),contactAdresses.get(positionIndex),contactEmails.get(positionIndex)))
 		menu()
 	
 	else:
