@@ -4,7 +4,6 @@ contactFirstNames = []
 contactLastNames = []
 contactAdresses = []
 
-menu();
 
 
 def menu():
@@ -63,15 +62,15 @@ def removeFromCart():
 def display(content1:list,content2:list,content3:list,content4:list,content5:list):
 	print("YOUR CONTACT LIST : ")
 	for count in range (len(content1)):
-		print("%d. %s %s%n %s%n%s%n%s%n", %(count+1,content1.get(count),content2.get(count),content3.get(count),content4.get(count),content5.get(count)))
+		print("%d. %s %s%n %s\n%s\n%s\n"%(count+1,content1.get(count),content2.get(count),content3.get(count),content4.get(count),content5.get(count)))
 	
-def findName([] allFirstName):
-		nameToSearch  = input("Enter First Name to search in contact : ")
-		nameSearched = allFirstName.index(nameToSearch)
-		return nameSearched
+def findName(allFirstName:list):
+	nameToSearch  = input("Enter First Name to search in contact : ")
+	nameSearched = allFirstName.index(nameToSearch)
+	return nameSearched
 
 def findFirstName():
-	int positionIndex = findName(contactFirstNames)
+	positionIndex = findName(contactFirstNames)
 	if positionIndex > -1:
 		print(positionIndex)
 		print("Here you go:\n contact %s %s%n%s%n%s%n%s"%(contactFirstNames.get(positionIndex),contactLastNames.get(positionIndex),phoneNumbers.get(positionIndex),contactAdresses.get(positionIndex),contactEmails.get(positionIndex)))
@@ -81,7 +80,7 @@ def findFirstName():
 		menu()
 
 def findPhoneNumber():
-	int positionIndex = findPhoneNumber(phoneNumbers);
+	positionIndex = findPhoneNumber(phoneNumbers);
 	if positionIndex > -1:
 		print(positionIndex)
 		print("Here you go:\n%s %s%n%s%n%s%n%s"%(contactFirstNames.get(positionIndex),contactLastNames.get(positionIndex),phoneNumbers.get(positionIndex),contactAdresses.get(positionIndex),contactEmails.get(positionIndex)))
@@ -91,16 +90,16 @@ def findPhoneNumber():
 		print("contact mismatch try again !!!")
 		menu()
 		
-def findPhoneNumber([] allFirstName ):
+def findPhoneNumber(allFirstName:list ):
 	nameToSearch = input("Enter Phone Number to search in contact : ")
 	nameSearched = allFirstName.index(nameToSearch)
 	return nameSearched
 	
 def editlastName():
-	int positionIndex = editLastName(contactLastNames);
+	positionIndex = editLastName(contactLastNames);
 	if positionIndex > -1:
 		print(positionIndex)
-		print("Editing Name:\n%s %s%n%s%n%s%n%s",%(contactFirstNames.get(positionIndex),contactLastNames.get(positionIndex),phoneNumbers.get(positionIndex),contactAdresses.get(positionIndex),contactEmails.get(positionIndex)))				
+		print("Editing Name:\n%s %s%n%s%n%s%n%s"%(contactFirstNames.get(positionIndex),contactLastNames.get(positionIndex),phoneNumbers.get(positionIndex),contactAdresses.get(positionIndex),contactEmails.get(positionIndex)))				
 		contactFirstNameEdit  = input("Edit First Name :")
 		contactFirstNames.append(positionIndex,contactFirstNameEdit)
 		contactLastNameEdit  = input("Edit Last Name :")
@@ -113,7 +112,7 @@ def editlastName():
 		contactEmails.append(positionIndex,contactEmailEdit)
 		print("saved>>>>>>>>>>>>>>>")
 	
-		print("you Added %s to contact",%(contactFirstNameEdit))
+		print("you Added %s to contact"%(contactFirstNameEdit))
 			
 		contactFirstNames.remove(positionIndex+1)
 		contactLastNames.remove(positionIndex+1)
@@ -121,13 +120,13 @@ def editlastName():
 		contactAdresses.remove(positionIndex+1)
 		contactEmails.remove(positionIndex+1)
 
-		print("Editing Name:\n%s %s%n%s%n%s%n%s",%(contactFirstNames.get(positionIndex),contactLastNames.get(positionIndex),phoneNumbers.get(positionIndex),contactAdresses.get(positionIndex),contactEmails.get(positionIndex)))
+		print("Editing Name:\n%s %s\n%s\n%s\n%s"%(contactFirstNames.get(positionIndex),contactLastNames.get(positionIndex),phoneNumbers.get(positionIndex),contactAdresses.get(positionIndex),contactEmails.get(positionIndex)))
 		menu()
 	else:
 		print("contact mismatch try again !!!")
 		menu()
 
-def editLastName([] allFirstName ):
+def editLastName( allFirstName:list ):
 	nameToSearch  = input("Enter Last name to Edit in contact : ")
 	nameSearched = allFirstName.index(nameToSearch);
 	return nameSearched
@@ -138,8 +137,8 @@ def editContact():
 	display(contactFirstNames,contactLastNames,phoneNumbers,contactAdresses,contactEmails)
 	userPositionIndex = input("Enter number of contact to edit : ")
 	positionIndex = userPositionIndex-1
-	if positionIndex <= contactFirstNames.size() && positionIndex > 0:
-		print("Editing Name:\n%s %s%n%s%n%s%n%s",%(contactFirstNames.get(positionIndex),contactLastNames.get(positionIndex),phoneNumbers.get(positionIndex),contactAdresses.get(positionIndex),contactEmails.get(positionIndex)))
+	if positionIndex <= contactFirstNames.size() and positionIndex > 0:
+		print("Editing Name:\n%s %s%n%s%n%s%n%s"%(contactFirstNames.get(positionIndex),contactLastNames.get(positionIndex),phoneNumbers.get(positionIndex),contactAdresses.get(positionIndex),contactEmails.get(positionIndex)))
 		contactFirstNameEdit  = input("Edit First Name :")
 		contactLastNameEdit  = input("Edit Last Name :")
 		phoneNumberEdit = input("Edit Phone Number :")
@@ -160,7 +159,7 @@ def editContact():
 		contactAdresses.remove(positionIndex+1)
 		contactEmails.remove(positionIndex+1)
 
-		print("Editing Name:\n%s %s%n%s%n%s%n%s",%(contactFirstNames.get(positionIndex),contactLastNames.get(positionIndex),phoneNumbers.get(positionIndex),contactAdresses.get(positionIndex),contactEmails.get(positionIndex)))
+		print("Editing Name:\n%s %s%n%s%n%s%n%s"%(contactFirstNames.get(positionIndex),contactLastNames.get(positionIndex),phoneNumbers.get(positionIndex),contactAdresses.get(positionIndex),contactEmails.get(positionIndex)))
 
 		display(contactFirstNames,contactLastNames,phoneNumbers,contactAdresses,contactEmails)
 		menu()
@@ -168,3 +167,4 @@ def editContact():
 	else:
 		print("contact mismatch try again !!!")
 		menu()
+menu()

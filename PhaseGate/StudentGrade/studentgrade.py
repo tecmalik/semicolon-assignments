@@ -43,7 +43,6 @@ for grades in studentGrade:
 
 
 
-
 def listtotal(numbers:list):
 	total = 0
 	for integer in number:
