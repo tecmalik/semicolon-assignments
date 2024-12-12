@@ -100,7 +100,7 @@ public class PhoneBook{
 		}
 	}
 	public static void display(ArrayList<String> content1,ArrayList<String> content2,ArrayList<String> content3,ArrayList<String> content4,ArrayList<String> content5){
-		System.out.printf("YOUR CONTACT LIST : ");
+		System.out.print("YOUR CONTACT LIST : ");
 		System.out.println();
 		for(int count = 0; count < content1.size() ; count++){
 			System.out.printf("%d. %s %s%n %s%n%s%n%s%n", count+1,content1.get(count),content2.get(count),content3.get(count),content4.get(count),content5.get(count));
@@ -110,7 +110,7 @@ public class PhoneBook{
 	}
 	
 	public static int findName(ArrayList<String> allFirstName ){
-		System.out.printf("Enter First Name to search in contact : ");
+		System.out.print("Enter First Name to search in contact : ");
 		input.nextLine();
 		String nameToSearch  = input.nextLine();
 		int nameSearched = allFirstName.indexOf(nameToSearch);
@@ -148,7 +148,7 @@ public class PhoneBook{
 			}
 	} 
 		public static int findPhoneNumber(ArrayList<String> allFirstName ){
-		System.out.printf("Enter Phone Number to search in contact : ");
+		System.out.print("Enter Phone Number to search in contact : ");
 		input.nextLine();
 		String nameToSearch  = input.nextLine();
 		int nameSearched = allFirstName.indexOf(nameToSearch);
@@ -199,7 +199,7 @@ public class PhoneBook{
 			}
 	} 
 		public static int editLastName(ArrayList<String> allFirstName ){
-		System.out.printf("Enter Last name to Edit in contact : ");
+		System.out.print("Enter Last name to Edit in contact : ");
 		input.nextLine();
 		String nameToSearch  = input.nextLine();
 		int nameSearched = allFirstName.indexOf(nameToSearch);

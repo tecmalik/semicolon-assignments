@@ -7,7 +7,7 @@ contactAdresses = []
 menu();
 
 
-dev menu():
+def menu():
 	choice = int(input("SELECT AN OPTION: \n1. Add Contact \n2. Remove Contact \n3. Find contact by Phone Number \n4. Find contact by First Name \n5. Edit contact by Last Name \n6. Edit contact \nEnter Number :"))
 	if choice == 1:
 		addToCart()
@@ -25,12 +25,11 @@ dev menu():
 		editlastName()
 		menu()
 	elif choice == 6:
-		
-	else :
+		print("exit")
+	else:
 		print("Invalid input !!!")
 
 
-	
 def addToCart():
 	contactFirstName = input("Enter First Name :")
 	contactFirstNames.append(contactFirstName)
@@ -46,14 +45,13 @@ def addToCart():
 	print("you Added %s to contact"%(contactFirstName))
 
 	
-def removeFromCart(){
+def removeFromCart():
 	display(contactFirstNames,contactLastNames,phoneNumbers,contactAdresses,contactEmails)
-	print
 	index = int(input("enter a number to delete the Contact : "))
-	if index <= len(contactFirstNames) && index > 0 :
-		contactFirstNames.remove(index-1);
-		contactLastNames.remove(index-1);
-		phoneNumbers.remove(index-1);
+	if index <= len(contactFirstNames) and index > 0 :
+		contactFirstNames.remove(index-1)
+		contactLastNames.remove(index-1)
+		phoneNumbers.remove(index-1)
 		contactAdresses.remove(index-1)
 		contactEmails.remove(index-1)
 		display(contactFirstNames,contactLastNames,phoneNumbers,contactAdresses,contactEmails)
@@ -62,155 +60,111 @@ def removeFromCart(){
 		removeFromCart()
 
 
-public static void display(ArrayList<String> content1,ArrayList<String> content2,ArrayList<String> content3,ArrayList<String> content4,ArrayList<String> content5){
-		System.out.printf("YOUR CONTACT LIST : ");
-		System.out.println();
-		for(int count = 0; count < content1.size() ; count++){
-			System.out.printf("%d. %s %s%n %s%n%s%n%s%n", count+1,content1.get(count),content2.get(count),content3.get(count),content4.get(count),content5.get(count));
-		System.out.println();
-		}
+def display(ArrayList<String> content1,ArrayList<String> content2,ArrayList<String> content3,ArrayList<String> content4,ArrayList<String> content5):
+	print("YOUR CONTACT LIST : ")
+	for count in range (len(content1)):
+	print("%d. %s %s%n %s%n%s%n%s%n", %(count+1,content1.get(count),content2.get(count),content3.get(count),content4.get(count),content5.get(count)))
 	
-	}
-	
-	public static int findName(ArrayList<String> allFirstName ){
-		System.out.printf("Enter First Name to search in contact : ");
-		input.nextLine();
-		String nameToSearch  = input.nextLine();
-		int nameSearched = allFirstName.indexOf(nameToSearch);
-		return nameSearched;
-	}
+def findName([] allFirstName):
+	nameToSearch  = input("Enter First Name to search in contact : ")
+	nameSearched = allFirstName.index(nameToSearch)
+	return nameSearched
 
+def findFirstName():
+	int positionIndex = findName(contactFirstNames)
+	if positionIndex > -1:
+		print(positionIndex)
+		print("Here you go:\n contact %s %s%n%s%n%s%n%s"%(contactFirstNames.get(positionIndex),contactLastNames.get(positionIndex),phoneNumbers.get(positionIndex),contactAdresses.get(positionIndex),contactEmails.get(positionIndex)))
+		menu()
+	else:
+		print("contact mismatch try again !!!")
+		menu()
 
-	public static void findFirstName(){
+def findPhoneNumber():
+	int positionIndex = findPhoneNumber(phoneNumbers);
+	if positionIndex > -1:
+		print(positionIndex)
+		print("Here you go:\n%s %s%n%s%n%s%n%s",%(contactFirstNames.get(positionIndex),contactLastNames.get(positionIndex),phoneNumbers.get(positionIndex),contactAdresses.get(positionIndex),contactEmails.get(positionIndex)))
+		menu()
 	
-		int positionIndex = findName(contactFirstNames);
-			if (positionIndex > -1){
-			System.out.println(positionIndex);
-		System.out.printf("Here you go:\n contact %s %s%n%s%n%s%n%s",contactFirstNames.get(positionIndex),contactLastNames.get(positionIndex),phoneNumbers.get(positionIndex),contactAdresses.get(positionIndex),contactEmails.get(positionIndex));
-			menu();
-			}
-			else{ 
-				System.out.print("contact mismatch try again !!!");
-				menu();
-			}
-	
-	
-	}
-
-	public static void findPhoneNumber(){
-	
-		int positionIndex = findPhoneNumber(phoneNumbers);
-			if (positionIndex > -1){
-			System.out.println(positionIndex);
-		System.out.printf("Here you go:\n%s %s%n%s%n%s%n%s",contactFirstNames.get(positionIndex),contactLastNames.get(positionIndex),phoneNumbers.get(positionIndex),contactAdresses.get(positionIndex),contactEmails.get(positionIndex));
-			menu();
-			}
-			else{ 
-				System.out.print("contact mismatch try again !!!");
-				menu();
-			}
-	} 
-		public static int findPhoneNumber(ArrayList<String> allFirstName ){
-		System.out.printf("Enter Phone Number to search in contact : ");
-		input.nextLine();
-		String nameToSearch  = input.nextLine();
-		int nameSearched = allFirstName.indexOf(nameToSearch);
-		return nameSearched;
-		}
-	
-	public static void editlastName(){
-	
-		int positionIndex = editLastName(contactLastNames);
-			if (positionIndex > -1){
-			System.out.println(positionIndex);
-		System.out.printf("Editing Name:\n%s %s%n%s%n%s%n%s",contactFirstNames.get(positionIndex),contactLastNames.get(positionIndex),phoneNumbers.get(positionIndex),contactAdresses.get(positionIndex),contactEmails.get(positionIndex));
-				
-			System.out.print("Edit First Name :");
-			String contactFirstNameEdit  = input.nextLine();
-			System.out.print("Edit Last Name :");
-			String contactLastNameEdit  = input.nextLine();
-			System.out.print("Edit Phone Number :");
-			String phoneNumberEdit = input.nextLine();
-			System.out.print("Edit Contact Adress :");
-			String contactAdressEdit = input.nextLine();
-			System.out.print("Edit Contact Email :");
-			String contactEmailEdit = input.nextLine();
-			System.out.print("saved>>>>>>>>>>>>>>>");
-	
-			contactFirstNames.add(positionIndex,contactFirstNameEdit);
-			contactLastNames.add(positionIndex,contactLastNameEdit);
-			phoneNumbers.add(positionIndex,phoneNumberEdit);
-			contactAdresses.add(positionIndex,contactAdressEdit);
-			contactEmails.add(positionIndex,contactEmailEdit); 
-			System.out.printf("you Added %s to contact",contactFirstNameEdit);
-			
-			contactFirstNames.remove(positionIndex+1);
-			contactLastNames.remove(positionIndex+1);
-			phoneNumbers.remove(positionIndex+1);
-			contactAdresses.remove(positionIndex+1);
-			contactEmails.remove(positionIndex+1); 
-
+	else:
+		print("contact mismatch try again !!!")
+		menu()
 		
-			System.out.printf("Editing Name:\n%s %s%n%s%n%s%n%s",contactFirstNames.get(positionIndex),contactLastNames.get(positionIndex),phoneNumbers.get(positionIndex),contactAdresses.get(positionIndex),contactEmails.get(positionIndex));
-
-			
-			menu();
-			}
-			else{ 
-				System.out.print("contact mismatch try again !!!");
-				menu();
-			}
-	} 
-		public static int editLastName(ArrayList<String> allFirstName ){
-		System.out.printf("Enter Last name to Edit in contact : ");
-		input.nextLine();
-		String nameToSearch  = input.nextLine();
-		int nameSearched = allFirstName.indexOf(nameToSearch);
-		return nameSearched;
-		}
-
+def findPhoneNumber([] allFirstName ):
+	nameToSearch = input("Enter Phone Number to search in contact : ")
+	nameSearched = allFirstName.index(nameToSearch)
+	return nameSearched
 	
-	public static void editContact(){
+def editlastName():
+	int positionIndex = editLastName(contactLastNames);
+	if positionIndex > -1:
+		print(positionIndex)
+		print("Editing Name:\n%s %s%n%s%n%s%n%s",%(contactFirstNames.get(positionIndex),contactLastNames.get(positionIndex),phoneNumbers.get(positionIndex),contactAdresses.get(positionIndex),contactEmails.get(positionIndex)))				
+		contactFirstNameEdit  = input("Edit First Name :")
+		contactFirstNames.append(positionIndex,contactFirstNameEdit)
+		contactLastNameEdit  = input("Edit Last Name :")
+		contactLastNames.append(positionIndex,contactLastNameEdit)
+		phoneNumberEdit = input("Edit Phone Number :")
+		phoneNumbers.append(positionIndex,phoneNumberEdit)
+		contactAdressEdit = input("Edit Contact Adress :")
+		contactAdresses.append(positionIndex,contactAdressEdit)
+		contactEmailEdit = input("Edit Contact Email :")
+		contactEmails.append(positionIndex,contactEmailEdit)
+		print("saved>>>>>>>>>>>>>>>")
 	
-		display(contactFirstNames,contactLastNames,phoneNumbers,contactAdresses,contactEmails);
-		System.out.print("Enter number of contact to edit : ");
-		int userPositionIndex = input.nextInt();
-		int positionIndex = userPositionIndex-1;
-			if (positionIndex <= contactFirstNames.size() && positionIndex > 0 ){
+		print("you Added %s to contact",%(contactFirstNameEdit))
 			
-		System.out.printf("Editing Name:\n%s %s%n%s%n%s%n%s",contactFirstNames.get(positionIndex),contactLastNames.get(positionIndex),phoneNumbers.get(positionIndex),contactAdresses.get(positionIndex),contactEmails.get(positionIndex));
-				
-			System.out.print("Edit First Name :");
-			String contactFirstNameEdit  = input.nextLine();
-			System.out.print("Edit Last Name :");
-			String contactLastNameEdit  = input.nextLine();
-			System.out.print("Edit Phone Number :");
-			String phoneNumberEdit = input.nextLine();
-			System.out.print("Edit Contact Adress :");
-			String contactAdressEdit = input.nextLine();
-			System.out.print("Edit Contact Email :");
-			String contactEmailEdit = input.nextLine();
-			System.out.print("saved>>>>>>>>>>>>>>>");
-	
-			contactFirstNames.add(positionIndex,contactFirstNameEdit);
-			contactLastNames.add(positionIndex,contactLastNameEdit);
-			phoneNumbers.add(positionIndex,phoneNumberEdit);
-			contactAdresses.add(positionIndex,contactAdressEdit);
-			contactEmails.add(positionIndex,contactEmailEdit); 
-			System.out.printf("you Added %s to contact",contactFirstNameEdit);
-			
-			contactFirstNames.remove(positionIndex+1);
-			contactLastNames.remove(positionIndex+1);
-			phoneNumbers.remove(positionIndex+1);
-			contactAdresses.remove(positionIndex+1);
-			contactEmails.remove(positionIndex+1); 
+		contactFirstNames.remove(positionIndex+1)
+		contactLastNames.remove(positionIndex+1)
+		phoneNumbers.remove(positionIndex+1)
+		contactAdresses.remove(positionIndex+1)
+		contactEmails.remove(positionIndex+1)
 
+		print("Editing Name:\n%s %s%n%s%n%s%n%s",%(contactFirstNames.get(positionIndex),contactLastNames.get(positionIndex),phoneNumbers.get(positionIndex),contactAdresses.get(positionIndex),contactEmails.get(positionIndex)))
+		menu()
+	else:
+		print("contact mismatch try again !!!")
+		menu()
+
+def editLastName([] allFirstName ):
+	nameToSearch  = input("Enter Last name to Edit in contact : ")
+	nameSearched = allFirstName.index(nameToSearch);
+	return nameSearched
 		
-			System.out.printf("Editing Name:\n%s %s%n%s%n%s%n%s",contactFirstNames.get(positionIndex),contactLastNames.get(positionIndex),phoneNumbers.get(positionIndex),contactAdresses.get(positionIndex),contactEmails.get(positionIndex));
 
-			display(contactFirstNames,contactLastNames,phoneNumbers,contactAdresses,contactEmails);
-			menu();
-			}
-			else{ 
-				System.out.print("contact mismatch try again !!!");
-				menu();
+	
+def editContact():
+	display(contactFirstNames,contactLastNames,phoneNumbers,contactAdresses,contactEmails)
+	userPositionIndex = input("Enter number of contact to edit : ")
+	positionIndex = userPositionIndex-1
+	if positionIndex <= contactFirstNames.size() && positionIndex > 0:
+		print("Editing Name:\n%s %s%n%s%n%s%n%s",%(contactFirstNames.get(positionIndex),contactLastNames.get(positionIndex),phoneNumbers.get(positionIndex),contactAdresses.get(positionIndex),contactEmails.get(positionIndex)))
+		contactFirstNameEdit  = input("Edit First Name :")
+		contactLastNameEdit  = input("Edit Last Name :")
+		phoneNumberEdit = input("Edit Phone Number :")
+		contactAdressEdit = input("Edit Contact Adress :")
+		contactEmailEdit = input("Edit Contact Email :")
+		print("saved>>>>>>>>>>>>>>>")
+
+		contactFirstNames.append(positionIndex,contactFirstNameEdit)
+		contactLastNames.append(positionIndex,contactLastNameEdit)
+		phoneNumbers.append(positionIndex,phoneNumberEdit)
+		contactAdresses.append(positionIndex,contactAdressEdit)
+		contactEmails.append(positionIndex,contactEmailEdit); 
+		print("you Added %s to contact"%(contactFirstNameEdit))
+			
+		contactFirstNames.remove(positionIndex+1)
+		contactLastNames.remove(positionIndex+1)
+		phoneNumbers.remove(positionIndex+1)
+		contactAdresses.remove(positionIndex+1)
+		contactEmails.remove(positionIndex+1)
+
+		print("Editing Name:\n%s %s%n%s%n%s%n%s",%(contactFirstNames.get(positionIndex),contactLastNames.get(positionIndex),phoneNumbers.get(positionIndex),contactAdresses.get(positionIndex),contactEmails.get(positionIndex)))
+
+		display(contactFirstNames,contactLastNames,phoneNumbers,contactAdresses,contactEmails)
+		menu()
+			
+	else:
+		print("contact mismatch try again !!!")
+		menu()
