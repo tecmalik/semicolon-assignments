@@ -10,7 +10,7 @@ public class Diary{
 
 	public static void Create Diary(){
 		System.out.print("Enter Title : ");
-		
+	}	
 
 	
 }
