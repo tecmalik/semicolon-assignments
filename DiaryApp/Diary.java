@@ -14,9 +14,30 @@ public class Diary{
 	public static void menu(){ 
 	System.out.print("1.Add Entry\n2. Create Diary\n3. Update entry\n4. find by Id\n5. Unlock Diary\6. Lock Diary\n7. Delete \n Entry Enter a number :");
 	int userSelection = input.nextint();
-	if (userSelection == 1){}
-	
-	
+	if (userSelection == 1){
+		
+	}
+	else if (userSelection == 2){
+		
+	}
+	else if (userSelection == 3){
+		
+	}
+	else if (userSelection == 4){
+		
+	}
+	else if (userSelection == 5){
+		
+	}
+	else if (userSelection == 6){
+		
+	}
+	else if(userSelection == 7){
+		
+	}else{
+		System.out.print("invalid input");l
+		
+	}
 	}
 	
 	public static void setpassword(){
