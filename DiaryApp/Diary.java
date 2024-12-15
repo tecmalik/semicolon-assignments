@@ -11,8 +11,9 @@ public class Diary{
 	public static void Create Diary(){
 		System.out.print("Enter Title : ");
 		String title = input.nextLine();
+		System.out.print("Enter Date in (yy/mm/dd) :  ");
+		String date = iniput.nextline;
 		
-		 
 	}	
 
 	
