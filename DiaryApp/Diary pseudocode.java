@@ -18,3 +18,4 @@ collect, store as title
 prompt the user to Enter a date 
 collect the date, store a as date 
 prompt the user to input the text 
+colect and store texts 
