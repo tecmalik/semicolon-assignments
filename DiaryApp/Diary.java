@@ -2,7 +2,12 @@ import java.util.Scanner;
 public class Diary{ 
 	public static void main(String[] args){
 	Scanner input = new Scanner(System.in);
-
+		
+	System.out.print("welcomr to My Diary App");
+	System.out.print("Enter username : ");
+	String userName = input.next();
+	System.out.print("password : ");
+	String userName = input.next();
 	System.out.print("1.Add Entry\n2. Create Diary\n3. Update entry\n4. find by Id\n5. Unlock Diary\6. Lock Diary\n7. Delete Entry ");
 	
 	
@@ -45,5 +50,7 @@ public class Diary{
 		System.out.print(" Diary locked ");	
 	}
 	
-	public static findByID(){} 
+	public static findByID(){
+			
+	} 
 }
