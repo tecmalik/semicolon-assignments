@@ -53,4 +53,18 @@ public class Diary{
 	public static findByID(){
 			
 	} 
+
+	public static void addEntry(){
+		
+	}
+	public static void deleteEntry(){
+		
+	}
+	public static void updateEntry(){
+		
+	}
+	
+
+
+
 }
