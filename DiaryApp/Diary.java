@@ -1,7 +1,9 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 public class Diary{ 
 
 	static Scanner input = new Scanner(System.in);
+	ArrayList<String> diaryText = new ArrayList<String>();
 
 	public static void main(String[] args){
 		
@@ -16,6 +18,7 @@ public class Diary{
 	int userSelection = input.nextint();
 	if (userSelection == 1){
 		
+		menu();
 	}
 	else if (userSelection == 2){
 		
@@ -35,7 +38,7 @@ public class Diary{
 	else if(userSelection == 7){
 		
 	}else{
-		System.out.print("invalid input");l
+		System.out.print("invalid input");
 		
 	}
 	}
