@@ -29,16 +29,21 @@ public class Diary{
 		System.out.print("Enter text");
 	}	
 	
-	public static void main unlockDiary(){
+	public static void unlockDiary(){
 		
 		System.out.print("Enter password : ");
 		String userPassword = inpuut.next();
-		if (userpassword.equals(actualPassword) ){
-		
+		if (userpassword.equals(actualPassword)){
+			Create Diary();
 		}else{
 			System.out.print("invalid passWord");
 		}
 	}
 
+
+	public static void lockDiary(){
+		System.out.print(" Diary locked ");	
+	}
 	
+	public static findByID(){} 
 }
