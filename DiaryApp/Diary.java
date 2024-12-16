@@ -3,7 +3,8 @@ import java.util.Scanner;
 public class Diary{ 
 	
 	static Scanner input = new Scanner(System.in);
-	static ArrayList<ArrayList<String>> diary = new ArrayList<String<>();
+	static ArrayList<ArrayList<String>> diaryID = new ArrayList<ArrayList<String>>();
+	static ArrayList<ArrayList<String>> diaryText = new ArrayList<ArrayList<String>>();
 
 	public static void main(String[] args){
 		
@@ -23,7 +24,8 @@ public class Diary{
 			findByID();
 		}
 		else if (userSelection == 2){
-			createDiary();
+			ArrayList<String> createdDiary = createDiary();
+			diaryID.add(createdDiary);
 		}
 		else{
 		System.out.println("invalid input");
