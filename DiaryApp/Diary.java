@@ -19,7 +19,7 @@ public class Diary{
 
 	
 	public static void menu(){ 
-		System.out.print("1. find by Id \n2. Create Diary \n Entry Enter a number :");
+		System.out.print("1. Find by Id \n2. Create Diary \n Enter a number :");
 		int userSelection = input.nextint();
 		if (userSelection == 1){
 		
@@ -28,24 +28,10 @@ public class Diary{
 		else if (userSelection == 2){
 		
 		}
-		else if (userSelection == 3){
-		
-		}
-		else if (userSelection == 4){
-		
-		}
-		else if (userSelection == 5){
-		
-		}
-		else if (userSelection == 6){
-		
-		}
-		else if(userSelection == 7){
-		
-	}else{
+		else{
 		System.out.print("invalid input");
 		
-	}
+		}
 	}
 	
 	public static void setpassword(){
