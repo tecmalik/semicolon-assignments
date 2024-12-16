@@ -4,7 +4,7 @@ public class Diary{
 	
 	static Scanner input = new Scanner(System.in);
 	static ArrayList<ArrayList<String>> diaryID = new ArrayList<ArrayList<String>>();
-	static ArrayList<ArrayList<String>> diaryText = new ArrayList<ArrayList<String>>();
+	static ArrayList<String> diaryText = new ArrayList<String>();
 
 	public static void main(String[] args){
 		
@@ -35,7 +35,15 @@ public class Diary{
 	
 
 	public static void findByID(){
-		String Arry
+		Systrm.out.print("Enter user Id ");
+		String userId = input.next();
+		if ( ){
+			unlock();
+		}
+		else{
+			System.out.print("invalid user Id try again");
+			findByID();
+		}	
 	
 	}
 	public static ArrayList<String> createDiary(){
