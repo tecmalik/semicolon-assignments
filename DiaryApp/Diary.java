@@ -8,19 +8,17 @@ public class Diary{
 	public static void main(String[] args){
 		
 	
-		System.out.print("welcome to My Diary App");
-		System.out.print("Enter username : ");
-		String userName = input.next();
-		System.out.print("password : ");
-		String userpassword = input.next();
+		System.out.println("welcome to My Diary App");
+		System.out.println(" ");
+		menu();
 	}
 	
 
 
 	
 	public static void menu(){ 
-		System.out.print("1. Find by Id \n2. Create Diary \n Enter a number :");
-		int userSelection = input.nextint();
+		System.out.println("1. Find by Id \n2. Create Diary \n Enter your option number :");
+		int userSelection = input.nextInt();
 		if (userSelection == 1){
 			findByID();
 		}
@@ -28,36 +26,39 @@ public class Diary{
 			createDiary();
 		}
 		else{
-		System.out.print("invalid input");
+		System.out.println("invalid input");
 		
 		}
 	}
 	
 
 	public static void findByID(){
+		String enteredID ;
 	
 	}
 	public static ArrayList<String> createDiary(){
 		ArrayList<String> userinfo = new ArrayList<String>();
-		System.out.print("Create a Username : ");
+		System.out.println("Create a new user ID : ");
 		String userName = input.nextLine();
 		userinfo.add(userName);
-		System.out.print("Enter Date in \"yy/mm/dd\" : ");
+		System.out.println("Enter Date\n \"yy/mm/dd\" : ");
 		String date = input.nextLine();
-		userinfo.add(setpassword());
+		String password = setpassword();
+		userinfo.add(password);
 		
 		return userinfo; 
 	} 
 
-	public static void setpassword(){
-		System.out.print("Enter a new password : ");
+	public static String setpassword(){
+		System.out.println("Enter a new password : ");
 		String firstInput = input.next(); 
-		System.out.print("Enter password again: ");
+		System.out.println("re-enter password again: ");
 		String secondInput = input.next(); 
+		String actualPassword = "";
 		if (firstInput.equals(secondInput)){
-			String actualPassword = firstInput;
+			actualPassword = firstInput;
 		}else{
-			System.out.print("password does not match !!!\n try Again. ");
+			System.out.println("password does not match !!!\n try Again. ");
 			 setpassword();
 		}
 		return actualPassword;
@@ -84,11 +85,11 @@ public class Diary{
 
 
 	public static void addEntry(){
-		.add();
+		//.add();
 		
 	}
 	public static void deleteEntry(){
-		.remove();
+		//.remove();
 	}
 	public static void updateEntry(){
 		
