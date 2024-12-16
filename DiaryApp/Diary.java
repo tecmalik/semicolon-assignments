@@ -1,14 +1,14 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 public class Diary{ 
-
+	
 	static Scanner input = new Scanner(System.in);
 	ArrayList<String> diaryText = new ArrayList<String>();
 
 	public static void main(String[] args){
 		
 	
-		System.out.println("welcome to My Diary App");
+		System.out.println("welcome to my Diary App");
 		System.out.println(" ");
 		menu();
 	}
@@ -17,7 +17,7 @@ public class Diary{
 
 	
 	public static void menu(){ 
-		System.out.println("1. Find by Id \n2. Create Diary \n Enter your option number :");
+		System.out.print("1. Find by Id \n2. Create Diary \n Enter number :");
 		int userSelection = input.nextInt();
 		if (userSelection == 1){
 			findByID();
@@ -33,7 +33,7 @@ public class Diary{
 	
 
 	public static void findByID(){
-		String enteredID ;
+		String Arry
 	
 	}
 	public static ArrayList<String> createDiary(){
