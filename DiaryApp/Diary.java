@@ -22,11 +22,10 @@ public class Diary{
 		System.out.print("1. Find by Id \n2. Create Diary \n Enter a number :");
 		int userSelection = input.nextint();
 		if (userSelection == 1){
-		
-		
+			findByID();
 		}
 		else if (userSelection == 2){
-		
+			createDiary();
 		}
 		else{
 		System.out.print("invalid input");
@@ -34,6 +33,23 @@ public class Diary{
 		}
 	}
 	
+
+	public static void findByID(){
+	
+	}
+	public static ArrayList<String> createDiary(){
+		
+		System.out.print("Create user name : ");
+		String title = input.nextLine();
+		System.out.print("Enter Date in \"yy/mm/dd\" : ");
+		String date = input.nextLine();
+		setpassword();
+		
+		
+		
+	return;
+	} 
+
 	public static void setpassword(){
 		System.out.print("Enter a new password : ");
 		String firstInput = input.next(); 
@@ -47,13 +63,7 @@ public class Diary{
 		}
 	}
 
-	public static void createDiary(){
-		System.out.print("Enter Title : ");
-		String title = input.nextLine();
-		System.out.print("Enter Date in \"yy/mm/dd\" : ");
-		String date = input.nextLine();
-		System.out.print("Enter text");
-	}	
+	
 	
 	public static void unlockDiary(String actualPassword){
 		
@@ -71,9 +81,7 @@ public class Diary{
 		System.out.print(" Diary locked ");	
 	}
 	
-	public static void findByID(){
-			
-	} 
+
 
 	public static void addEntry(){
 		.add();
