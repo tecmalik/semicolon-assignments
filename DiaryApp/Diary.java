@@ -35,10 +35,13 @@ public class Diary{
 	
 
 	public static void findByID(){
-		Systrm.out.print("Enter user Id ");
+		System.out.print("Enter user Id : ");
 		String userId = input.next();
-		if ( ){
+		diaryID.contains(userId);
+		for(int count = 0 ; count<
+		if( ){
 			unlock();
+			break;
 		}
 		else{
 			System.out.print("invalid user Id try again");
