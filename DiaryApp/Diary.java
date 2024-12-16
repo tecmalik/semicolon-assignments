@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Diary{ 
 	
 	static Scanner input = new Scanner(System.in);
-	ArrayList<String> diaryText = new ArrayList<String>();
+	static ArrayList<ArrayList<String>> diary = new ArrayList<String<>();
 
 	public static void main(String[] args){
 		
