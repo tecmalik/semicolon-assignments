@@ -38,16 +38,15 @@ public class Diary{
 	
 	}
 	public static ArrayList<String> createDiary(){
-		
-		System.out.print("Create user name : ");
-		String title = input.nextLine();
+		ArrayList<String> userinfo = new ArrayList<String>();
+		System.out.print("Create a Username : ");
+		String userName = input.nextLine();
+		userinfo.add(userName);
 		System.out.print("Enter Date in \"yy/mm/dd\" : ");
 		String date = input.nextLine();
-		setpassword();
+		userinfo.add(setpassword());
 		
-		
-		
-	return;
+		return userinfo; 
 	} 
 
 	public static void setpassword(){
@@ -61,6 +60,7 @@ public class Diary{
 			System.out.print("password does not match !!!\n try Again. ");
 			 setpassword();
 		}
+		return actualPassword;
 	}
 
 	
