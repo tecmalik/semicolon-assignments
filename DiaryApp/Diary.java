@@ -7,35 +7,40 @@ public class Diary{
 
 	public static void main(String[] args){
 		
-	System.out.print("welcome to My Diary App");
-	System.out.print("Enter username : ");
-	String userName = input.next();
-	System.out.print("password : ");
-	String userpassword = input.next();
+	
+		System.out.print("welcome to My Diary App");
+		System.out.print("Enter username : ");
+		String userName = input.next();
+		System.out.print("password : ");
+		String userpassword = input.next();
 	}
+	
+
+
+	
 	public static void menu(){ 
-	System.out.print("1.Add Entry\n2. Create Diary\n3. Update entry\n4. find by Id\n5. Unlock Diary\6. Lock Diary\n7. Delete \n Entry Enter a number :");
-	int userSelection = input.nextint();
-	if (userSelection == 1){
+		System.out.print("1. find by Id \n2. Create Diary \n Entry Enter a number :");
+		int userSelection = input.nextint();
+		if (userSelection == 1){
 		
-		menu();
-	}
-	else if (userSelection == 2){
 		
-	}
-	else if (userSelection == 3){
+		}
+		else if (userSelection == 2){
 		
-	}
-	else if (userSelection == 4){
+		}
+		else if (userSelection == 3){
 		
-	}
-	else if (userSelection == 5){
+		}
+		else if (userSelection == 4){
 		
-	}
-	else if (userSelection == 6){
+		}
+		else if (userSelection == 5){
 		
-	}
-	else if(userSelection == 7){
+		}
+		else if (userSelection == 6){
+		
+		}
+		else if(userSelection == 7){
 		
 	}else{
 		System.out.print("invalid input");
@@ -85,10 +90,11 @@ public class Diary{
 	} 
 
 	public static void addEntry(){
+		.add();
 		
 	}
 	public static void deleteEntry(){
-		
+		.remove();
 	}
 	public static void updateEntry(){
 		
