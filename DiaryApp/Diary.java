@@ -38,15 +38,16 @@ public class Diary{
 		System.out.print("Enter user Id : ");
 		String userId = input.next();
 		diaryID.contains(userId);
-		for(int count = 0 ; count<
-		if( ){
-			unlock();
-			break;
+		for(int count = 0; count< diaryID.size() ; count++ ){
+			if( diaryID.get(count).contains(userId) == true ){
+				unlock();
+				break;
+			}
+			else{
+				System.out.print("invalid user Id try again");
+				findByID();
+			}	
 		}
-		else{
-			System.out.print("invalid user Id try again");
-			findByID();
-		}	
 	
 	}
 	public static ArrayList<String> createDiary(){
@@ -79,12 +80,12 @@ public class Diary{
 
 	
 	
-	public static void unlockDiary(String actualPassword){
+	public static void unlockDiary(){
 		
-		System.out.print("Enter password : ");
+		System.out.print("Enter your password : ");
 		String userPassword = input.next();
 		if (userPassword.equals(actualPassword)){
-			createDiary();
+			
 		}else{
 			System.out.print("invalid passWord");
 		}
