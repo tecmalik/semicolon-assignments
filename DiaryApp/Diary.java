@@ -40,9 +40,9 @@ public class Diary{
 		diaryID.contains(userId);
 		for(int count = 0; count< diaryID.size() ; count++ ){
 			if( diaryID.get(count).contains(userId) == true ){
-				int textIndex = (unlock());
+				int textIndex = (unlockDiary());
 				if (textIndex != -1){ 
-					Addtext();
+					menu();
 					break;
 				}
 			}
@@ -88,13 +88,14 @@ public class Diary{
 		int textIndex = 0;
 		System.out.print("Enter your password : ");
 		String userPassword = input.next();
-		for(int count = 0; count<diaryID.size(); count++ )
-		if (userPassword.equals(diaryID.get(count).get(1))){
+		for(int count = 0; count<diaryID.size(); count++ ){
+			if (userPassword.equals(diaryID.get(count).get(1))){
 			textIndex = count;
 			return textIndex;
-		}else{
+			}else{
 			System.out.print("invalid passWord");
-			unlockDiary()
+			unlockDiary();
+		}
 		}
 		return -1;
 	}
