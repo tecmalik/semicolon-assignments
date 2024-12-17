@@ -42,8 +42,7 @@ public class Diary{
 			if( diaryID.get(count).contains(userId) == true ){
 				int textIndex = (unlockDiary());
 				if (textIndex != -1){ 
-					text(textIndex)
-					menu();
+					text(textIndex);
 					break;
 				}
 				else{
@@ -60,14 +59,38 @@ public class Diary{
 	}
 
 
-	public static void text(int number){
-		if 
-		diaryText.indexOf(number)
+	public static void text(int index){
+		if (index <= diaryText.size()){
+			System.out.print(diaryText.get(index));
+			textMenu();
+		}
+		else{
+			System.out.println("Enter texts")
+			String newText = input.nextLine();
+			.add(newText) 
+		}
 			
 	}
 	
-	public static void menu(){
-		System.out.print("Enter :\n1. to Add Entery\n2. To Delete Entry \n-1. Exit ")
+	public static Int textMenu(){
+		System.out.print("Enter :\n1. to Add Entry\n2. To Delete Entry \n3. Update Entry \n-1. Exit ");
+		int menuOption = input.nextInt();
+		if( menuOption == -1){
+			menu();
+		}
+		else if( menuOption == 1){
+			addEntry();
+		}
+		else if( menuOption == 2){
+			deleteEntry();
+		}
+		else if( menuOption == 3){
+			updateEntry();
+		}
+		else{
+			System.out.print("invalid input");
+			textMenu();
+		}
 	}
 
 
