@@ -55,10 +55,11 @@ public class Diary{
 		System.out.println("Create a new user ID : ");
 		String userName = input.nextLine();
 		userinfo.add(userName);
-		System.out.println("Enter Date\n \"yy/mm/dd\" : ");
-		String date = input.nextLine();
 		String password = setpassword();
 		userinfo.add(password);
+		System.out.println("Enter Date\n \"yy/mm/dd\" : ");
+		String date = input.nextLine();
+		userinfo.add(date);
 		
 		return userinfo; 
 	} 
@@ -80,15 +81,17 @@ public class Diary{
 
 	
 	
-	public static void unlockDiary(){
-		
+	public static int unlockDiary(){
+		int textIndex = 0;
 		System.out.print("Enter your password : ");
 		String userPassword = input.next();
-		if (userPassword.equals(actualPassword)){
-			
+		for(int count = 0; count<diaryID.size(); count++ )
+		if (userPassword.equals(diaryID.get(count).get(1))){
+			textIndex = count;
 		}else{
 			System.out.print("invalid passWord");
 		}
+		return textIndex;
 	}
 
 
