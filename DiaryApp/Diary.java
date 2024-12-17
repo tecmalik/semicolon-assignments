@@ -4,7 +4,7 @@ public class Diary{
 	
 	static Scanner input = new Scanner(System.in);
 	static ArrayList<ArrayList<String>> diaryID = new ArrayList<ArrayList<String>>();
-	static ArrayList<String> diaryText = new ArrayList<String>();
+	static ArrayList<ArrayList<String>> diaryText = new ArrayList<ArrayList<String>>();
 
 	public static void main(String[] args){
 		
@@ -35,6 +35,7 @@ public class Diary{
 	
 
 	public static void findByID(){
+		if(diaryID.size()>0){
 		System.out.print("Enter user Id : ");
 		String userId = input.next();
 		diaryID.contains(userId);
@@ -46,7 +47,7 @@ public class Diary{
 					break;
 				}
 				else{
-					System.out.print("invalid passWord");
+					System.out.print("invalid passWord !!!");
 					unlockDiary();
 				}
 			}
@@ -55,7 +56,11 @@ public class Diary{
 				findByID();
 			}	
 		}
-	
+		}
+		else{	
+			createDiary();
+			textMenu();
+		}
 	}
 
 
@@ -65,14 +70,14 @@ public class Diary{
 			textMenu();
 		}
 		else{
-			System.out.println("Enter texts")
+			System.out.println("Enter texts");
 			String newText = input.nextLine();
-			.add(newText) 
+			//.add(newText);
 		}
 			
 	}
 	
-	public static Int textMenu(){
+	public static void textMenu(){
 		System.out.print("Enter :\n1. to Add Entry\n2. To Delete Entry \n3. Update Entry \n-1. Exit ");
 		int menuOption = input.nextInt();
 		if( menuOption == -1){
@@ -97,11 +102,13 @@ public class Diary{
 	public static ArrayList<String> createDiary(){
 		ArrayList<String> userinfo = new ArrayList<String>();
 		System.out.println("Create a new user ID : ");
+		input.nextLine();
 		String userName = input.nextLine();
 		userinfo.add(userName);
 		String password = setpassword();
 		userinfo.add(password);
 		System.out.println("Enter Date\n \"yy/mm/dd\" : ");
+		input.nextLine();
 		String date = input.nextLine();
 		userinfo.add(date);
 		
@@ -146,6 +153,8 @@ public class Diary{
 
 
 	public static void addEntry(){
+		System.out.print("Enter text");
+		String heading = input.nextLine();
 		//.add();
 		
 	}
