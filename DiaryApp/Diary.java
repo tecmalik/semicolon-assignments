@@ -42,8 +42,13 @@ public class Diary{
 			if( diaryID.get(count).contains(userId) == true ){
 				int textIndex = (unlockDiary());
 				if (textIndex != -1){ 
+					text(textIndex)
 					menu();
 					break;
+				}
+				else{
+					System.out.print("invalid passWord");
+					unlockDiary();
 				}
 			}
 			else{
@@ -53,6 +58,19 @@ public class Diary{
 		}
 	
 	}
+
+
+	public static void text(int number){
+		if 
+		diaryText.indexOf(number)
+			
+	}
+	
+	public static void menu(){
+		System.out.print("Enter :\n1. to Add Entery\n2. To Delete Entry \n-1. Exit ")
+	}
+
+
 	public static ArrayList<String> createDiary(){
 		ArrayList<String> userinfo = new ArrayList<String>();
 		System.out.println("Create a new user ID : ");
@@ -92,10 +110,7 @@ public class Diary{
 			if (userPassword.equals(diaryID.get(count).get(1))){
 			textIndex = count;
 			return textIndex;
-			}else{
-			System.out.print("invalid passWord");
-			unlockDiary();
-		}
+			}
 		}
 		return -1;
 	}
