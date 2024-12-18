@@ -43,7 +43,7 @@ public class Diary{
 			if( diaryID.get(count).contains(userId) == true ){
 				int textIndex = (unlockDiary());
 				if (textIndex != -1){ 
-					text(textIndex);
+					textMenu(textIndex);
 					break;
 				}
 				else{
@@ -59,7 +59,8 @@ public class Diary{
 		}
 		else{	
 			createDiary();
-			textMenu();
+			int unlockedindex = unlockDiary();
+			textMenu(unlockedindex);
 		}
 	}
 
@@ -77,25 +78,26 @@ public class Diary{
 			
 	}*/
 	
-	public static void textMenu(){
+	public static void textMenu(int index){
 		System.out.print("Enter :\n1. to Add Entry\n2. To Delete Entry \n3. Update Entry \n-1. Exit ");
 		int menuOption = input.nextInt();
 		if( menuOption == -1){
 			menu();
 		}
 		else if( menuOption == 1){
-			System.out.print()
-			//addEntry();
+			
+			addEntry(index);
 		}
 		else if( menuOption == 2){
-			//deleteEntry();
+			deleteEntry(index);
 		}
 		else if( menuOption == 3){
-			//updateEntry();
+			updateEntry(index);
 		}
 		else{
 			System.out.print("invalid input");
-			textMenu();
+			int unlockedindex = unlockDiary();
+			textMenu(unlockedindex);
 		}
 	}
 
