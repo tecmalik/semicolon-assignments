@@ -151,17 +151,25 @@ public class Diary{
 	}
 	
 
-
-	public static void addEntry(){
-		System.out.print("Enter text");
-		String heading = input.nextLine();
-		//.add();
+	public static void addEntry(int index){
+		System.out.print("Enter text : ");
+		String textToAdd = input.nextLine();
+		diaryText.get(index).add(textToAdd);
 		
 	}
-	public static void deleteEntry(){
-		//.remove();
+	public static void deleteEntry(int index){
+		System.out.print("Enter text position to be deleted : ");
+		int position = input.nextInt();
+		diaryText.get(index).remove(position);
 	}
 	public static void updateEntry(){
+		System.out.print("Enter text position to be updated : ");
+		int position = input.nextInt();
+		System.out.print("Enter text : ");
+		input.nextLine();
+		String update = input.nextLine();
+		diaryText.get(index).get(position) = diaryText.get(index).get(position)+ update;
+
 		
 	}
 	
