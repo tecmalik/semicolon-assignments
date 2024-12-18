@@ -64,7 +64,7 @@ public class Diary{
 	}
 
 
-	public static void text(int index){
+	/**public static void text(int index){
 		if (index <= diaryText.size()){
 			System.out.print(diaryText.get(index));
 			textMenu();
@@ -73,9 +73,9 @@ public class Diary{
 			System.out.println("Enter texts");
 			String newText = input.nextLine();
 			//.add(newText);
-		}
+		}/
 			
-	}
+	}*/
 	
 	public static void textMenu(){
 		System.out.print("Enter :\n1. to Add Entry\n2. To Delete Entry \n3. Update Entry \n-1. Exit ");
@@ -84,13 +84,14 @@ public class Diary{
 			menu();
 		}
 		else if( menuOption == 1){
-			addEntry();
+			System.out.print()
+			//addEntry();
 		}
 		else if( menuOption == 2){
-			deleteEntry();
+			//deleteEntry();
 		}
 		else if( menuOption == 3){
-			updateEntry();
+			//updateEntry();
 		}
 		else{
 			System.out.print("invalid input");
@@ -160,17 +161,21 @@ public class Diary{
 	public static void deleteEntry(int index){
 		System.out.print("Enter text position to be deleted : ");
 		int position = input.nextInt();
-		diaryText.get(index).remove(position);
+		diaryText.get(index).remove(position-1);
 	}
-	public static void updateEntry(){
+	public static void updateEntry(int index){
 		System.out.print("Enter text position to be updated : ");
 		int position = input.nextInt();
 		System.out.print("Enter text : ");
 		input.nextLine();
 		String update = input.nextLine();
-		diaryText.get(index).get(position) = diaryText.get(index).get(position)+ update;
+		diaryText.get(index).set(position-1,update);
 
 		
+	}
+	
+	public static void getdisplay(int index){
+		System.out.print(diaryText.get(index));
 	}
 	
 
