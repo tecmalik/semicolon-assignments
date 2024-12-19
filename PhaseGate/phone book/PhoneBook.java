@@ -26,11 +26,11 @@ public class PhoneBook{
 	System.out.println("SELECT AN OPTION: \n1. Add Contact \n2. Remove Contact \n3. Find contact by Phone Number \n4. Find contact by First Name \n5. Edit contact by Last Name \n6. Edit contact \nEnter Number :");
 	int choice = input.nextInt(); 
 		if(choice == 1){
-			addToCart();
+			addContact();
 			menu();
 		}
 		else if(choice == 2){
-			removeFromCart();
+			removecontact()
 			menu();
 		}
 		else if(choice == 3){
@@ -57,7 +57,7 @@ public class PhoneBook{
 
 	}
 	
-	public static void addToCart(){
+	public static void addContact(){
 				input.nextLine();
 			System.out.print("Enter First Name :");
 			String contactFirstName  = input.nextLine();
@@ -78,7 +78,7 @@ public class PhoneBook{
 			contactEmails.add(contactEmail); 
 			System.out.printf("you Added %s to contact",contactFirstName);
 	}
-	public static void removeFromCart(){
+	public static void removecontact(){
 		
 		display(contactFirstNames,contactLastNames,phoneNumbers,contactAdresses,contactEmails);
 
@@ -96,7 +96,7 @@ public class PhoneBook{
 		}
 		else{ 
 		System.out.print("invalid input !!!");
-		removeFromCart();
+		removecontact();
 		}
 	}
 	public static void display(ArrayList<String> content1,ArrayList<String> content2,ArrayList<String> content3,ArrayList<String> content4,ArrayList<String> content5){
