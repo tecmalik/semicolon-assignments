@@ -43,6 +43,7 @@ public class StudentGrade{
 				System.out.printf("Enter %s  grade :",studentSubjects[counter]);
 				
 					studentGrade[count][counter]  = input.nextInt();
+					
 					if (studentGrade[count][counter]<0 || studentGrade[count][counter]>100){
 						System.out.print(" invalid !!! \nEnter a valid grade !!!");
 						--counter;

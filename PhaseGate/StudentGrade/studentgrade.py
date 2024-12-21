@@ -6,7 +6,6 @@ studentSubject = []
 
 
 
-
 for count in range(studentnumber):
 	name = input(f"Enter {count+1} Student names : ")
 	studentNames.append(name)
@@ -19,9 +18,12 @@ for name in studentNames:
 	studentGrade[name] = {}
 	for subject in studentSubject:
 		grade = int(input(f"Enter {name} grade for {subject} :"))
+		#if grade <= 100 and grade >= 0 :
 		studentGrade[name][subject] = grade 
 		print("Saving >>>>>>>>>>>>>>>>>>>>>>>>>>")
 		print("Saved Suceessfully")
+		#else :
+		print("invalid input !!!")
 
 print("=================================================================================")
 print("Student",end="")
