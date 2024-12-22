@@ -6,6 +6,9 @@ studentSubject = []
 
 
 
+
+
+
 def getEachStudentTotal(studentSubject:list , studentGrade:dict):
 	total = []
 	for student in studentGrade:
@@ -42,19 +45,17 @@ for subject in studentSubject:
 	print(f"	{subject}",end="" )
 print("\t",end="")
 
-print("%-10s%11s%13s " %("Total" , "AVE" ,"POS"))
+print("%-10s%-11s%-13s " %("Total" , "AVE" ,"POS"))
 print("=================================================================================")
 count = 0
 for subjects in studentGrade :
 	print(f"{subjects}",end="")
 	for grade in studentSubject :
 		print("\t%s" %(studentGrade[subjects][grade]),end="")
-	print("\t",getEachStudentTotal(studentSubject,studentGrade)[count])
+	print("%10d"%(getEachStudentTotal(studentSubject,studentGrade)[count]),end="")
+	print("%11d"%((getEachStudentTotal(studentSubject,studentGrade)[count])/(numberOfSubjects)),end="")
 	count += 1
 	print()
-
-
-
 
 
 
