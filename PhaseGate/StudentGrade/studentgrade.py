@@ -12,11 +12,11 @@ def getposition(numbers:list):
 	for grade in sortedNumbers:
 		count = 1
 		index = 0
-		for check in range(len(sortedNumbers)):
-			
+		for check in range(len(numbers)):
+
 			if grade == numbers[index]:
 				position[index] = count
-		index += 1
+			index += 1
 		count += 1
 	return position
 
