@@ -4,6 +4,21 @@ numberOfSubjects = int(input("Enter number of Subjects :"))
 studentNames = []
 studentSubject = []
 
+def getHighestPerSubject(studentgrade:dict):
+	highestStudents = []
+	name = []
+	highest
+	for student in studentGrade:
+		
+		for subject in studentGrade:
+			if 
+			
+	return highest
+
+
+
+
+
 
 def getPosition(numbers:list):
 	position = numbers
