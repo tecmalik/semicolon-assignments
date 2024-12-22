@@ -8,15 +8,15 @@ studentSubject = []
 def getLowestPerSubject(studentgrades:dict):
 	lowestStudents = []
 	name = []
-	for student in studentGrades:
+	for subject in studentGrades:
 		lowest = 100
-		for subject in studentGrades[subject]:
+		lowestStudent = ' '
+		for student in studentGrades[subject]:
 			if studentGrades[subject][student] < lowest :
 				lowest = studentGrades[subject][student]
 				lowestStudent = student
 		lowestStudents.append(lowest)
 		name.append(lowestStudent)
-				
 	return lowestStudents, name
 
 
@@ -25,7 +25,7 @@ def getLowestPerSubject(studentgrades:dict):
 def getHighestPerSubject(studentgrades:dict):
 	highestStudents = []
 	name = []
-	for student in studentGrades:
+	for subject in studentGrades:
 		highest = 0
 		for subject in studentGrades[subject]:
 			if studentGrades[subject][student] > highest :
@@ -103,9 +103,10 @@ for subjects in studentGrades :
 	count += 1
 	print()
 
+print("Student Summary")
+for grade , name in getLowestPerSubject(studentGrades):
+	print (f"{grade } -- {name}")
 
-
-	
 print(getLowestPerSubject(studentGrades))
 print(getHighestPerSubject(studentGrades))
 
