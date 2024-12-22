@@ -5,7 +5,7 @@ studentNames = []
 studentSubject = []
 
 
-def getlowestPerSubject(studentgrades:dict):
+def getLowestPerSubject(studentgrades:dict):
 	lowestStudents = []
 	name = []
 	for student in studentGrades:
@@ -103,6 +103,9 @@ for subjects in studentGrades :
 	count += 1
 	print()
 
-	
 
+
+	
+print(getLowestPerSubject(studentGrades))
+print(getHighestPerSubject(studentGrades))
 
