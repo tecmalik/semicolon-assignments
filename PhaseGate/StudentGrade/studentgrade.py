@@ -17,7 +17,7 @@ for count in range(numberOfSubjects):
 for name in studentNames:
 	studentGrade[name] = {}
 	for subject in studentSubject:
-		grade = int(input(f"Enter {name} grade for {subject} :"))
+		grade = int(input(f"Enter {name} grade for {subject} : "))
 		#if grade <= 100 and grade >= 0 :
 		studentGrade[name][subject] = grade 
 		print("Saving >>>>>>>>>>>>>>>>>>>>>>>>>>")
@@ -32,10 +32,10 @@ for subject in studentSubject:
 
 print("%-10s%11s%13s " %("Total" , "AVE" ,"POS"))
 print("=================================================================================")
-for grades in studentGrade:
+for subject , grades in studentGrade.items :
 	print(f"{grades}",end="")
 	for count in grades:
-		print("	     %d" %(count),end="")
+		print("	    %d" %(count),end="")
 	print()
 
 
