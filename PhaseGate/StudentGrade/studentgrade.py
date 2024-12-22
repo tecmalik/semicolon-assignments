@@ -29,14 +29,14 @@ print("=========================================================================
 print("Student",end="")
 for subject in studentSubject:
 	print(f"	{subject}",end="" )
-print(" ",end="")
+print("\t",end="")
 
 print("%-10s%11s%13s " %("Total" , "AVE" ,"POS"))
 print("=================================================================================")
 for subjects in studentGrade :
 	print(f"{subjects}",end="")
-	for grade in subjects :
-		print("\t%s" %(studentGrade[subjects][grades]),end="")
+	for grade in studentSubject :
+		print("\t%s" %(studentGrade[subjects][grade]),end="")
 	print()
 
 
@@ -44,7 +44,7 @@ for subjects in studentGrade :
 
 
 
-def listtotal(numbers:list):
+def gettotal(numbers:dict):
 	total = 0
 	for integer in number:
 		total += integer
