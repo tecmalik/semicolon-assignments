@@ -1,18 +1,20 @@
-studentGrade = {}
+studentGrades = {}
 studentnumber = int(input("Enter number of Students :"))
 numberOfSubjects = int(input("Enter number of Subjects :"))
 studentNames = []
 studentSubject = []
 
-def getHighestPerSubject(studentgrade:dict):
+def getHighestPerSubject(studentgrades:dict):
 	highestStudents = []
 	name = []
 	highest
-	for student in studentGrade:
+	for student in studentGrades:
 		
-		for subject in studentGrade:
-			if 
-			
+		for subject in studentGrades:
+			if studentGrades[subject][student] > highest :
+				highest = studentGrades[subject][student]
+			highestStudents.append(highest)
+				
 	return highest
 
 
@@ -36,12 +38,12 @@ def getPosition(numbers:list):
 	return position
 
 
-def getEachStudentTotal(studentSubject:list , studentGrade:dict):
+def getEachStudentTotal(studentSubject:list , studentGrades:dict):
 	total = []
-	for student in studentGrade:
+	for student in studentGrades:
 		sum = 0
 		for grade in studentSubject :
-			sum += studentGrade[student][grade]
+			sum += studentGrades[student][grade]
 		total.append(sum)
 			
 	return list(total)
@@ -56,11 +58,11 @@ for count in range(numberOfSubjects):
 	studentSubject.append(subject)
 
 for name in studentNames:
-	studentGrade[name] = {}
+	studentGrades[name] = {}
 	for subject in studentSubject:
 		grade = int(input(f"Enter {name} grade for {subject} : "))
 		#if grade <= 100 and grade >= 0 :
-		studentGrade[name][subject] = grade 
+		studentGrades[name][subject] = grade 
 		print("Saving >>>>>>>>>>>>>>>>>>>>>>>>>>")
 		print("Saved Suceessfully")
 		#else :
@@ -78,10 +80,10 @@ count = 0
 for subjects in studentGrade :
 	print(f"{subjects}",end="")
 	for grade in studentSubject :
-		print("\t%s" %(studentGrade[subjects][grade]),end="")
-	print("%10d"%(getEachStudentTotal(studentSubject,studentGrade)[count]),end="")
-	print("%11d"%((getEachStudentTotal(studentSubject,studentGrade)[count])/(numberOfSubjects)),end="")
-	print("%13d"%(getPosition(getEachStudentTotal(studentSubject,studentGrade))[count]))
+		print("\t%s" %(studentGrades[subjects][grade]),end="")
+	print("%10d"%(getEachStudentTotal(studentSubject,studentGrades)[count]),end="")
+	print("%11d"%((getEachStudentTotal(studentSubject,studentGrades)[count])/(numberOfSubjects)),end="")
+	print("%13d"%(getPosition(getEachStudentTotal(studentSubject,studentGrades))[count]))
 	count += 1
 	print()
 
