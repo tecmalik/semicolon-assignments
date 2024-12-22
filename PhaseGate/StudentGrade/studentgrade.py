@@ -5,8 +5,17 @@ studentNames = []
 studentSubject = []
 
 
-
-
+def getposition(numbers:list):
+	position = numbers
+	sortedNumbers = sorted(numbers) 
+	for grade in sortedNumbers:
+		count = 1
+		index = 0
+		if grade == numbers[index]:
+			position[index] = count
+		index += 1
+		count += 1
+	return position
 
 
 def getEachStudentTotal(studentSubject:list , studentGrade:dict):
@@ -56,6 +65,8 @@ for subjects in studentGrade :
 	print("%11d"%((getEachStudentTotal(studentSubject,studentGrade)[count])/(numberOfSubjects)),end="")
 	count += 1
 	print()
+	
+
 
 
 
