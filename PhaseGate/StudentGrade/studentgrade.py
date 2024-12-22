@@ -7,17 +7,17 @@ studentSubject = []
 def getHighestPerSubject(studentgrades:dict):
 	highestStudents = []
 	name = []
-	highest
+	highest = 0
 	for student in studentGrades:
 		
 		for subject in studentGrades:
 			if studentGrades[subject][student] > highest :
 				highest = studentGrades[subject][student]
-			highestStudents.append(highest)
+				studentsName = subject
+		highestStudents.append(highest)
+		name.append()
 				
-	return highest
-
-
+	return highestStudents
 
 
 
