@@ -6,10 +6,10 @@ studentSubject = []
 
 
 
-def geteachStudentTotal(studentSubject:list , studentGrade:dict):
+def getEachStudentTotal(studentSubject:list , studentGrade:dict):
 	total = []
-	sum = 0
 	for student in studentGrade:
+		sum = 0
 		for grade in studentSubject :
 			sum += studentGrade[student][grade]
 		total.append(sum)
@@ -45,9 +45,12 @@ print("\t",end="")
 print("%-10s%11s%13s " %("Total" , "AVE" ,"POS"))
 print("=================================================================================")
 for subjects in studentGrade :
+	count = 0
 	print(f"{subjects}",end="")
 	for grade in studentSubject :
 		print("\t%s" %(studentGrade[subjects][grade]),end="")
+	print("\t",getEachStudentTotal(studentSubject,studentGrade)[count])
+	count += 1
 	print()
 
 
