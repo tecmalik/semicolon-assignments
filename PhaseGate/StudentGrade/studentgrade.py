@@ -29,17 +29,16 @@ print("=========================================================================
 print("Student",end="")
 for subject in studentSubject:
 	print(f"	{subject}",end="" )
+print(" ",end="")
 
 print("%-10s%11s%13s " %("Total" , "AVE" ,"POS"))
 print("=================================================================================")
-for grades in studentGrade :
-	print(f"{grades}",end="")
-	for subject,grades in studentGrade.items() :
-		print("\t%s" %(grades),end="")
+for subjects in studentGrade :
+	print(f"{subjects}",end="")
+	for grade in subjects :
+		print("\t%s" %(studentGrade[subjects][grades]),end="")
 	print()
 
-	
-	
 
 
 
