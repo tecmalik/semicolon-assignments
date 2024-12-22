@@ -4,21 +4,37 @@ numberOfSubjects = int(input("Enter number of Subjects :"))
 studentNames = []
 studentSubject = []
 
+
+def getlowestPerSubject(studentgrades:dict):
+	lowestStudents = []
+	name = []
+	for student in studentGrades:
+		lowest = 100
+		for subject in studentGrades[subject]:
+			if studentGrades[subject][student] < lowest :
+				lowest = studentGrades[subject][student]
+				lowestStudent = student
+		lowestStudents.append(lowest)
+		name.append(lowestStudent)
+				
+	return lowestStudents, name
+
+
+
+
 def getHighestPerSubject(studentgrades:dict):
 	highestStudents = []
 	name = []
-	highest = 0
 	for student in studentGrades:
-		
-		for subject in studentGrades:
+		highest = 0
+		for subject in studentGrades[subject]:
 			if studentGrades[subject][student] > highest :
 				highest = studentGrades[subject][student]
-				studentsName = subject
+				highestStudent = student
 		highestStudents.append(highest)
-		name.append()
+		name.append(highestStudent)
 				
-	return highestStudents
-
+	return highestStudents, name
 
 
 
