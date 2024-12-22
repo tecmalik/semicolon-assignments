@@ -8,11 +8,14 @@ studentSubject = []
 def getposition(numbers:list):
 	position = numbers
 	sortedNumbers = sorted(numbers) 
+	sortedNumbers.sort(reverse=True)
 	for grade in sortedNumbers:
 		count = 1
 		index = 0
-		if grade == numbers[index]:
-			position[index] = count
+		for check in range(len(sortedNumbers)):
+			
+			if grade == numbers[index]:
+				position[index] = count
 		index += 1
 		count += 1
 	return position
