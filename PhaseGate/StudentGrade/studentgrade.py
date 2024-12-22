@@ -6,6 +6,17 @@ studentSubject = []
 
 
 
+def geteachStudentTotal(studentSubject:list , studentGrade:dict):
+	total = []
+	sum = 0
+	for student in studentGrade:
+		for grade in studentSubject :
+			sum += studentGrade[student][grade]
+		total.append(sum)
+			
+	return list(total)
+
+
 for count in range(studentnumber):
 	name = input(f"Enter {count+1} Student names : ")
 	studentNames.append(name)
@@ -44,8 +55,3 @@ for subjects in studentGrade :
 
 
 
-def gettotal(numbers:dict):
-	total = 0
-	for integer in number:
-		total += integer
-	return total
