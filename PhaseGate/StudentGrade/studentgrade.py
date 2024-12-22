@@ -44,8 +44,8 @@ print("\t",end="")
 
 print("%-10s%11s%13s " %("Total" , "AVE" ,"POS"))
 print("=================================================================================")
+count = 0
 for subjects in studentGrade :
-	count = 0
 	print(f"{subjects}",end="")
 	for grade in studentSubject :
 		print("\t%s" %(studentGrade[subjects][grade]),end="")
