@@ -9,8 +9,8 @@ def getPosition(numbers:list):
 	position = numbers
 	sortedNumbers = sorted(numbers) 
 	sortedNumbers.sort(reverse=True)
+	count = 1
 	for grade in sortedNumbers:
-		count = 1
 		index = 0
 		for check in range(len(numbers)):
 
@@ -66,12 +66,10 @@ for subjects in studentGrade :
 		print("\t%s" %(studentGrade[subjects][grade]),end="")
 	print("%10d"%(getEachStudentTotal(studentSubject,studentGrade)[count]),end="")
 	print("%11d"%((getEachStudentTotal(studentSubject,studentGrade)[count])/(numberOfSubjects)),end="")
-	print("%13d"%(getPosition(getEachStudentTotal(studentSubject,studentGrade))[count]),end="")
+	print("%13d"%(getPosition(getEachStudentTotal(studentSubject,studentGrade))[count]))
 	count += 1
 	print()
 
 	
-
-
 
 
