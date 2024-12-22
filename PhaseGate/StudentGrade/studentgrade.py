@@ -21,13 +21,13 @@ def getLowestPerSubject(studentgrades:dict):
 
 
 
-
 def getHighestPerSubject(studentgrades:dict):
 	highestStudents = []
 	name = []
 	for subject in studentGrades:
 		highest = 0
-		for subject in studentGrades[subject]:
+		highestStudents = ' '
+		for student in studentGrades[subject]:
 			if studentGrades[subject][student] > highest :
 				highest = studentGrades[subject][student]
 				highestStudent = student
