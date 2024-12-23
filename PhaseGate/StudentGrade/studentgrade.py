@@ -3,6 +3,17 @@ studentnumber = int(input("Enter number of Students :"))
 numberOfSubjects = int(input("Enter number of Subjects :"))
 studentNames = []
 studentSubject = []
+	
+	
+def subjectTotal(studentGrades:dict):
+	totals = []
+	for subject in studentGrades:
+		sum = 0
+		for student in studentGrades[subject]:
+				sum += studentGrades[subject][student]
+				
+		totals.append(sum)
+	return totals
 
 def passesAndFailures(studenGrades:dict):
 	passes = []
@@ -122,16 +133,17 @@ print()
 highestScores , highestStudents = getHighestPerSubject(studentGrades)
 lowestScores , lowesrStudents = getLowestPerSubject(studentGrades)
 numberOfPasse , numberOfFailures = passesAndFailures(studentGrades)
+totals = subjectTotal(studentGrades)
 
 count = 0
 for subject in studentSubject:
 	print()
 	print(f"{subject}")
 	print(f"the highest scoring is :{highestStudents[count]} scoring {highestScores[count]} ")
-	print("the lowest scoring student is: {lowestScores[count]} scoring ")
-	print("total is {}")
-	print("number of passes{numberOfPasse[count]}")
-	print("number of failes{numberOfFailures[count]}")
+	print(f"the lowest scoring student is: {lowestScores[count]} scoring ")
+	print(f"total is {}")
+	print(f"number of passes{numberOfPasse[count]}")
+	print(f"number of failes{numberOfFailures[count]}")
 	print()
 	print("--------------------------------------------------------------------------------------------")
 	count += 1
