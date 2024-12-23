@@ -5,6 +5,7 @@ studentNames = []
 studentSubject = []
 
 
+
 def getLowestPerSubject(studentgrades:dict):
 	lowestStudents = []
 	name = []
@@ -106,8 +107,15 @@ for subjects in studentGrades :
 print("Student Summary")
 for grade in getLowestPerSubject(studentGrades):
 	print (f"{grade } -- {name}")
+for coint in range (numberOfSubjects):
+	print("subject")
+	print("the higheest scoring is :{} scoring {} ")
+	print("the lowest scoring student is: {} scoring ")
+	print("total is {}")
+	print("number of passes{}")
+	print("number of failes{}")
+	
 
-
-print(getLowestPerSubject(studentGrades))
-print(getHighestPerSubject(studentGrades))
+	print(getLowestPerSubject(studentGrades))
+	print(getHighestPerSubject(studentGrades))
 
