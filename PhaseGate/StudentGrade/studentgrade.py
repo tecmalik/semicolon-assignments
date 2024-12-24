@@ -135,7 +135,7 @@ print()
 print("Student Summary")
 print()
 highestScores , highestStudents = getHighestPerSubject(studentGrades , studentSubject)
-lowestScores , lowestStudents = getLowestPerSubject(studentGrades)
+lowestScores , lowestStudents = getLowestPerSubject(studentGrades, studentSubject)
 numberOfPasse , numberOfFailures = passesAndFailures(studentGrades)
 totals = subjectTotal(studentGrades)
 
