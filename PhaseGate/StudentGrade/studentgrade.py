@@ -14,7 +14,7 @@ def subjectTotal(studentGrades:dict):
 		totals.append(sum)
 	return totals
 
-def passesAndFailures(studenGrades:dict):
+def passesAndFailures(studenGrades:dict, subjects:list):
 	passes = []
 	fails = []
 	for subject in subjects:
@@ -37,9 +37,9 @@ def getLowestPerSubject(studentgrades:dict,subjects:list):
 		subjectname = ''
 		for student in studentGrades:
 			if studentGrades[student][subject] < lowest :
-				highest = studentGrades[student][subject]
+				lowest = studentGrades[student][subject]
 				subjectname = student
-		highestStudents.append(lowest)
+		lowestStudents.append(lowest)
 		subjectkey.append(subjectname)
 		
 				
@@ -135,8 +135,8 @@ print()
 print("Student Summary")
 print()
 highestScores , highestStudents = getHighestPerSubject(studentGrades , studentSubject)
-lowestScores , lowestStudents = getLowestPerSubject(studentGrades, studentSubject)
-numberOfPasse , numberOfFailures = passesAndFailures(studentGrades)
+lowestScores , lowestStudents = getLowestPerSubject(studentGrades , studentSubject)
+numberOfPasse , numberOfFailures = passesAndFailures(studentGrades, studentSubject)
 totals = subjectTotal(studentGrades)
 
 count = 0
