@@ -36,7 +36,7 @@ def getLowestPerSubject(studentgrades:dict,subjects:list):
 		lowest = 100
 		subjectname = ''
 		for student in studentGrades:
-			if studentGrades[student][subject] < highest :
+			if studentGrades[student][subject] < lowest :
 				highest = studentGrades[student][subject]
 				subjectname = student
 		highestStudents.append(lowest)
