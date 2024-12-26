@@ -117,8 +117,9 @@ public class StudentGrade{
 		highestAndLowestPreSubject( numberOfSubjects, eachSubjects(numberOfSubjects, studentNumber ,studentGrade));
 		totalPreSubject(numberOfSubjects,eachSubjects(numberOfSubjects, studentNumber ,studentGrade));
 		passesAndFailuresOfEachSubjects( numberOfSubjects , studentNumber , eachSubjects(numberOfSubjects, studentNumber ,studentGrade));
-
-	
+		highestInteger(totalPreSubject(numberOfSubjects,eachSubjects(numberOfSubjects, studentNumber ,studentGrade)));
+		lowestInteger(totalPreSubject(numberOfSubjects,eachSubjects(numberOfSubjects, studentNumber ,studentGrade)));
+		
 
 
 
@@ -148,27 +149,44 @@ public class StudentGrade{
 				System.out.printf(" Average Score Score is : %.3f%n",(float)totalPreSubject(numberOfSubjects,eachSubjects(numberOfSubjects, studentNumber ,studentGrade))[index]/studentNumber);
 				System.out.printf(" Number of Passes: %d \n Number of failures is : %d%n",passesAndFailuresOfEachSubjects(numberOfSubjects , studentNumber , eachSubjects(numberOfSubjects, studentNumber ,studentGrade))[index][0] ,passesAndFailuresOfEachSubjects(numberOfSubjects , studentNumber , eachSubjects(numberOfSubjects, studentNumber ,studentGrade))[index][1] ); 
 				System.out.println("--------------------------------------------------------------------------------");
-			
+				
 
 		} 
-	
-	
-		System.out.print("The hardest subject is subject____ with number offailures____ ");
-		System.out.print("The easiest subject is subject ___ with 4 numer pf passes____");
-		System.out.print("The ovarall highest score is Scored by student____2 in subject___1 Scoring___98"); 
+
+
+		
+		
+		for(int count=0; count < numberOfSubjects ; count++){
+			if (lowestInteger(totalPreSubject(numberOfSubjects,eachSubjects(numberOfSubjects, studentNumber ,studentGrade))) == totalPreSubject(numberOfSubjects,eachSubjects(numberOfSubjects, studentNumber ,studentGrade))[count] ){
+				System.out.printf("The hardest subject is %s with number %d\n ", studentSubjects[count], passesAndFailuresOfEachSubjects(numberOfSubjects , studentNumber , eachSubjects(numberOfSubjects, studentNumber ,studentGrade))[count][1] );
+				
+			}
+		}
+		for(int count=0; count < numberOfSubjects ; count++){
+			if (highestInteger(totalPreSubject(numberOfSubjects,eachSubjects(numberOfSubjects, studentNumber ,studentGrade))) == totalPreSubject(numberOfSubjects,eachSubjects(numberOfSubjects, studentNumber ,studentGrade))[count] ){
+				System.out.printf("The easiest subject is %s with number %d\n " , studentSubjects[count] , passesAndFailuresOfEachSubjects(numberOfSubjects , studentNumber , eachSubjects(numberOfSubjects, studentNumber ,studentGrade))[count][0] );
+				
+			}
+		}
+		
+
+		
+		//System.out.print("The ovarall highest score is Scored by studentNames in %s Scoring %d \n",studentSubjects[hardestindex] , highestInteger(eachSubjects(numberOfSubjects, studentNumber ,studentGrade)[hardestindex])); 
+
 		System.out.print("The overall lowest score is scored by Student___1 in  subject scoring____ 21");
 
 		System.out.println("Class Summary");
-		System.out.print("========================================================================");
-		System.out.print("Best Graduating Student is : "); 
+		System.out.println("========================================================================");
+		System.out.println("Best Graduating Student is : "); 
 		System.out.print("========================================================================\n\n\n");
-		System.out.print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");		System.out.print("Worse Graduating Student is : "); 
-		System.out.print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+		System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");		
+		System.out.println("Worse Graduating Student is : "); 
+		System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
 			
-		System.out.print("========================================================================");
+		System.out.println("========================================================================");
 		System.out.println("Class Total : ");
 		System.out.println("Class Average Score is : ");
-		System.out.print("========================================================================");
+		System.out.println("========================================================================");
 
 		
 	}
@@ -305,7 +323,8 @@ public class StudentGrade{
 		return passesAndFailuresOfEachSubjects;	
 	}
 	
-
+	
+	
 	
 
 }
