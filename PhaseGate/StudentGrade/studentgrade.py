@@ -5,18 +5,18 @@ studentNames = []
 studentSubject = []
 
 
-def get list_total(numbers:list):
+def get_list_total(numbers:list):
 	total = 0 
 	for number in numbers:
 		total += number
 	return total
 
-def ovarall_lowest_score(studentGrades:dict ):
+def overall_lowest_score(studentGrades:dict ):
 	lowest = 100
 	display_subject = " "
 	name = " "
-	for student in studentGrade:
-		for subject in student:
+	for student in studentGrades:
+		for subject in studentSubject:
 			if studentGrades[student][subject] < lowest:
 				lowest = studentGrades[student][subject]
 				display_subject = subject
@@ -26,12 +26,12 @@ def ovarall_lowest_score(studentGrades:dict ):
 
 
 
-def ovarall_highest_score(studentGrades:dict ):
+def overall_highest_score(studentGrades:dict ):
 	highest = 0
 	display_subject = " "
 	name = " "
-	for student in studentGrade:
-		for subject in student:
+	for student in studentGrades:
+		for subject in studentSubject:
 			if studentGrades[student][subject] > highest:
 				highest = studentGrades[student][subject]
 				display_subject = subject
@@ -174,9 +174,9 @@ highestScores , highestStudents = getHighestPerSubject(studentGrades , studentSu
 lowestScores , lowestStudents = getLowestPerSubject(studentGrades , studentSubject)
 numberOfPasse , numberOfFailures = passesAndFailures(studentGrades, studentSubject)
 totals = subjectTotal(studentGrades)
-ovarall_highest, ovarall_highest_subject, overall_highest_name = ovarall_highest_score(studentGrades)  
-ovarall_lowest, ovarall_lowest_subject, overall_lowest_name = ovarall_lowest_score(studentGrades)
-overall_total= list_total(getEachStudentTotal(studentSubject, studentGrades))
+overall_highest, overall_highest_subject, overall_highest_name = overall_highest_score(studentGrades)  
+overall_lowest, overall_lowest_subject, overall_lowest_name = overall_lowest_score(studentGrades)
+overall_total= get_list_total(getEachStudentTotal(studentSubject, studentGrades))
 
 count = 0
 for subject in studentSubject:
@@ -185,7 +185,7 @@ for subject in studentSubject:
 	print(f"the highest scoring is  {highestStudents[count]} scoring {highestScores[count]} ")
 	print(f"the lowest scoring student is {lowestStudents[count]} {lowestScores[count]} scoring ")
 	print(f"total is : {totals[count]}")
-	print(f"Average is : {round (totals[count]/studentnumber , 3)}")
+	print(f"Average is : {round(totals[count]/studentnumber , 3)}")
 	print(f"number of passes : {numberOfPasse[count]}")
 	print(f"number of failes : {numberOfFailures[count]}")
 	print()
@@ -194,7 +194,7 @@ for subject in studentSubject:
 	
 #print(f"the hardest Subject is {} with {} faliures")
 #print(f"The easiest Subject is {} with {} passes")
-printf("the overall Highest score scored by {overall_highest_name} in {overall_highest_subject} scoring {overall_highest}")
+print(f"the overall Highest score scored by {overall_highest_name} in {overall_highest_subject} scoring {overall_highest}")
 printf("the overall lowest score scored by { overall_lowest_name} in {ovarall_lowest_subject} scoring {ovarall_lowest}")
 print("==========================================================================================")
 print()
