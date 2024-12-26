@@ -120,6 +120,7 @@ public class StudentGrade{
 		highestInteger(totalPreSubject(numberOfSubjects,eachSubjects(numberOfSubjects, studentNumber ,studentGrade)));
 		lowestInteger(totalPreSubject(numberOfSubjects,eachSubjects(numberOfSubjects, studentNumber ,studentGrade)));
 		
+		
 
 
 
@@ -169,11 +170,24 @@ public class StudentGrade{
 			}
 		}
 		
+		for(int count = 0 ; count < numberOfSubjects ; count++){
+			for(int index = 0 ; index < studentNumber ; index++){
+				if (  overallHighest( highestAndLowestPreSubject(numberOfSubjects, eachSubjects(numberOfSubjects, studentNumber ,studentGrade)) , numberOfSubjects) == eachSubjects(numberOfSubjects, studentNumber ,studentGrade)[count][index]){
+					System.out.printf("The ovarall highest score is Scored by studentNames in %s Scoring %d \n", studentSubjects[count] , overallHighest( highestAndLowestPreSubject(numberOfSubjects, eachSubjects(numberOfSubjects, studentNumber ,studentGrade)) , numberOfSubjects)); 
+				}
+			}
+		}
 
-		
-		//System.out.print("The ovarall highest score is Scored by studentNames in %s Scoring %d \n",studentSubjects[hardestindex] , highestInteger(eachSubjects(numberOfSubjects, studentNumber ,studentGrade)[hardestindex])); 
 
-		System.out.print("The overall lowest score is scored by Student___1 in  subject scoring____ 21");
+		for(int count = 0 ; count < numberOfSubjects ; count++){
+			for(int index = 0 ; index < studentNumber ; index++){
+				if ( overallLowest( highestAndLowestPreSubject(numberOfSubjects, eachSubjects(numberOfSubjects, studentNumber ,studentGrade)) , numberOfSubjects) == eachSubjects(numberOfSubjects, studentNumber ,studentGrade)[count][index]){
+					System.out.printf("The ovarall lowest score is Scored by studentNames in %s Scoring %d \n", studentSubjects[count] , overallLowest( highestAndLowestPreSubject(numberOfSubjects, eachSubjects(numberOfSubjects, studentNumber ,studentGrade)) , numberOfSubjects)); 
+				}
+			}
+		}
+
+
 
 		System.out.println("Class Summary");
 		System.out.println("========================================================================");
@@ -324,7 +338,27 @@ public class StudentGrade{
 	}
 	
 	
+	public static int overallHighest(int[][] highestAndLowestPreSubject , int numberOfSubjects){
+		int[] allHighest = new int[numberOfSubjects];
+		for(int count = 0 ; count< numberOfSubjects ; count++){
+			allHighest[count] = highestAndLowestPreSubject[count][0];
+		}
+		return highestInteger(allHighest);
+			
+	}
 	
+	public static int overallLowest(int[][] highestAndLowestPreSubject , int numberOfSubjects){
+		int[] allLowest = new int[numberOfSubjects];
+		for(int count = 0 ; count< numberOfSubjects ; count++){
+			allLowest[count] = highestAndLowestPreSubject[count][1];
+		}
+		return lowestInteger(allLowest);
+			
+	}
+
+
+
+
 	
 
 }
