@@ -173,7 +173,7 @@ public class StudentGrade{
 		for(int count = 0 ; count < numberOfSubjects ; count++){
 			for(int index = 0 ; index < studentNumber ; index++){
 				if (  overallHighest( highestAndLowestPreSubject(numberOfSubjects, eachSubjects(numberOfSubjects, studentNumber ,studentGrade)) , numberOfSubjects) == eachSubjects(numberOfSubjects, studentNumber ,studentGrade)[count][index]){
-					System.out.printf("The ovarall highest score is Scored by studentNames in %s Scoring %d \n", studentSubjects[count] , overallHighest( highestAndLowestPreSubject(numberOfSubjects, eachSubjects(numberOfSubjects, studentNumber ,studentGrade)) , numberOfSubjects)); 
+					System.out.printf("The ovarall highest score is Scored by %s in %s Scoring %d \n", studentNames[index], studentSubjects[count] , overallHighest( highestAndLowestPreSubject(numberOfSubjects, eachSubjects(numberOfSubjects, studentNumber ,studentGrade)) , numberOfSubjects)); 
 				}
 			}
 		}
@@ -182,7 +182,7 @@ public class StudentGrade{
 		for(int count = 0 ; count < numberOfSubjects ; count++){
 			for(int index = 0 ; index < studentNumber ; index++){
 				if ( overallLowest( highestAndLowestPreSubject(numberOfSubjects, eachSubjects(numberOfSubjects, studentNumber ,studentGrade)) , numberOfSubjects) == eachSubjects(numberOfSubjects, studentNumber ,studentGrade)[count][index]){
-					System.out.printf("The ovarall lowest score is Scored by studentNames in %s Scoring %d \n", studentSubjects[count] , overallLowest( highestAndLowestPreSubject(numberOfSubjects, eachSubjects(numberOfSubjects, studentNumber ,studentGrade)) , numberOfSubjects)); 
+					System.out.printf("The ovarall lowest score is Scored by %s in %s Scoring %d \n", studentNames[index], studentSubjects[count] , overallLowest( highestAndLowestPreSubject(numberOfSubjects, eachSubjects(numberOfSubjects, studentNumber ,studentGrade)) , numberOfSubjects)); 
 				}
 			}
 		}
