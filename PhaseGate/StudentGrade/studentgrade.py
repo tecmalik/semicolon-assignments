@@ -195,7 +195,7 @@ for subject in studentSubject:
 #print(f"the hardest Subject is {} with {} faliures")
 #print(f"The easiest Subject is {} with {} passes")
 print(f"the overall Highest score scored by {overall_highest_name} in {overall_highest_subject} scoring {overall_highest}")
-printf("the overall lowest score scored by { overall_lowest_name} in {ovarall_lowest_subject} scoring {ovarall_lowest}")
+print(f"the overall lowest score scored by { overall_lowest_name} in {overall_lowest_subject} scoring {overall_lowest}")
 print("==========================================================================================")
 print()
 
