@@ -159,13 +159,13 @@ public class StudentGrade{
 		
 		for(int count=0; count < numberOfSubjects ; count++){
 			if (lowestInteger(totalPreSubject(numberOfSubjects,eachSubjects(numberOfSubjects, studentNumber ,studentGrade))) == totalPreSubject(numberOfSubjects,eachSubjects(numberOfSubjects, studentNumber ,studentGrade))[count] ){
-				System.out.printf("The hardest subject is %s with number %d\n ", studentSubjects[count], passesAndFailuresOfEachSubjects(numberOfSubjects , studentNumber , eachSubjects(numberOfSubjects, studentNumber ,studentGrade))[count][1] );
+				System.out.printf("The hardest subject is %s with %d failures \n ", studentSubjects[count], passesAndFailuresOfEachSubjects(numberOfSubjects , studentNumber , eachSubjects(numberOfSubjects, studentNumber ,studentGrade))[count][1] );
 				
 			}
 		}
 		for(int count=0; count < numberOfSubjects ; count++){
 			if (highestInteger(totalPreSubject(numberOfSubjects,eachSubjects(numberOfSubjects, studentNumber ,studentGrade))) == totalPreSubject(numberOfSubjects,eachSubjects(numberOfSubjects, studentNumber ,studentGrade))[count] ){
-				System.out.printf("The easiest subject is %s with number %d\n " , studentSubjects[count] , passesAndFailuresOfEachSubjects(numberOfSubjects , studentNumber , eachSubjects(numberOfSubjects, studentNumber ,studentGrade))[count][0] );
+				System.out.printf("The easiest subject is %s with %d passes \n " , studentSubjects[count] , passesAndFailuresOfEachSubjects(numberOfSubjects , studentNumber , eachSubjects(numberOfSubjects, studentNumber ,studentGrade))[count][0] );
 				
 			}
 		}
@@ -191,15 +191,27 @@ public class StudentGrade{
 
 		System.out.println("Class Summary");
 		System.out.println("========================================================================");
-		System.out.println("Best Graduating Student is : "); 
+		
+		for(int index = 0 ; index < studentNumber ; index++){
+			if(highestInteger(eachStudentTotal(studentGrade, studentNumber) == eachStudentTotal(studentGrade, studentNumber)[index] ){
+				System.out.printf("Best Graduating Student is %s Scoring %d \n ", studentNames[index] , highestInteger(eachStudentTotal(studentGrade, studentNumber)));
+			}
+		}
+	
+			 
 		System.out.print("========================================================================\n\n\n");
-		System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");		
-		System.out.println("Worse Graduating Student is : "); 
+		System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");	
+		for(int index = 0 ; index < studentNumber ; index++){
+			if(lowestInteger(eachStudentTotal(studentGrade, studentNumber) == eachStudentTotal(studentGrade, studentNumber)[index] ){
+				System.out.printf("Worse Graduating Student is %s Scoring %d \n ", studentNames[index] , lowestInteger(eachStudentTotal(studentGrade, studentNumber)));
+			}
+		}	
+ 
 		System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
 			
 		System.out.println("========================================================================");
-		System.out.println("Class Total : ");
-		System.out.println("Class Average Score is : ");
+		System.out.printf("Class Total : %d\n",listTotal(eachStudentTotal(studentGrade, studentNumber)));
+		System.out.printf("Class Average Score is %.4f\n : ",(float)listTotal(eachStudentTotal(studentGrade, studentNumber))/studentNumber);
 		System.out.println("========================================================================");
 
 		
