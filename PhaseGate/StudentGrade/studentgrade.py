@@ -185,7 +185,7 @@ for subject in studentSubject:
 	print(f"the highest scoring is  {highestStudents[count]} scoring {highestScores[count]} ")
 	print(f"the lowest scoring student is {lowestStudents[count]} {lowestScores[count]} scoring ")
 	print(f"total is : {totals[count]}")
-	print(f"Average is : {totals[count]/studentnumber}")
+	print(f"Average is : {round (totals[count]/studentnumber , 3)}")
 	print(f"number of passes : {numberOfPasse[count]}")
 	print(f"number of failes : {numberOfFailures[count]}")
 	print()
