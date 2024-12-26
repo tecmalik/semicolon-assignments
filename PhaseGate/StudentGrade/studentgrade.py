@@ -8,10 +8,10 @@ studentSubject = []
 def subjectTotal(studentGrades:dict):
 	totals = []
 	for subject in studentGrades:
-		sum = 0
+		total = 0
 		for student in studentGrades[subject]:
-			sum += studentGrades[subject][student]	
-		totals.append(sum)
+			total += studentGrades[subject][student]	
+		totals.append(total)
 	return totals
 
 def passesAndFailures(studenGrades:dict, subjects:list):
