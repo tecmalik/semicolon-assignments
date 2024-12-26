@@ -193,7 +193,7 @@ public class StudentGrade{
 		System.out.println("========================================================================");
 		
 		for(int index = 0 ; index < studentNumber ; index++){
-			if(highestInteger(eachStudentTotal(studentGrade, studentNumber) == eachStudentTotal(studentGrade, studentNumber)[index] ){
+			if(highestInteger(eachStudentTotal(studentGrade, studentNumber)) == eachStudentTotal(studentGrade, studentNumber)[index] ){
 				System.out.printf("Best Graduating Student is %s Scoring %d \n ", studentNames[index] , highestInteger(eachStudentTotal(studentGrade, studentNumber)));
 			}
 		}
@@ -202,7 +202,7 @@ public class StudentGrade{
 		System.out.print("========================================================================\n\n\n");
 		System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");	
 		for(int index = 0 ; index < studentNumber ; index++){
-			if(lowestInteger(eachStudentTotal(studentGrade, studentNumber) == eachStudentTotal(studentGrade, studentNumber)[index] ){
+			if(lowestInteger(eachStudentTotal(studentGrade, studentNumber)) == eachStudentTotal(studentGrade, studentNumber)[index] ){
 				System.out.printf("Worse Graduating Student is %s Scoring %d \n ", studentNames[index] , lowestInteger(eachStudentTotal(studentGrade, studentNumber)));
 			}
 		}	
