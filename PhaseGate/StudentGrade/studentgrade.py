@@ -4,6 +4,42 @@ numberOfSubjects = int(input("Enter number of Subjects :"))
 studentNames = []
 studentSubject = []
 
+
+def get list_total(numbers:list):
+	total = 0 
+	for number in numbers:
+		total += number
+	return total
+
+def ovarall_lowest_score(studentGrades:dict ):
+	lowest = 100
+	display_subject = " "
+	name = " "
+	for student in studentGrade:
+		for subject in student:
+			if studentGrades[student][subject] < lowest:
+				lowest = studentGrades[student][subject]
+				display_subject = subject
+				name = student
+			
+	return lowest,	display_subject, name
+
+
+
+def ovarall_highest_score(studentGrades:dict ):
+	highest = 0
+	display_subject = " "
+	name = " "
+	for student in studentGrade:
+		for subject in student:
+			if studentGrades[student][subject] > highest:
+				highest = studentGrades[student][subject]
+				display_subject = subject
+				name = student
+			
+	return highest,	display_subject, name
+	
+
 	
 def subjectTotal(studentGrades:dict):
 	totals = []
@@ -138,6 +174,9 @@ highestScores , highestStudents = getHighestPerSubject(studentGrades , studentSu
 lowestScores , lowestStudents = getLowestPerSubject(studentGrades , studentSubject)
 numberOfPasse , numberOfFailures = passesAndFailures(studentGrades, studentSubject)
 totals = subjectTotal(studentGrades)
+ovarall_highest, ovarall_highest_subject, overall_highest_name = ovarall_highest_score(studentGrades)  
+ovarall_lowest, ovarall_lowest_subject, overall_lowest_name = ovarall_lowest_score(studentGrades)
+overall_total= list_total(getEachStudentTotal(studentSubject, studentGrades))
 
 count = 0
 for subject in studentSubject:
@@ -155,8 +194,8 @@ for subject in studentSubject:
 	
 #print(f"the hardest Subject is {} with {} faliures")
 #print(f"The easiest Subject is {} with {} passes")
-#printf("the overall Highest score scored by {} in {} scoring {}")
-#printf("the overall lowest score scored by {} in {} scoring {}")
+printf("the overall Highest score scored by {overall_highest_name} in {overall_highest_subject} scoring {overall_highest}")
+printf("the overall lowest score scored by { overall_lowest_name} in {ovarall_lowest_subject} scoring {ovarall_lowest}")
 print("==========================================================================================")
 print()
 
@@ -164,12 +203,12 @@ print("Class Summary")
 print("==========================================================================================")
 #print("best Graduating Student is : {} Scoring {} ")
 print("==========================================================================================")
-#print()
+print()
 print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
 #print("Worse Graduationg Student is : {} scpring {}")
 print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-#print()
-#print("==========================================================================================")
-#print("Class Total Score is : {} ")
-#print("Class Aversge Score is : {} ")
-#print("==========================================================================================")
+print()
+print("==========================================================================================")
+print(f"Class Total Score is : {overall_total} ")
+print(f"Class Aversge Score is : {overall_total/studentnumber} ")
+print("==========================================================================================")
