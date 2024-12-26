@@ -111,6 +111,18 @@ public class StudentGrade{
 		System.out.println();
 
 
+
+
+
+		highestAndLowestPreSubject( numberOfSubjects, eachSubjects(numberOfSubjects, studentNumber ,studentGrade));
+		totalPreSubject(numberOfSubjects,eachSubjects(numberOfSubjects, studentNumber ,studentGrade));
+		passesAndFailuresOfEachSubjects( numberOfSubjects , studentNumber , eachSubjects(numberOfSubjects, studentNumber ,studentGrade));
+
+	
+
+
+
+
 	
 		System.out.println("STUDENT SUMMARY");
 		System.out.println("--------------------------------------------------------------------------------");
@@ -120,32 +132,43 @@ public class StudentGrade{
 				System.out.println( studentSubjects[index] );
 				System.out.print("Highest Scoring Student is ");
 				for(int count=0; count < numberOfSubjects ; count++){
-					if(highestAndLowestPreSubject[count][0] == studentGrade[count][index]){
-						//System.out.printf("%s Scoring :%d%n",studentNames[count],highestAndLowestPreSubject[count][0]);
+					if(highestAndLowestPreSubject(numberOfSubjects, eachSubjects(numberOfSubjects, studentNumber ,studentGrade))[count][0] == studentGrade[count][index]){
+						System.out.printf("%s%s Scoring :%d \n", studentNames[count], studentNames[count] , highestAndLowestPreSubject(numberOfSubjects, eachSubjects(numberOfSubjects, studentNumber ,studentGrade))[count][0]);
 					}
 				} 
 				System.out.print("lowest Scoring Student is ");
 				for(int count=0; count < numberOfSubjects ; count++){
 
-					if(highestAndLowestPreSubject[count][1] == studentGrade[count][index]){
-						System.out.printf("%s Scoring :%d%n",studentNames[count] ,highestAndLowestPreSubject[count][1]);
+					if(highestAndLowestPreSubject( numberOfSubjects, eachSubjects(numberOfSubjects, studentNumber ,studentGrade))[count][1] == studentGrade[count][index]){
+						System.out.printf(" %s%s Scoring : %d \n ", studentNames[count] , studentNames[count] ,highestAndLowestPreSubject( numberOfSubjects, eachSubjects(numberOfSubjects, studentNumber ,studentGrade))[count][1]);
 					}
 				}
-				//System.out.printf(" Total Score is : %d",totalPreSubject[index]);
+				System.out.printf(" Total Score is : %d",totalPreSubject(numberOfSubjects,eachSubjects(numberOfSubjects, studentNumber ,studentGrade))[index]);
 				System.out.println();
-				//System.out.printf(" Average Score Score is : %.3f%n",(float)totalPreSubject[index]/studentNumber);
-				//System.out.printf(" Number of Passes: %d \n Number of failures is : %d%n",passesAndFailuresOfEachSubjects[index][0] ,passesAndFailuresOfEachSubjects[index][1] ); 
+				System.out.printf(" Average Score Score is : %.3f%n",(float)totalPreSubject(numberOfSubjects,eachSubjects(numberOfSubjects, studentNumber ,studentGrade))[index]/studentNumber);
+				System.out.printf(" Number of Passes: %d \n Number of failures is : %d%n",passesAndFailuresOfEachSubjects(numberOfSubjects , studentNumber , eachSubjects(numberOfSubjects, studentNumber ,studentGrade))[index][0] ,passesAndFailuresOfEachSubjects(numberOfSubjects , studentNumber , eachSubjects(numberOfSubjects, studentNumber ,studentGrade))[index][1] ); 
 				System.out.println("--------------------------------------------------------------------------------");
 			
 
 		} 
 	
 	
-	
-	
-	
-	
-		
+		System.out.print("The hardest subject is subject____ with number offailures____ ");
+		System.out.print("The easiest subject is subject ___ with 4 numer pf passes____");
+		System.out.print("The ovarall highest score is Scored by student____2 in subject___1 Scoring___98"); 
+		System.out.print("The overall lowest score is scored by Student___1 in  subject scoring____ 21");
+
+		System.out.println("Class Summary");
+		System.out.print("========================================================================");
+		System.out.print("Best Graduating Student is : "); 
+		System.out.print("========================================================================\n\n\n");
+		System.out.print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");		System.out.print("Worse Graduating Student is : "); 
+		System.out.print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+			
+		System.out.print("========================================================================");
+		System.out.println("Class Total : ");
+		System.out.println("Class Average Score is : ");
+		System.out.print("========================================================================");
 
 		
 	}
@@ -224,7 +247,7 @@ public class StudentGrade{
 	public static int[][] highestAndLowestPreSubject(int numberOfSubjects, int[][] eachSubjects){
 		int[][] highestAndLowestPreSubject = new int [numberOfSubjects][2]; 
 		for(int index=0; index<numberOfSubjects ; index++){
-		
+			
 		highestAndLowestPreSubject[index][0] = highestInteger(eachSubjects[index]);
 		highestAndLowestPreSubject[index][1] = lowestInteger(eachSubjects[index]);
 		
@@ -243,9 +266,45 @@ public class StudentGrade{
 	
 	}
 
+	public static int lowestInteger(int[] numbers){
+		int lowest = numbers[0];
+		for(int count = 0; count<numbers.length;count++){
+			if(numbers[count]<lowest){
+				lowest = numbers[count];
+			}
+		} 
+	return lowest;
+	
+	}
 
 
+	public static int[] totalPreSubject(int numberOfSubjects, int[][] eachSubjects){
+				
+		int[] totalPreSubject = new int [numberOfSubjects]; 
+		for(int index=0; index<numberOfSubjects ; index++){
+			totalPreSubject[index] = listTotal(eachSubjects[index]);
+			
+		}
+	return totalPreSubject;
+	}
 
+	
+	public static int[][] passesAndFailuresOfEachSubjects(int numberOfSubjects , int studentNumber, int[][] eachSubjects ){
+		
+		int[][] passesAndFailuresOfEachSubjects = new int[numberOfSubjects][2];
+		for(int index=0;index<numberOfSubjects; index++){
+			for(int innerIndex=0; innerIndex < studentNumber ;innerIndex++){
+				if(eachSubjects[index][innerIndex] > 45){
+					passesAndFailuresOfEachSubjects[index][0] +=1;
+				}
+				else{
+					passesAndFailuresOfEachSubjects[index][1] +=1; 
+				}
+			}
+		}
+		return passesAndFailuresOfEachSubjects;	
+	}
+	
 
 	
 
