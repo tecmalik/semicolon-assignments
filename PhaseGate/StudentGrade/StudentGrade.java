@@ -135,14 +135,14 @@ public class StudentGrade{
 				System.out.print("Highest Scoring Student is ");
 				for(int count=0; count < numberOfSubjects ; count++){
 					if(highestAndLowestPreSubject(numberOfSubjects, eachSubjects(numberOfSubjects, studentNumber ,studentGrade))[count][0] == studentGrade[count][index]){
-						System.out.printf("%s%s Scoring :%d \n", studentNames[count], studentNames[count] , highestAndLowestPreSubject(numberOfSubjects, eachSubjects(numberOfSubjects, studentNumber ,studentGrade))[count][0]);
+						System.out.printf("%s%s Scoring :%d%n\n", studentNames[count], studentNames[count] , highestAndLowestPreSubject(numberOfSubjects, eachSubjects(numberOfSubjects, studentNumber ,studentGrade))[count][0]);
 					}
 				} 
 				System.out.print("lowest Scoring Student is ");
 				for(int count=0; count < numberOfSubjects ; count++){
 
 					if(highestAndLowestPreSubject( numberOfSubjects, eachSubjects(numberOfSubjects, studentNumber ,studentGrade))[count][1] == studentGrade[count][index]){
-						System.out.printf(" %s%s Scoring : %d \n ", studentNames[count] , studentNames[count] ,highestAndLowestPreSubject( numberOfSubjects, eachSubjects(numberOfSubjects, studentNumber ,studentGrade))[count][1]);
+						System.out.printf(" %s%s Scoring : %d%n \n ", studentNames[count] , studentNames[count] ,highestAndLowestPreSubject( numberOfSubjects, eachSubjects(numberOfSubjects, studentNumber ,studentGrade))[count][1]);
 					}
 				}
 				System.out.printf(" Total Score is : %d",totalPreSubject(numberOfSubjects,eachSubjects(numberOfSubjects, studentNumber ,studentGrade))[index]);
