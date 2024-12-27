@@ -20,12 +20,12 @@ def get_Hardest_add_easiest_subject(studentgrades:dict,subjects:list):
 	highest = get_highest(totalpersubjects)
 	lowest = get_lowest(totalpersubjects)
 				
-	return highest, lowest
+	return highest, lowest ,subjectkey
 
 def get_lowest(numbers:list):
-	lowest = 0
+	lowest = 100
 	for count in numbers:
-		if count > lowest:
+		if count < lowest:
 			lowest = count
 	return lowest
 
