@@ -6,16 +6,15 @@ studentSubject = []
 
 
 def get_Hardest_add_easiest_subject(studentgrades:dict,subjects:list):
-	totalStudents = []
+	totalpersubjects = []
 	subjectkey = []
 	for subject in subjects:
-		lowest = 100
 		subjectname = ''
 		for student in studentGrades:
 			if studentGrades[student][subject] < lowest :
-				lowest = studentGrades[student][subject]
-				subjectname = student
-		lowestStudents.append(lowest)
+				total += studentGrades[student][subject]
+				
+		totalpersubjects.append(lowest)
 		subjectkey.append(subjectname)
 		
 				
