@@ -27,23 +27,29 @@ def get_Hardest_add_easiest_subject(studentgrades:dict,subjects:list):
 		subjectkey.append(subjectname)
 		passes.append(pas)
 		failures.append(fails)
+	get_highest(
+	get_lowest(
 				
 	return totalpersubject, subjectkey
 
 def get_lowest(numbers:list):
 	lowest = 0
-	for count in numbers:
+	counter = 0
+	for count in range len(numbers):
 		if count > lowest:
-			lowest = count 
-	return lowest
+			lowest = count
+			counter = count 
+	return lowest, counter
 
 
 def get_highest(numbers:list):
 	highest = 0
-	for count in numbers:
+	counter = 0
+	for count in range len(numbers):
 		if count > highest:
 			highest = count 
-	return highest
+			counter = count
+	return highest , counter
 	
 
 def get_list_total(numbers:list):
