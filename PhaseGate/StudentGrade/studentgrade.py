@@ -5,6 +5,23 @@ studentNames = []
 studentSubject = []
 
 
+
+def get_lowest(numbers:list):
+	lowest = 0
+	for count in numbers:
+		if count > lowest:
+			lowest = count 
+	return lowest
+
+
+def get_highest(numbers:list):
+	highest = 0
+	for count in numbers:
+		if count > highest:
+			highest = count 
+	return highest
+	
+
 def get_list_total(numbers:list):
 	total = 0 
 	for number in numbers:
