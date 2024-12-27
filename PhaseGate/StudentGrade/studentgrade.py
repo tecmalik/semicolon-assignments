@@ -5,6 +5,21 @@ studentNames = []
 studentSubject = []
 
 
+def get_Hardest_add_easiest_subject(studentgrades:dict,subjects:list):
+	totalStudents = []
+	subjectkey = []
+	for subject in subjects:
+		lowest = 100
+		subjectname = ''
+		for student in studentGrades:
+			if studentGrades[student][subject] < lowest :
+				lowest = studentGrades[student][subject]
+				subjectname = student
+		lowestStudents.append(lowest)
+		subjectkey.append(subjectname)
+		
+				
+	return lowestStudents, subjectkey
 
 def get_lowest(numbers:list):
 	lowest = 0
@@ -195,6 +210,8 @@ overall_highest, overall_highest_subject, overall_highest_name = overall_highest
 overall_lowest, overall_lowest_subject, overall_lowest_name = overall_lowest_score(studentGrades)
 overall_total= get_list_total(getEachStudentTotal(studentSubject, studentGrades))
 
+
+
 count = 0
 for subject in studentSubject:
 	print()
@@ -208,7 +225,10 @@ for subject in studentSubject:
 	print()
 	print("--------------------------------------------------------------------------------------------")
 	count += 1
-	
+
+
+get_highest(numberOfPasse)
+get_lowest(numberOfPasse)
 #print(f"the hardest Subject is {} with {} faliures")
 #print(f"The easiest Subject is {} with {} passes")
 print(f"the overall Highest score scored by {overall_highest_name} in {overall_highest_subject} scoring {overall_highest}")
