@@ -8,48 +8,34 @@ studentSubject = []
 def get_Hardest_add_easiest_subject(studentgrades:dict,subjects:list):
 	totalpersubjects = []
 	subjectkey = []
-	passes = []
-	failures = []
 	for subject in subjects:
 		subjectname = ''
 		total = 0
-		pas = 0
-		fails = 0
 		for student in studentGrades:
 			total += studentGrades[student][subject]
-			subjectkey = subject
-			if studentGrades[student][subject] >= 45 :
-				pas += 1
-			else:
-				fails += 1
-				
+			subjectkey = subject		
 		totalpersubjects.append(total)
 		subjectkey.append(subjectname)
-		passes.append(pas)
-		failures.append(fails)
-	get_highest(
-	get_lowest(
+
+	highest = get_highest(totalpersubjects)
+	lowest = get_lowest(totalpersubjects)
 				
-	return totalpersubject, subjectkey
+	return highest, lowest
 
 def get_lowest(numbers:list):
 	lowest = 0
-	counter = 0
-	for count in range len(numbers):
+	for count in numbers:
 		if count > lowest:
 			lowest = count
-			counter = count 
-	return lowest, counter
+	return lowest
 
 
 def get_highest(numbers:list):
 	highest = 0
-	counter = 0
-	for count in range len(numbers):
+	for count in numbers:
 		if count > highest:
 			highest = count 
-			counter = count
-	return highest , counter
+	return highest 
 	
 
 def get_list_total(numbers:list):
