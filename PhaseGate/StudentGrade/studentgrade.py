@@ -7,8 +7,8 @@ studentSubject = []
 
 def get_best_and_worse_student_name(studentSubject:list , studentGrades:dict):
 	total = []
-	highest_name = "none"
-	lowest_name = "none"
+	highest_name = " "
+	lowest_name = " "
 	for student in studentGrades:
 		sum = 0
 		for grade in studentSubject :
@@ -285,11 +285,11 @@ print()
 
 print("Class Summary")
 print("==========================================================================================")
-print("best Graduating Student is : {highest_name} Scoring {best_total} ")
+print(f"best Graduating Student is : {highest_name} Scoring {best_total} ")
 print("==========================================================================================")
 print()
 print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-print("Worse Graduationg Student is : {lowest_name} scoring {lowest_total}")
+print(f"Worse Graduationg Student is : {lowest_name} scoring {lowest_total}")
 print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
 print()
 print("==========================================================================================")
