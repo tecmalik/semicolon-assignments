@@ -5,7 +5,7 @@ studentNames = []
 studentSubject = []
 
 
-def get_best_and_worsestudent_name(studentSubject:list , studentGrades:dict):
+def get_best_and_worse_student_name(studentSubject:list , studentGrades:dict):
 	total = []
 	highest_name = "none"
 	lowest_name = "none"
@@ -17,10 +17,10 @@ def get_best_and_worsestudent_name(studentSubject:list , studentGrades:dict):
 	count = 0
 	for student in studentGrades:
 		if get_highest(total) == total[count]:
-			highest_name =
+			highest_name = student
 		if get_lowest(total) == total[count]:
-			highest_name
-	return 
+			lowest_name = student
+	return highest_name, lowest_name 
 
 
 def get_Hardest_add_easiest_subject(studentGrades:dict,subjects:list):
@@ -232,27 +232,29 @@ for subjects in studentGrades :
 	print(f"{subjects}",end="")
 	for grade in studentSubject :
 		print("\t%s" %(studentGrades[subjects][grade]),end="")
-	print("%10d"%(getEachStudentTotal(studentSubject,studentGrades)[count]),end="")
-	print("%11d"%((getEachStudentTotal(studentSubject,studentGrades)[count])/(numberOfSubjects)),end="")
-	print("%13d"%(getPosition(getEachStudentTotal(studentSubject,studentGrades))[count]))
+	print("%-10d"%(getEachStudentTotal(studentSubject,studentGrades)[count]),end="")
+	print("%-11d"%((getEachStudentTotal(studentSubject,studentGrades)[count])/(numberOfSubjects)),end="")
+	print("%-13d"%(getPosition(getEachStudentTotal(studentSubject,studentGrades))[count]))
 	count += 1
 	print()
 
 print()
 print("Student Summary")
 print()
+
+
 highestScores , highestStudents = getHighestPerSubject(studentGrades , studentSubject)
 lowestScores , lowestStudents = getLowestPerSubject(studentGrades , studentSubject)
 numberOfPasse , numberOfFailures = passesAndFailures(studentGrades, studentSubject)
-best_total = get_highest(totals = subjectTotal(studentGrades))
-lowest_total = get_lowest(totals = subjectTotal(studentGrades))
+best_total = get_highest(subjectTotal(studentGrades))
+lowest_total = get_lowest(subjectTotal(studentGrades))
 
-getEachStudentTotal(studentSubject,studentGrades)
+totals = getEachStudentTotal(studentSubject,studentGrades)
 overall_highest, overall_highest_subject, overall_highest_name = overall_highest_score(studentGrades)  
 overall_lowest, overall_lowest_subject, overall_lowest_name = overall_lowest_score(studentGrades)
 overall_total= get_list_total(getEachStudentTotal(studentSubject, studentGrades))
 easiest_subject, easiest_passes, hardest_subject , hardest_failure = get_Hardest_add_easiest_subject(studentGrades,subjects)
-
+highest_name, lowest_name = get_best_and_worse_student_name(studentSubject,studentGrades)
 
 
 
@@ -277,17 +279,17 @@ get_lowest(numberOfPasse)
 print(f"the hardest Subject is {hardest_subject} with {hardest_failure} faliures")
 print(f"The easiest Subject is {easiest_subject} with {easiest_passes} passes")
 print(f"the overall Highest score scored by {overall_highest_name} in {overall_highest_subject} scoring {overall_highest}")
-print(f"the overall lowest score scored by { overall_lowest_name} in {overall_lowest_subject} scoring {overall_lowest}")
+print(f"the overall lowest score scored by {overall_lowest_name} in {overall_lowest_subject} scoring {overall_lowest}")
 print("==========================================================================================")
 print()
 
 print("Class Summary")
 print("==========================================================================================")
-print("best Graduating Student is : {} Scoring {best_total} ")
+print("best Graduating Student is : {highest_name} Scoring {best_total} ")
 print("==========================================================================================")
 print()
 print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-print("Worse Graduationg Student is : {} scoring {lowest_total}")
+print("Worse Graduationg Student is : {lowest_name} scoring {lowest_total}")
 print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
 print()
 print("==========================================================================================")
