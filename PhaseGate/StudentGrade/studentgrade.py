@@ -18,9 +18,10 @@ def get_best_and_worse_student_name(studentSubject:list , studentGrades:dict):
 	for student in studentGrades:
 		if get_highest(total) == total[count]:
 			highest_name = student
+			highest_name = student
 		if get_lowest(total) == total[count]:
 			lowest_name = student
-	return highest_name, lowest_name 
+	return highest_name , lowest_name 
 
 
 def get_Hardest_add_easiest_subject(studentGrades:dict,subjects:list):
@@ -254,7 +255,7 @@ overall_highest, overall_highest_subject, overall_highest_name = overall_highest
 overall_lowest, overall_lowest_subject, overall_lowest_name = overall_lowest_score(studentGrades)
 overall_total= get_list_total(getEachStudentTotal(studentSubject, studentGrades))
 easiest_subject, easiest_passes, hardest_subject , hardest_failure = get_Hardest_add_easiest_subject(studentGrades,subjects)
-highest_name, lowest_name = get_best_and_worse_student_name(studentSubject,studentGrades)
+highest_name , lowest_name = get_best_and_worse_student_name(studentSubject,studentGrades)
 
 
 
@@ -285,7 +286,7 @@ print()
 
 print("Class Summary")
 print("==========================================================================================")
-print(f"best Graduating Student is : {highest_name} Scoring {best_total} ")
+print(f"best Graduating Student is : {highest_name} scoring {best_total} ")
 print("==========================================================================================")
 print()
 print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
