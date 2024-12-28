@@ -1,0 +1,7 @@
+pseudocode stage 1
+print board 
+take players inputs to determine the position 
+check for win or tie 
+switch the player 
+check for win or tie again 
+print WIN OR draw 
