@@ -5,6 +5,24 @@ studentNames = []
 studentSubject = []
 
 
+def get_best_and_worsestudent_name(studentSubject:list , studentGrades:dict):
+	total = []
+	highest_name = "none"
+	lowest_name = "none"
+	for student in studentGrades:
+		sum = 0
+		for grade in studentSubject :
+			sum += studentGrades[student][grade]
+		total.append(sum)
+	count = 0
+	for student in studentGrades:
+		if get_highest(total) == total[count]:
+			highest_name =
+		if get_lowest(total) == total[count]:
+			highest_name
+	return 
+
+
 def get_Hardest_add_easiest_subject(studentGrades:dict,subjects:list):
 	totalpersubjects = []
 	subjectkey = []
@@ -21,7 +39,7 @@ def get_Hardest_add_easiest_subject(studentGrades:dict,subjects:list):
 			else:
 				fails += 1 
 			total += studentGrades[student][subject]
-			subjectkey = subject		
+			subjectname = subject		
 		totalpersubjects.append(total)
 		subjectkey.append(subjectname)
 		passes.append(pas)
@@ -226,11 +244,13 @@ print()
 highestScores , highestStudents = getHighestPerSubject(studentGrades , studentSubject)
 lowestScores , lowestStudents = getLowestPerSubject(studentGrades , studentSubject)
 numberOfPasse , numberOfFailures = passesAndFailures(studentGrades, studentSubject)
-totals = subjectTotal(studentGrades)
+best_total = get_highest(totals = subjectTotal(studentGrades))
+lowest_total = get_lowest(totals = subjectTotal(studentGrades))
+
+getEachStudentTotal(studentSubject,studentGrades)
 overall_highest, overall_highest_subject, overall_highest_name = overall_highest_score(studentGrades)  
 overall_lowest, overall_lowest_subject, overall_lowest_name = overall_lowest_score(studentGrades)
 overall_total= get_list_total(getEachStudentTotal(studentSubject, studentGrades))
-
 easiest_subject, easiest_passes, hardest_subject , hardest_failure = get_Hardest_add_easiest_subject(studentGrades,subjects)
 
 
@@ -254,8 +274,8 @@ for subject in studentSubject:
 
 get_highest(numberOfPasse)
 get_lowest(numberOfPasse)
-#print(f"the hardest Subject is {hardest_subject} with {hardest_failure} faliures")
-#print(f"The easiest Subject is {easiest_subject} with {easiest_passes} passes")
+print(f"the hardest Subject is {hardest_subject} with {hardest_failure} faliures")
+print(f"The easiest Subject is {easiest_subject} with {easiest_passes} passes")
 print(f"the overall Highest score scored by {overall_highest_name} in {overall_highest_subject} scoring {overall_highest}")
 print(f"the overall lowest score scored by { overall_lowest_name} in {overall_lowest_subject} scoring {overall_lowest}")
 print("==========================================================================================")
@@ -263,11 +283,11 @@ print()
 
 print("Class Summary")
 print("==========================================================================================")
-#print("best Graduating Student is : {} Scoring {} ")
+print("best Graduating Student is : {} Scoring {best_total} ")
 print("==========================================================================================")
 print()
 print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-#print("Worse Graduationg Student is : {} scpring {}")
+print("Worse Graduationg Student is : {} scoring {lowest_total}")
 print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
 print()
 print("==========================================================================================")
