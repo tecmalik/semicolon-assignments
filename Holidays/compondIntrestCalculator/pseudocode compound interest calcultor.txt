@@ -1,0 +1,21 @@
+pseudocode compound interest calculator 
+
+prompt the user to ENter initial investment 
+collect the number 
+store as initialInvestment 
+prompt the user to Enter monthly contribution 
+collect the number 
+store as monthlyContribution
+prompt the user to Enter length of time in years
+collect the time 
+Store as lengthInYears
+prompt the user to Enter Estimated intrest rate
+collect the number
+Store as IntrestRate 
+prompt the user to Enter interest rate variance range 
+collect the rate 
+store as varianceRate 
+prompt the user to sellect compound Frequency 
+collect choice  
+store as compoundFrequency 
+calculate compoundinterest  = 
