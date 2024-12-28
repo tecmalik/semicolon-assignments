@@ -10,7 +10,7 @@ def get_Hardest_add_easiest_subject(studentGrades:dict,subjects:list):
 	subjectkey = []
 	passes = []
 	faliures = []
-	for subject in subjects:
+	for subject in studentSubject:
 		subjectname = ''
 		total = 0
 		pas = 0
