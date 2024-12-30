@@ -2,7 +2,7 @@ import java.util.Scanner;
 public class TicTacToe{
 	static Scanner input = new Scanner(System.in);
 	static String firstPlayer = "x";
-	static winner = " "
+	static String winner = " ";
 	public static void main(String[] args){
 
 		String[] board = {"-","-","-","-","-","-","-","-","-"};
@@ -43,7 +43,7 @@ public class TicTacToe{
 		
 	}
 	
-	public static checkHorizontal(board){
+	public static boolean checkHorizontal(String[] board){
 		if(board[0] == board[1] && board[0]  == board[2] & board[0] != "-"){
 			winner = board[2];
 			return true ;
@@ -61,7 +61,7 @@ public class TicTacToe{
 	}
 
 
-	public static checkvertical(board){
+	public static boolean checkvertical(String[] board){
 		if(board[0] == board[3] && board[0]  == board[6] & board[0] != "-"){
 			winner = board[0];
 			return true ;
@@ -77,7 +77,7 @@ public class TicTacToe{
 
 	}
 	
-	public static checkDiagonals(board){
+	public static boolean checkDiagonals(String[] board){
 	
 		if(board[0] == board[4] && board[0]  == board[8] & board[0] != "-"){
 			winner = board[0];
