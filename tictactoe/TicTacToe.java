@@ -4,15 +4,11 @@ public class TicTacToe{
 	static String[] board = {"-","-","-","-","-","-","-","-","-"};
 	static String firstPlayer = "x";
 	static String winner = " ";
-	static String gameRun = " ";
+	static Boolean gameisRunning = true;
 
 	public static void main(String[] args){
 
-		
-				     
-		
-		String winner = " " ;
-		Boolean gameisRunning = true;
+
 		
 		
 		while(gameisRunning){
@@ -96,9 +92,9 @@ public class TicTacToe{
 		return false;
 	}
 
-	public static void checkTie(String[] board):
+	public static void checkTie(String[] board){
 		for(int count = 0; count < board.length ; count++){
-			if ( board[count].notequal("-") ){
+			if ( board[count] != "-" ){
 				System.out.print("Draw");
 				gameisRunning = false ;
 			}
@@ -119,9 +115,10 @@ public class TicTacToe{
 	}
 
 	public static void checkWin(){
-		if checkvertical(board) or checkDiagonals(board) or checkHorizontal(board){
+		if (checkvertical(board) || checkDiagonals(board) || checkHorizontal(board)){
 			System.out.printf("the winner is %s%n",winner);		
 	
+		}
 	}
 	
 
