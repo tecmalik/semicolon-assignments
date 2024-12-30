@@ -1,7 +1,8 @@
 
-firstPlayer = "x"
+
 board = ["-","-","-","-","-","-","-","-","-"]
 
+firstPlayer = "x"
 winner = " ";
 gameisRunning = True;
 
@@ -65,7 +66,7 @@ def checkTie(board):
 	gameRun = False
 
 def switchPlayer():
-	global currentplayer
+	global firstPlayer
 	if firstPlayer == "x":
 		firstPlayer = "O"
 	else:
