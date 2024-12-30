@@ -60,10 +60,10 @@ def checkDiagonals(board):
 		return True ;
 		
 def checkTie(board):
-	global gameRun
+	global gameisRuning
 	if "-" not in board:
 		print("Draw")
-	gameRun = False
+	gameisRuning = False
 
 def switchPlayer():
 	global firstPlayer

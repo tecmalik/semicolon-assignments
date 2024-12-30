@@ -1,13 +1,14 @@
 import java.util.Scanner;
 public class TicTacToe{
 	static Scanner input = new Scanner(System.in);
+	static String[] board = {"-","-","-","-","-","-","-","-","-"};
 	static String firstPlayer = "x";
 	static String winner = " ";
 	static String gameRun = " ";
 
 	public static void main(String[] args){
 
-		String[] board = {"-","-","-","-","-","-","-","-","-"};
+		
 				     
 		
 		String winner = " " ;
@@ -95,11 +96,11 @@ public class TicTacToe{
 		return false;
 	}
 
-	public static void checkTie(board):
-		for(int count = 0; count< board.length ; count++){
+	public static void checkTie(String[] board):
+		for(int count = 0; count < board.length ; count++){
 			if ( board[count].notequal("-") ){
 				System.out.print("Draw");
-			gameRun = False
+				gameisRunning = false ;
 			}
 		
 		}
@@ -110,22 +111,19 @@ public class TicTacToe{
 	public static void switchPlayer(){
 	
 		if(firstPlayer == "x"){
-			firstPlayer = "O"
+			firstPlayer = "O";
 		}
 		else{
-			firstPlayer = "x"
+			firstPlayer = "x" ;
 		}
 	}
 
-	public static void checkWin():
-		if checkvertical(board) or checkDiagonals(board) or checkHorizontal(board):
-			print(f"the winner is {winner}")		
+	public static void checkWin(){
+		if checkvertical(board) or checkDiagonals(board) or checkHorizontal(board){
+			System.out.printf("the winner is %s%n",winner);		
 	
+	}
 	
-	
-
-
-
 
 
 
