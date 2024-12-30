@@ -24,11 +24,11 @@ public class TicTacToe{
 	}
 	public static void printGameBoard(String[] board){
 
-		System.out.printf("%s | %s | %s%n ",board[0],board[1],board[2]);
+		System.out.printf("%s | %s | %s \n ",board[0],board[1],board[2]);
 		System.out.println("---------");
-		System.out.printf("%s | %s | %s%n ",board[3],board[4],board[5]);
+		System.out.printf("%s | %s | %s \n ",board[3],board[4],board[5]);
 		System.out.println("---------");
-		System.out.printf("%s | %s | %s%n ",board[6],board[7],board[8]);
+		System.out.printf("%s | %s | %s \n ",board[6],board[7],board[8]);
 		
 	
 	}
@@ -95,10 +95,11 @@ public class TicTacToe{
 	public static void checkTie(String[] board){
 		for(int count = 0; count < board.length ; count++){
 			if (board[count] != "-" ){
-				System.out.print("Draw");
+				
 				gameisRunning = false ;
 			}
 			else {
+				System.out.println("Draw");
 				gameisRunning = true;
 			}
 		
