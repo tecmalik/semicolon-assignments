@@ -23,6 +23,7 @@ def playerInput(board):
 
  
 def checkHorizontal(board):
+	global winner
 	if board[0] == board[1] and board[0]  == board[2] and board[0] != "-" :
 		winner = board[2];
 		return True ;
@@ -33,22 +34,23 @@ def checkHorizontal(board):
 		winner = board[2];
 		return True ;
 
-	return False;
 
 
 def checkvertical(board):
-	if(board[0] == board[3] and board[0]  == board[6] and board[0] != "-"){
+	global winner
+	if board[0] == board[3] and board[0]  == board[6] and board[0] != "-":
 		winner = board[0];
 		return True ;
-	elif(board[1] == board[4] and board[1]  == board[7] and board[1] != "-"){
+	elif board[1] == board[4] and board[1]  == board[7] and board[1] != "-":
 		winner = board[1];
 		return True ;
-	elif(board[2] == board[5] and board[2]  == board[8] and board[2] != "-"){
+	elif board[2] == board[5] and board[2]  == board[8] and board[2] != "-":
 		winner = board[2];
 		return True ;
-	return False;
+	
 	
 def checkDiagonals(board):
+	global winner
 	if board[0] == board[4] and board[0]  == board[8] and board[0] != "-":
 		winner = board[0];
 		return True ;
@@ -56,10 +58,28 @@ def checkDiagonals(board):
 		winner = board[2];	
 		return True ;
 		
-	return False;
+def checkTie(board):
+	global gameRun
+	if "-" not in board:
+		print("Draw")
+	gameRun = False
 
+def switchPlayer():
+	global currentplayer
+	if firstPlayer == "x":
+		firstPlayer = "O"
+	else:
+		firstPlayer = "x"
 
+def checkWin():
+	if checkvertical(board) or checkDiagonals(board) or checkHorizontal(board):
+		print(f"the winner is {winner}")		
+	
 
 while gameisRunning :
 	printGameBoard(board);
 	playerInput(board);
+	checkWin()
+	checkTie(board)
+	switchPlayer()
+	
