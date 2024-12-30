@@ -94,16 +94,15 @@ public class TicTacToe{
 
 	public static void checkTie(String[] board){
 		for(int count = 0; count < board.length ; count++){
-			if (board[count] != "-" ){
+			if (board[count].equals("-") ){
 				
-				gameisRunning = false ;
+				return;
 			}
-			else {
-				System.out.println("Draw");
-				gameisRunning = true;
-			}
-		
 		}
+		System.out.println("Draw");
+		gameisRunning = false;
+		
+		
 	}
 
 
