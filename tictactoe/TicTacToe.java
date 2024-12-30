@@ -4,9 +4,7 @@ public class TicTacToe{
 	static String firstPlayer = "x";
 	public static void main(String[] args){
 
-		String[][] board = {"-","-","-",
-				    "-","-","-",
-				    "-","-","-"};
+		String[] board = {"-","-","-","-","-","-","-","-","-"};
 				     
 
 		
@@ -26,14 +24,14 @@ public class TicTacToe{
 	public static void printGameBoard(String[] board){
 
 		System.out.printf("%s | %s | %s%n ",board[0],board[1],board[2]);
-		System.out.print("---------------------");
+		System.out.println("---------");
 		System.out.printf("%s | %s | %s%n ",board[3],board[4],board[5]);
-		System.out.print("---------------------");
+		System.out.println("---------");
 		System.out.printf("%s | %s | %s%n ",board[6],board[7],board[8]);
 		
 	
 	}
-	/** public static void playerInput(String[][] board){
+	public static void playerInput(String[] board){
 		System.out.print("Enter a number 1 - 9 : ");
 		int playerInput = input.nextInt();
 		if(playerInput >= 1 && playerInput <= 9 && board[playerInput-1] == "-" ){
@@ -43,7 +41,7 @@ public class TicTacToe{
 			System.out.print(" Space Occupied ");
 		}
 		
-	} **/
+	}
 
 
 
