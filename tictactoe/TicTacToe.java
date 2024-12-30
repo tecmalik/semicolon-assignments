@@ -3,11 +3,12 @@ public class TicTacToe{
 	static Scanner input = new Scanner(System.in);
 	static String firstPlayer = "x";
 	static String winner = " ";
+	static String gameRun = " ";
+
 	public static void main(String[] args){
 
 		String[] board = {"-","-","-","-","-","-","-","-","-"};
 				     
-
 		
 		String winner = " " ;
 		Boolean gameisRunning = true;
@@ -17,6 +18,9 @@ public class TicTacToe{
 
 			printGameBoard(board);
 			playerInput(board);
+			checkWin();
+			checkTie(board);
+			switchPlayer();
 		}
 
 
@@ -91,7 +95,34 @@ public class TicTacToe{
 		return false;
 	}
 
+	public static void checkTie(board):
+		for(int count = 0; count< board.length ; count++){
+			if ( board[count].notequal("-") ){
+				System.out.print("Draw");
+			gameRun = False
+			}
+		
+		}
+	}
 
+
+
+	public static void switchPlayer(){
+	
+		if(firstPlayer == "x"){
+			firstPlayer = "O"
+		}
+		else{
+			firstPlayer = "x"
+		}
+	}
+
+	public static void checkWin():
+		if checkvertical(board) or checkDiagonals(board) or checkHorizontal(board):
+			print(f"the winner is {winner}")		
+	
+	
+	
 
 
 
