@@ -4,9 +4,9 @@ public class TicTacToe{
 	static String firstPlayer = "x";
 	public static void main(String[] args){
 
-		String[][] board = {{"-","-","-"},
-				    {"-","-","-"},
-				    {"-","-","-"}};
+		String[][] board = {"-","-","-",
+				    "-","-","-",
+				    "-","-","-"};
 				     
 
 		
@@ -17,18 +17,20 @@ public class TicTacToe{
 		while(gameisRunning){
 
 			printGameBoard(board);
-			//playerInput(board);
+			playerInput(board);
 		}
 
 
 
 	}
-	public static void printGameBoard(String[][] board){
+	public static void printGameBoard(String[] board){
+
 		System.out.printf("%s | %s | %s%n ",board[0],board[1],board[2]);
 		System.out.print("---------------------");
 		System.out.printf("%s | %s | %s%n ",board[3],board[4],board[5]);
 		System.out.print("---------------------");
 		System.out.printf("%s | %s | %s%n ",board[6],board[7],board[8]);
+		
 	
 	}
 	/** public static void playerInput(String[][] board){
