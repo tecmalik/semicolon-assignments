@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class TikTacToe{
+public class TicTacToe{
 	static Scanner input = new Scanner(System.in);
 	static String firstPlayer = "x";
 	public static void main(String[] args){
@@ -17,7 +17,7 @@ public class TikTacToe{
 		while(gameisRunning){
 
 			printGameBoard(board);
-			playerInput(board);
+			//playerInput(board);
 		}
 
 
@@ -31,20 +31,17 @@ public class TikTacToe{
 		System.out.printf("%s | %s | %s%n ",board[6],board[7],board[8]);
 	
 	}
-	public static void playerInput(String[][] board){
+	/** public static void playerInput(String[][] board){
 		System.out.print("Enter a number 1 - 9 : ");
 		int playerInput = input.nextInt();
-		for(int count = 0; count < board.length ; count++ ){
-			for(int count = 0; count < board.length ; count++ ){
-				if(playerInput >= 1 && playerInput <= 9 && board[playerInput-1] == "-" ){
-					board[playerInput-1] = firstPlayer;
-				}
-				else {
-					System.out.print(" Space Occupied ");
-				}
-			}
+		if(playerInput >= 1 && playerInput <= 9 && board[playerInput-1] == "-" ){
+			board[playerInput-1] = firstPlayer;
 		}
-	}
+		else {
+			System.out.print(" Space Occupied ");
+		}
+		
+	} **/
 
 
 
