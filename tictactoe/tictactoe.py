@@ -21,7 +21,45 @@ def playerInput(board):
 		print(" Space Occupied ");
 	
 
+ 
+def checkHorizontal(board):
+	if board[0] == board[1] and board[0]  == board[2] and board[0] != "-" :
+		winner = board[2];
+		return True ;
+	elif board[3] == board[4] and board[3]  == board[5] and board[3] != "-":
+		winner = board[2];
+		return True ;
+	elif board[6] == board[7] and board[6]  == board[8] and board[6] != "-":
+		winner = board[2];
+		return True ;
+
+	return False;
+
+
+def checkvertical(board):
+	if(board[0] == board[3] and board[0]  == board[6] and board[0] != "-"){
+		winner = board[0];
+		return True ;
+	elif(board[1] == board[4] and board[1]  == board[7] and board[1] != "-"){
+		winner = board[1];
+		return True ;
+	elif(board[2] == board[5] and board[2]  == board[8] and board[2] != "-"){
+		winner = board[2];
+		return True ;
+	return False;
+	
+def checkDiagonals(board):
+	if board[0] == board[4] and board[0]  == board[8] and board[0] != "-":
+		winner = board[0];
+		return True ;
+	elif board[2] == board[4] and board[1]  == board[7] and board[1] != "-":
+		winner = board[2];	
+		return True ;
+		
+	return False;
+
+
+
 while gameisRunning :
 	printGameBoard(board);
 	playerInput(board);
-

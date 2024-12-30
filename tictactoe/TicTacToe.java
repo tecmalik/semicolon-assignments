@@ -38,57 +38,57 @@ public class TicTacToe{
 			board[playerInput-1] = firstPlayer;
 		}
 		else {
-			System.out.print(" Space Occupied ");
+			System.out.println(" Space Occupied ");
 		}
 		
 	}
 	
 	public static boolean checkHorizontal(String[] board){
-		if(board[0] == board[1] && board[0]  == board[2] & board[0] != "-"){
+		if(board[0] == board[1] && board[0]  == board[2] && board[0] != "-"){
 			winner = board[2];
 			return true ;
 		}
-		else if(board[3] == board[4] && board[3]  == board[5] & board[3] != "-"){
+		else if(board[3] == board[4] && board[3]  == board[5] && board[3] != "-"){
 			winner = board[2];
 			return true ;
 		}
-		else if(board[6] == board[7] && board[6]  == board[8] & board[6] != "-"){
+		else if(board[6] == board[7] && board[6]  == board[8] && board[6] != "-"){
 			winner = board[2];
 			return true ;
 		}
 
-	
+		return false;
 	}
 
 
 	public static boolean checkvertical(String[] board){
-		if(board[0] == board[3] && board[0]  == board[6] & board[0] != "-"){
+		if(board[0] == board[3] && board[0]  == board[6] && board[0] != "-"){
 			winner = board[0];
 			return true ;
 		}
-		else if(board[1] == board[4] && board[1]  == board[7] & board[1] != "-"){
+		else if(board[1] == board[4] && board[1]  == board[7] && board[1] != "-"){
 			winner = board[1];
 			return true ;
 		}
-		else if(board[2] == board[5] && board[2]  == board[8] & board[2] != "-"){
+		else if(board[2] == board[5] && board[2]  == board[8] && board[2] != "-"){
 			winner = board[2];
 			return true ;
 		}
-
+		return false;
 	}
 	
 	public static boolean checkDiagonals(String[] board){
 	
-		if(board[0] == board[4] && board[0]  == board[8] & board[0] != "-"){
+		if(board[0] == board[4] && board[0]  == board[8] && board[0] != "-"){
 			winner = board[0];
 			return true ;
 		}
-		else if(board[2] == board[4] && board[1]  == board[7] & board[1] != "-"){
+		else if(board[2] == board[4] && board[1]  == board[7] && board[1] != "-"){
 			winner = board[2];
 			return true ;
 		}
 		
-
+		return false;
 	}
 
 
