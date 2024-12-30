@@ -18,4 +18,5 @@ store as varianceRate
 prompt the user to sellect compound Frequency 
 collect choice  
 store as compoundFrequency 
-calculate compoundinterest  = 
+calculate compoundinterest  = final amount = initial principal balance(1 + (interest rate/number of times interest applied per time period
+))^(number of times interest applied per time period*number of time periods elapsed)
