@@ -19,7 +19,6 @@ public class TicTacToe{
 		}
 
 
-
 	}
 	public static void printGameBoard(String[] board){
 
@@ -41,6 +40,23 @@ public class TicTacToe{
 			System.out.print(" Space Occupied ");
 		}
 		
+	}
+	
+	public static checkHorizontal(board){
+		if(board[0] == board[1] && board[0]  == board[2] & board[0] != "-"){
+			winnner = board[2]
+			return true ;
+		}
+		if(board[3] == board[4] && board[3]  == board[5] & board[3] != "-"){
+			winnner = board[2]
+			return true ;
+		}
+		if(board[6] == board[7] && board[6]  == board[8] & board[6] != "-"){
+			winnner = board[2]
+			return true ;
+		}
+
+	
 	}
 
 
