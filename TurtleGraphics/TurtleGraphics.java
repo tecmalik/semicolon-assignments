@@ -2,10 +2,10 @@ import java.util.Scanner;
 public class TurtleGraphics{
 		
 	static Scanner input = new Scanner(System.in);
-	public static void main(String){
+	public static void main(String[] args){
 		int[][] floor = new int[20][20];
 		int continue = 0;
-		while ( continue != 9){
+		while (continue != 9){
 			
 			command();
 			
@@ -20,7 +20,7 @@ public class TurtleGraphics{
 	}
 
 	public Static penUp(){
-	
+		
 	
 	}
 	
