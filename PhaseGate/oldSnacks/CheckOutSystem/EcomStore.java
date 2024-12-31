@@ -67,9 +67,6 @@ public class EcomStore{
 		
 
 
-
-
-
 		}
 	 else if(moreItemsOption.equalsIgnoreCase("yes")){   
  		addToCart( itemsPurchased, itemsPrices, itemsNumber);
