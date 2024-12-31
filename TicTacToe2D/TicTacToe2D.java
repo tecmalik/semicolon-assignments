@@ -1,7 +1,7 @@
 import java.util.Scanner;
 public class TicTacToe2D{
 	static Scanner input = new Scanner(System.in);
-	static String[][] board = {
+	static String[][] BOARD = {
 				   {"EMPTY","EMPTY","EMPTY"},
 				   {"EMPTY","EMPTY","EMPTY"},
 				   {"EMPTY","EMPTY","EMPTY"}
@@ -17,18 +17,18 @@ public class TicTacToe2D{
 		
 		while(gameisRunning){
 
-			printGameBoard(board);
-			playerInput(board);
+			printGameBoard(BOARD);
+			playerInput(BOARD);
 			checkWin();
-			checkTie(board);
+			checkTie(BOARD);
 			switchPlayer();
 		}
 
 
 	}
-	public static void printGameBoard(String[][] board){
-		for(int count = 0 ; count< board.length ){
-		System.out.printf("%s | %s | %s \n ",board[count][1],board[count][2],board[count][3]);
+	public static void printGameBoard(String[][] BOARD){
+		for(int count = 0 ; count< BOARD.length ){
+		System.out.printf("%s | %s | %s \n ",BOARD[count][1],BOARD[count][2],BOARD[count][3]);
 			if(count<=2){
 				System.out.println("---------");
 			}
@@ -36,18 +36,18 @@ public class TicTacToe2D{
 			
 	}
 
-	public static void playerInput(String[][] board){
+	public static void playerInput(String[][] BOARD){
 		System.out.print("Enter row number and column numberyy \ne.g 12 , 13\n  : ");
 		int playerInput = input.nextInt();
 
-		if(playerInput >= 11 && playerInput <= 13 && board[playerInput-1] == "EMPTY" ){
-			board[playerInput-1/10][playerInput-1%10] = firstPlayer;
+		if(playerInput >= 11 && playerInput <= 13 && BOARD[playerInput-1] == "EMPTY" ){
+			BOARD[playerInput-1/10][playerInput-1%10] = firstPlayer;
 		}
-		if(playerInput >= 21 && playerInput <= 23 && board[playerInput-1] == "EMPTY" ){
-			board[playerInput-1/10][playerInput-1%10] = firstPlayer;
+		if(playerInput >= 21 && playerInput <= 23 && BOARD[playerInput-1] == "EMPTY" ){
+			BOARD[playerInput-1/10][playerInput-1%10] = firstPlayer;
 		}
-		if(playerInput >= 31 && playerInput <= 33 && board[playerInput-1] == "EMPTY" ){
-			board[playerInput-1/10][playerInput-1%10] = firstPlayer;
+		if(playerInput >= 31 && playerInput <= 33 && BOARD[playerInput-1] == "EMPTY" ){
+			BOARD[playerInput-1/10][playerInput-1%10] = firstPlayer;
 		}
 
 		else {
@@ -56,17 +56,17 @@ public class TicTacToe2D{
 		
 	}
 	
-	public static boolean checkHorizontal(String[][] board){
-		if(board[0] == board[1] && board[0]  == board[2] && board[0] != "EMPTY"){
+	public static boolean checkHorizontal(String[][] BOARD){
+		if(BOARD[0] == BOARD[1] && BOARD[0]  == BOARD[2] && BOARD[0] != "EMPTY"){
 			winner = board[2];
 			return true ;
 		}
-		else if(board[3] == board[4] && board[3]  == board[5] && board[3] != "EMPTY"){
+		else if(BOARD[3] == BOARD[4] && BOARD[3]  == BOARD[5] && BOARD[3] != "EMPTY"){
 			winner = board[2];
 			return true ;
 		}
-		else if(board[6] == board[7] && board[6]  == board[8] && board[6] != "EMPTY"){
-			winner = board[2];
+		else if(BOARD[6] == BOARD[7] && BOARD[6]  == BOARD[8] && BOARD[6] != "EMPTY"){
+			winner = BOARD[2];
 			return true ;
 		}
 
@@ -75,7 +75,7 @@ public class TicTacToe2D{
 
 
 	public static boolean checkvertical(String[][] board){
-		if(board[0] == board[3] && board[0]  == board[6] && board[0] != "EMPTY"){
+		if(BOARD[0] == BOARD[3] && board[0]  == board[6] && board[0] != "EMPTY"){
 			winner = board[0];
 			return true ;
 		}
