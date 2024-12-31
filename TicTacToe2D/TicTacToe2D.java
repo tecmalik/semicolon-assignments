@@ -27,7 +27,7 @@ public class TicTacToe2D{
 	}
 	public static void printGameBoard(String[][] BOARD){
 		for(int count = 0 ; count< BOARD.length ; count++ ){
-		System.out.printf("%s | %s | %s \n ",BOARD[count][1],BOARD[count][2],BOARD[count][3]);
+		System.out.printf("%s | %s | %s \n ",BOARD[count][0],BOARD[count][1],BOARD[count][2]);
 			if(count<=2){
 				System.out.println("---------");
 			}
@@ -82,7 +82,7 @@ public class TicTacToe2D{
 			winner = board[0][1];
 			return true ;
 		}
-		else if(BOARD[0][2] == BOARD[1][2] && BOARD[0][2]  == BOARD[1][1] && BOARD[0][2] != "EMPTY"){
+		else if(BOARD[0][2] == BOARD[1][2] && BOARD[0][2]  == BOARD[2][2] && BOARD[0][2] != "EMPTY"){
 			winner = BOARD[0][2];
 			return true ;
 		}
