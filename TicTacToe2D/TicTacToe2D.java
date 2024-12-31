@@ -75,15 +75,15 @@ public class TicTacToe2D{
 
 	public static boolean checkvertical(String[][] board){
 		if(BOARD[0][0] == BOARD[1][0] && BOARD[0][0]  == BOARD[2][0] && BOARD[0][0] != "EMPTY"){
-			winner = BOARD[0];
+			winner = BOARD[0][0];
 			return true ;
 		}
-		else if(BOARD[1] == BOARD[4] && BOARD[1]  == BOARD[7] && BOARD[1] != "EMPTY"){
-			winner = board[1];
+		else if(BOARD[0][1] == BOARD[1][1] && BOARD[0][1]  == BOARD[2][1] && BOARD[0][1] != "EMPTY"){
+			winner = board[0][1];
 			return true ;
 		}
-		else if(BOARD[2] == BOARD[5] && BOARD[2]  == BOARD[8] && BOARD[2] != "EMPTY"){
-			winner = BOARD[2];
+		else if(BOARD[0][2] == BOARD[1][2] && BOARD[0][2]  == BOARD[1][1] && BOARD[0][2] != "EMPTY"){
+			winner = BOARD[0][2];
 			return true ;
 		}
 		return false;
@@ -91,21 +91,21 @@ public class TicTacToe2D{
 	
 	public static boolean checkDiagonals(String[][] board){
 	
-		if(BOARD[0] == BOARD[4] && BOARD[0]  == BOARD[8] && BOARD[0] != "EMPTY"){
-			winner = BOARD[0];
+		if(BOARD[0][0] == BOARD[1][1] && BOARD[0][0]  == BOARD[2][2] && BOARD[0][0] != "EMPTY"){
+			winner = BOARD[0][0];
 			return true ;
 		}
-		else if(BOARD[2] == BOARD[4] && BOARD[1]  == BOARD[7] && BOARD[1] != "EMPTY"){
-			winner = BOARD[2];
+		else if(BOARD[2][0] == BOARD[1][1] && BOARD[2][0]  == BOARD[0][2] && BOARD[2][0] != "EMPTY"){
+			winner = BOARD[2][0];
 			return true ;
 		}
 		
 		return false;
-	}
+	} 
 
 	public static void checkTie(String[][] BOARD){
 		for(int count = 0; count < BOARD.length ; count++){
-			if (BOARD[count].equals("EMPTY") ){
+			if (BOARD[count][].equals("EMPTY") ){
 				
 				return;
 			}
