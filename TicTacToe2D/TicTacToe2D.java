@@ -26,18 +26,16 @@ public class TicTacToe2D{
 
 
 	}
-	public static void printGameBoard(String[] board){
+	public static void printGameBoard(String[][] board){
 		for(int count = 0 ; count< board.length ){
-		System.out.printf("%s | %s | %s \n ",board[][],board[][],board[][]);
-		System.out.println("---------");
-		System.out.printf("%s | %s | %s \n ",board[][3],board[][4],board[][5]);
-		System.out.println("---------");
-		System.out.printf("%s | %s | %s \n ",board[][6],board[][7],board[][8]);
-		
-	
+		System.out.printf("%s | %s | %s \n ",board[count][1],board[count][2],board[count][3]);
+		if(count<=2){
+			System.out.println("---------");
+		}
+			
 	}
-	public static void playerInput(String[] board){
-		System.out.print("Enter a number 1 - 9 : ");
+	public static void playerInput(String[][] board){
+		System.out.print("Enter row number and column 1 - 9 : ");
 		int playerInput = input.nextInt();
 		if(playerInput >= 1 && playerInput <= 9 && board[playerInput-1] == "-" ){
 			board[playerInput-1] = firstPlayer;
