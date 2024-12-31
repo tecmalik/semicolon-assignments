@@ -1,7 +1,11 @@
 import java.util.Scanner;
 public class TicTacToe2D{
 	static Scanner input = new Scanner(System.in);
-	static String[][] board = {{"-","-","-"},{"-","-","-"},{"-","-","-"}};
+	static String[][] board = {
+				   {"-","-","-"},
+				   {"-","-","-"},
+				   {"-","-","-"}
+				   };
 	static String firstPlayer = "x";
 	static String winner = " ";
 	static Boolean gameisRunning = true;
@@ -23,12 +27,12 @@ public class TicTacToe2D{
 
 	}
 	public static void printGameBoard(String[] board){
-
-		System.out.printf("%s | %s | %s \n ",board[0],board[1],board[2]);
+		for(int count = 0 ; count< board.length ){
+		System.out.printf("%s | %s | %s \n ",board[][],board[][],board[][]);
 		System.out.println("---------");
-		System.out.printf("%s | %s | %s \n ",board[3],board[4],board[5]);
+		System.out.printf("%s | %s | %s \n ",board[][3],board[][4],board[][5]);
 		System.out.println("---------");
-		System.out.printf("%s | %s | %s \n ",board[6],board[7],board[8]);
+		System.out.printf("%s | %s | %s \n ",board[][6],board[][7],board[][8]);
 		
 	
 	}
