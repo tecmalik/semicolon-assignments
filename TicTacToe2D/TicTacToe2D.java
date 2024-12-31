@@ -29,24 +29,34 @@ public class TicTacToe2D{
 	public static void printGameBoard(String[][] board){
 		for(int count = 0 ; count< board.length ){
 		System.out.printf("%s | %s | %s \n ",board[count][1],board[count][2],board[count][3]);
-		if(count<=2){
-			System.out.println("---------");
+			if(count<=2){
+				System.out.println("---------");
+			}
 		}
 			
 	}
+
 	public static void playerInput(String[][] board){
-		System.out.print("Enter row number and column 1 - 9 : ");
+		System.out.print("Enter row number and column numberyy \ne.g 12 , 13\n  : ");
 		int playerInput = input.nextInt();
-		if(playerInput >= 1 && playerInput <= 9 && board[playerInput-1] == "-" ){
-			board[playerInput-1] = firstPlayer;
+
+		if(playerInput >= 11 && playerInput <= 13 && board[playerInput-1] == "-" ){
+			board[playerInput-1/10][playerInput-1%10] = firstPlayer;
 		}
+		if(playerInput >= 21 && playerInput <= 23 && board[playerInput-1] == "-" ){
+			board[playerInput-1/10][playerInput-1%10] = firstPlayer;
+		}
+		if(playerInput >= 31 && playerInput <= 33 && board[playerInput-1] == "-" ){
+			board[playerInput-1/10][playerInput-1%10] = firstPlayer;
+		}
+
 		else {
 			System.out.println(" Space Occupied ");
 		}
 		
 	}
 	
-	public static boolean checkHorizontal(String[] board){
+	public static boolean checkHorizontal(String[][] board){
 		if(board[0] == board[1] && board[0]  == board[2] && board[0] != "-"){
 			winner = board[2];
 			return true ;
@@ -64,7 +74,7 @@ public class TicTacToe2D{
 	}
 
 
-	public static boolean checkvertical(String[] board){
+	public static boolean checkvertical(String[][] board){
 		if(board[0] == board[3] && board[0]  == board[6] && board[0] != "-"){
 			winner = board[0];
 			return true ;
@@ -80,7 +90,7 @@ public class TicTacToe2D{
 		return false;
 	}
 	
-	public static boolean checkDiagonals(String[] board){
+	public static boolean checkDiagonals(String[][] board){
 	
 		if(board[0] == board[4] && board[0]  == board[8] && board[0] != "-"){
 			winner = board[0];
@@ -94,7 +104,7 @@ public class TicTacToe2D{
 		return false;
 	}
 
-	public static void checkTie(String[] board){
+	public static void checkTie(String[][] board){
 		for(int count = 0; count < board.length ; count++){
 			if (board[count].equals("-") ){
 				
