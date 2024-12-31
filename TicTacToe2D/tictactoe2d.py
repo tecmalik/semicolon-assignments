@@ -1,6 +1,10 @@
 
 BOARD = [["EMPTY","EMPTY","EMPTY"],["EMPTY","EMPTY","EMPTY"],["EMPTY","EMPTY","EMPTY"]];
 
+firstPlayer = "X"
+winner = " ";
+gameisRunning = True;
+
 
 def printGameBoard(BOARD):
 	for count in range(len(BOARD)):
@@ -10,68 +14,70 @@ def printGameBoard(BOARD):
 
 
 def playerInput(BOARD):
-	playerInput =int(input("Enter row number and column numberyy \ne.g 12 , 13\n  : "));
-	if playerInput >= 11 and playerInput <= 13 and BOARD[(playerInput/10)-1][(playerInput%10)-1] == "EMPTY" :
-		BOARD[(playerInput/10)-1][(playerInput%10)-1] = firstPlayer;
+	playerInput =int(input("Enter row number and column number \ne.g 12 , 13\n  : "));
+	if playerInput >= 11 and playerInput <= 13 and BOARD[(playerInput//10)-1][(playerInput%10)-1] == "EMPTY" :
+		BOARD[(playerInput//10)-1][(playerInput%10)-1] = firstPlayer;
 
-	elif playerInput >= 21 and playerInput <= 23 and BOARD[(playerInput/10)-1][(playerInput%10)-1] == "EMPTY" :
-		BOARD[(playerInput/10)-1][(playerInput%10)-1] = firstPlayer;
+	elif playerInput >= 21 and playerInput <= 23 and BOARD[(playerInput//10)-1][(playerInput%10)-1] == "EMPTY" :
+		BOARD[(playerInput//10)-1][(playerInput%10)-1] = firstPlayer;
 
-	elif playerInput >= 31 and playerInput <= 33 and BOARD[(playerInput/10)-1][(playerInput%10)-1] == "EMPTY" :
-		BOARD[(playerInput/10)-1][(playerInput%10)-1] = firstPlayer;
+	elif playerInput >= 31 and playerInput <= 33 and BOARD[(playerInput//10)-1][(playerInput%10)-1] == "EMPTY" :
+		BOARD[(playerInput//10)-1][(playerInput%10)-1] = firstPlayer;
 
 	else:
 		print(" Space Occupied ");
 
 def checkHorizontal(BOARD):
+	global winner
 	if BOARD[0][0] == BOARD[0][1] and BOARD[0][0]  == BOARD[0][2] and BOARD[0][0] != "EMPTY":
 		winner = BOARD[0][0];
-		return true ;
+		return True ;
 		
 	elif BOARD[1][0] == BOARD[1][1] and BOARD[1][0]  == BOARD[1][2] and BOARD[1][0] != "EMPTY":
 		winner = BOARD[1][0];
-		return true ;
+		return True ;
 		
 	elif BOARD[2][0] == BOARD[2][1] and BOARD[2][0]  == BOARD[2][2] and BOARD[2][0] != "EMPTY":
 			winner = BOARD[2][0];
-			return true ;
-	return false;
+			return True ;
+	return False;
 
 def checkvertical(board):
-	global winner = " ";
+	global winner 
 	if BOARD[0][0] == BOARD[1][0] and BOARD[0][0]  == BOARD[2][0] and BOARD[0][0] != "EMPTY":
 		winner = BOARD[0][0];
-		return true ;
+		return True ;
 
 	elif BOARD[0][1] == BOARD[1][1] and BOARD[0][1]  == BOARD[2][1] and BOARD[0][1] != "EMPTY":
 			winner = board[0][1];
-			return true ;
+			return True ;
 	elif BOARD[0][2] == BOARD[1][2] and BOARD[0][2]  == BOARD[2][2] and BOARD[0][2] != "EMPTY":
 			winner = BOARD[0][2];
-			return true ;
-	return false;
+			return True ;
+	return False;
 	
 def checkDiagonals(board):
+	global winner
 	if BOARD[0][0] == BOARD[1][1] and BOARD[0][0]  == BOARD[2][2] and BOARD[0][0] != "EMPTY" :
 		winner = BOARD[0][0];
-		return true ;
+		return True ;
 	elif BOARD[2][0] == BOARD[1][1] and BOARD[2][0]  == BOARD[0][2] and BOARD[2][0] != "EMPTY":
 		winner = BOARD[2][0];
-		return true ;
+		return True ;
 		
-	return false;
+	return False;
 
 def checkTie(BOARD):
-	global gameisRunning = true;
+	global gameisRunning
 	for index in range(len(BOARD)):
 		for count in range(len(BOARD)):
 			if BOARD[index][count] == ("EMPTY"):
 				return;
 	print("Draw");
-	gameisRunning = false;
+	gameisRunning = False;
 		
 def switchPlayer():
-	global firstPlayer = "X";
+	global firstPlayer 
 	if firstPlayer == "X" :
 		firstPlayer = "O";
 	else:

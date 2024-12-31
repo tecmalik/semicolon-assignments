@@ -36,7 +36,7 @@ public class TicTacToe2D{
 	}
 
 	public static void playerInput(String[][] BOARD){
-		System.out.print("Enter row number and column numberyy \ne.g 12 , 13\n  : ");
+		System.out.print("Enter row number and column number \ne.g 12 , 13\n  : ");
 		int playerInput = input.nextInt();
 
 		if(playerInput >= 11 && playerInput <= 13 && BOARD[(playerInput/10)-1][(playerInput%10)-1] == "EMPTY" ){
