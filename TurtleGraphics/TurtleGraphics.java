@@ -26,6 +26,7 @@ public class TurtleGraphics{
 		if (commandMenu == 1){
 			
 			penUp();
+			action(commandMenu());	
 		}
 		else if (commandMenu == 2){
 			

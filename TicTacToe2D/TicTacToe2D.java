@@ -2,11 +2,11 @@ import java.util.Scanner;
 public class TicTacToe2D{
 	static Scanner input = new Scanner(System.in);
 	static String[][] board = {
-				   {"-","-","-"},
-				   {"-","-","-"},
-				   {"-","-","-"}
+				   {"EMPTY","EMPTY","EMPTY"},
+				   {"EMPTY","EMPTY","EMPTY"},
+				   {"EMPTY","EMPTY","EMPTY"}
 				   };
-	static String firstPlayer = "x";
+	static String firstPlayer = "X";
 	static String winner = " ";
 	static Boolean gameisRunning = true;
 
@@ -40,13 +40,13 @@ public class TicTacToe2D{
 		System.out.print("Enter row number and column numberyy \ne.g 12 , 13\n  : ");
 		int playerInput = input.nextInt();
 
-		if(playerInput >= 11 && playerInput <= 13 && board[playerInput-1] == "-" ){
+		if(playerInput >= 11 && playerInput <= 13 && board[playerInput-1] == "EMPTY" ){
 			board[playerInput-1/10][playerInput-1%10] = firstPlayer;
 		}
-		if(playerInput >= 21 && playerInput <= 23 && board[playerInput-1] == "-" ){
+		if(playerInput >= 21 && playerInput <= 23 && board[playerInput-1] == "EMPTY" ){
 			board[playerInput-1/10][playerInput-1%10] = firstPlayer;
 		}
-		if(playerInput >= 31 && playerInput <= 33 && board[playerInput-1] == "-" ){
+		if(playerInput >= 31 && playerInput <= 33 && board[playerInput-1] == "EMPTY" ){
 			board[playerInput-1/10][playerInput-1%10] = firstPlayer;
 		}
 
@@ -57,15 +57,15 @@ public class TicTacToe2D{
 	}
 	
 	public static boolean checkHorizontal(String[][] board){
-		if(board[0] == board[1] && board[0]  == board[2] && board[0] != "-"){
+		if(board[0] == board[1] && board[0]  == board[2] && board[0] != "EMPTY"){
 			winner = board[2];
 			return true ;
 		}
-		else if(board[3] == board[4] && board[3]  == board[5] && board[3] != "-"){
+		else if(board[3] == board[4] && board[3]  == board[5] && board[3] != "EMPTY"){
 			winner = board[2];
 			return true ;
 		}
-		else if(board[6] == board[7] && board[6]  == board[8] && board[6] != "-"){
+		else if(board[6] == board[7] && board[6]  == board[8] && board[6] != "EMPTY"){
 			winner = board[2];
 			return true ;
 		}
@@ -75,15 +75,15 @@ public class TicTacToe2D{
 
 
 	public static boolean checkvertical(String[][] board){
-		if(board[0] == board[3] && board[0]  == board[6] && board[0] != "-"){
+		if(board[0] == board[3] && board[0]  == board[6] && board[0] != "EMPTY"){
 			winner = board[0];
 			return true ;
 		}
-		else if(board[1] == board[4] && board[1]  == board[7] && board[1] != "-"){
+		else if(board[1] == board[4] && board[1]  == board[7] && board[1] != "EMPTY"){
 			winner = board[1];
 			return true ;
 		}
-		else if(board[2] == board[5] && board[2]  == board[8] && board[2] != "-"){
+		else if(board[2] == board[5] && board[2]  == board[8] && board[2] != "EMPTY"){
 			winner = board[2];
 			return true ;
 		}
@@ -92,11 +92,11 @@ public class TicTacToe2D{
 	
 	public static boolean checkDiagonals(String[][] board){
 	
-		if(board[0] == board[4] && board[0]  == board[8] && board[0] != "-"){
+		if(board[0] == board[4] && board[0]  == board[8] && board[0] != "EMPTY"){
 			winner = board[0];
 			return true ;
 		}
-		else if(board[2] == board[4] && board[1]  == board[7] && board[1] != "-"){
+		else if(board[2] == board[4] && board[1]  == board[7] && board[1] != "EMPTY"){
 			winner = board[2];
 			return true ;
 		}
@@ -106,7 +106,7 @@ public class TicTacToe2D{
 
 	public static void checkTie(String[][] board){
 		for(int count = 0; count < board.length ; count++){
-			if (board[count].equals("-") ){
+			if (board[count].equals("EMPTY") ){
 				
 				return;
 			}
@@ -121,11 +121,11 @@ public class TicTacToe2D{
 
 	public static void switchPlayer(){
 	
-		if(firstPlayer == "x"){
+		if(firstPlayer == "X"){
 			firstPlayer = "O";
 		}
 		else{
-			firstPlayer = "x" ;
+			firstPlayer = "X" ;
 		}
 	}
 
