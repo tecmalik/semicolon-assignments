@@ -28,7 +28,7 @@ public class TicTacToe2D{
 	public static void printGameBoard(String[][] BOARD){
 		for(int count = 0 ; count< BOARD.length ; count++ ){
 		System.out.printf("%s | %s | %s \n ",BOARD[count][0],BOARD[count][1],BOARD[count][2]);
-			if(count<=2){
+			if(count<2){
 				System.out.println("--------------------");
 			}
 		}
@@ -39,14 +39,14 @@ public class TicTacToe2D{
 		System.out.print("Enter row number and column numberyy \ne.g 12 , 13\n  : ");
 		int playerInput = input.nextInt();
 
-		if(playerInput >= 11 && playerInput <= 13 && BOARD[playerInput-1/10][playerInput-1%10] == "EMPTY" ){
-			BOARD[playerInput-1/10][playerInput-1%10] = firstPlayer;
+		if(playerInput >= 11 && playerInput <= 13 && BOARD[(playerInput/10)-1][(playerInput%10)-1] == "EMPTY" ){
+			BOARD[(playerInput/10)-1][(playerInput%10)-1] = firstPlayer;
 		}
-		else if(playerInput >= 21 && playerInput <= 23 && BOARD[playerInput-1/10][playerInput-1%10] == "EMPTY" ){
-			BOARD[playerInput-1/10][playerInput-1%10] = firstPlayer;
+		else if(playerInput >= 21 && playerInput <= 23 && BOARD[(playerInput/10)-1][(playerInput%10)-1] == "EMPTY" ){
+			BOARD[(playerInput/10)-1][(playerInput%10)-1] = firstPlayer;
 		}
-		else if(playerInput >= 31 && playerInput <= 33 && BOARD[playerInput-1/10][playerInput-1%10] == "EMPTY" ){
-			BOARD[playerInput-1/10][playerInput-1%10] = firstPlayer;
+		else if(playerInput >= 31 && playerInput <= 33 && BOARD[(playerInput/10)-1][(playerInput%10)-1] == "EMPTY" ){
+			BOARD[(playerInput/10)-1][(playerInput%10)-1] = firstPlayer;
 		}
 
 		else {
