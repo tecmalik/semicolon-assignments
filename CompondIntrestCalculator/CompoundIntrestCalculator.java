@@ -15,7 +15,7 @@ public class CompoundIntrestCalculator{
 	
 	System.out.println("Length of Tume in Years *");
 	System.out.println("Length of time, in years, that you plan to save");
-	int LengthInYears = input.nextInt();
+	int lengthInYears = input.nextInt();
 	
 	System.out.println("Estimated Intrest Rate in % *");
 	System.out.println("Your estimated annual intrest rate");
@@ -31,12 +31,12 @@ public class CompoundIntrestCalculator{
 	
 	if (monthlyContribution == 0){
 	
-		compoundIntrestAmount = initialInvestment * (Math.pow((1 + ((estimatesIntrestRate /100)/LengthInYears)), LengthInYears*compoundFrequency )) - initialInvestment;
+		double compoundIntrestAmount = initialInvestment * (Math.pow((1 + ((estimatesIntrestRate /100)/lengthInYears)), lengthInYears*compoundFrequency )) - initialInvestment;
 		System.out.printf("your calculated compound Intrest Amount is %.2f",compoundIntrestAmount);
 	}
 	else{
 		
-		compoundIntrestAmount = initialInvestment * (Math.pow((1 + ((estimatesIntrestRate /100)/LengthInYears)), LengthInYears*compoundFrequency )) + monthlyContribution(((Math.pow((1 + ((estimatesIntrestRate /100)/LengthInYears)), LengthInYears*compoundFrequency ))-1)/((estimatesIntrestRate /100)/LengthInYears)))
+		double compoundIntrestAmount = initialInvestment * (Math.pow((1 + ((estimatesIntrestRate /100)/lengthInYears)), lengthInYears*compoundFrequency )) + monthlyContribution(((Math.pow((1 + ((estimatesIntrestRate /100)/lengthInYears), lengthInYears*compoundFrequency ))-1)/((estimatesIntrestRate /100)/lengthInYears)));
 		System.out.printf("your calculated compound Intrest Amount is %.2f",compoundIntrestAmount);
 	}
 	
