@@ -11,5 +11,6 @@ class StudentGrade(TestCase):
 
 	def test_if_getPosition_exist(self):
 		value = studentgrade.getPosition([23,4,5,67,9])
-		expected
+		expected = [6,1,2,5,3]
+		self. asseryEqual(values, expected)
 		
