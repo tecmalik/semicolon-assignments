@@ -9,4 +9,5 @@ class StudentGrade(TestCase):
 		expected = [106, 75]
 		self.assertEqual(value,expected)
 
+
 	
