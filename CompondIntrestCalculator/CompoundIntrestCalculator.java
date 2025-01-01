@@ -30,6 +30,8 @@ public class CompoundIntrestCalculator{
 	int compoundFrequency = input.nextInt();
 	
 	compoundIntrestAmount = initialInvestment * (Math.pow((1 + ((estimatesIntrestRate /100)/LengthInYears)), LengthInYears*compoundFrequency )) - initialInvestment;
+		
+	System.out.printf("your calculated compound Intrest Amount is %.2f",compoundIntrestAmount);
 	
 	}
 	
