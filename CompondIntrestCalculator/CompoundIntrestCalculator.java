@@ -29,9 +29,17 @@ public class CompoundIntrestCalculator{
 	System.out.println(" Times per year that intrest will be compounded");
 	int compoundFrequency = input.nextInt();
 	
-	compoundIntrestAmount = initialInvestment * (Math.pow((1 + ((estimatesIntrestRate /100)/LengthInYears)), LengthInYears*compoundFrequency )) - initialInvestment;
+	if (monthlyContribution == 0){
+	
+		compoundIntrestAmount = initialInvestment * (Math.pow((1 + ((estimatesIntrestRate /100)/LengthInYears)), LengthInYears*compoundFrequency )) - initialInvestment;
+		System.out.printf("your calculated compound Intrest Amount is %.2f",compoundIntrestAmount);
+	}
+	else{
 		
-	System.out.printf("your calculated compound Intrest Amount is %.2f",compoundIntrestAmount);
+		
+		
+	}
+	
 	
 	}
 	
