@@ -7,22 +7,27 @@ public class CompoundIntrestCalculator{
 	
 	System.out.println(" Initial Investment * ");
 	System.out.println("Amount of money that you have available to invest instantlly. ");
+	System.out.print("Enter value : ");
 	double initialInvestment = input.nextDouble();
 	
 	System.out.println("Monthly Constribution ");
 	System.out.println("Amount that you plan to add to the principal every month,or a nagative \n number for the amount that you plan to withdraw every month.");
+	System.out.print("Enter value : ");
 	int monthlyContribution = input.nextInt();
 	
 	System.out.println("Length of Tume in Years *");
 	System.out.println("Length of time, in years, that you plan to save");
+	System.out.print("Enter value : ");
 	int lengthInYears = input.nextInt();
 	
 	System.out.println("Estimated Intrest Rate in % *");
 	System.out.println("Your estimated annual intrest rate");
+	System.out.print("Enter value : ");
 	double estimatesIntrestRate = input.nextDouble();
 
 	System.out.println("Intrest rate Varience range");
 	System.out.println("Range of interest rate(above and beliow the rate set above) that you desire to see results for.");
+	System.out.print("Enter value : ");
 	int intrestRateVarianceRange = input.nextInt();
 	
 	System.out.println("compound Frequency");
@@ -36,7 +41,7 @@ public class CompoundIntrestCalculator{
 	}
 	else{
 		
-		double compoundIntrestAmount = initialInvestment * (Math.pow((1 + ((estimatesIntrestRate /100)/lengthInYears)), lengthInYears*compoundFrequency )) + monthlyContribution(((Math.pow((1 + ((estimatesIntrestRate /100)/lengthInYears), lengthInYears*compoundFrequency ))-1)/((estimatesIntrestRate /100)/lengthInYears)));
+		double compoundIntrestAmount = initialInvestment * (Math.pow((1 + ( (estimatesIntrestRate /100)/lengthInYears) ),lengthInYears*compoundFrequency )) + monthlyContribution * (((Math.pow((1 + ((estimatesIntrestRate /100)/lengthInYears)), lengthInYears*compoundFrequency ))-1)/((estimatesIntrestRate /100)/lengthInYears));
 		System.out.printf("your calculated compound Intrest Amount is %.2f",compoundIntrestAmount);
 	}
 	
