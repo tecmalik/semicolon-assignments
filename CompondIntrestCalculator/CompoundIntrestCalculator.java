@@ -10,7 +10,7 @@ public class CompoundIntrestCalculator{
 	double initialInvestment = input.nextDouble();
 	
 	System.out.println("Monthly Constribution ");
-	System.out.println("Amount that you plan to add to the principal every month,or a nagative \n number for the amount that you plan to withdraw envry month.");
+	System.out.println("Amount that you plan to add to the principal every month,or a nagative \n number for the amount that you plan to withdraw every month.");
 	int monthlyContribution = input.nextInt();
 	
 	System.out.println("Length of Tume in Years *");
@@ -36,8 +36,8 @@ public class CompoundIntrestCalculator{
 	}
 	else{
 		
-		
-		
+		compoundIntrestAmount = initialInvestment * (Math.pow((1 + ((estimatesIntrestRate /100)/LengthInYears)), LengthInYears*compoundFrequency )) + monthlyContribution(((Math.pow((1 + ((estimatesIntrestRate /100)/LengthInYears)), LengthInYears*compoundFrequency ))-1)/((estimatesIntrestRate /100)/LengthInYears)))
+		System.out.printf("your calculated compound Intrest Amount is %.2f",compoundIntrestAmount);
 	}
 	
 	
