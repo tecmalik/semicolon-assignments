@@ -19,9 +19,10 @@ public class CompoundIntrestCalculator{
 	System.out.print("Length of time, in years, that you plan to save");
 	int LengthInYears = input.nextInt();
 	
-	System.out.print("Estimatedc Intrest Rate");
+	System.out.print("Estimated Intrest Rate");
 	System.out.print("Your estimated annual intrest rate");
 	int estimatesIntrestRate = input.nextInt();
+	double intrestRate = (double)estimatesIntrestRate /100 ;
 
 	System.out.print("Intrest rate Varience range");
 	System.out.print("Range of interest rate(above and beliow the rate set above) that you desire to see results for.");
@@ -31,6 +32,7 @@ public class CompoundIntrestCalculator{
 	System.out.print(" Times per year that intrest will be compounded");
 	int compoundFrequency = input.nextInt();
 	
+	compound intrest = 
 	
 	}
 	

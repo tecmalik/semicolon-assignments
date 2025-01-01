@@ -16,7 +16,7 @@ public class TurtleGraphics{
 
 
 	public static int commandMenu(){
-		System.out.print("1. Pen up.\n2. Pen down.\n3. Turn right.\n4. Turn left \n5,10. Moving foward 10 spaces(replace 20 doe diffrent number of spaces).\n6. DIsplay the 20-by-20 array.\n9. End of data(sentinel) \nEnter Choice :");
+		System.out.print("1. Pen up.\n2. Pen down.\n3. Turn right.\n4. Turn left \n5,10. Moving foward 10 spaces(replace 10 for a diffrent number of spaces).\n6. DIsplay the 20-by-20 array.\n9. End of data(sentinel) \nEnter Choice :");
 		int userChoice = input.nextInt();
 	return userChoice;
 
@@ -30,7 +30,7 @@ public class TurtleGraphics{
 		}
 		else if (commandMenu == 2){
 			
-		}
+		} 
 		else if (commandMenu == 3){
 			
 		}
@@ -41,9 +41,7 @@ public class TurtleGraphics{
 
 		else if (commandMenu == 5 ){
 		
-		}
-		else if (commandMenu == 10){
-			
+				move= input.nextInt();
 		}
 
 		else if (commandMenu == 6 ){
