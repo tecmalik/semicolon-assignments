@@ -29,7 +29,7 @@ public class CompoundIntrestCalculator{
 	System.out.println(" Times per year that intrest will be compounded");
 	int compoundFrequency = input.nextInt();
 	
-	compoundIntrestAmount = initialInvestment * (Math.pow((1 + ((estimatesIntrestRate /100)/LengthInYears)), LengthInYears*compoundFrequency ))
+	compoundIntrestAmount = initialInvestment * (Math.pow((1 + ((estimatesIntrestRate /100)/LengthInYears)), LengthInYears*compoundFrequency )) - initialInvestment;
 	
 	}
 	
