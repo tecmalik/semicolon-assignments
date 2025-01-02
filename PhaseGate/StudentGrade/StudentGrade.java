@@ -18,7 +18,6 @@ public class StudentGrade{
 				
 				System.out.print("you have to enter integers !!! ");
 				input.nextInt();
-				
 			}
 			
 		}while(continousLoop);
