@@ -17,4 +17,10 @@ class StudentGrade(TestCase):
 		value = studentgrade.getPosition([23,4,5,67,9])
 		expected = [6,1,2,5,3]
 		self.assertEqual(value, expected)	
+	def test_if_getPosition_will_return_a_list(self):
+		value = studentgrade.getPosition([23,4,5,67,9])
+		expected = [6,1,2,5,3]
 	
+	def test_if_subjectTotal_exist(self):
+		value = studentgrade.subjectTotal()
+		
