@@ -46,6 +46,11 @@ class StudentGrade(TestCase):
 		
 	def test_if_overall_highest_score_exist(self):
 		studentgrade.overall_highest_score({"malik":{"maths":56,"english":43},"jame":{"maths":43,"english":43}})
-	def test_
+	def test_will return_an_int__value()
 		value = studentgrade.overall_highest_score({"malik":{"maths":56,"english":43},"jame":{"maths":43,"english":43}})
-		expected = 
+		expected = 56, maths, malik
+		self.assertEqual(value,expected)
+	def test_will return_a_correct_value()
+		value = studentgrade.overall_highest_score({"malik":{"maths":56,"english":93},"jame":{"maths":43,"english":43}})
+		expected = 93, english, malik
+		self.assertEqual(value,expected)
