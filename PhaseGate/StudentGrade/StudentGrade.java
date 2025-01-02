@@ -1,26 +1,27 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
+
 public class StudentGrade{
 
 	static Scanner input = new Scanner(System.in);
 	
 	public static void main(String... args){
 
-
 		boolean continousLoop = true;
-	do{
-		try{
-			collectStudentsInputs();
-			continousLoop = false;
-		}
-		catch(InputMismatchException){
-			System.out.print(" ");
-			
-		}
-		catch(){
 		
-			System.out.print(" ");
-		}
-	}while( continousLoop );
+		do{
+			try{
+				collectStudentsInputs();
+				continousLoop = false;
+			}
+			catch(InputMismatchException e){
+				
+				System.out.print("you have to enter integers !!! ");
+				input.nextInt();
+				
+			}
+			
+		}while(continousLoop);
 
 		
 	}
