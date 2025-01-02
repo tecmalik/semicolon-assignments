@@ -201,7 +201,7 @@ def getEachStudentTotal(studentSubject:list , studentGrades:dict):
 
 
 for count in range(studentnumber):
-	name = input(f"Enter {count+1} Student names : ")
+	name = input(f"Enter Student {count+1} name : ")
 	studentNames.append(name)
 
 for count in range(numberOfSubjects):
