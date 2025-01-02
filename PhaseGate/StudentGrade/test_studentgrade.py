@@ -23,11 +23,29 @@ class StudentGrade(TestCase):
 		self.assertEqual(value,expected)
 	
 	def test_if_subjectTotal_exist(self):
-		value = studentgrade.subjectTotal({"malik":{"maths":56,"english":45},"jame":{"maths":45,"english":45}})
-
-	def test_if_subjectTotal_exist(self):
+		 studentgrade.subjectTotal({"malik":{"maths":56,"english":45},"jame":{"maths":45,"english":45}})
+	def test_if_subjectTotal_returns_an_int_value(self):
 		value = studentgrade.subjectTotal({"malik":{"maths":56,"english":45},"jame":{"maths":45,"english":45}})
 		expected = [101, 90]
 		self.assertEqual(value,expected)
+	def test_if_subjectTotal_returns_an_correct_t_value(self):
+		value = studentgrade.subjectTotal({"malik":{"maths":56,"english":45},"jame":{"maths":45,"english":45}})
+		expected = [101, 90]
+		self.assertEqual(value,expected)
+
+	def test_if_passesAndFailures_exist_(self):
+		studentgrade.passesAndFailures({"malik":{"maths":56,"english":43},"jame":{"maths":43,"english":43}}, (["maths","english"])
+	def test_if_passesAndFailures_returns_an_int_value_(self):
+		values = studentgrade.passesAndFailures({"malik":{"maths":56,"english":43},"jame":{"maths":43,"english":43}}, (["maths","english"])
+		expected = [1,1],[0,2]
+		self.assertEqual(value,expected)
+			def test_if_passesAndFailures_returns_a_correct_value_(self):
+		values = studentgrade.passesAndFailures({"malik":{"maths":56,"english":43},"jame":{"maths":43,"english":43}}, (["maths","english"])
+		expected = [1,1],[0,2]
+		self.assertEqual(value,expected)
 		
-	
+	def test_if_overall_highest_score_exist(self):
+		studentgrade.overall_highest_score({"malik":{"maths":56,"english":43},"jame":{"maths":43,"english":43}})
+	def test_
+		value = studentgrade.overall_highest_score({"malik":{"maths":56,"english":43},"jame":{"maths":43,"english":43}})
+		expected = 
