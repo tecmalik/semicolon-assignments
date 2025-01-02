@@ -2,13 +2,25 @@ import java.util.Scanner;
 public class StudentGrade{
 
 	static Scanner input = new Scanner(System.in);
-
-
-
 	
 	public static void main(String... args){
 
-		 collectStudentsInputs();
+
+		boolean continousLoop = true;
+	do{
+		try{
+			collectStudentsInputs();
+			continousLoop = false;
+		}
+		catch(InputMismatchException){
+			System.out.print(" ");
+			
+		}
+		catch(){
+		
+			System.out.print(" ");
+		}
+	}while( continousLoop );
 
 		
 	}
