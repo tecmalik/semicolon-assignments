@@ -30,3 +30,4 @@ class StudentGrade(TestCase):
 		expected = [101, 90]
 		self.assertEqual(value,expected)
 		
+	
