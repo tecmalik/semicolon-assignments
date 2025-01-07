@@ -1,15 +1,25 @@
 import java.util.Scanner;
 
 public class CompoundIntrestCalculator{
+	
+	static double initialInvestment;
+	ststic int monthlyContributionl;
+	ststic int lengthInYears;
+	static double estimatesInterestRate;
+	static int interestRateVarianceRange;
+	static double initialInvestment;
+	static int compoundFrequency;
+
 	public static void main(String[] args){
 	
 	Scanner input = new Scanner(System.in);
-	
+
+	try{
+
 	System.out.println(" Initial Investment * ");
 	System.out.println("Amount of money that you have available to invest instantly. ");
 	System.out.print("Enter value : ");
-	double initialInvestment = input.nextDouble();
-	
+
 	System.out.println(" Monthly Contribution ");
 	System.out.println("Amount that you plan to add to the principal every month, or a negative \n number for the amount that you plan to withdraw every month.");
 	System.out.print("Enter value : ");
@@ -30,22 +40,34 @@ public class CompoundIntrestCalculator{
 	System.out.print("Enter value : ");
 	int interestRateVarianceRange = input.nextInt();
 	
-	System.out.println(" compound Frequency");
+	System.out.println("compound Frequency");
 	System.out.println("Times per year that interest will be compounded");
 	int compoundFrequency = input.nextInt();
 	
-	if (monthlyContribution == 0){
+		if (monthlyContribution == 0){
 	
-		double compoundInterestAmount = initialInvestment * (Math.pow((1 + ((estimatesInterestRate /100)/lengthInYears)), lengthInYears*compoundFrequency )) - initialInvestment;
-		System.out.printf("your calculated compound Interest Amount is %.2f",compoundInterestAmount);
-	}
-	else{
+			getCompoundInterest();
+		}
+		else{
 		
-		double compoundInterestAmount = initialInvestment * (Math.pow((1 + ( (estimatesInterestRate /100)/lengthInYears) ),lengthInYears*compoundFrequency )) + monthlyContribution * (((Math.pow((1 + ((estimatesInterestRate /100)/lengthInYears)), lengthInYears*compoundFrequency ))-1)/((estimatesInterestRate /100)/lengthInYears));
+			getCompoundInterestAmountWithMonthlyContribution();
+		}
+	}catch( ){
+		System.out.print("");
+	}
+	
+	
+	}
+	
+	public static void getCompoundInterest(){
+		double compoundInterestAmount = initialInvestment * (Math.pow((1 + ((estimatesInterestRate /100)/lengthInYears)), lengthInYears*compoundFrequency ));
 		System.out.printf("your calculated compound Interest Amount is %.2f",compoundInterestAmount);
-	}
-	
 	
 	}
+	public static void getCompoundInterestAmount(){
+		double compoundInterestAmount = initialInvestment * (Math.pow((1 + ( (estimatesInterestRate /100)/lengthInYears) ),lengthInYears*compoundFrequency )) + monthlyContribution * (((Math.pow((1 + ((estimatesInterestRate /100)/lengthInYears)), lengthInYears*compoundFrequency ))-1)/((estimatesInterestRate /100)/lengthInYears));
+			System.out.printf("your calculated compound Interest Amount is %.2f",compoundInterestAmount);
+	}
+
 	
 }
