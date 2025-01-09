@@ -20,6 +20,19 @@ public class NumberChecker{
 	
 	return "not available";
 	}
+	public static String searchNumber(int number, int[] numbers){
+		int index = "";
+		for (int count = 0 ; numbers.length > 0; count++){
+			if(numbers[count] == number){
+				index = count;	
+				return String.format("the number %d is present at index %d", number,index);
+			
+			}
+		}
+	
+	return "not available";
+	}
+
 	/**public static String getPositiveNagativeAndZeros(int[] numbers){
 		int positive = 0;
 		int negative = 0;
