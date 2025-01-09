@@ -30,7 +30,7 @@ public class PhoneBook{
 			menu();
 		}
 		else if(choice == 2){
-			removecontact()
+			removecontact();
 			menu();
 		}
 		else if(choice == 3){
