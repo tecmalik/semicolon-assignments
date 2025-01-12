@@ -1,32 +1,33 @@
 public class Rooms {
+    private int roomNumber;
+    private RoomTypes roomType;
+    private RoomStatus  Status;
 
-   private String roomNumber;
-   private RoomType roomType;
-   private String roomStatus;
 
-    public Rooms(String roomNumber, RoomType roomType, String roomStatus) {
+
+    public Rooms(int roomNumber, RoomTypes roomType) {
         this.roomNumber = roomNumber;
         this.roomType = roomType;
-        this.roomStatus = roomStatus;
+        this.Status = RoomStatus.AVAILABLE;
     }
-
-
-   public void setRoomNumber(String roomNumber) {
+    public void setRoomNumber( int roomNumber ) {
         this.roomNumber = roomNumber;
-   }
-    public String getRoomNumber() {
+    }
+    public int getRoomNumber() {
         return roomNumber;
     }
-    public void setRoomType(RoomType roomType) {
+    public void setRoomType( RoomTypes roomType ) {
         this.roomType = roomType;
     }
-    public RoomType getRoomType() {
+    public RoomTypes getRoomType() {
         return roomType;
     }
-    public void setRoomStatus(String roomStatus) {
-        this.roomStatus = roomStatus;
+    public void setStatus(RoomStatus status) {
+        this.Status = status;
     }
-    public String getRoomStatus() {
-        return roomStatus;
+    public RoomStatus getStatus() {
+        return Status;
     }
+
+
 }
