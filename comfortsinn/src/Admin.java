@@ -7,11 +7,11 @@ public class Admin  {
     private String password;
     private static int count = 0;
     ArrayList<String> admin = new ArrayList<>();
-    public Admin(String id, String name, String email, String password) {
+    public Admin(String id, String name, String email,String password) {
         this.id = id;
         this.name = name;
         this.email = email;
-        this.password = password;
+        this.password = "password";
         count++;
     }
 
@@ -47,10 +47,8 @@ public class Admin  {
     }
     public String getAdminID() {
         String admin = "#Admin_";
-        return String.format("%s-%d", admin, count);
+        return String.format("%s%d", admin, count);
     }
-
-
 
 
 }

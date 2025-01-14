@@ -1,8 +1,10 @@
 public enum RoomStatus{
     OCCUPIED,
     AVAILABLE,
-    MAINTAINACE;
+    MAINTENANCE;
 
     RoomStatus() {
     }
 }
+
+

@@ -4,23 +4,11 @@ import java.util.Scanner;
 
 public class ComfortInnApp {
     Admin[] adminlist = new Admin[2];
+    static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("WELCOME TO COMFORT-INN DOCS");
 
-        System.out.println("Sellect an option:\n1. Admin\n2. Guest\n3. Exit ");
-        String option = scanner.nextLine();
-        switch (option){
-            case "1": System.out.println("WELCOME TO ADMIN MENU");
-                adminmenu();
 
-            break;
-            case "2":
-                System.out.println("WELCOME TO COMFORT-INN DOCS");
-                usermenu();
-            break;
-            case "3":System.exit(0);
-        }
+
         System.out.println("Enter your first name: ");
         String userName = scanner.next();
         System.out.println("Enter your last name: ");
@@ -55,6 +43,25 @@ public class ComfortInnApp {
         System.out.println("7. View All Available Rooms");
         System.out.println("8. View Notification");
     }
-   
+    public static void userOption(){
+        System.out.println("WELCOME TO COMFORT-INN DOCS");
+
+        System.out.println("Select an option:\n1. Admin\n2. Guest\n3. Exit ");
+        String option = scanner.nextLine();
+        switch (option){
+            case "1": System.out.println("WELCOME TO ADMIN MENU");
+
+                adminmenu();
+
+                break;
+            case "2":
+                System.out.println("WELCOME TO COMFORT-INN DOCS");
+                usermenu();
+                break;
+            case "3":System.exit(0);
+            default:System.out.println("Invalid option");
+                userOption();
+        }
+    }
 
 }
