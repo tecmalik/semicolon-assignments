@@ -15,11 +15,13 @@ public class ComfortInnApp {
         String lastName = scanner.next();
         System.out.println("Enter your phone number: ");
         String phoneNumber = scanner.next();
+
+
         System.out.println("Enter your email: ");
         String UserEmail = scanner.nextLine();
-
-
     }
+
+
     public static void adminmenu(){
         System.out.println("WELCOME MADAM GLORIA");
         System.out.println("1. View All Rooms");
@@ -47,21 +49,36 @@ public class ComfortInnApp {
         System.out.println("WELCOME TO COMFORT-INN DOCS");
 
         System.out.println("Select an option:\n1. Admin\n2. Guest\n3. Exit ");
-        String option = scanner.nextLine();
+        int option = scanner.nextInt();
         switch (option){
-            case "1": System.out.println("WELCOME TO ADMIN MENU");
+            case 1: System.out.println("Welcome, Madam Gloria!");
 
                 adminmenu();
 
                 break;
-            case "2":
-                System.out.println("WELCOME TO COMFORT-INN DOCS");
+            case 2:
+                System.out.println("WELCOME TO COMFORT-INN");
                 usermenu();
+                guestLoginOption();
                 break;
-            case "3":System.exit(0);
+            case 3:System.exit(0);
             default:System.out.println("Invalid option");
                 userOption();
         }
     }
 
+    public static void guestLoginOption(){
+        System.out.println("WELCOME TO COMFORT-INN DOCS");
+        System.out.println("Select an option:\n1. Login \n2. create Account.");
+        int option = scanner.nextInt();
+        switch (option){
+            case 1:
+                System.out.println("");
+                break;
+                case 2: System.out.println("");
+                break;
+                default:System.out.println("Invalid option");
+
+        }
+    }
 }

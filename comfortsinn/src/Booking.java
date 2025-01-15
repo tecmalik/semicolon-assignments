@@ -1,4 +1,5 @@
 import java.text.DecimalFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Date;
@@ -14,7 +15,7 @@ public class Booking {
     private static int count = 0;
 
     ArrayList<Guest> guests = new ArrayList<>();
-    ArrayList<String> bookings = new ArrayList<>();
+
 
     public Booking(String bookingReferenceNumber, String customerId, String checkInDate, String checkOutDate, int totalBookings) {
         this.bookingReferenceNumber = bookingReferenceNumber;
@@ -34,20 +35,18 @@ public class Booking {
         this.customerId = customerId;
     }
 
-    public void setCheckInDate(String checkInDate) {
-        this.checkInDate = checkInDate;
+    public void setCheckInDate() {
+        Date date = new Date();
+        this.checkInDate = date.toString();
     }
 
     public void setCheckOutDate(String checkOutDate) {
-        this.checkInDate = checkOutDate;
+
+        this.checkOutDate = checkOutDate;
     }
 
     public void setTotalBookings(int totalBookings) {
         this.totalBookings = totalBookings;
-    }
-
-    public void setBookings(ArrayList<String> bookings) {
-        this.bookings = bookings;
     }
 
     public String getBookingReferenceNumber() {
@@ -86,6 +85,5 @@ public class Booking {
         }
     return userID;
     }
-
 
 }

@@ -6,17 +6,15 @@ public class Guest {
     private String email;
     private String phoneNumber;
     private String password;
-    private String numberOfNights;
    private static int count = 0;
 
 
-    public Guest(String firstName, String lastName, String email, String phoneNumber,String password, String referenceNumber) {
+    public Guest(String firstName, String lastName, String email, String phoneNumber,String password) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.phoneNumber = phoneNumber;
         this.password = password;
-        this.numberOfNights = referenceNumber;
         count++;
     }
 
@@ -35,9 +33,6 @@ public class Guest {
     public void setPassword(String password) {
         this.password = password;
     }
-    public void setNumberOfNights(String numberOfNights) {
-        this.numberOfNights = String.valueOf(numberOfNights);
-    }
     public String getFirstName() {
         return firstName;
     }
@@ -53,8 +48,19 @@ public class Guest {
     public String getPassword() {
         return password;
     }
-    public String getNumberOfNights(){
-        return numberOfNights;
+
+    public boolean checkPhoneNumber(String phoneNumber) {
+        boolean isValidNot = true;
+        while (isValidNot) {
+            for(int count = 0; count<phoneNumber.length(); count++){
+                if(phoneNumber.charAt(count) >= 12 && phoneNumber.charAt(count) > 0 ) {
+                    isValidNot = false;
+                }
+            }
+        }
+        return true;
     }
+
+
 
 }
