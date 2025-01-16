@@ -1,3 +1,5 @@
+import java.math.BigDecimal;
+
 public class Room {
     private int roomNumber;
     private RoomTypes roomType;
@@ -34,6 +36,9 @@ public class Room {
     }
     public int getcount(){
         return count;
+    }
+    public BigDecimal getPrice() {
+        return roomType.getAmount();
     }
 
 }

@@ -60,6 +60,30 @@ public class Rooms {
     public Room getRoom(int roomNumber) {
         return rooms.get(roomNumber -1 );
     }
+    public void getAvailableRooms() {
+        System.out.println("Available rooms are:");
+        for (Room room : rooms) {
+            if (room.getStatus() == RoomStatus.AVAILABLE) {
+                System.out.printf("Room number :"+room.getRoomNumber()+" |  Type : "+ room.getRoomType()+" : "+ room.getPrice()+"| Room status "+ room.getStatus()+"\n");
+            }
 
+        }
+    }
+    public void getOccupiedRooms() {
+        System.out.println("Occupied rooms:");
+        for (Room room : rooms) {
+            if (room.getStatus() == RoomStatus.OCCUPIED) {
+                System.out.println("Room number :"+room.getRoomNumber()+" |  Type : "+ room.getRoomType()+"| Room status :"+room.getStatus()+"\n");
+            }
+        }
+    }
+
+    public void getRoomsUnderMaintenance(){
+        for (Room room : rooms) {
+            if(room.getStatus() == RoomStatus.MAINTENANCE) {
+                System.out.println("Room number :"+room.getRoomNumber()+" |  Type : "+ room.getRoomType()+" marked as unavailable for :"+room.getStatus()+"\n");
+            }
+        }
+    }
 
 }
