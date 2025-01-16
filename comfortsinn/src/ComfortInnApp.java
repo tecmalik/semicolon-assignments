@@ -3,22 +3,13 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class ComfortInnApp {
+
     Admin[] adminlist = new Admin[2];
     static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
 
 
 
-        System.out.println("Enter your first name: ");
-        String userName = scanner.next();
-        System.out.println("Enter your last name: ");
-        String lastName = scanner.next();
-        System.out.println("Enter your phone number: ");
-        String phoneNumber = scanner.next();
-
-
-        System.out.println("Enter your email: ");
-        String UserEmail = scanner.nextLine();
     }
 
 
@@ -81,4 +72,17 @@ public class ComfortInnApp {
 
         }
     }
+    public static void collectGuestDetails(){
+        System.out.println("Enter your first name :");
+        String userName = scanner.next();
+        System.out.println("Enter your last name :");
+        String lastName = scanner.next();
+        System.out.println("Enter your phone number :");
+        String phoneNumber = scanner.next();
+        System.out.println("Enter your email address :");
+        String UserEmail = scanner.nextLine();
+        System.out.println("Enter your password :");
+        String password = scanner.nextLine();
+    }
+
 }
