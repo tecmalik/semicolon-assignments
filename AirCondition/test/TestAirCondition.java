@@ -44,6 +44,15 @@ public class TestAirCondition {
     public void test_ifAirConditionMaxIs30(){
         AirCondition airCondition = new AirCondition();
         airCondition.temperature(30);
-        
+        airCondition.increaseTemperature();
+        assertEquals(30,airCondition.temperature(30));
     }
+    @Test
+    public void test_ifAirConditionMinIs16(){
+        AirCondition airCondition = new AirCondition();
+        airCondition.temperature(16);
+        airCondition.decreaseTemperature();
+        assertEquals(16,airCondition.temperature(16));
+    }
+
 }

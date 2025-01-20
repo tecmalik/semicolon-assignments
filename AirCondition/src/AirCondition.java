@@ -16,13 +16,18 @@ public class AirCondition {
         return temperature;
     }
     public int increaseTemperature(){
-        this.temperature++;
+        if (this.temperature < 30){
+            this.temperature++;
+        }
         return this.temperature;
     }
     public int decreaseTemperature(){
+    if (this.temperature > 16){
         this.temperature--;
+    }
         return this.temperature;
     }
+
 
 
 }
