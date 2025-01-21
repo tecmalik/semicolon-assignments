@@ -7,7 +7,6 @@ public class TestAirCondition {
     @Test
     public void test() {
         AirCondition airCondition = new AirCondition();
-
     }
     @Test
     public void test_AirConditionIsOff() {
@@ -54,5 +53,6 @@ public class TestAirCondition {
         airCondition.decreaseTemperature();
         assertEquals(16,airCondition.temperature(16));
     }
+
 
 }
