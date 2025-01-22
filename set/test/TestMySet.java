@@ -1,19 +1,44 @@
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class TestMySet {
 
-    MySet myTest;
+    MySet mySet;
 
     @BeforeEach
     public void testMySet() {
-        myTest = new MySet();
+        mySet = new MySet();
     }
 
     @Test
-    public void testMySetIsEmpty() {
-
+    public void test_mySetIsEmpty() {
+        assertTrue(mySet.isEmpty());
     }
+    @Test
+    public void test_mySetIsNotEmpty() {
+        mySet.add("hello");
+        assertFalse(mySet.isEmpty());
+    }
+    @Test
+    public void test_mySetCanRemoveElement() {
+        mySet.add("hello");
+        mySet.remove("hello");
+        assertTrue(mySet.isEmpty());
+    }
+    @Test
+    public void test_mySetWillReturnSize() {
+        mySet.add("hello");
+        assertEquals(1 , mySet.size());
+    }
+    @Test
+    public void test_mySetCanAddTwoElements() {
+        mySet.add("hello");
+        mySet.add("james");
+        assertEquals(2 , mySet.size());
+        mySet.add("shade");
+        assertTrue(mySet.contains("Shade"));
+    }
+
 }
