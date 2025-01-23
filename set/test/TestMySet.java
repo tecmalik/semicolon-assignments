@@ -33,12 +33,20 @@ public class TestMySet {
         assertEquals(1 , mySet.size());
     }
     @Test
-    public void test_mySetCanAddTwoElements() {
+    public void test_mySetCanAddsOnly() {
         mySet.add("hello");
         mySet.add("james");
         assertEquals(2 , mySet.size());
         mySet.add("shade");
-        assertTrue(mySet.contains("Shade"));
+        assertTrue(mySet.contains("shade"));
+    }
+    @Test
+    public void test_mySetAddsOnlyElementsnotPresentInTheList() {
+        mySet.add("hello");
+        mySet.add("james");
+        mySet.add("james");
+        mySet.add("shade");
+        assertEquals("shade" , mySet.get(2));
     }
 
 }

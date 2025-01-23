@@ -1,3 +1,5 @@
+package dsa;
+
 public class MyArrayList {
     private String[] elements = new String[3];
     private int size = 0;
@@ -6,7 +8,7 @@ public class MyArrayList {
     }
 
     public void add(String item) {
-        if (elements.length-1 == size) {
+        if (size == elements.length-1 ) {
         String[] newElements = new String[elements.length*2];
         for(int index = 0; index < size; index++) {
             newElements[index] = elements[index];
@@ -15,7 +17,6 @@ public class MyArrayList {
     }
         this.elements[size] = item ;
         this.size++;
-
 
     }
 
@@ -27,11 +28,9 @@ public class MyArrayList {
         return this.size;
     }
 
-    public int getIndexOf(String malik) {
-        for(int count = 0; count < size; count++) {
-            if(this.elements[count].equals(malik)) {
-                return count;
-            }
+    public int getIndexOf(String element) {
+        for(int index = 0; index < size; index++) {
+            if(this.elements[index].equals(element)) return index;
         }
         return -1;
     }

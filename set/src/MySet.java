@@ -10,8 +10,7 @@ public class MySet {
 
 
     public boolean add(String element) {
-        this.elements[size] = element;
-        size++;
+
         return true;
     }
 
@@ -29,9 +28,18 @@ public class MySet {
     }
 
     public boolean contains(String element) {
-        for(String element : elements) {
-            return true;
+        for(String eachElement : elements) {
+            if(element.equals(eachElement)){
+                return true;
+            }
         }
         return false;
+    }
+
+    public String get(int index) {
+        if(index > 0 || index < size) {
+            return this.elements[index];
+        }
+        return null;
     }
 }
