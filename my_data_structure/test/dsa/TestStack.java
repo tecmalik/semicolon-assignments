@@ -17,14 +17,29 @@ public class TestStack {
     }
     @Test
     public void test_ifMyStackIsNotEmpty() {
-        myStack.add("object");
+        myStack.push("object");
         assertFalse(myStack.isEmpty());
     }
     @Test
     public void test_ifMyStackWillPeekElement () {
-        myStack.add("object");
-        assertEquals("Object",myStack.peek());
+        myStack.push("object");
+        assertEquals("object", myStack.peek());
     }
+    @Test
+    public void test_ifMyStackWillPopElement () {
+        myStack.push("object");
+        myStack.push("malik");
+        assertEquals("malik", myStack.pop());
+        assertEquals(1, myStack.size());
+
+    }
+    @Test
+    public void test_ifMyStackWillSearchForAElement () {
+        myStack.push("object");
+        myStack.push("malik");
+        assertEquals(1 , myStack.search("malik"));
+    }
+
 
 
 
