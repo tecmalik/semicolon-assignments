@@ -47,5 +47,37 @@ public class TestMySet {
         assertEquals(4 , mySet.size());
 
     }
+    @Test
+    public void test_Add_XYZ_CheckThatMySetWouldContainY() {
+        mySet.add("malik");
+        mySet.add("oj07");
+        mySet.add("hello");
+        assertTrue(mySet.contains("hello"));
+    }
+    @Test
+    public void test_Add_XYZ_CheckThatMySetWouldNotContainf() {
+        mySet.add("malik");
+        mySet.add("oj07");
+        mySet.add("hello");
+        assertFalse(mySet.contains("hello4"));
+    }
+    @Test
+    public void test_Add_XYZ_And_RemoveAll() {
+        mySet.add("malik");
+        mySet.add("oj07");
+        mySet.add("hello");
+        mySet.add("hello");
+        mySet.removeAll();
+        assertEquals(0, mySet.size());
+    }
+    @Test
+    public void test_Add_XYZ_And_GetindexOfElement() {
+        mySet.add("malik");
+        mySet.add("oj07");
+        mySet.add("hello");
+        mySet.add("hello");
+        mySet.add("timi");
+        assertEquals(3, mySet.get("timi"));
+    }
 
 }

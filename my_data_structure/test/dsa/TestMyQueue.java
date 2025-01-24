@@ -62,11 +62,12 @@ public class TestMyQueue {
         myQueue.remove();
 
     }
+    @Test
     public void test_canReturnWithoutremovingItTheElement() {
         myQueue.add("malik");
         myQueue.offer("david");
         myQueue.offer("Apple");
-        myQueue.pool();
+        myQueue.pull();
         assertEquals(3, myQueue.size());
         myQueue.remove();
 

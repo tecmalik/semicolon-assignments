@@ -24,6 +24,8 @@ public class TestStack {
     public void test_ifMyStackWillPeekElement () {
         myStack.push("object");
         assertEquals("object", myStack.peek());
+        myStack.push("malik");
+        assertEquals("malik", myStack.peek());
     }
     @Test
     public void test_ifMyStackWillPopElement () {

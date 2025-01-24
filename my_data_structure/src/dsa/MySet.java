@@ -2,19 +2,19 @@ package dsa;
 
 public class MySet {
 
-     private boolean isEmpty;
      private int size = 0;
+    MyArrayList myArrayList = new MyArrayList();
 
     public boolean isEmpty() {
-        return size==0;
+        return this.size == 0;
     }
 
     public void add(String element) {
-        MyArrayList myArrayList = new MyArrayList();
-        if(myArrayList.contains(element) == false){
-            myArrayList.add(element);
-            size++;
+        if(myArrayList.contains(element)){
+            return ;
         }
+            myArrayList.add(element);
+            this.size++;
     }
 
     public int size() {
@@ -22,9 +22,28 @@ public class MySet {
     }
 
     public void clear() {
-        MyArrayList myArrayList = new MyArrayList();
+
         myArrayList.clear();
         this.size = 0;
     }
 
+
+    public boolean contains(String element){
+        if(myArrayList.contains(element)){
+            return true;
+        }
+        return false;
+    }
+
+    public void removeAll() {
+        myArrayList.clear();
+        this.size = 0;
+    }
+
+    public int get(String element) {
+        if(myArrayList.contains(element)){
+            return myArrayList.getIndexOf(element);
+        }
+        return -1;
+    }
 }

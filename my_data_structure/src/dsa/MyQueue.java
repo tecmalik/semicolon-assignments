@@ -38,7 +38,7 @@ public class MyQueue {
         return this.elements[0];
     }
 
-    public String pool() {
+    public String pull() {
         return this.elements[0];
     }
 }

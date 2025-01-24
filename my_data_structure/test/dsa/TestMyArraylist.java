@@ -67,5 +67,14 @@ public class TestMyArraylist {
         myArrayList.add("ant");
         assertEquals(5,myArrayList.size());
     }
+    @Test
+    public void test_myArrayListWillReturnFalseIfElementDoesNotContainAnElement() {
+        myArrayList.add("man");
+        myArrayList.add("malik");
+        myArrayList.add("ojo");
+        assertFalse(myArrayList.contains("jug"));
+        assertTrue(!myArrayList.contains("jug"));
+    }
+
 
 }
