@@ -42,7 +42,6 @@ public class TestMyHashMap {
         myHashMap.put("james","i love my self");
         myHashMap.put("james","i am a boy");
         assertEquals(2,myHashMap.size());
-
     }
 
 
