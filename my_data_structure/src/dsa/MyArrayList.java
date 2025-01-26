@@ -48,8 +48,12 @@ public class MyArrayList {
         if(this.contains(element)) {
             for(int count = 0; count < size-1; count++) {
                 if(element.equals(elements[count]) && count != size-1 ) {
-                    elements[count] = elements[count+1];
-                    elements[count+1] = null;
+                    for(int index = count; index < size-1; index++) {
+                        elements[index] = elements[index+1];
+                    }
+                    elements[size-1] = null;
+                    size--;
+                    return;
                 }
                 else if(count == size-1) {
                     elements[count] = null;
@@ -64,6 +68,10 @@ public class MyArrayList {
             elements[count] = null;
             size = 0;
         }
+    }
+
+    public void setElement(int index, String element) {
+        this.elements[index] = element;
     }
 
 }

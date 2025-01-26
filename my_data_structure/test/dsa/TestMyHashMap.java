@@ -42,8 +42,16 @@ public class TestMyHashMap {
         myHashMap.put("james","i love my self");
         myHashMap.put("james","i am a boy");
         assertEquals(2,myHashMap.size());
+        assertEquals("i am a boy", myHashMap.get("james"));
     }
-
+ /**   @Test
+    public void test_ToAdd2_keysAndValuesAndGetTheSetsOfKeys() {
+        myHashMap.put("key","i love my life");
+        myHashMap.put("james","i am a boy");
+        myHashMap.keySet();
+        assertEquals("key", myHashMap.keySet()[0]);
+        assertEquals("james",myHashMap.keySet()[1]);
+    }*/
 
 
 }

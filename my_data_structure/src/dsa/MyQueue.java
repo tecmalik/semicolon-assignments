@@ -1,7 +1,5 @@
 package dsa;
 
-import javax.swing.*;
-
 public class MyQueue {
     private String[] elements = new String[4];
     private int size = 0 ;

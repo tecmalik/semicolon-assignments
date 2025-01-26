@@ -75,6 +75,25 @@ public class TestMyArraylist {
         assertFalse(myArrayList.contains("jug"));
         assertTrue(!myArrayList.contains("jug"));
     }
+    @Test
+    public void test_myArryListAdds_ADC_Replace_D_With_B(){
+        myArrayList.add("man");
+        myArrayList.add("malik");
+        myArrayList.add("woman");
+        myArrayList.setElement(1,"male");
+        assertEquals("male",myArrayList.get(1));
+    }
+    @Test
+    public void test_myArrayListCanAdd4ElementandRemoveSecondElement() {
+        myArrayList.add("man");
+        myArrayList.add("malik");
+        myArrayList.add("ojo");
+        myArrayList.add("jug");
+        myArrayList.remove("malik");
+        assertFalse(myArrayList.contains("malik"));
+        assertEquals("ojo", myArrayList.get(1));
+        assertEquals("jug", myArrayList.get(2));
+    }
 
 
-}
+    }

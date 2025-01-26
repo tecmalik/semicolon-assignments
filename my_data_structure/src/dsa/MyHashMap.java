@@ -11,6 +11,10 @@ public class MyHashMap {
     }
 
     public void put(String key, String value) {
+        if(mySet.contains(key)){
+            myList.setElement(mySet.get(key) , value);
+            return;
+        }
         mySet.add( key );
         myList.add(value);
         this.size++;
@@ -33,4 +37,11 @@ public class MyHashMap {
         this.size = 0;
     }
 
+   /** public String[] keySet() {
+        String[] keys = new String[myList.size()];
+        for(int index = 0; index < mySet.size(); index++){
+           // keys[index] = mySet.
+
+        }
+    }*/
 }
