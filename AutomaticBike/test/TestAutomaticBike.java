@@ -20,9 +20,19 @@ public class TestAutomaticBike {
     }
     @Test
     public void test_ThatMyBikeCan_is_not_in_motion(){
-        automaticBike.gear(0);
-        assertEquals(0,automaticBike.acceleration());
+        automaticBike.getGear();
+        assertEquals(0,automaticBike.getGear());
+        automaticBike.getAcceleration();
+        assertEquals(0,automaticBike.getGear());
+        automaticBike.getSpeed();
+        assertEquals(0,automaticBike.getSpeed());
     }
+    @Test
+    public void test_thatMyBikeCan_drive(){
+        automaticBike.IncreaseGear();
+        automaticBike.getAcceleration();
+    }
+
 
 
 }
