@@ -7,12 +7,16 @@ public class AutomaticBike {
     private int speed = 0;
 
 
-    public boolean powerOff(){
+    public boolean powerIsOff(){
         return this.power == 0 ;
     }
 
-    public boolean powerOn() {
+    public boolean powerIsOn() {
        return this.power == 1 ;
+    }
+
+    public void powerOn() {
+        this.power = 1;
     }
 
     public int getGear() {
@@ -26,7 +30,36 @@ public class AutomaticBike {
         return this.speed;
     }
 
-    public void IncreaseGear() {
-        this.gear++;
+    public void increaseGear() {
+        if (powerIsOn()) {
+            this.gear++;
+        }
+
     }
+
+    public void accelerate() {
+        if (powerIsOn()) {
+            if( this.gear == 0 ){
+                increaseGear();
+            }
+             this.speed+=gear;
+
+            if (this.speed == 21) {
+                 this.gear++;
+             }
+             else if (this.speed == 31) {
+                 this.gear++;
+             }
+             else if (this.speed == 40) {
+                 this.gear++;
+            }
+
+
+        }
+    }
+
+    public void powerOff() {
+        this.power = 0;
+    }
+
 }

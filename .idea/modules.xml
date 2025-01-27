@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/AirCondition/AirCondition.iml" filepath="$PROJECT_DIR$/AirCondition/AirCondition.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Alphabet checker junit/Alphabet checker junit.iml" filepath="$PROJECT_DIR$/Alphabet checker junit/Alphabet checker junit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AutomaticBike/AutomaticBike.iml" filepath="$PROJECT_DIR$/AutomaticBike/AutomaticBike.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CCV/CCV.iml" filepath="$PROJECT_DIR$/CCV/CCV.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CaesarCipherApp/CaesarCipherApp.iml" filepath="$PROJECT_DIR$/CaesarCipherApp/CaesarCipherApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DiaryAppOOP/DiaryAppOOP.iml" filepath="$PROJECT_DIR$/DiaryAppOOP/DiaryAppOOP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MathsQuiz/MathsQuiz.iml" filepath="$PROJECT_DIR$/MathsQuiz/MathsQuiz.iml" />
+      <module fileurl="file://$PROJECT_DIR$/my_data_structure/MyDataStructure.iml" filepath="$PROJECT_DIR$/my_data_structure/MyDataStructure.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PhaseGate/OldSnacks/OldSnacks.iml" filepath="$PROJECT_DIR$/PhaseGate/OldSnacks/OldSnacks.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PhaseGate/PhaseGate.iml" filepath="$PROJECT_DIR$/PhaseGate/PhaseGate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/comfortsinn/comfortsinn.iml" filepath="$PROJECT_DIR$/comfortsinn/comfortsinn.iml" />
+      <module fileurl="file://$PROJECT_DIR$/semicolon- assignments java.iml" filepath="$PROJECT_DIR$/semicolon- assignments java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/set/set.iml" filepath="$PROJECT_DIR$/set/set.iml" />
+    </modules>
+  </component>
+</project>

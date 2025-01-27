@@ -8,11 +8,5 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="StudentGrade" level="project" />
-    <orderEntry type="library" name="Menstral App" level="project" />
-    <orderEntry type="library" name="pizza App" level="project" />
-    <orderEntry type="library" name="lib" level="project" />
-    <orderEntry type="library" name="phone book" level="project" />
-    <orderEntry type="library" name="AlphabetChecker" level="project" />
   </component>
 </module>
