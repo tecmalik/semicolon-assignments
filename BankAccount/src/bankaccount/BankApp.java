@@ -1,5 +1,4 @@
 package bankaccount;
 
-public class Bank {
-
+public class BankApp {
 }
