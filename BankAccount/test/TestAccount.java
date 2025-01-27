@@ -20,7 +20,7 @@ public class TestAccount {
         assertTrue(account.isEmpty());
     }
     @Test
-    public void test_AccountBalanceIsanotEmpty() {
+    public void test_AccountBalanceIsNotEmpty() {
         account.deposit(1000);
         assertTrue(account.isNotEmpty());
     }
@@ -32,14 +32,25 @@ public class TestAccount {
     @Test
     public void test_AccountCanCheckBalance() {
         account.deposit(1000);
-        assertEquals(1000,account.checkBalance());
+        assertEquals(1000,account.checkBalance("1234"));
     }
     @Test
     public void test_AccountCanDepositAndWithdraw() {
         account.deposit(1000);
         account.withdraw(1000,"1234");
-        assertEquals(0,account.checkBalance());
+        assertEquals(0,account.checkBalance("1234"));
     }
-    
+    @Test
+    public void test_AccountUserCanupdatePin() {
+        account.updatePin("1234","2222");
+        account.deposit(1000);
+        assertEquals(1000,account.checkBalance("2222"));
+    }
+    @Test
+    public void test_AccountCantDepositNegativeNumber() {
+        account.deposit(1000);
+        account.deposit(-1000);
+        assertEquals(1000,account.checkBalance("1234"));
+    }
 
 }
