@@ -15,6 +15,10 @@ public class Account {
 
     }
 
+    public int getAccountNumber() {
+        return this.bankAccountNumber;
+    }
+
     public String getFirstname() {
         return firstName;
     }

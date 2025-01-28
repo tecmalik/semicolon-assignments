@@ -52,5 +52,4 @@ public class TestAccount {
         account.deposit(-1000);
         assertEquals(1000,account.checkBalance("1234"));
     }
-
 }
