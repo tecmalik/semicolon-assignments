@@ -1,5 +1,6 @@
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.w3c.dom.Text;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -90,6 +91,8 @@ public class TestAutomaticBike {
         }
         assertEquals(4,automaticBike.getGear());
     }
+    @Test
+    public void test_that
 
 
 

@@ -48,4 +48,20 @@ public class Bank {
         }
     }
 
+    public void bankTransfer(int senderAccountNumber, int amount, int recipientAcctNumber, String pinNumber) {
+        for (Account account : accounts) {
+
+            if (account.getAccountNumber() == senderAccountNumber) {
+                account.withdraw(amount, pinNumber);
+                for (Account checkedAccount : accounts) {
+
+                    if (checkedAccount.getAccountNumber() == recipientAcctNumber) {
+                        checkedAccount.deposit(amount);
+                    }
+                }
+
+            }
+
+        }
+    }
 }

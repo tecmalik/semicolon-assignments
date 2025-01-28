@@ -37,6 +37,19 @@ public class TestBank {
         assertEquals(950,bank.checkBalance(1,"1234"));
     }
     @Test
-    public void test_bankCanTransfer() {}
+    public void test_bankCanTransfer() {
+        bank.createAccount("malik","ojo","1234");
+        bank.createAccount("daniel","oji","2222");
+        bank.deposit(1,1000);
+        bank.bankTransfer(1,50,2,"1234");
+        assertEquals(950,bank.checkBalance(1,"1234"));
+        assertEquals(50,bank.checkBalance(2,"2222"));
+    }
+    @Test
+    public void test_bankWontDepositNegativeNumbers(){
+        bank.createAccount("malik","ojo","1234");
+        bank.deposit(1,-1000);
+        assertEquals(0,bank.checkBalance(1,"1234"));
+    }
 
 }

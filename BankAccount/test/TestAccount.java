@@ -41,7 +41,7 @@ public class TestAccount {
         assertEquals(0,account.checkBalance("1234"));
     }
     @Test
-    public void test_AccountUserCanupdatePin() {
+    public void test_AccountUserCanUpdatePin() {
         account.updatePin("1234","2222");
         account.deposit(1000);
         assertEquals(1000,account.checkBalance("2222"));
@@ -52,4 +52,5 @@ public class TestAccount {
         account.deposit(-1000);
         assertEquals(1000,account.checkBalance("1234"));
     }
+
 }

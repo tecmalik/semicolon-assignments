@@ -7,10 +7,10 @@ public class Account {
     private String pinNumber;
     private int bankAccountNumber;
 
-    public Account(String firstName, String lastName ,String pinCode,int accountNumber) {
+    public Account(String firstName, String lastName ,String pinNumber,int accountNumber) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.pinNumber = pinCode;
+        this.pinNumber = pinNumber;
         this.bankAccountNumber = accountNumber;
 
     }
@@ -45,7 +45,7 @@ public class Account {
         if (pinNumber.equals(this.pinNumber)) {
             return this.balance;
         }
-        return 0;
+        return -1;
     }
 
     public void withdraw(int amount, String pinNumber) {
