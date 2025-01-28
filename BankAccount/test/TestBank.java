@@ -34,8 +34,9 @@ public class TestBank {
         bank.deposit(1,1000);
         assertEquals(1000,bank.checkBalance(1,"1234"));
         bank.withdraw(1,50,"1234");
-        assertEquals(50,bank.checkBalance(1,"1234"));
+        assertEquals(950,bank.checkBalance(1,"1234"));
     }
-
+    @Test
+    public void test_bankCanTransfer() {}
 
 }

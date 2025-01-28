@@ -41,5 +41,11 @@ public class Bank {
     }
 
     public void withdraw(int accountName, int amount, String pinNumber) {
+        for (Account account : accounts) {
+            if (account.getAccountNumber() == accountName) {
+                account.withdraw(amount, pinNumber);
+            }
+        }
     }
+
 }
