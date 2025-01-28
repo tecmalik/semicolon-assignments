@@ -4,12 +4,15 @@ public class Account {
     private String firstName;
     private String lastName;
     private int balance = 0;
-    private String pinNumber;;
+    private String pinNumber;
+    private int bankAccountNumber;
 
-    public Account(String firstName, String lastName ,String pinCode) {
+    public Account(String firstName, String lastName ,String pinCode,int accountNumber) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.pinNumber = pinCode;
+        this.bankAccountNumber = accountNumber;
+
     }
 
     public String getFirstname() {

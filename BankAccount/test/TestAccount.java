@@ -8,7 +8,7 @@ public class TestAccount {
     private Account account;
     @BeforeEach
     public void test_Account() {
-        account = new Account("malik","ojo","1234");
+        account = new Account("malik","ojo","1234" , 1 );
     }
     @Test
     public void test_AccountHasAName() {
