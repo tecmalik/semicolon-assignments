@@ -92,7 +92,13 @@ public class TestAutomaticBike {
         assertEquals(4,automaticBike.getGear());
     }
     @Test
-    public void test_that
+    public void test_thatMyBikeSpeedCAnDecelerate(){
+        automaticBike.powerOn();
+        automaticBike.accelerate();
+        automaticBike.accelerate();
+        automaticBike.brake();
+        assertEquals(1,automaticBike.getGear());
+    }
 
 
 

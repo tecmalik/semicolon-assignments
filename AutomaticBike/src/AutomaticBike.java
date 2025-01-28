@@ -62,4 +62,19 @@ public class AutomaticBike {
         this.power = 0;
     }
 
+    public void brake() {
+        this.speed-=gear;
+
+        if (this.speed == 21) {
+            this.gear--;
+        }
+        else if (this.speed == 31) {
+            this.gear--;
+        }
+        else if (this.speed == 40) {
+            this.gear--;
+        }
+
+
+    }
 }

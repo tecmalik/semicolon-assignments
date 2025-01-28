@@ -23,6 +23,13 @@ public class TestBank {
         assertEquals(2,bank.getAccountNumber("daniel","oji"));
     }
     @Test
+    public void test_thatAccountNumbersAreBeenCreated() {
+        bank.createAccount("malik","ojo","1234");
+        bank.createAccount("daniel","oji","2222");
+        bank.getAccountNumber("malik","ojo");
+        assertEquals(1,bank.getAccountNumber("malik","ojo"));
+    }
+    @Test
     public void test_bankCanDeposit() {
         bank.createAccount("malik","ojo","1234");
         bank.deposit(1,1000);
