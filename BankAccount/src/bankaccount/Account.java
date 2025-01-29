@@ -1,5 +1,9 @@
 package bankaccount;
 
+import org.junit.jupiter.params.shadow.com.univocity.parsers.annotations.Validate;
+
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
 public class Account {
     private String firstName;
     private String lastName;
@@ -49,15 +53,21 @@ public class Account {
     }
 
     public void withdraw(int amount, String pinNumber) {
-        if(this.pinNumber.equals(pinNumber)){
-            this.balance -= amount;
-        }
+        if (validatePin(pinNumber)){if (validateAmount(amount)) this.balance -= amount;
+        throw new IllegalArgumentException("insufficient fund");
+    }
+        throw new IllegalArgumentException("invalid pin number");
     }
 
+    private boolean validateAmount(int amount) {
+        return amount >= 0 && amount <= balance;
+    }
+
+    private boolean validatePin(String pinNumber) {
+        return this.pinNumber.equals(pinNumber);
+    }
 
     public void updatePin(String OldNumber , String newNumber) {
-        if (this.pinNumber.equals(OldNumber)) {
-            this.pinNumber = newNumber;
-        }
+        if (validatePin(pinNumber) && this.pinNumber.equals(OldNumber))this.pinNumber = newNumber;
     }
 }

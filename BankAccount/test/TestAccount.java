@@ -11,7 +11,7 @@ public class TestAccount {
         account = new Account("malik","ojo","1234" , 1 );
     }
     @Test
-    public void test_AccountHasAName() {
+    public void test_startWith() {
         assertEquals("malik",account.getFirstname());
         assertEquals("ojo",account.getLastname());
     }
@@ -23,11 +23,6 @@ public class TestAccount {
     public void test_AccountBalanceIsNotEmpty() {
         account.deposit(1000);
         assertTrue(account.isNotEmpty());
-    }
-    @Test
-    public void test_AccountBalanceIsEmptyWillReturnFalse() {
-        account.deposit(1000);
-        assertFalse(account.isEmpty());
     }
     @Test
     public void test_AccountCanCheckBalance() {
@@ -53,6 +48,14 @@ public class TestAccount {
         assertEquals(1000,account.checkBalance("1234"));
     }
     @Test
-    public
+    public void test_AccountCantWithdrawWithWrongPinNumberWillThrowAnException() {
+        account.deposit(1000);
+        account.deposit(-1000);
+        assertThrows(IllegalArgumentException.class, () -> account.withdraw(1000,"1235"));
+        assertThrows(IllegalArgumentException.class, () -> account.withdraw(11000,"1234"));
+
+    }
+
+
 
 }

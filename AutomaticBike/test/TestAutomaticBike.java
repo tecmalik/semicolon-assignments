@@ -121,10 +121,9 @@ public class TestAutomaticBike {
         assertEquals(3,automaticBike.getGear());
         assertEquals(31,automaticBike.getSpeed());
         automaticBike.brake();
-        assertEquals(,automaticBike.getGear());
+       // assertEquals( ,automaticBike.getGear());
         //assertEquals(31,automaticBike.getSpeed());
     }
-
 
 
 }
