@@ -99,6 +99,31 @@ public class TestAutomaticBike {
         automaticBike.brake();
         assertEquals(1,automaticBike.getGear());
     }
+    @Test
+    public void test_thatWhenMyBikeSpeedCAnDecelerateBy2AtGear2(){
+        automaticBike.powerOn();
+        for(int counter = 0; counter < 23; counter++){
+            automaticBike.accelerate();
+        }
+        assertEquals(2,automaticBike.getGear());
+        assertEquals(25,automaticBike.getSpeed());
+        automaticBike.brake();
+        assertEquals(2,automaticBike.getGear());
+        assertEquals(23,automaticBike.getSpeed());
+
+    }
+    @Test
+    public void test_thatWhenMyBikeSpeedCAnDecelerateBy3AtGear3(){
+        automaticBike.powerOn();
+        for(int counter = 0; counter < 31; counter++){
+            automaticBike.accelerate();
+        }
+        assertEquals(3,automaticBike.getGear());
+        assertEquals(31,automaticBike.getSpeed());
+        automaticBike.brake();
+        assertEquals(,automaticBike.getGear());
+        //assertEquals(31,automaticBike.getSpeed());
+    }
 
 
 
