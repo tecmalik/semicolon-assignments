@@ -1,5 +1,6 @@
 package bankaccount;
 
+import javax.swing.*;
 import java.util.ArrayList;
 
 public class Bank {
@@ -25,11 +26,17 @@ public class Bank {
     }
 
     public void deposit(int accountNumber, int amount) {
-        for (Account account : accounts) {
-            if (account.getAccountNumber() == accountNumber) {
-                account.deposit(amount);
+        if (amountValidity(amount)) {
+            for (Account account : accounts) {
+                if (account.getAccountNumber() == accountNumber) account.deposit(amount);
             }
         }
+        throw new IllegalArgumentException("Deposit amount mut be greater than 10");
+
+    }
+
+    private boolean amountValidity(int amount) {
+        return amount > 10;
     }
 
     public int checkBalance(int accountNumber, String pinNumber) {

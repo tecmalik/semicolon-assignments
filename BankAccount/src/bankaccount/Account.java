@@ -40,9 +40,8 @@ public class Account {
     }
 
     public void deposit(int amount) {
-        if (amount > 0) {
-            this.balance += amount;
-        }
+        if (amount <= 10) throw new IllegalArgumentException("Amount must be greater than 100");
+        this.balance += amount;
     }
 
     public int checkBalance(String pinNumber) {
@@ -53,14 +52,13 @@ public class Account {
     }
 
     public void withdraw(int amount, String pinNumber) {
-        if (validatePin(pinNumber)){if (validateAmount(amount)) this.balance -= amount;
-        throw new IllegalArgumentException("insufficient fund");
-    }
-        throw new IllegalArgumentException("invalid pin number");
+        if (!validatePin(pinNumber)) throw new IllegalArgumentException("invalid pin number");
+        if (!validateAmount(amount))  throw new IllegalArgumentException("insufficient fund");
+        this.balance -= amount;
     }
 
     private boolean validateAmount(int amount) {
-        return amount >= 0 && amount <= balance;
+        return amount > 0 && amount <= balance;
     }
 
     private boolean validatePin(String pinNumber) {

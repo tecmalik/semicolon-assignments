@@ -44,18 +44,20 @@ public class TestAccount {
     @Test
     public void test_AccountCantDepositNegativeNumber() {
         account.deposit(1000);
-        account.deposit(-1000);
+        assertThrows(IllegalArgumentException.class, () -> account.deposit(-1000));
         assertEquals(1000,account.checkBalance("1234"));
     }
     @Test
     public void test_AccountCantWithdrawWithWrongPinNumberWillThrowAnException() {
         account.deposit(1000);
-        account.deposit(-1000);
         assertThrows(IllegalArgumentException.class, () -> account.withdraw(1000,"1235"));
         assertThrows(IllegalArgumentException.class, () -> account.withdraw(11000,"1234"));
 
     }
-
-
+    @Test
+    public void test_DepositBelow_10_WillThrowAnError() {
+        assertThrows(IllegalArgumentException.class, () -> account.deposit(-1));
+        assertThrows(IllegalArgumentException.class, () -> account.deposit(9));
+    }
 
 }
