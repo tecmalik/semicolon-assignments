@@ -26,12 +26,8 @@ public class Bank {
     }
 
     public void deposit(int accountNumber, int amount) {
-        if (amountValidity(amount)) {
-            for (Account account : accounts) {
-                if (account.getAccountNumber() == accountNumber) account.deposit(amount);
-            }
-        }
-        throw new IllegalArgumentException("Deposit amount mut be greater than 10");
+        if (!amountValidity(amount)) throw new IllegalArgumentException("Deposit amount mut be greater than 10");
+        for (Account account : accounts) if (account.getAccountNumber() == accountNumber) account.deposit(amount);
 
     }
 
@@ -47,9 +43,9 @@ public class Bank {
         } return 0;
     }
 
-    public void withdraw(int accountName, int amount, String pinNumber) {
+    public void withdraw(int accountNumber, int amount, String pinNumber) {
         for (Account account : accounts) {
-            if (account.getAccountNumber() == accountName) {
+            if (account.getAccountNumber() == accountNumber) {
                 account.withdraw(amount, pinNumber);
             }
         }
@@ -68,7 +64,7 @@ public class Bank {
                 }
 
             }
-
         }
     }
 }
+
