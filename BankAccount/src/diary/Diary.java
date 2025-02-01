@@ -7,11 +7,18 @@ public class Diary {
     private String password;
     private boolean isLocked;
     ArrayList<Entry> entries = new ArrayList<>();
+    private int count;
+
 
     Diary(String userName, String password) {
         this.userName = userName;
         this.password = password;
-        this.isLocked = false;
+        this.isLocked = true;
+
+    }
+
+    public int numberOfEntry() {
+        return entries.size();
     }
 
     public boolean isLocked() {
@@ -28,8 +35,19 @@ public class Diary {
         this.isLocked = true;
     }
 
-
     public void createEntry(String title, String body) {
-        Entry entry = new Entry( idnumber(),title ,body);
+        if (title == null || title.isEmpty()) throw new NullPointerException("title is empty");
+        if (body == null || title.isEmpty()) throw new NullPointerException("Body can't be empty");
+        Entry entry = new Entry( entryIdNumber(),title ,body);
+        entries.add(entry);
+    }
+
+    private int entryIdNumber() {
+        return this.count++;
+    }
+
+
+    public void findEntryById(int entryIdNumber) {
+        
     }
 }

@@ -1,50 +1,60 @@
 package diary;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 public class TestDiary {
-    @Test
+    private Diary diary;
+
+    @BeforeEach
     public void startWith() {
-        Diary diary = new Diary("username","password");
+        diary = new Diary("username","password");
     }
     @Test
     public void test_ThatMyDiaryIsLocked() {
-        Diary diary = new Diary("username","password");
         assertTrue(diary.isLocked());
     }
     @Test
     public void test_myDiaryCanBeLocked() {
-        Diary diary = new Diary("username","password");
-        assertFalse(diary.isLocked());
-        diary.lock();
         assertTrue(diary.isLocked());
     }
     @Test
     public void test_myDiaryCanBeUnlocked() {
-        Diary diary = new Diary("username","password");
-        assertFalse(diary.isLocked());
-        diary.lock();
         assertTrue(diary.isLocked());
+        diary.lock();
         diary.unlock("password");
         assertFalse(diary.isLocked());
     }
     @Test
     public void test_myWillThrowAnErrorForInValidPasswordInputDiaryThrow() {
-        Diary diary = new Diary("username","password");
-        assertFalse(diary.isLocked());
-        diary.lock();
         assertTrue(diary.isLocked());
+        diary.lock();
         assertThrows(IllegalArgumentException.class, () -> diary.unlock("wrong password"));
 
     }
     @Test
-    public void test_myDiaryCanCreateEntry(){
-        Diary diary = new Diary("username","password");
+    public void test_myDiaryCanContainAnEntry(){
         diary.createEntry("Title","Body");
-        assertEquals("title", findEntrybyId());
+        assertEquals(1,diary.numberOfEntry());
+    }
+    @Test
+    public void test_thatMyDiaryWouldThrowAnErrorForNullInput(){
+        assertThrows(NullPointerException.class, () -> diary.createEntry(null," "));
+        assertThrows(NullPointerException.class, () -> diary.createEntry(" ", null));
+    }
+    @Test
+    public void test_ThatMYEntryCanBeFoundById(){
+        diary.createEntry("Title","Body");
+        diary.createEntry("Title2","Body2");
+        diary.createEntry("Title3","Body3");
+        assertEquals(3,diary.numberOfEntry());
+        diary.findEntryById(2);
+        assertEquals(,diary.numberOfEntry());
 
 
     }
+
+
 }
