@@ -25,6 +25,11 @@ public class TestDiaries {
         assertEquals(2 , diaries.size());
     }
     @Test
+    public void test_DiariesWillReturnANErrorFOrNullInputWhenAddingToDiaries() {
+        assertThrows(NullPointerException.class,()-> diaries.add(null,"password"));
+        assertThrows(NullPointerException.class,()-> diaries.add("username",null));
+    }
+    @Test
     public void test_DiariesCanDeleteDiaryFromDiaries() {
         diaries.add("Username","password");
         diaries.add("Username2","password2");

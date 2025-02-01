@@ -3,10 +3,12 @@ package diary;
 import java.util.ArrayList;
 
 public class Diaries {
-   private ArrayList<Diary> diaries = new ArrayList<>();
+   private final ArrayList<Diary> diaries = new ArrayList<>();
 
 
     public void add(String username, String password) {
+        if( password == null) throw new NullPointerException("password cant be empty");
+        if(username == null ) throw new NullPointerException("username cant be empty");
         Diary diary = new Diary(username, password);
         diaries.add(diary);
     }
@@ -14,7 +16,6 @@ public class Diaries {
     public int size() {
         return diaries.size();
     }
-
 
     public void delete(String username, String password) {
         for (Diary diary : diaries) {
