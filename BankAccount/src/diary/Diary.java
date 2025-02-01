@@ -6,7 +6,7 @@ public class Diary {
     private String userName;
     private String password;
     private boolean isLocked;
-    ArrayList<Entry> entries = new ArrayList<>();
+    private ArrayList<Entry> entries = new ArrayList<>();
     private int count;
 
 
@@ -28,7 +28,7 @@ public class Diary {
         if(!verifyPassword(password))throw new IllegalArgumentException("invalid credentials");
         this.isLocked = false;
     }
-    private boolean verifyPassword(String password) {
+    public boolean verifyPassword(String password) {
         return this.password.equals(password);
     }
     public void lock() {
@@ -69,6 +69,9 @@ public class Diary {
 
     private boolean isInValid(int entryIDNumber) {
         return entryIDNumber < 1 || entryIDNumber > entries.size();
+    }
+    public String getUserName(){
+        return this.userName;
     }
 }
 

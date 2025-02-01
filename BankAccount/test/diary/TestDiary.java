@@ -91,6 +91,6 @@ public class TestDiary {
         diary.createEntry("Title","Body");
         assertThrows(IllegalArgumentException.class, () -> diary.updateEntry(4,"UpdatedTitle","updatedBody"));
     }
-
-
+    @Test
+    public void test_thatMyDiariesWould(){}
 }
