@@ -13,23 +13,34 @@ public class DiaryApplication {
 
 
     public static void menu(){
-        String prompt = """
-                        1-> Create New Diary.
-                        2-> Find Diary.
-                        3-> delete Diary.
-                        4-> Exit.
-                        """;
-        int userChoice = intInput(prompt);
-        switch (userChoice){
-            case 1 :createNewDiary();
-            break;
-            case 2:findDiary();
-            break;
-            case 3:deleteDiary();
-            break;
-            case 4:System.exit(0);
-            break;
-            default: print("Invalid Choice");
+        try {
+            String prompt = """
+                    1-> Create New Diary.
+                    2-> Find Diary.
+                    3-> delete Diary.
+                    4-> Exit.
+                    """;
+            int userChoice = intInput(prompt);
+            switch (userChoice) {
+                case 1:
+                    createNewDiary();
+                    break;
+                case 2:
+                    findDiary();
+                    break;
+                case 3:
+                    deleteDiary();
+                    break;
+                case 4:
+                    System.exit(0);
+                    break;
+                default:
+                    print("Invalid Choice");
+            }
+        }catch(IllegalArgumentException e){
+            print("Input Must be a Digit");
+        }finally{
+            menu();
         }
 
     }
@@ -39,10 +50,11 @@ public class DiaryApplication {
             String username = input("Enter Diary name: ");
             String Password = input("Enter Diary password: ");
             diaries.delete(username, Password);
+            print("Deleted sucessfully");
         }catch(IllegalArgumentException e){
             print("Invalid details");
         }finally {
-            print("Deletedsucessfully");
+
             menu();
         }
 
@@ -53,36 +65,44 @@ public class DiaryApplication {
             String username = input("Enter Diary Username: ");
             String password = input("Enter Diary Password: ");
             diaries.findByUsername(username, password);
+            print("Found "+diaries.findByUsername(username, password).getUserName()+" successfully ");
         }catch(IllegalArgumentException e){
             print("Invalid details");
         }finally {
-            print(" Diary was never found.");
-            menu();
+
+            diaryMenu();
         }
     }
 
     public static void diaryMenu(){
-        String prompt2 = """
-                        1-> unlockDiary.
-                        2-> Create New Diary Entry.
-                        3-> lockDiary.
-                        4-> delete DiaryEntry.
-                        5-> find Entry by Id.
-                        6-> update Entry
-                        7-> back to main Menu
-                        8-> Exit.
-                        """;
-        int userChoice = intInput(prompt2);
-        switch (userChoice){
-            case 1 :createNewDiary();
-            break;
-//            case 2:findDiary();
+        try {
+            String prompt2 = """
+                    1-> Create New Diary Entry.
+                    2-> Find Diary Entry by Id.
+                    3-> lockDiary.
+                    4-> update Entry
+                    5-> delete DiaryEntry.
+                    6-> back to main Menu
+                    7-> Exit.
+                    """;
+            int userChoice = intInput(prompt2);
+            switch (userChoice) {
+                case 1:
+//                    createNewDiaryEntry();
+                    break;
+//            case 2:findDiaryEntryByID();
 //            break;
 //            case 3:deleteDiary();
 //            break;
 //            case 4:exit();
 //            break;
-            default: print("Invalid Choice");
+                default:
+                    print("Invalid Choice");
+            }
+        }catch(IllegalArgumentException e){
+            print("Enter number be between 1 and 7");
+        }finally{
+            menu();
         }
 
     }

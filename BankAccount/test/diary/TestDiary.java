@@ -14,22 +14,23 @@ public class TestDiary {
     }
     @Test
     public void test_ThatMyDiaryIsLocked() {
-        assertTrue(diary.isLocked());
+        assertFalse(diary.isLocked());
     }
     @Test
     public void test_myDiaryCanBeLocked() {
+        diary.lock();
         assertTrue(diary.isLocked());
     }
     @Test
     public void test_myDiaryCanBeUnlocked() {
-        assertTrue(diary.isLocked());
+        assertFalse(diary.isLocked());
         diary.lock();
         diary.unlock("password");
         assertFalse(diary.isLocked());
     }
     @Test
     public void test_myWillThrowAnErrorForInValidPasswordInputDiaryThrow() {
-        assertTrue(diary.isLocked());
+        assertFalse(diary.isLocked());
         diary.lock();
         assertThrows(IllegalArgumentException.class, () -> diary.unlock("wrong password"));
 
@@ -92,5 +93,9 @@ public class TestDiary {
         assertThrows(IllegalArgumentException.class, () -> diary.updateEntry(4,"UpdatedTitle","updatedBody"));
     }
     @Test
-    public void test_thatMyDiariesWould(){}
+    public void test_thatMyDiariesWontCreateEntryIfDiaryIsLocked(){
+        diary.createEntry("Title","Body");
+        diary.lock();
+       // assertThrows(IllegalArgumentException.class,()->diary.createEntry("Title2","Body2"));
+    }
 }

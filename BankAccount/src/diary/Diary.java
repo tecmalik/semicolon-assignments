@@ -13,7 +13,7 @@ public class Diary {
     Diary(String userName, String password) {
         this.userName = userName;
         this.password = password;
-        this.isLocked = true;
+        this.isLocked = false;
 
     }
 
@@ -36,6 +36,8 @@ public class Diary {
     }
 
     public void createEntry(String title, String body) {
+        if(isLocked) throw new IllegalArgumentException("Entry is Locked");
+        if (this.isLocked) throw new IllegalArgumentException("Entry is Locked");
         if (title == null || title.isEmpty()) throw new NullPointerException("title is empty");
         if (body == null || title.isEmpty()) throw new NullPointerException("Body can't be empty");
         Entry entry = new Entry( entryIdNumber(),title ,body);
@@ -45,6 +47,7 @@ public class Diary {
             return ++this.count;
     }
     public void deleteEntry(int entryIDNumber) {
+        if(isLocked) throw new IllegalArgumentException("Entry is Locked");
         if(entryIDNumber == 0 ) throw new IllegalArgumentException("Number has to be greater than 0");
         if(isInValid(entryIDNumber)) throw new IllegalArgumentException("EntryIDNumber Does Not Exist");
         entries.removeIf(entry -> entry.getId() == entryIDNumber);
@@ -52,6 +55,7 @@ public class Diary {
     }
 
     public Entry findEntryById(int entryIdNumber) {
+        if(isLocked) throw new IllegalArgumentException("Entry is Locked");
         for(Entry entry : entries) {
             if(entry.getId() == entryIdNumber) {
                 return entry;
@@ -62,6 +66,7 @@ public class Diary {
 
 
     public void updateEntry(int entryIDNumber, String updatedTitle, String updatedBody) {
+        if(isLocked) throw new IllegalArgumentException("Entry is Locked");
         if(isInValid(entryIDNumber))throw new IllegalArgumentException("EntryIDNumber Does Not Exist");
         findEntryById(entryIDNumber).setBody(updatedBody);
         findEntryById(entryIDNumber).setTitle(updatedTitle);
