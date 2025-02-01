@@ -45,16 +45,26 @@ public class TestDiary {
         assertThrows(NullPointerException.class, () -> diary.createEntry(" ", null));
     }
     @Test
-    public void test_ThatMYEntryCanBeFoundById(){
+    public void test_thatMyEntryCAnBeDeleted(){
         diary.createEntry("Title","Body");
         diary.createEntry("Title2","Body2");
         diary.createEntry("Title3","Body3");
         assertEquals(3,diary.numberOfEntry());
-        diary.findEntryById(2);
-        assertEquals(,diary.numberOfEntry());
-
+        diary.deleteEntry(2);
+        assertEquals(2,diary.numberOfEntry());
 
     }
+//    @Test
+//    public void test_ThatMYEntryCanBeFoundById(){
+//        diary.createEntry("Title","Body");
+//        diary.createEntry("Title2","Body2");
+//        diary.createEntry("Title3","Body3");
+//        assertEquals(3,diary.numberOfEntry());
+//        diary.findEntryById(2);
+//        assertEquals(,diary.numberOfEntry());
+//
+//
+//    }
 
 
 }
