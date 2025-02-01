@@ -17,10 +17,20 @@ public class Diaries {
 
 
     public void delete(String username, String password) {
+        for (Diary diary : diaries) {
+            if(!diary.verifyPassword(password)) {
+                throw new IllegalArgumentException("Passwords do not match");
+            }
+        }
         diaries.removeIf(diary -> diary.verifyPassword(password) && diary.getUserName().equals(username));
     }
 
-    public Diary findByUsername(String username2, String password2) {
-        
+    public Diary findByUsername(String username, String password) {
+        for (Diary diary : diaries) {
+            if (diary.verifyPassword(password) && diary.getUserName().equals(username)) {
+                return diary;
+            }
+        }
+        throw new IllegalArgumentException("Username not found");
     }
 }
