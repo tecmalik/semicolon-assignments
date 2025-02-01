@@ -1,7 +1,6 @@
 package diary;
 
 import java.util.ArrayList;
-import java.util.InputMismatchException;
 
 public class Diary {
     private String userName;
@@ -43,18 +42,33 @@ public class Diary {
         entries.add(entry);
     }
     private int entryIdNumber() {
-            return this.count++;
+            return ++this.count;
     }
-    public void deleteEntry(int EntryIDNumber) {
-        if(EntryIDNumber == 0 ) throw new NullPointerException("Number has to be greater than 0");
-        if(EntryIDNumber < 1 || EntryIDNumber > entries.size()) throw new InputMismatchException("EntryIDNumber Does Not Exist");
-        entries.removeIf(entry -> entry.getId() == EntryIDNumber);
+    public void deleteEntry(int entryIDNumber) {
+        if(entryIDNumber == 0 ) throw new IllegalArgumentException("Number has to be greater than 0");
+        if(isInValid(entryIDNumber)) throw new IllegalArgumentException("EntryIDNumber Does Not Exist");
+        entries.removeIf(entry -> entry.getId() == entryIDNumber);
 
     }
-    
-//    public void findEntryById(int entryIdNumber) {
-//
-//    }
+
+    public Entry findEntryById(int entryIdNumber) {
+        for(Entry entry : entries) {
+            if(entry.getId() == entryIdNumber) {
+                return entry;
+            }
+        }
+       throw new IllegalArgumentException("EntryIDNumber Does Not Exist");
+    }
 
 
+    public void updateEntry(int entryIDNumber, String updatedTitle, String updatedBody) {
+        if(isInValid(entryIDNumber))throw new IllegalArgumentException("EntryIDNumber Does Not Exist");
+        findEntryById(entryIDNumber).setBody(updatedBody);
+        findEntryById(entryIDNumber).setTitle(updatedTitle);
+    }
+
+    private boolean isInValid(int entryIDNumber) {
+        return entryIDNumber < 1 || entryIDNumber > entries.size();
+    }
 }
+

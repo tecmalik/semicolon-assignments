@@ -54,17 +54,43 @@ public class TestDiary {
         assertEquals(2,diary.numberOfEntry());
 
     }
-//    @Test
-//    public void test_ThatMYEntryCanBeFoundById(){
-//        diary.createEntry("Title","Body");
-//        diary.createEntry("Title2","Body2");
-//        diary.createEntry("Title3","Body3");
-//        assertEquals(3,diary.numberOfEntry());
-//        diary.findEntryById(2);
-//        assertEquals(,diary.numberOfEntry());
-//
-//
-//    }
+    @Test
+    public void test_thatMyDiaryWouldThrowAnErrorToDeleteInvalidEntry(){
+        diary.createEntry("Title","Body");
+        assertThrows(IllegalArgumentException.class, () -> diary.deleteEntry(2));
+
+    }
+    @Test
+    public void test_ThatMYEntryCanBeFoundById(){
+        diary.createEntry("Title","Body");
+        diary.createEntry("Title2","Body2");
+        diary.createEntry("Title3","Body3");
+        assertEquals(3,diary.numberOfEntry());
+
+        assertEquals( "Title2" ,diary.findEntryById(2).getTitle());
+        assertEquals( "Body2" ,diary.findEntryById(2).getBody());
+
+    }
+    @Test
+    public void test_thatMyDiaryWillThrowAnErrorToFindAnInvalidId(){
+        assertThrows(IllegalArgumentException.class, () -> diary.findEntryById(-1));
+
+    }
+    @Test
+    public void test_thatMyDiaryCanUpDateEntry(){
+        diary.createEntry("Title","Body");
+        diary.createEntry("Title2","Body2");
+        diary.updateEntry(1,"UpdatedTitle","updatedBody");
+        assertEquals(2,diary.numberOfEntry());
+        assertEquals( "UpdatedTitle" ,diary.findEntryById(1).getTitle());
+        assertEquals( "updatedBody" ,diary.findEntryById(1).getBody());
+    }
+    @Test
+    public void test_thatMyDiaryWouldThrowAnErrorToUpdateAnInvalidId(){
+        assertThrows(IllegalArgumentException.class, () -> diary.updateEntry(1,"UpdatedTitle","updatedBody"));
+        diary.createEntry("Title","Body");
+        assertThrows(IllegalArgumentException.class, () -> diary.updateEntry(4,"UpdatedTitle","updatedBody"));
+    }
 
 
 }
