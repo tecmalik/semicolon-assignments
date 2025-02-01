@@ -24,15 +24,43 @@ public class DiaryApplication {
             case 1 :createNewDiary();
             break;
             case 2:findDiary();
-//            break;
-//            case 3:deleteDiary();
-//            break;
-//            case 4:exit();
-//            break;
+            break;
+            case 3:deleteDiary();
+            break;
+            case 4:System.exit(0);
+            break;
             default: print("Invalid Choice");
         }
 
     }
+
+    private static void deleteDiary() {
+        try {
+            String username = input("Enter Diary name: ");
+            String Password = input("Enter Diary password: ");
+            diaries.delete(username, Password);
+        }catch(IllegalArgumentException e){
+            print("Invalid details");
+        }finally {
+            print("Deletedsucessfully");
+            menu();
+        }
+
+    }
+
+    private static void findDiary() {
+        try {
+            String username = input("Enter Diary Username: ");
+            String password = input("Enter Diary Password: ");
+            diaries.findByUsername(username, password);
+        }catch(IllegalArgumentException e){
+            print("Invalid details");
+        }finally {
+            print(" Diary was never found.");
+            menu();
+        }
+    }
+
     public static void diaryMenu(){
         String prompt2 = """
                         1-> unlockDiary.
@@ -41,7 +69,8 @@ public class DiaryApplication {
                         4-> delete DiaryEntry.
                         5-> find Entry by Id.
                         6-> update Entry
-                        7-> Exit.
+                        7-> back to main Menu
+                        8-> Exit.
                         """;
         int userChoice = intInput(prompt2);
         switch (userChoice){
