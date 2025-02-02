@@ -81,32 +81,45 @@ public class DiaryApplication {
     public static void diaryMenu(){
         try {
             String prompt2 = """
-                    1-> Create New Entry.
-                    2-> Find Entry by Id.
-                    3-> Update Entry
-                    4-> delete Entry.
-                    5-> back to main Menu
-                    6-> Exit.
+                    1-> view Entries.
+                    2-> Create New Entry.
+                    3-> Find Entry by Id.
+                    4-> Update Entry.
+                    5-> delete Entry.
+                    6-> back to main Menu.
+                    7-> Exit.
                     """;
             int userChoice = intInput(prompt2);
             switch (userChoice) {
-                case 1:createNewEntry();
+                case 1:display();
                 break;
-                case 2:findEntryByID();
+                case 2:createNewEntry();
                 break;
-                case 3:updateEntry();
+                case 3:findEntryByID();
                 break;
-                case 4:deleteEntry();
+                case 4:updateEntry();
                 break;
-                case 5: backToMenu();
+                case 5: deleteEntry();
                 break;
-                case 6: System.exit(0);
+                case 6: backToMenu();
+                break;
+                case 7:System.exit(0);
                 default : print("Invalid Choice");
             }
         }catch(IllegalArgumentException e){
             print("Enter number be between 1 and 7");
         }finally{
             menu();
+        }
+
+    }
+
+    private static void display() {
+        try {
+            Diary myDiary = diaries.findByUsername(username, password);
+            myDiary.getEntryTitles();
+        }catch(NullPointerException e){
+            print("Entry is empty");
         }
 
     }
@@ -167,7 +180,7 @@ public class DiaryApplication {
             String body = inputLine("Enter Diary description: ");
             Diary myDiary = diaries.findByUsername(username, password);
             myDiary.createEntry(title, body);
-            print("Entry successfully");
+            print("Entry successfully created");
         }catch (IllegalArgumentException e){
             print(" diary lock");
         }catch (NullPointerException e){
@@ -179,16 +192,16 @@ public class DiaryApplication {
 
     private static void createNewDiary() {
         try{
-            username = input("Enter Diary name: ");
+            username = input("Enter New Diary Username: ");
             password = input("Enter Diary password: ");
         diaries.add(username, password);
+        print("New diary created successfully");
         }catch(IllegalArgumentException e){
             print("Invalid details");
         }catch (NullPointerException e){
             print("space cant be Empty spaces");
         }finally {
             diaryMenu();
-            print("Diary was created Success fully.");
         }
     }
 

@@ -3,10 +3,10 @@ package diary;
 import java.util.ArrayList;
 
 public class Diary {
-    private String userName;
-    private String password;
+    private final String userName;
+    private final String password;
     private boolean isLocked;
-    private ArrayList<Entry> entries = new ArrayList<>();
+    private final ArrayList<Entry> entries = new ArrayList<>();
     private int count;
 
 
@@ -36,10 +36,9 @@ public class Diary {
     }
 
     public void createEntry(String title, String body) {
-        if(isLocked) throw new IllegalArgumentException("Entry is Locked");
         if (isLocked) throw new IllegalArgumentException("Entry is Locked");
         if (title == null || title.isEmpty()) throw new NullPointerException("title is empty");
-        if (body == null || title.isEmpty()) throw new NullPointerException("Body can't be empty");
+        if (body == null || body.isEmpty()) throw new NullPointerException("Body can't be empty");
         Entry entry = new Entry( entryIdNumber(),title ,body);
         entries.add(entry);
     }
@@ -77,6 +76,15 @@ public class Diary {
     }
     public String getUserName(){
         return this.userName;
+    }
+
+    public void getEntryTitles() {
+        if(isLocked) throw new IllegalArgumentException("Entry is Locked");
+        if(numberOfEntry()==0) throw new NullPointerException("Number has to be greater than 0");
+        for(Entry entry : entries) {
+            System.out.println("ID"+entry.getTitle()+" title:"+entry.getTitle());
+        }
+
     }
 }
 

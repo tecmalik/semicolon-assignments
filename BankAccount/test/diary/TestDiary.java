@@ -98,4 +98,8 @@ public class TestDiary {
         diary.lock();
         assertThrows(IllegalArgumentException.class,()->diary.createEntry("Title2","Body2"));
     }
+    @Test
+    public void test_thatMyDiaryWillThrowAnErrorWhenNoEntryToDisplay(){
+        assertThrows(NullPointerException.class,()->diary.getEntryTitles());
+    }
 }
