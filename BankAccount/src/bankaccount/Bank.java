@@ -1,6 +1,5 @@
 package bankaccount;
 
-import javax.swing.*;
 import java.util.ArrayList;
 
 public class Bank {
@@ -9,11 +8,10 @@ public class Bank {
     private int count = 0;
 
 
-    public ArrayList<Account> createAccount(String firstName, String lastName, String pin) {
+    public void createAccount(String firstName, String lastName, String pin) {
         this.count++;
         Account account = new Account(firstName, lastName, pin, count);
         accounts.add(account);
-        return accounts;
     }
 
     public int getAccountNumber(String firstName,String lastName) {
@@ -22,7 +20,7 @@ public class Bank {
                 return account.getAccountNumber();
             }
         }
-        return 0;
+        throw new IllegalArgumentException(" No Account With FirstName or LastName Found");
     }
 
     public void deposit(int accountNumber, int amount) {
@@ -40,7 +38,7 @@ public class Bank {
             if (account.getAccountNumber() == accountNumber) {
                 return account.checkBalance(pinNumber);
             }
-        } return 0;
+        } throw new IllegalArgumentException("invalid Details");
     }
 
     public void withdraw(int accountNumber, int amount, String pinNumber) {
@@ -49,6 +47,7 @@ public class Bank {
                 account.withdraw(amount, pinNumber);
             }
         }
+        throw new IllegalArgumentException("invalid Details");
     }
 
     public void bankTransfer(int senderAccountNumber, int amount, int recipientAcctNumber, String pinNumber) {
@@ -63,8 +62,17 @@ public class Bank {
                     }
                 }
 
-            }
+            } throw new IllegalArgumentException("invalid Details");
         }
+    }
+    public Account getAccount( int accountNumber) {
+        for (Account account : accounts) {
+            if (account.getAccountNumber() == accountNumber) {
+                return account;
+            }
+
+        }
+        throw new IllegalArgumentException();
     }
 }
 

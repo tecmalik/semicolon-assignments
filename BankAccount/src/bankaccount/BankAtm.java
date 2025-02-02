@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 public class BankAtm {
     static Bank bank = new Bank();
+
     public static void main(String[] args) {
 
         displayMainMenu();
@@ -37,43 +38,72 @@ public class BankAtm {
             break;
             case "7": System.exit(0);
             break;
-            default: prints("invalid input");
+            default: print("invalid input");
         }
     }
 
     private static void bankUpdatePin() {
-        String pinNumber = input("old pin: ");
-        String newPinNumber = input("new pin: ");
-        int pinNumberInt = Integer.parseInt(pinNumber);
-        //bank.
+        try {
+
+            String pinNumber = input("old pin: ");
+            String newPinNumber = input("new pin: ");
+            int pinNumberInt = Integer.parseInt(pinNumber);
+            bank.getAccount(pinNumberInt).updatePin(pinNumber,newPinNumber);
+            print("Account Pin updated successfully");
+
+        }catch(IllegalArgumentException e){
+            print("invalid input");
+        }finally {
+            displayMainMenu();
+        }
+
+
     }
 
     private static void bankTransfer() {
-        String sender = input("Enter Account number : ");
-        String receiver = input("Enter Account number : ");
-        String amount = input("Enter Amount : ");
-        String pinNumber = input("pin: ");
-        int senderAccountNumberInt = Integer.parseInt(sender);
-        int receiverAccountNumberInt = Integer.parseInt(receiver);
-        int amountInt = Integer.parseInt(amount);
-        bank.bankTransfer(senderAccountNumberInt,amountInt,receiverAccountNumberInt,pinNumber);
+        try {
+            String sender = input("Enter Account number : ");
+            String receiver = input("Enter Account number : ");
+            String amount = input("Enter Amount : ");
+            String pinNumber = input("pin: ");
+            int senderAccountNumberInt = Integer.parseInt(sender);
+            int receiverAccountNumberInt = Integer.parseInt(receiver);
+            int amountInt = Integer.parseInt(amount);
+            bank.bankTransfer(senderAccountNumberInt, amountInt, receiverAccountNumberInt, pinNumber);
+
+        }catch(IllegalArgumentException e){
+            print("invalid input");
+        }finally {
+            displayMainMenu();
+        }
     }
 
     private static void bankCheckBalance(){
-         String pinNumber = input("pin: ");
-         String accountNumber = input("Enter Account number:");
-         int accountNumberInt = Integer.parseInt(accountNumber);
-         bank.checkBalance(accountNumberInt, pinNumber);
+        try {
+            String pinNumber = input("pin: ");
+            String accountNumber = input("Enter Account number:");
+            int accountNumberInt = Integer.parseInt(accountNumber);
+            bank.checkBalance(accountNumberInt, pinNumber);
+        }catch(IllegalArgumentException e){
+            print("invalid input");
+        }finally {
+            displayMainMenu();
+        }
     }
 
-    private static String bankWithdraw() {
-        String accountNumber = input("Enter Account Number: ");
-        String amount = input("Enter amount to withdraw: ");
-        String pinNumber = input("Enter pin ");
-        int amountInt = Integer.parseInt(amount);
-        int accountNumberInt = Integer.parseInt(accountNumber);
-        bank.withdraw( accountNumberInt , amountInt  ,pinNumber);
-        return "Withdraw Successful";
+    private static void bankWithdraw() {
+        try {
+            String accountNumber = input("Enter Account Number: ");
+            String amount = input("Enter amount to withdraw: ");
+            String pinNumber = input("Enter pin ");
+            int amountInt = Integer.parseInt(amount);
+            int accountNumberInt = Integer.parseInt(accountNumber);
+            bank.withdraw(accountNumberInt, amountInt, pinNumber);
+        }catch(IllegalArgumentException e){
+            print("invalid input");
+        }finally{
+            displayMainMenu();
+        }
     }
 
     private static void createBankAccount() {
@@ -83,21 +113,27 @@ public class BankAtm {
         try {
             bank.createAccount(firstName, lastName, pin);
         }catch (Exception e) {
-            prints(e.getMessage());
+            print(e.getMessage());
             displayMainMenu();
         } finally {
-            prints("Account created successfully");
+            print("Account created successfully");
             displayMainMenu();
         }
     }
 
     private static void bankDeposit() {
-        String accountNumber = input("Enter Account Number: ");
-        String depositAmount = input("Enter Deposit Amount: ");
-        if(pinValidation(depositAmount)) throw new IllegalArgumentException();
-        int depositAmountInt = Integer.parseInt(depositAmount);
-        int accountNumberInt = Integer.parseInt(accountNumber);
-        bank.deposit( accountNumberInt , depositAmountInt );
+        try {
+            String accountNumber = input("Enter Account Number: ");
+            String depositAmount = input("Enter Deposit Amount: ");
+            if (pinValidation(depositAmount)) throw new IllegalArgumentException();
+            int depositAmountInt = Integer.parseInt(depositAmount);
+            int accountNumberInt = Integer.parseInt(accountNumber);
+            bank.deposit(accountNumberInt, depositAmountInt);
+        }catch(IllegalArgumentException e){
+            print("Invalid input");
+        }finally{
+            displayMainMenu();
+        }
     }
 
     private static boolean pinValidation(String depositAmount) {
@@ -112,13 +148,13 @@ public class BankAtm {
 
     public static String input(String print){
         Scanner input = new Scanner(System.in);
-        prints(print);
+        print(print);
         return input.nextLine();
 
         }
 
-    public static void prints(String print) {
+    public static void print(String print) {
         //System.out.println(print);
-       JOptionPane.showInputDialog(print);
+         JOptionPane.showInputDialog(print);
     }
 }
