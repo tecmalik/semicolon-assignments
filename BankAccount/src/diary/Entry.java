@@ -29,4 +29,8 @@ public class Entry {
     public void setBody(String body) {
         this.Body = body;
     }
+
+    public LocalDate getDate() {
+        return date;
+    }
 }
