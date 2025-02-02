@@ -68,7 +68,7 @@ public class DiaryApplication {
             password = input("Enter Diary Password: ");
             Diary mydiary = diaries.findByUsername(username, password);
             mydiary.unlock(password);
-            print("Welcome"+diaries.findByUsername(username, password).getUserName());
+            print("Welcome "+diaries.findByUsername(username, password).getUserName());
             diaryMenu();
         }catch(IllegalArgumentException e){
             print("Invalid details");
@@ -120,6 +120,8 @@ public class DiaryApplication {
             myDiary.getEntryTitles();
         }catch(NullPointerException e){
             print("Entry is empty");
+        }finally {
+            diaryMenu();
         }
 
     }
@@ -147,8 +149,8 @@ public class DiaryApplication {
     private static void updateEntry() {
         try{
             int entryIdNumber = intInput("Enter Entry entry ID: ");
-            String updatedBody = input("Enter Entry Title: ");
-            String updatedTitle = input("Enter Entry title: ");
+            String updatedBody = inputLine("Enter Entry Title: ");
+            String updatedTitle = inputLine("Enter Entry title: ");
             diaries.findByUsername(username, password).updateEntry(entryIdNumber, updatedTitle, updatedBody);
             print("Entry updated successfully");
         }catch(IllegalArgumentException e){
@@ -176,11 +178,11 @@ public class DiaryApplication {
 
     private static void createNewEntry() {
         try {
-            String title = input("Enter Diary title: ");
-            String body = inputLine("Enter Diary description: ");
+            String title = inputLine("Enter Diary Entry Title: ");
+            String body = inputLine("Enter Diary Entry Body : ");
             Diary myDiary = diaries.findByUsername(username, password);
             myDiary.createEntry(title, body);
-            print("Entry successfully created");
+            print("Entry successfully Saved");
         }catch (IllegalArgumentException e){
             print(" diary lock");
         }catch (NullPointerException e){
