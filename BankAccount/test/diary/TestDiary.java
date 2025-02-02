@@ -96,6 +96,6 @@ public class TestDiary {
     public void test_thatMyDiariesWontCreateEntryIfDiaryIsLocked(){
         diary.createEntry("Title","Body");
         diary.lock();
-       // assertThrows(IllegalArgumentException.class,()->diary.createEntry("Title2","Body2"));
+        assertThrows(IllegalArgumentException.class,()->diary.createEntry("Title2","Body2"));
     }
 }

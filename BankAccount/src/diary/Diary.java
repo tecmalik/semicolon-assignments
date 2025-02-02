@@ -37,7 +37,7 @@ public class Diary {
 
     public void createEntry(String title, String body) {
         if(isLocked) throw new IllegalArgumentException("Entry is Locked");
-        if (this.isLocked) throw new IllegalArgumentException("Entry is Locked");
+        if (isLocked) throw new IllegalArgumentException("Entry is Locked");
         if (title == null || title.isEmpty()) throw new NullPointerException("title is empty");
         if (body == null || title.isEmpty()) throw new NullPointerException("Body can't be empty");
         Entry entry = new Entry( entryIdNumber(),title ,body);
