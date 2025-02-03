@@ -82,7 +82,7 @@ public class Diary {
         if(isLocked) throw new IllegalArgumentException("Entry is Locked");
         if(numberOfEntry()==0) throw new NullPointerException("Number has to be greater than 0");
         for(Entry entry : entries) {
-            System.out.println("ID"+ entry.getId()+": "+ entry.getTitle()+" - "+entry.getDate());
+            System.out.println("ID"+ entry.getId()+": "+ entry.getTitle()+" - "+entry.getDate()+" \n "+entry.getBody());
         }
 
     }

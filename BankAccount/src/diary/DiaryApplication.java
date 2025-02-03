@@ -139,18 +139,19 @@ public class DiaryApplication {
         Diary mydiary = diaries.findByUsername(username);
             mydiary.unlock(password);
             mydiary.deleteEntry(entryIDNumber);
+            print("Deleted Successfully");
         }catch(IllegalArgumentException e ){
-            print("Invalid details");
+            print("Invalid Entry !!!");
         }finally {
-           menu();
+           diaryMenu();
         }
     }
 
     private static void updateEntry() {
         try{
             int entryIdNumber = intInput("Enter Entry entry ID: ");
-            String updatedBody = inputLine("Enter Entry Title: ");
-            String updatedTitle = inputLine("Enter Entry title: ");
+            String updatedTitle = inputLine("Enter Entry Title: ");
+            String updatedBody = inputLine("Enter Entry Body: ");
             diaries.findByUsername(username).updateEntry(entryIdNumber, updatedTitle, updatedBody);
             print("Entry updated successfully");
         }catch(IllegalArgumentException e){
