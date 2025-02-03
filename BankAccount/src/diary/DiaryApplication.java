@@ -66,9 +66,9 @@ public class DiaryApplication {
             print("unlock Diary");
             username = input("Enter Diary Username: ");
             password = input("Enter Diary Password: ");
-            Diary mydiary = diaries.findByUsername(username, password);
+            Diary mydiary = diaries.findByUsername(username);
             mydiary.unlock(password);
-            print("Welcome "+diaries.findByUsername(username, password).getUserName());
+            print("Welcome "+diaries.findByUsername(username).getUserName());
             diaryMenu();
         }catch(IllegalArgumentException e){
             print("Invalid details");
@@ -116,7 +116,7 @@ public class DiaryApplication {
 
     private static void display() {
         try {
-            Diary myDiary = diaries.findByUsername(username, password);
+            Diary myDiary = diaries.findByUsername(username);
             myDiary.getEntryTitles();
         }catch(NullPointerException e){
             print("Entry is empty");
@@ -127,7 +127,7 @@ public class DiaryApplication {
     }
 
     private static void backToMenu() {
-        diaries.findByUsername(username,password).lock();
+        diaries.findByUsername(username).lock();
         menu();
     }
 
@@ -136,7 +136,7 @@ public class DiaryApplication {
             String username = input("Enter Diary Username: ");
             String password = input("Enter Diary Password: ");
         int entryIDNumber = intInput("Enter Entry ID: ");
-        Diary mydiary = diaries.findByUsername(username, password);
+        Diary mydiary = diaries.findByUsername(username);
             mydiary.unlock(password);
             mydiary.deleteEntry(entryIDNumber);
         }catch(IllegalArgumentException e ){
@@ -151,7 +151,7 @@ public class DiaryApplication {
             int entryIdNumber = intInput("Enter Entry entry ID: ");
             String updatedBody = inputLine("Enter Entry Title: ");
             String updatedTitle = inputLine("Enter Entry title: ");
-            diaries.findByUsername(username, password).updateEntry(entryIdNumber, updatedTitle, updatedBody);
+            diaries.findByUsername(username).updateEntry(entryIdNumber, updatedTitle, updatedBody);
             print("Entry updated successfully");
         }catch(IllegalArgumentException e){
             print("Invalid details");
@@ -163,7 +163,7 @@ public class DiaryApplication {
     private static void findEntryByID() {
         try {
             int idNumber = intInput("Enter Entry ID: ");
-            Entry foundEntry = diaries.findByUsername(username, password).findEntryById(idNumber);
+            Entry foundEntry = diaries.findByUsername(username).findEntryById(idNumber);
             print("Entry" + foundEntry.getTitle() + " found successfully");
             print(foundEntry.getBody());
         }catch(IllegalArgumentException e){
@@ -180,7 +180,7 @@ public class DiaryApplication {
         try {
             String title = inputLine("Enter Diary Entry Title: ");
             String body = inputLine("Enter Diary Entry Body : ");
-            Diary myDiary = diaries.findByUsername(username, password);
+            Diary myDiary = diaries.findByUsername(username);
             myDiary.createEntry(title, body);
             print("Entry successfully Saved");
         }catch (IllegalArgumentException e){

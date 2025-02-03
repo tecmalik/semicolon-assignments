@@ -26,9 +26,9 @@ public class Diaries {
         diaries.removeIf(diary -> diary.verifyPassword(password) && diary.getUserName().equals(username));
     }
 
-    public Diary findByUsername(String username, String password) {
+    public Diary findByUsername(String username) {
         for (Diary diary : diaries) {
-            if (diary.verifyPassword(password) && diary.getUserName().equals(username)) {
+            if ( diary.getUserName().equals(username)) {
                 return diary;
             }
         }
