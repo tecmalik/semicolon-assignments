@@ -19,7 +19,7 @@ public class DiaryApplication {
                     1-> Create New Diary.
                     2-> Find Diary.
                     3-> delete Diary.
-                    4-> Exit.
+                    4-> Exit Program.
                     """;
             int userChoice = intInput(prompt);
             switch (userChoice) {
@@ -87,7 +87,7 @@ public class DiaryApplication {
                     4-> Update Entry.
                     5-> delete Entry.
                     6-> back to main Menu.
-                    7-> Exit.
+                    7-> Exit Program.
                     """;
             int userChoice = intInput(prompt2);
             switch (userChoice) {
