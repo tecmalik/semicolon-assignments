@@ -7,7 +7,7 @@ public class Diaries {
 
 
     public void add(String username, String password) {
-        if( password == null) throw new NullPointerException("password cant be empty");
+        if(password == null) throw new NullPointerException("password cant be empty");
         if(username == null ) throw new NullPointerException("username cant be empty");
         Diary diary = new Diary(username, password);
         diaries.add(diary);

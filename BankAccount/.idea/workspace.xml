@@ -4,56 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a961995-cc16-44cd-9632-5908ec3f6de8" name="Changes" comment="updating files">
-      <change afterPath="$PROJECT_DIR$/bankaccount.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/class_project.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/diary/DiaryApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/diary/DiaryApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CaesarCipher/CaesarCipher.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CaesarCipherApp/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CaesarCipherApp/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CaesarCipherApp/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CaesarCipherApp/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CaesarCipherApp/CaesarCipherApp.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CaesarCipherApp/src/CaesarCipherApp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CaesarCipherApp/src/CaesarCipherEncryption.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DiaryAppOOP/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DiaryAppOOP/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DiaryAppOOP/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DiaryAppOOP/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DiaryAppOOP/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DiaryAppOOP/DiaryApp.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DiaryAppOOP/DiaryAppOOP.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DiaryAppOOP/lib/apiguardian-api-1.1.2-javadoc.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DiaryAppOOP/lib/apiguardian-api-1.1.2-sources.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DiaryAppOOP/lib/apiguardian-api-1.1.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DiaryAppOOP/lib/junit-jupiter-5.8.1-javadoc.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DiaryAppOOP/lib/junit-jupiter-5.8.1-sources.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DiaryAppOOP/lib/junit-jupiter-5.8.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DiaryAppOOP/lib/junit-jupiter-api-5.8.1-javadoc.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DiaryAppOOP/lib/junit-jupiter-api-5.8.1-sources.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DiaryAppOOP/lib/junit-jupiter-api-5.8.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DiaryAppOOP/lib/junit-jupiter-engine-5.8.1-javadoc.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DiaryAppOOP/lib/junit-jupiter-engine-5.8.1-sources.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DiaryAppOOP/lib/junit-jupiter-engine-5.8.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DiaryAppOOP/lib/junit-jupiter-params-5.8.1-javadoc.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DiaryAppOOP/lib/junit-jupiter-params-5.8.1-sources.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DiaryAppOOP/lib/junit-jupiter-params-5.8.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DiaryAppOOP/lib/junit-platform-commons-1.8.1-javadoc.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DiaryAppOOP/lib/junit-platform-commons-1.8.1-sources.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DiaryAppOOP/lib/junit-platform-commons-1.8.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DiaryAppOOP/lib/junit-platform-engine-1.8.1-javadoc.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DiaryAppOOP/lib/junit-platform-engine-1.8.1-sources.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DiaryAppOOP/lib/junit-platform-engine-1.8.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DiaryAppOOP/lib/opentest4j-1.2.0-javadoc.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DiaryAppOOP/lib/opentest4j-1.2.0-sources.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DiaryAppOOP/lib/opentest4j-1.2.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DiaryAppOOP/src/Diary.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DiaryAppOOP/src/DiaryApp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DiaryAppOOP/src/DiaryEntry.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DiaryAppOOP/src/TicTacToe.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DiaryAppOOP/test/DiaryAppTest.java" beforeDir="false" />
-    </list>
+    <list default="true" id="1a961995-cc16-44cd-9632-5908ec3f6de8" name="Changes" comment="updating files" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -77,89 +28,89 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.BankAtm.executor&quot;: &quot;Run&quot;,
-    &quot;Application.DiaryApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;true&quot;,
-    &quot;JUnit.TestAccount.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestAccount.test_.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestAccount.test_AccountBalenceIsNotEmpty.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestAccount.test_AccountCanChechBalance.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestAccount.test_AccountCanCheckBalance.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestAccount.test_AccountCanDepositAndWithdraw.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestAccount.test_AccountCanWithdraw.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestAccount.test_AccountCantDepositNegativeNumber.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestAccount.test_AccountCantWithdrawWithWrongPinNumberWillThrowAnException.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestAccount.test_AccountUserCanUpdatePin.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestAccount.test_AccountUserCanupdatePin.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestAccount.test_AccountWillThrowAnErrorForDepositLess10.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestAccount.test_AccountWillThrowAnErrowForDepositLess10.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestAccount.test_AccountpinNumberIsValidNumber.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestAccount.test_DepositBelow_10_WillThrowAnError.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestAccount.test_negativeDepositWillThrowAnError.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestAccount.test_thatWithdrawalAboveAccountBalanceWillThrowAnException.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestBank.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestBank.test_ThatMyBankContainsMyAccountNumber.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestBank.test_ThatMyWillThrownErrorForInvalidAccountDetailsFind.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestBank.test_ThatMyWillThrownErrorForInvalidDetailsAccoutFind.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestBank.test_bankCanCreateAccount.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestBank.test_bankCanDeposit.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestBank.test_bankCanGetAccountNumbersIndependently.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestBank.test_bankCanTransfer.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestBank.test_bankCanWithdraw.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestBank.test_bankCandDeposite.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestBank.test_bankWontDepositNegativeNumbers.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestBank.test_thatAccountNumbersAreBeenCreated.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestDiaries.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestDiaries.test_DiariesCanAddMoreDiaryToDiaries.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestDiaries.test_DiariesCanContainMyDiary.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestDiaries.test_DiariesCanDeleteDiaryFromDiaries.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestDiaries.test_DiariesCanReturnAnErrorWhenTryingToDeleteInValidDiaryFromDiaries.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestDiaries.test_DiariesWillReturnANErrorFOrNullInputWhenAddingToDiaries.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestDiaries.test_iCanFindByUserAndMyPasswordMoreDiaryFromDiaries.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestDiaries.test_myDiariesWillThrowAnErrorToFindInvalidDetailsFromDiaries.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestDiary.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestDiary.test_ThatMYEntryCanBeFoundById.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestDiary.test_ThatMyDiaryIsLocked.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestDiary.test_my.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestDiary.test_myDiaryCanBeLocked.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestDiary.test_myDiaryCanBeUnlocked.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestDiary.test_myDiaryCanContainAnEntry.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestDiary.test_myDiaryCanCreateEntry.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestDiary.test_myWilThrowAnErrorForInValidPasswordInputDiaryThrow.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestDiary.test_myWillThrowAnErrorForInValidPasswordInputDiaryThrow.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestDiary.test_testThatMyDiaryCanUnlocked.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestDiary.test_testThatMyDiaryIsLocked.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestDiary.test_testThatMyDiaryislocked.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestDiary.test_thatMyDiariesWontAddEntryIfDiaryIsLocked.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestDiary.test_thatMyDiariesWontCreateEntryIfDiaryIsLocked.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestDiary.test_thatMyDiaryCanUpDateEntry.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestDiary.test_thatMyDiaryWillThrowAnErrorForAnInvalidId.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestDiary.test_thatMyDiaryWillThrowAnErrorToFindAnInvalidId.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestDiary.test_thatMyDiaryWillThrowAnErrorWhenNoEntryToDisplay.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestDiary.test_thatMyDiaryWouldThrowAnErrorForNullInput.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestDiary.test_thatMyDiaryWouldThrowAnErrorToDeleteInvalidEntry.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestDiary.test_thatMyDiaryWouldThrowAnErrorToUpdateAnInvalidId.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestDiary.test_thatMyEntryCAnBeDeleted.executor&quot;: &quot;Run&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;true&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/DELL/Documents/tecmalik-Git-Repo/semicolon- assignments java/AutomaticBike&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/DELL/Documents/tecmalik-Git-Repo/semicolon- assignments java/BankAccount/src/Main.java&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.BankAtm.executor": "Run",
+    "Application.DiaryApplication.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "true",
+    "JUnit.TestAccount.executor": "Run",
+    "JUnit.TestAccount.test_.executor": "Run",
+    "JUnit.TestAccount.test_AccountBalenceIsNotEmpty.executor": "Run",
+    "JUnit.TestAccount.test_AccountCanChechBalance.executor": "Run",
+    "JUnit.TestAccount.test_AccountCanCheckBalance.executor": "Run",
+    "JUnit.TestAccount.test_AccountCanDepositAndWithdraw.executor": "Run",
+    "JUnit.TestAccount.test_AccountCanWithdraw.executor": "Run",
+    "JUnit.TestAccount.test_AccountCantDepositNegativeNumber.executor": "Run",
+    "JUnit.TestAccount.test_AccountCantWithdrawWithWrongPinNumberWillThrowAnException.executor": "Run",
+    "JUnit.TestAccount.test_AccountUserCanUpdatePin.executor": "Run",
+    "JUnit.TestAccount.test_AccountUserCanupdatePin.executor": "Run",
+    "JUnit.TestAccount.test_AccountWillThrowAnErrorForDepositLess10.executor": "Run",
+    "JUnit.TestAccount.test_AccountWillThrowAnErrowForDepositLess10.executor": "Run",
+    "JUnit.TestAccount.test_AccountpinNumberIsValidNumber.executor": "Run",
+    "JUnit.TestAccount.test_DepositBelow_10_WillThrowAnError.executor": "Run",
+    "JUnit.TestAccount.test_negativeDepositWillThrowAnError.executor": "Run",
+    "JUnit.TestAccount.test_thatWithdrawalAboveAccountBalanceWillThrowAnException.executor": "Run",
+    "JUnit.TestBank.executor": "Run",
+    "JUnit.TestBank.test_ThatMyBankContainsMyAccountNumber.executor": "Run",
+    "JUnit.TestBank.test_ThatMyWillThrownErrorForInvalidAccountDetailsFind.executor": "Run",
+    "JUnit.TestBank.test_ThatMyWillThrownErrorForInvalidDetailsAccoutFind.executor": "Run",
+    "JUnit.TestBank.test_bankCanCreateAccount.executor": "Run",
+    "JUnit.TestBank.test_bankCanDeposit.executor": "Run",
+    "JUnit.TestBank.test_bankCanGetAccountNumbersIndependently.executor": "Run",
+    "JUnit.TestBank.test_bankCanTransfer.executor": "Run",
+    "JUnit.TestBank.test_bankCanWithdraw.executor": "Run",
+    "JUnit.TestBank.test_bankCandDeposite.executor": "Run",
+    "JUnit.TestBank.test_bankWontDepositNegativeNumbers.executor": "Run",
+    "JUnit.TestBank.test_thatAccountNumbersAreBeenCreated.executor": "Run",
+    "JUnit.TestDiaries.executor": "Run",
+    "JUnit.TestDiaries.test_DiariesCanAddMoreDiaryToDiaries.executor": "Run",
+    "JUnit.TestDiaries.test_DiariesCanContainMyDiary.executor": "Run",
+    "JUnit.TestDiaries.test_DiariesCanDeleteDiaryFromDiaries.executor": "Run",
+    "JUnit.TestDiaries.test_DiariesCanReturnAnErrorWhenTryingToDeleteInValidDiaryFromDiaries.executor": "Run",
+    "JUnit.TestDiaries.test_DiariesWillReturnANErrorFOrNullInputWhenAddingToDiaries.executor": "Run",
+    "JUnit.TestDiaries.test_iCanFindByUserAndMyPasswordMoreDiaryFromDiaries.executor": "Run",
+    "JUnit.TestDiaries.test_myDiariesWillThrowAnErrorToFindInvalidDetailsFromDiaries.executor": "Run",
+    "JUnit.TestDiary.executor": "Run",
+    "JUnit.TestDiary.test_ThatMYEntryCanBeFoundById.executor": "Run",
+    "JUnit.TestDiary.test_ThatMyDiaryIsLocked.executor": "Run",
+    "JUnit.TestDiary.test_my.executor": "Run",
+    "JUnit.TestDiary.test_myDiaryCanBeLocked.executor": "Run",
+    "JUnit.TestDiary.test_myDiaryCanBeUnlocked.executor": "Run",
+    "JUnit.TestDiary.test_myDiaryCanContainAnEntry.executor": "Run",
+    "JUnit.TestDiary.test_myDiaryCanCreateEntry.executor": "Run",
+    "JUnit.TestDiary.test_myWilThrowAnErrorForInValidPasswordInputDiaryThrow.executor": "Run",
+    "JUnit.TestDiary.test_myWillThrowAnErrorForInValidPasswordInputDiaryThrow.executor": "Run",
+    "JUnit.TestDiary.test_testThatMyDiaryCanUnlocked.executor": "Run",
+    "JUnit.TestDiary.test_testThatMyDiaryIsLocked.executor": "Run",
+    "JUnit.TestDiary.test_testThatMyDiaryislocked.executor": "Run",
+    "JUnit.TestDiary.test_thatMyDiariesWontAddEntryIfDiaryIsLocked.executor": "Run",
+    "JUnit.TestDiary.test_thatMyDiariesWontCreateEntryIfDiaryIsLocked.executor": "Run",
+    "JUnit.TestDiary.test_thatMyDiaryCanUpDateEntry.executor": "Run",
+    "JUnit.TestDiary.test_thatMyDiaryWillThrowAnErrorForAnInvalidId.executor": "Run",
+    "JUnit.TestDiary.test_thatMyDiaryWillThrowAnErrorToFindAnInvalidId.executor": "Run",
+    "JUnit.TestDiary.test_thatMyDiaryWillThrowAnErrorWhenNoEntryToDisplay.executor": "Run",
+    "JUnit.TestDiary.test_thatMyDiaryWouldThrowAnErrorForNullInput.executor": "Run",
+    "JUnit.TestDiary.test_thatMyDiaryWouldThrowAnErrorToDeleteInvalidEntry.executor": "Run",
+    "JUnit.TestDiary.test_thatMyDiaryWouldThrowAnErrorToUpdateAnInvalidId.executor": "Run",
+    "JUnit.TestDiary.test_thatMyEntryCAnBeDeleted.executor": "Run",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "true",
+    "Repository.Attach.Sources": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/DELL/Documents/tecmalik-Git-Repo/semicolon- assignments java",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "C:/Users/DELL/Documents/tecmalik-Git-Repo/semicolon- assignments java/BankAccount/src/Main.java",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Application.DiaryApplication">
     <configuration name="BankAtm" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="bankaccount.BankAtm" />
@@ -257,6 +208,7 @@
       <workItem from="1738542524788" duration="806000" />
       <workItem from="1738586271101" duration="7871000" />
       <workItem from="1738673285296" duration="931000" />
+      <workItem from="1738691127584" duration="95000" />
     </task>
     <task id="LOCAL-00001" summary="updating files">
       <option name="closed" value="true" />

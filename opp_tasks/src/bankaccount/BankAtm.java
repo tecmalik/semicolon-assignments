@@ -146,15 +146,23 @@ public class BankAtm {
 
     }
 
+//    public static String input(String print){
+//        Scanner input = new Scanner(System.in);
+//        print(print);
+//        return input.nextLine();
+//
+//        }
     public static String input(String print){
-        Scanner input = new Scanner(System.in);
-        print(print);
-        return input.nextLine();
+
+        return JOptionPane.showInputDialog(print);
 
         }
 
     public static void print(String print) {
-        //System.out.println(print);
-         JOptionPane.showInputDialog(print);
+         JOptionPane.showMessageDialog(null, print);
     }
+//    public static void print(String print) {
+//        System.out.println(print);
+//        // JOptionPane.showInputDialog(print);
+//    }
 }
