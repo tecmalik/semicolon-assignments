@@ -13,6 +13,7 @@
       <sourceFolder url="file://$MODULE_DIR$/TicTacToe2D" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/TurtleGraphics" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/quiz" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/televisionApp/test" isTestSource="true" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

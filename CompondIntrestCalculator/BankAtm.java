@@ -80,10 +80,10 @@ public class BankAtm {
 
     private static void bankCheckBalance(){
         try {
-            String pinNumber = input("pin: ");
             String accountNumber = input("Enter Account number:");
+            String pinNumber = input("pin: ");
             int accountNumberInt = Integer.parseInt(accountNumber);
-            bank.checkBalance(accountNumberInt, pinNumber);
+            print("Account Balance: "+ bank.checkBalance(accountNumberInt, pinNumber));
         }catch(IllegalArgumentException e){
             print("invalid input");
         }finally {
@@ -107,16 +107,17 @@ public class BankAtm {
     }
 
     private static void createBankAccount() {
-        String firstName = input("Enter First Name: ");
-        String lastName = input("Enter Last Name: ");
-        String pin = input("pin: ");
         try {
+            String firstName = input("Enter First Name: ");
+            String lastName = input("Enter Last Name: ");
+            String pin = input("pin: ");
             bank.createAccount(firstName, lastName, pin);
+            print("Account created successfully");
+            print("your Account number is"+bank.getAccountNumber(firstName, lastName));
         }catch (Exception e) {
             print(e.getMessage());
             displayMainMenu();
         } finally {
-            print("Account created successfully");
             displayMainMenu();
         }
     }
@@ -125,7 +126,6 @@ public class BankAtm {
         try {
             String accountNumber = input("Enter Account Number: ");
             String depositAmount = input("Enter Deposit Amount: ");
-            if (pinValidation(depositAmount)) throw new IllegalArgumentException();
             int depositAmountInt = Integer.parseInt(depositAmount);
             int accountNumberInt = Integer.parseInt(accountNumber);
             bank.deposit(accountNumberInt, depositAmountInt);
@@ -146,16 +146,12 @@ public class BankAtm {
 
     }
 
-//    public static String input(String print){
+
+    public static String input(String print){
 //        Scanner input = new Scanner(System.in);
 //        print(print);
 //        return input.nextLine();
-//
-//        }
-    public static String input(String print){
-
         return JOptionPane.showInputDialog(print);
-
         }
 
     public static void print(String print) {
@@ -163,6 +159,5 @@ public class BankAtm {
     }
 //    public static void print(String print) {
 //        System.out.println(print);
-//        // JOptionPane.showInputDialog(print);
 //    }
 }
