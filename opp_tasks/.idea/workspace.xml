@@ -5,58 +5,68 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1a961995-cc16-44cd-9632-5908ec3f6de8" name="Changes" comment="updating files">
-      <change afterPath="$PROJECT_DIR$/../CompondIntrestCalculator/Account.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CompondIntrestCalculator/Bank.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CompondIntrestCalculator/BankAtm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Television/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Television/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Television/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Television/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Television/Television.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Television/test/TestTelevision.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled/untitled.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bankaccount.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/apiguardian-api-1.1.2-javadoc.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/apiguardian-api-1.1.2-sources.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/apiguardian-api-1.1.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/junit-jupiter-5.8.1-javadoc.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/junit-jupiter-5.8.1-sources.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/junit-jupiter-5.8.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/junit-jupiter-api-5.8.1-javadoc.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/junit-jupiter-api-5.8.1-sources.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/junit-jupiter-api-5.8.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/junit-jupiter-engine-5.8.1-javadoc.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/junit-jupiter-engine-5.8.1-sources.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/junit-jupiter-engine-5.8.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/junit-jupiter-params-5.8.1-javadoc.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/junit-jupiter-params-5.8.1-sources.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/junit-jupiter-params-5.8.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/junit-platform-commons-1.8.1-javadoc.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/junit-platform-commons-1.8.1-sources.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/junit-platform-commons-1.8.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/junit-platform-engine-1.8.1-javadoc.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/junit-platform-engine-1.8.1-sources.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/junit-platform-engine-1.8.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/opentest4j-1.2.0-javadoc.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/opentest4j-1.2.0-sources.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/opentest4j-1.2.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bankaccount/Account.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bankaccount/Bank.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bankaccount/BankAtm.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/diary/Diaries.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/diary/Diary.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/diary/DiaryApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/diary/Entry.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/TestAccount.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/TestBank.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/diary/TestDiaries.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/diary/TestDiary.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../semicolon- assignments java.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../semicolon- assignments java.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demoassignment 1/bankaccount.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demoassignment 1/src/bankaccount/bankaccount.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../humanproblems/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../humanproblems/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../humanproblems/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../humanproblems/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../humanproblems/humanproblems.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../humanproblems/src/problem/ProblemType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../humanproblems/test/ProblemTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AirCondition/AirCondition.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../AirCondition/AirCondition.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AutomaticBike/AutomaticBike.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../AutomaticBike/AutomaticBike.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PhaseGate/PhaseGate.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../PhaseGate/PhaseGate.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PhaseGate/oldSnacks/OldSnacks.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../PhaseGate/oldSnacks/OldSnacks.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Television/Television.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Television/Television.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../comfortsinn/comfortsinn.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../comfortsinn/comfortsinn.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demoassignment/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demoassignment/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demoassignment/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demoassignment/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demoassignment/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demoassignment/bankaccount.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demoassignment/lib/apiguardian-api-1.1.2-javadoc.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demoassignment/lib/apiguardian-api-1.1.2-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demoassignment/lib/apiguardian-api-1.1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demoassignment/lib/junit-jupiter-5.8.1-javadoc.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demoassignment/lib/junit-jupiter-5.8.1-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demoassignment/lib/junit-jupiter-5.8.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demoassignment/lib/junit-jupiter-api-5.8.1-javadoc.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demoassignment/lib/junit-jupiter-api-5.8.1-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demoassignment/lib/junit-jupiter-api-5.8.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demoassignment/lib/junit-jupiter-engine-5.8.1-javadoc.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demoassignment/lib/junit-jupiter-engine-5.8.1-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demoassignment/lib/junit-jupiter-engine-5.8.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demoassignment/lib/junit-jupiter-params-5.8.1-javadoc.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demoassignment/lib/junit-jupiter-params-5.8.1-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demoassignment/lib/junit-jupiter-params-5.8.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demoassignment/lib/junit-platform-commons-1.8.1-javadoc.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demoassignment/lib/junit-platform-commons-1.8.1-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demoassignment/lib/junit-platform-commons-1.8.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demoassignment/lib/junit-platform-engine-1.8.1-javadoc.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demoassignment/lib/junit-platform-engine-1.8.1-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demoassignment/lib/junit-platform-engine-1.8.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demoassignment/lib/opentest4j-1.2.0-javadoc.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demoassignment/lib/opentest4j-1.2.0-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demoassignment/lib/opentest4j-1.2.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demoassignment/src/bankaccount/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demoassignment/src/bankaccount/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demoassignment/src/bankaccount/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demoassignment/src/bankaccount/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demoassignment/src/bankaccount/Account.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demoassignment/src/bankaccount/Bank.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demoassignment/src/bankaccount/BankAtm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demoassignment/src/bankaccount/bankaccount.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demoassignment/src/diary/Diaries.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demoassignment/src/diary/Diary.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demoassignment/src/diary/DiaryApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demoassignment/src/diary/Entry.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demoassignment/test/TestAccount.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demoassignment/test/TestBank.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demoassignment/test/diary/TestDiaries.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demoassignment/test/diary/TestDiary.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../set/set.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../set/set.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,90 +91,90 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.BankAtm.executor": "Run",
-    "Application.DiaryApplication.executor": "Run",
-    "Downloaded.Files.Path.Enabled": "true",
-    "JUnit.TestAccount.executor": "Run",
-    "JUnit.TestAccount.test_.executor": "Run",
-    "JUnit.TestAccount.test_AccountBalenceIsNotEmpty.executor": "Run",
-    "JUnit.TestAccount.test_AccountCanChechBalance.executor": "Run",
-    "JUnit.TestAccount.test_AccountCanCheckBalance.executor": "Run",
-    "JUnit.TestAccount.test_AccountCanDepositAndWithdraw.executor": "Run",
-    "JUnit.TestAccount.test_AccountCanWithdraw.executor": "Run",
-    "JUnit.TestAccount.test_AccountCantDepositNegativeNumber.executor": "Run",
-    "JUnit.TestAccount.test_AccountCantWithdrawWithWrongPinNumberWillThrowAnException.executor": "Run",
-    "JUnit.TestAccount.test_AccountUserCanUpdatePin.executor": "Run",
-    "JUnit.TestAccount.test_AccountUserCanupdatePin.executor": "Run",
-    "JUnit.TestAccount.test_AccountWillThrowAnErrorForDepositLess10.executor": "Run",
-    "JUnit.TestAccount.test_AccountWillThrowAnErrowForDepositLess10.executor": "Run",
-    "JUnit.TestAccount.test_AccountpinNumberIsValidNumber.executor": "Run",
-    "JUnit.TestAccount.test_DepositBelow_10_WillThrowAnError.executor": "Run",
-    "JUnit.TestAccount.test_negativeDepositWillThrowAnError.executor": "Run",
-    "JUnit.TestAccount.test_thatWithdrawalAboveAccountBalanceWillThrowAnException.executor": "Run",
-    "JUnit.TestBank.executor": "Run",
-    "JUnit.TestBank.test_ThatMyBankContainsMyAccountNumber.executor": "Run",
-    "JUnit.TestBank.test_ThatMyWillThrownErrorForInvalidAccountDetailsFind.executor": "Run",
-    "JUnit.TestBank.test_ThatMyWillThrownErrorForInvalidDetailsAccoutFind.executor": "Run",
-    "JUnit.TestBank.test_bankCanCreateAccount.executor": "Run",
-    "JUnit.TestBank.test_bankCanDeposit.executor": "Run",
-    "JUnit.TestBank.test_bankCanGetAccountNumbersIndependently.executor": "Run",
-    "JUnit.TestBank.test_bankCanTransfer.executor": "Run",
-    "JUnit.TestBank.test_bankCanWithdraw.executor": "Run",
-    "JUnit.TestBank.test_bankCandDeposite.executor": "Run",
-    "JUnit.TestBank.test_bankWontDepositNegativeNumbers.executor": "Run",
-    "JUnit.TestBank.test_thatAccountNumbersAreBeenCreated.executor": "Run",
-    "JUnit.TestDiaries.executor": "Run",
-    "JUnit.TestDiaries.test_DiariesCanAddMoreDiaryToDiaries.executor": "Run",
-    "JUnit.TestDiaries.test_DiariesCanContainMyDiary.executor": "Run",
-    "JUnit.TestDiaries.test_DiariesCanDeleteDiaryFromDiaries.executor": "Run",
-    "JUnit.TestDiaries.test_DiariesCanReturnAnErrorWhenTryingToDeleteInValidDiaryFromDiaries.executor": "Run",
-    "JUnit.TestDiaries.test_DiariesWillReturnANErrorFOrNullInputWhenAddingToDiaries.executor": "Run",
-    "JUnit.TestDiaries.test_iCanFindByUserAndMyPasswordMoreDiaryFromDiaries.executor": "Run",
-    "JUnit.TestDiaries.test_myDiariesWillThrowAnErrorToFindInvalidDetailsFromDiaries.executor": "Run",
-    "JUnit.TestDiary.executor": "Run",
-    "JUnit.TestDiary.test_ThatMYEntryCanBeFoundById.executor": "Run",
-    "JUnit.TestDiary.test_ThatMyDiaryIsLocked.executor": "Run",
-    "JUnit.TestDiary.test_my.executor": "Run",
-    "JUnit.TestDiary.test_myDiaryCanBeLocked.executor": "Run",
-    "JUnit.TestDiary.test_myDiaryCanBeUnlocked.executor": "Run",
-    "JUnit.TestDiary.test_myDiaryCanContainAnEntry.executor": "Run",
-    "JUnit.TestDiary.test_myDiaryCanCreateEntry.executor": "Run",
-    "JUnit.TestDiary.test_myWilThrowAnErrorForInValidPasswordInputDiaryThrow.executor": "Run",
-    "JUnit.TestDiary.test_myWillThrowAnErrorForInValidPasswordInputDiaryThrow.executor": "Run",
-    "JUnit.TestDiary.test_testThatMyDiaryCanUnlocked.executor": "Run",
-    "JUnit.TestDiary.test_testThatMyDiaryIsLocked.executor": "Run",
-    "JUnit.TestDiary.test_testThatMyDiaryislocked.executor": "Run",
-    "JUnit.TestDiary.test_thatMyDiariesWontAddEntryIfDiaryIsLocked.executor": "Run",
-    "JUnit.TestDiary.test_thatMyDiariesWontCreateEntryIfDiaryIsLocked.executor": "Run",
-    "JUnit.TestDiary.test_thatMyDiaryCanUpDateEntry.executor": "Run",
-    "JUnit.TestDiary.test_thatMyDiaryWillThrowAnErrorForAnInvalidId.executor": "Run",
-    "JUnit.TestDiary.test_thatMyDiaryWillThrowAnErrorToFindAnInvalidId.executor": "Run",
-    "JUnit.TestDiary.test_thatMyDiaryWillThrowAnErrorWhenNoEntryToDisplay.executor": "Run",
-    "JUnit.TestDiary.test_thatMyDiaryWouldThrowAnErrorForNullInput.executor": "Run",
-    "JUnit.TestDiary.test_thatMyDiaryWouldThrowAnErrorToDeleteInvalidEntry.executor": "Run",
-    "JUnit.TestDiary.test_thatMyDiaryWouldThrowAnErrorToUpdateAnInvalidId.executor": "Run",
-    "JUnit.TestDiary.test_thatMyEntryCAnBeDeleted.executor": "Run",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "true",
-    "Repository.Attach.Sources": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/DELL/Documents/tecmalik-Git-Repo/semicolonAssignmentsJava",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "C:/Users/DELL/Documents/tecmalik-Git-Repo/semicolon- assignments java/BankAccount/src/Main.java",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.BankAtm.executor&quot;: &quot;Run&quot;,
+    &quot;Application.DiaryApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;true&quot;,
+    &quot;JUnit.TestAccount.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestAccount.test_.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestAccount.test_AccountBalenceIsNotEmpty.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestAccount.test_AccountCanChechBalance.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestAccount.test_AccountCanCheckBalance.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestAccount.test_AccountCanDepositAndWithdraw.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestAccount.test_AccountCanWithdraw.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestAccount.test_AccountCantDepositNegativeNumber.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestAccount.test_AccountCantWithdrawWithWrongPinNumberWillThrowAnException.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestAccount.test_AccountUserCanUpdatePin.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestAccount.test_AccountUserCanupdatePin.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestAccount.test_AccountWillThrowAnErrorForDepositLess10.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestAccount.test_AccountWillThrowAnErrowForDepositLess10.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestAccount.test_AccountpinNumberIsValidNumber.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestAccount.test_DepositBelow_10_WillThrowAnError.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestAccount.test_negativeDepositWillThrowAnError.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestAccount.test_thatWithdrawalAboveAccountBalanceWillThrowAnException.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestBank.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestBank.test_ThatMyBankContainsMyAccountNumber.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestBank.test_ThatMyWillThrownErrorForInvalidAccountDetailsFind.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestBank.test_ThatMyWillThrownErrorForInvalidDetailsAccoutFind.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestBank.test_bankCanCreateAccount.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestBank.test_bankCanDeposit.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestBank.test_bankCanGetAccountNumbersIndependently.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestBank.test_bankCanTransfer.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestBank.test_bankCanWithdraw.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestBank.test_bankCandDeposite.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestBank.test_bankWontDepositNegativeNumbers.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestBank.test_thatAccountNumbersAreBeenCreated.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestDiaries.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestDiaries.test_DiariesCanAddMoreDiaryToDiaries.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestDiaries.test_DiariesCanContainMyDiary.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestDiaries.test_DiariesCanDeleteDiaryFromDiaries.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestDiaries.test_DiariesCanReturnAnErrorWhenTryingToDeleteInValidDiaryFromDiaries.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestDiaries.test_DiariesWillReturnANErrorFOrNullInputWhenAddingToDiaries.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestDiaries.test_iCanFindByUserAndMyPasswordMoreDiaryFromDiaries.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestDiaries.test_myDiariesWillThrowAnErrorToFindInvalidDetailsFromDiaries.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestDiary.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestDiary.test_ThatMYEntryCanBeFoundById.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestDiary.test_ThatMyDiaryIsLocked.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestDiary.test_my.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestDiary.test_myDiaryCanBeLocked.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestDiary.test_myDiaryCanBeUnlocked.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestDiary.test_myDiaryCanContainAnEntry.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestDiary.test_myDiaryCanCreateEntry.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestDiary.test_myWilThrowAnErrorForInValidPasswordInputDiaryThrow.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestDiary.test_myWillThrowAnErrorForInValidPasswordInputDiaryThrow.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestDiary.test_testThatMyDiaryCanUnlocked.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestDiary.test_testThatMyDiaryIsLocked.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestDiary.test_testThatMyDiaryislocked.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestDiary.test_thatMyDiariesWontAddEntryIfDiaryIsLocked.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestDiary.test_thatMyDiariesWontCreateEntryIfDiaryIsLocked.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestDiary.test_thatMyDiaryCanUpDateEntry.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestDiary.test_thatMyDiaryWillThrowAnErrorForAnInvalidId.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestDiary.test_thatMyDiaryWillThrowAnErrorToFindAnInvalidId.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestDiary.test_thatMyDiaryWillThrowAnErrorWhenNoEntryToDisplay.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestDiary.test_thatMyDiaryWouldThrowAnErrorForNullInput.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestDiary.test_thatMyDiaryWouldThrowAnErrorToDeleteInvalidEntry.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestDiary.test_thatMyDiaryWouldThrowAnErrorToUpdateAnInvalidId.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestDiary.test_thatMyEntryCAnBeDeleted.executor&quot;: &quot;Run&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;true&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/DELL/Documents/tecmalik-Git-Repo/semicolonAssignmentsJava&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/DELL/Documents/tecmalik-Git-Repo/semicolon- assignments java/BankAccount/src/Main.java&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Application.BankAtm">
+}</component>
+  <component name="RunManager" selected="Application.DiaryApplication">
     <configuration name="BankAtm" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="bankaccount.BankAtm" />
       <module name="bankaccount" />
@@ -271,6 +281,7 @@
       <workItem from="1738824986581" duration="209000" />
       <workItem from="1738825258434" duration="771000" />
       <workItem from="1738826055554" duration="76000" />
+      <workItem from="1738958555362" duration="103000" />
     </task>
     <task id="LOCAL-00001" summary="updating files">
       <option name="closed" value="true" />

@@ -18,12 +18,10 @@ public class Diaries {
     }
 
     public void delete(String username, String password) {
-        for (Diary diary : diaries) {
-            if(!diary.verifyPassword(password)) {
-                throw new IllegalArgumentException("Passwords do not match");
-            }
-        }
+        if(password == null) throw new NullPointerException("password cant be empty");
+        if(username == null ) throw new NullPointerException("username cant be empty");
         diaries.removeIf(diary -> diary.verifyPassword(password) && diary.getUserName().equals(username));
+
     }
 
     public Diary findByUsername(String username) {

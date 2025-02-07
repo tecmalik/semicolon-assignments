@@ -22,7 +22,7 @@ public class TestAccount {
     @Test
     public void test_AccountBalanceIsNotEmpty() {
         account.deposit(1000);
-        assertTrue(account.isNotEmpty());
+        assertFalse(account.isEmpty());
     }
     @Test
     public void test_AccountCanCheckBalance() {

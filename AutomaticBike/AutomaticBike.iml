@@ -8,27 +8,16 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="StudentGrade" level="project" />
-    <orderEntry type="library" name="Menstral App" level="project" />
-    <orderEntry type="library" name="pizza App" level="project" />
+    <orderEntry type="library" name="lib2" level="project" />
     <orderEntry type="library" name="lib" level="project" />
-    <orderEntry type="library" name="phone book" level="project" />
+    <orderEntry type="library" name="lib4" level="project" />
+    <orderEntry type="library" name="Menstral App" level="project" />
+    <orderEntry type="library" name="pizzaApp" level="project" />
+    <orderEntry type="library" name="lib5" level="project" />
+    <orderEntry type="library" name="lib3" level="project" />
     <orderEntry type="library" name="AlphabetChecker" level="project" />
-    <orderEntry type="module-library" scope="TEST">
-      <library name="JUnit5.8.1">
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/lib/junit-jupiter-5.8.1.jar!/" />
-          <root url="jar://$MODULE_DIR$/lib/junit-jupiter-api-5.8.1.jar!/" />
-          <root url="jar://$MODULE_DIR$/lib/opentest4j-1.2.0.jar!/" />
-          <root url="jar://$MODULE_DIR$/lib/junit-platform-commons-1.8.1.jar!/" />
-          <root url="jar://$MODULE_DIR$/lib/apiguardian-api-1.1.2.jar!/" />
-          <root url="jar://$MODULE_DIR$/lib/junit-jupiter-params-5.8.1.jar!/" />
-          <root url="jar://$MODULE_DIR$/lib/junit-jupiter-engine-5.8.1.jar!/" />
-          <root url="jar://$MODULE_DIR$/lib/junit-platform-engine-1.8.1.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
+    <orderEntry type="library" name="phone book" level="project" />
+    <orderEntry type="library" name="lib6" level="project" />
+    <orderEntry type="library" name="StudentGrade" level="project" />
   </component>
 </module>
