@@ -49,13 +49,10 @@ public class Account {
     }
 
     public void withdraw(int amount, String pinNumber) {
-        if (!this.validatePin(pinNumber)) {
-            throw new IllegalArgumentException("invalid pin number");
-        } else if (!this.validateAmount(amount)) {
-            throw new IllegalArgumentException("insufficient fund");
-        } else {
-            this.balance -= amount;
-        }
+        if (!this.validatePin(pinNumber)) throw new IllegalArgumentException("invalid pin number");
+        if (!this.validateAmount(amount))throw new IllegalArgumentException("insufficient fund");
+        this.balance -= amount;
+
     }
 
     private boolean validateAmount(int amount) {
@@ -63,7 +60,15 @@ public class Account {
     }
 
     private boolean validatePin(String pinNumber) {
+        checkPinLength(pinNumber);
+        for (int index = 0; index < pinNumber.length(); index++) {
+            if (pinNumber.charAt(index) == '0') throw new IllegalArgumentException("pin must be a Number");
+        }
         return this.pinNumber.equals(pinNumber);
+    }
+
+    private static void checkPinLength(String pinNumber) {
+        if(pinNumber.length() != 4) throw new IllegalArgumentException("Invalid detail");
     }
 
     public void updatePin(String OldNumber, String newNumber) {
@@ -71,6 +76,6 @@ public class Account {
             this.pinNumber = newNumber;
         }
 
-        throw new IllegalArgumentException("Invalid pinNumber");
+        throw new IllegalArgumentException("Invalid details");
     }
 }

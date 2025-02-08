@@ -3,7 +3,7 @@
 package bankaccount;
 
 import java.util.ArrayList;
-import java.util.Iterator;
+
 
 public class Bank {
     ArrayList<Account> accounts = new ArrayList();
@@ -55,26 +55,30 @@ public class Bank {
     }
 
     public void withdraw(int accountNumber, int amount, String pinNumber) {
+        int matchedAccount = 0;
         for(Account account : this.accounts) {
-            if (account.getAccountNumber() == accountNumber) account.withdraw(amount, pinNumber);
+            if (account.getAccountNumber() == accountNumber) matchedAccount++;
+            account.withdraw(amount, pinNumber);
         }
 
-        throw new IllegalArgumentException("invalid Details");
+        if (matchedAccount == 0)throw new IllegalArgumentException("invalid Details");
     }
 
-    public void bankTransfer(int senderAccountNumber, int amount, int recipientAcctNumber, String pinNumber) {
-        Iterator var5 = this.accounts.iterator();
-        if (var5.hasNext()) {
-            Account account = (Account)var5.next();
-            if (account.getAccountNumber() == senderAccountNumber) {
-                account.withdraw(amount, pinNumber);
 
-                for(Account checkedAccount : this.accounts) {
-                    if (checkedAccount.getAccountNumber() == recipientAcctNumber) {
-                        checkedAccount.deposit(amount);
-                    }
-                }
-            }
+    public void bankTransfer(int senderAccountNumber, int amount, int recipientAcctNumber, String pinNumber) {
+
+        for(Account account : this.accounts) {
+           if (senderAccountNumber == account.getAccountNumber()){
+               if (account.getAccountNumber() == senderAccountNumber) {
+                   account.withdraw(amount, pinNumber);
+
+                   for(Account checkedAccount : this.accounts) {
+                       if (checkedAccount.getAccountNumber() == recipientAcctNumber) {
+                           checkedAccount.deposit(amount);
+                       }
+                   }
+               }
+           }
 
             throw new IllegalArgumentException("invalid Details");
         }

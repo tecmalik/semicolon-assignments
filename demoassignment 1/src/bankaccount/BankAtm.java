@@ -89,6 +89,7 @@ public class BankAtm {
             int amountInt = Integer.parseInt(amount);
             int accountNumberInt = Integer.parseInt(accountNumber);
             bank.withdraw(accountNumberInt, amountInt, pinNumber);
+            print("withdraw was successful");
         } catch (IllegalArgumentException var8) {
             print("invalid input");
         } finally {
