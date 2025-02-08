@@ -1,4 +1,5 @@
 import bankaccount.Account;
+import bankaccount.InsufficientFundsException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -51,7 +52,7 @@ public class TestAccount {
     public void test_AccountCantWithdrawWithWrongPinNumberWillThrowAnException() {
         account.deposit(1000);
         assertThrows(IllegalArgumentException.class, () -> account.withdraw(1000,"1235"));
-        assertThrows(IllegalArgumentException.class, () -> account.withdraw(11000,"1234"));
+        assertThrows(InsufficientFundsException.class, () -> account.withdraw(11000,"1234"));
 
     }
     @Test

@@ -33,11 +33,9 @@ public class Account {
     }
 
     public void deposit(int amount) {
-        if (amount <= 10) {
-            throw new IllegalArgumentException("Amount must be greater than 100");
-        } else {
-            this.balance += amount;
-        }
+        if (amount <= 10)throw new IllegalArgumentException("Amount must be greater than 100");
+        this.balance += amount;
+
     }
 
     public int checkBalance(String pinNumber) {
@@ -47,9 +45,8 @@ public class Account {
 
     public void withdraw(int amount, String pinNumber) {
         if (!this.validatePin(pinNumber)) throw new IllegalArgumentException("invalid pin number");
-        if (!this.validateAmount(amount))throw new IllegalArgumentException("insufficient fund");
+        if (!this.validateAmount(amount))throw new InsufficientFundsException("insufficient fund");
         this.balance -= amount;
-
     }
 
     private boolean validateAmount(int amount) {
@@ -58,9 +55,7 @@ public class Account {
 
     private boolean validatePin(String pinNumber) {
         checkPinLength(pinNumber);
-        for (int index = 0; index < pinNumber.length(); index++) {
-            if (pinNumber.charAt(index) == '0') throw new IllegalArgumentException("pin must be a Number");
-        }
+        if (!pinNumber.matches("[0-9]+")) throw new InvalidAccountException("pin must be 4 digits");
         return this.pinNumber.equals(pinNumber);
     }
 
@@ -69,10 +64,14 @@ public class Account {
     }
 
     public void updatePin(String OldNumber, String newNumber) {
-        if (this.validatePin(this.pinNumber) && this.pinNumber.equals(OldNumber)) {
-            this.pinNumber = newNumber;
-        }
-
-        throw new IllegalArgumentException("Invalid details");
+        if(!isValid(newNumber))throw new InvalidPinException("pin must be 4 digits");
+        if(!this.pinNumber.equals(OldNumber)) throw new IllegalArgumentException("invalid Details");
+        this.pinNumber = newNumber;
     }
+    private boolean isValid(String pin) {
+        if (!pin.matches("[0-9]+")) throw new InvalidAccountException("pin must be 4 digits");
+        if(pin.length() != 4) throw new InvalidAccountException("pin must be 4 digits");
+        return true;
+    }
+
 }

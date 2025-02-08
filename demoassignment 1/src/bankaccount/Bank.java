@@ -14,8 +14,15 @@ public class Bank {
 
     public void createAccount(String firstName, String lastName, String pin) {
         ++this.count;
+        if (!isValid(pin)) throw new IllegalArgumentException("invalid details");
         Account account = new Account(firstName, lastName, pin, this.count);
         this.accounts.add(account);
+    }
+
+    private boolean isValid(String pin) {
+        if (!pin.matches("[0-9]+")) throw new InvalidAccountException("pin must be 4 digits");
+        if(pin.length() != 4) throw new InvalidAccountException("pin must be 4 digits");
+        return true;
     }
 
     public int getAccountNumber(String firstName, String lastName) {
@@ -50,8 +57,7 @@ public class Bank {
                 return account.checkBalance(pinNumber);
             }
         }
-
-        throw new IllegalArgumentException("invalid Details");
+        return 0;
     }
 
     public void withdraw(int accountNumber, int amount, String pinNumber) {
@@ -66,22 +72,23 @@ public class Bank {
 
 
     public void bankTransfer(int senderAccountNumber, int amount, int recipientAcctNumber, String pinNumber) {
+       if(!confirmAccounts(senderAccountNumber, recipientAcctNumber)) throw new IllegalArgumentException("invalid Details");
+       if(!isValid(pinNumber))throw new IllegalArgumentException("invalid Details");
 
+       for(Account checkedAccount : this.accounts) {
+           if(checkedAccount.getAccountNumber() == recipientAcctNumber)checkedAccount.deposit(amount);
+           if(checkedAccount.getAccountNumber()== senderAccountNumber)checkedAccount.withdraw(amount, pinNumber);
+       }
+    }
+
+    private boolean confirmAccounts(int senderAccountNumber, int recipientAcctNumber) {
+        int countMatchedAccount = 0;
         for(Account account : this.accounts) {
-           if (senderAccountNumber == account.getAccountNumber()){
-               if (account.getAccountNumber() == senderAccountNumber) {
-                   account.withdraw(amount, pinNumber);
-
-                   for(Account checkedAccount : this.accounts) {
-                       if (checkedAccount.getAccountNumber() == recipientAcctNumber) {
-                           checkedAccount.deposit(amount);
-                       }
-                   }
-               }
-           }
-
-            throw new IllegalArgumentException("invalid Details");
+           if (account.getAccountNumber() == recipientAcctNumber)++countMatchedAccount;
+           if (account.getAccountNumber() == senderAccountNumber)++countMatchedAccount;
         }
+        if (countMatchedAccount != 2) throw new IllegalArgumentException("invalid Details");
+        return true;
     }
 
     public Account getAccount(int accountNumber) {

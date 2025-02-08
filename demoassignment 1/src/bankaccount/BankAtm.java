@@ -40,9 +40,10 @@ public class BankAtm {
             int pinNumberInt = Integer.parseInt(pinNumber);
             bank.getAccount(pinNumberInt).updatePin(pinNumber, newPinNumber);
             print("Account Pin updated successfully");
-        } catch (IllegalArgumentException var6) {
+        } catch (IllegalArgumentException e) {
             print("invalid input");
-        } finally {
+        } catch (InvalidPinException e) {
+            print("pin must be 4 digits");
             displayMainMenu();
         }
 
@@ -50,15 +51,16 @@ public class BankAtm {
 
     private static void bankTransfer() {
         try {
-            String sender = input("Enter Account number : ");
-            String receiver = input("Enter Account number : ");
+            String sender = input("Enter Sender Account number : ");
+            String receiver = input("Enter recipient Account number : ");
             String amount = input("Enter Amount : ");
             String pinNumber = input("pin: ");
             int senderAccountNumberInt = Integer.parseInt(sender);
             int receiverAccountNumberInt = Integer.parseInt(receiver);
             int amountInt = Integer.parseInt(amount);
             bank.bankTransfer(senderAccountNumberInt, amountInt, receiverAccountNumberInt, pinNumber);
-        } catch (IllegalArgumentException var10) {
+            print("Transfer was successful");
+        } catch (IllegalArgumentException e) {
             print("invalid input");
         } finally {
             displayMainMenu();
@@ -71,9 +73,9 @@ public class BankAtm {
             String accountNumber = input("Enter Account number:");
             String pinNumber = input("pin: ");
             int accountNumberInt = Integer.parseInt(accountNumber);
-            int var10000 = bank.checkBalance(accountNumberInt, pinNumber);
-            print("Account Balance: " + var10000);
-        } catch (IllegalArgumentException var6) {
+            int accountBalance = bank.checkBalance(accountNumberInt, pinNumber);
+            print("Account Balance: " + accountBalance );
+        } catch (IllegalArgumentException e) {
             print("invalid input");
         } finally {
             displayMainMenu();
@@ -90,9 +92,11 @@ public class BankAtm {
             int accountNumberInt = Integer.parseInt(accountNumber);
             bank.withdraw(accountNumberInt, amountInt, pinNumber);
             print("withdraw was successful");
-        } catch (IllegalArgumentException var8) {
+        } catch (IllegalArgumentException e) {
             print("invalid input");
-        } finally {
+        } catch (InsufficientFundsException e ){
+            print("insufficient funds");
+        }finally {
             displayMainMenu();
         }
 
@@ -105,11 +109,13 @@ public class BankAtm {
             String pin = input("pin: ");
             bank.createAccount(firstName, lastName, pin);
             print("Account created successfully");
-            int var10000 = bank.getAccountNumber(firstName, lastName);
-            print("your Account number is" + var10000);
-        } catch (Exception e) {
+            int accountNumber = bank.getAccountNumber(firstName, lastName);
+            print("your Account number is" + accountNumber);
+        } catch (IllegalArgumentException e) {
             print(e.getMessage());
             displayMainMenu();
+        }catch (InvalidAccountException e) {
+            print("pin must be 4 digits");
         } finally {
             displayMainMenu();
         }
@@ -124,7 +130,7 @@ public class BankAtm {
             int accountNumberInt = Integer.parseInt(accountNumber);
             bank.deposit(accountNumberInt, depositAmountInt);
             print(depositAmountInt+" deposited successfully");
-        } catch (IllegalArgumentException var7) {
+        } catch (IllegalArgumentException e) {
             print("Invalid input");
         } catch (InvalidAccountException e) {
             print("invalid Account Number");
@@ -134,21 +140,6 @@ public class BankAtm {
 
     }
 
-    private static boolean pinValidation(String depositAmount) {
-        if (depositAmount.length() < 4) {
-            return true;
-        } else if (depositAmount.length() > 4) {
-            return true;
-        } else {
-            for(int index = 0; index < depositAmount.length(); ++index) {
-                if (!Character.isDigit(depositAmount.charAt(index))) {
-                    return true;
-                }
-            }
-
-            return false;
-        }
-    }
 
     public static String input(String print) {
         return JOptionPane.showInputDialog(print);

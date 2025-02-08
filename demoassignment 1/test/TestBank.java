@@ -57,9 +57,9 @@ public class TestBank {
         bank.createAccount("malik", "ojo", "1234");
         bank.createAccount("daniel", "oji", "2222");
         bank.deposit(1, 1000);
-        bank.bankTransfer(1, 50, 2, "1234");
-        assertEquals(950, bank.checkBalance(1, "1234"));
-        assertEquals(50, bank.checkBalance(2, "2222"));
+        bank.bankTransfer(1, 500, 2, "1234");
+        assertEquals(500, bank.checkBalance(1, "1234"));
+        assertEquals(500, bank.checkBalance(2, "2222"));
     }
 
     @Test
@@ -87,7 +87,13 @@ public class TestBank {
         bank.createAccount("malik", "ojo", "1234");
         assertThrows(InvalidAccountException.class ,()-> bank.deposit(2,1000));
     }
-
+    @Test
+    public void test_ThatMyBankThrowsExceptionForInvalidPinNumber(){
+        bank.createAccount("malik", "ojo", "1234");
+        assertThrows(InvalidAccountException.class ,()-> bank.createAccount("mutiu","jacop" , "12345"));
+        assertThrows(InvalidAccountException.class ,()-> bank.createAccount("mutiu","jacop" , "123"));
+        assertThrows(InvalidAccountException.class ,()-> bank.createAccount("mutiu","jacop" , "wertyhj"));
+    }
 
 
 }
