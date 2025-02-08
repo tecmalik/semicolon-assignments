@@ -29,15 +29,14 @@ public class Bank {
     }
 
     public void deposit(int accountNumber, int amount) {
-        if (!this.amountValidity(amount)) {
-            throw new IllegalArgumentException("Deposit amount mut be greater than 10");
-        } else {
-            for(Account account : this.accounts) {
-                if (account.getAccountNumber() == accountNumber) {
-                    account.deposit(amount);
-                }
-            }
-
+        if (!amountValidity(amount)) throw new IllegalArgumentException("Deposit amount must be greater than 10");
+        int validAccount = 0;
+        for (Account account : this.accounts) {
+            if (account.getAccountNumber() == accountNumber) validAccount++;
+        }
+        if (validAccount == 0) throw new InvalidAccountException("invalid Account number");
+        for(Account account : this.accounts) {
+            if (account.getAccountNumber() == accountNumber) account.deposit(amount);
         }
     }
 
@@ -57,9 +56,7 @@ public class Bank {
 
     public void withdraw(int accountNumber, int amount, String pinNumber) {
         for(Account account : this.accounts) {
-            if (account.getAccountNumber() == accountNumber) {
-                account.withdraw(amount, pinNumber);
-            }
+            if (account.getAccountNumber() == accountNumber) account.withdraw(amount, pinNumber);
         }
 
         throw new IllegalArgumentException("invalid Details");

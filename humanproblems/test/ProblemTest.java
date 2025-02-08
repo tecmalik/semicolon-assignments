@@ -1,5 +1,6 @@
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import problem.Problem;
 import problem.Type;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;

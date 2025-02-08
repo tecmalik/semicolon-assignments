@@ -1,4 +1,4 @@
-import problem.Type;
+package problem;
 
 public class Problem {
     private String name;
@@ -14,6 +14,7 @@ public class Problem {
     public boolean isSolved() {
         return isSolved;
     }
+
 
 
 

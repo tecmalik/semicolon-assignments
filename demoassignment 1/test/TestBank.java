@@ -1,4 +1,5 @@
 import bankaccount.Bank;
+import bankaccount.InvalidAccountException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -80,6 +81,11 @@ public class TestBank {
         bank.createAccount("malik", "ojo", "1234");
         assertEquals("malik",bank.getAccount(1).getFirstname());
         assertThrows(IllegalArgumentException.class,()->bank.getAccount(3));
+    }
+    @Test
+    public void test_ThatMyBankThrowsExceptionForInvalidAccountNumberDeposit(){
+        bank.createAccount("malik", "ojo", "1234");
+        assertThrows(InvalidAccountException.class ,()-> bank.deposit(2,1000));
     }
 
 

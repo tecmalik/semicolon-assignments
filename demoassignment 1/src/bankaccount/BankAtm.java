@@ -24,7 +24,11 @@ public class BankAtm {
             case "5" -> bankUpdatePin();
             case "6" -> createBankAccount();
             case "7" -> System.exit(0);
-            default -> print("invalid input");
+            default -> {
+                print("invalid input");
+                displayMainMenu();
+            }
+
         }
 
     }
@@ -115,15 +119,14 @@ public class BankAtm {
         try {
             String accountNumber = input("Enter Account Number: ");
             String depositAmount = input("Enter Deposit Amount: ");
-            if (pinValidation(depositAmount)) {
-                throw new IllegalArgumentException();
-            }
-
             int depositAmountInt = Integer.parseInt(depositAmount);
             int accountNumberInt = Integer.parseInt(accountNumber);
             bank.deposit(accountNumberInt, depositAmountInt);
+            print(depositAmountInt+" deposited successfully");
         } catch (IllegalArgumentException var7) {
             print("Invalid input");
+        } catch (InvalidAccountException e) {
+            print("invalid Account Number");
         } finally {
             displayMainMenu();
         }
