@@ -44,6 +44,7 @@ public class BankAtm {
             print("invalid input");
         } catch (InvalidPinException e) {
             print("pin must be 4 digits");
+        } finally {
             displayMainMenu();
         }
 
@@ -110,7 +111,7 @@ public class BankAtm {
             bank.createAccount(firstName, lastName, pin);
             print("Account created successfully");
             int accountNumber = bank.getAccountNumber(firstName, lastName);
-            print("your Account number is" + accountNumber);
+            print("your Account number is " + accountNumber);
         } catch (IllegalArgumentException e) {
             print(e.getMessage());
             displayMainMenu();
