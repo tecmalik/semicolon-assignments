@@ -41,11 +41,8 @@ public class Account {
     }
 
     public int checkBalance(String pinNumber) {
-        if (pinNumber.equals(this.pinNumber)) {
-            return this.balance;
-        } else {
-            throw new IllegalArgumentException("Invalid pinNumber");
-        }
+        if (!pinNumber.equals(this.pinNumber))throw new IllegalArgumentException("Invalid pinNumber");
+        return this.balance;
     }
 
     public void withdraw(int amount, String pinNumber) {
