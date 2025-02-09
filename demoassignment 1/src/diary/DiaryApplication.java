@@ -1,5 +1,7 @@
 package diary;
 
+import bankaccount.InvalidAccountException;
+
 import java.util.Scanner;
 
 import static bankaccount.BankAtm.print;
@@ -73,7 +75,11 @@ public class DiaryApplication {
             print("Welcome "+diaries.findByUsername(username).getUserName());
             diaryMenu();
         }catch(IllegalArgumentException e){
-            print("Invalid details");
+            print("No Diary in DataBase");
+        }catch (NullPointerException e ) {
+            print("input can't be Empty");
+        }catch (InvalidAccountException e) {
+            print("Username not found");
         }finally {
             menu();
         }
@@ -120,8 +126,14 @@ public class DiaryApplication {
     }
 
     private static void displayAllTitles() {
+        try{
             Diary myDiary = diaries.findByUsername(username);
             print(myDiary.getAllTitles());
+        }catch (IllegalArgumentException e){
+            print("Entry is empty");
+        }finally {
+            diaryMenu();
+        }
 
     }
 

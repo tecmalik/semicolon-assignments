@@ -30,11 +30,17 @@ public class Diaries {
 
 
     public Diary findByUsername(String username) {
+
+        if(username == null) throw new NullPointerException("username cant be empty");
+        if(diaries.isEmpty()) throw new IllegalArgumentException("no Diary in database");
+        int matchedDiary = 0;
         for (Diary diary : diaries) {
-            if ( diary.getUserName().equals(username)) {
+            if ( diary.getUserName().equals(username)){
+                ++matchedDiary;
                 return diary;
             }
         }
+        if(matchedDiary == 0)throw new InvalidAccountException("Invalid account");
         throw new IllegalArgumentException("Username not found");
     }
 }
