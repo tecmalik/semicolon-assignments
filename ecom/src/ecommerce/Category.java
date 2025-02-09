@@ -1,5 +1,5 @@
 package ecommerce;
 
-public enum ProductCategory {
+public enum Category {
     ELECTRONICS, GROCERIES, UTILITIES,CLOTHING ;
 }
