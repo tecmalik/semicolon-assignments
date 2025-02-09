@@ -2,6 +2,8 @@ package diary;
 
 import java.util.Scanner;
 
+import static bankaccount.BankAtm.print;
+
 public class DiaryApplication {
 
     static Diaries diaries = new Diaries();
@@ -74,36 +76,39 @@ public class DiaryApplication {
             print("Invalid details");
         }finally {
             menu();
-            print("invalid details");
         }
     }
 
     public static void diaryMenu(){
         try {
             String prompt2 = """
-                    1-> view Entries.
-                    2-> Create New Entry.
-                    3-> Find Entry by Id.
-                    4-> Update Entry.
-                    5-> delete Entry.
-                    6-> back to main Menu.
-                    7-> Exit Program.
+                    1-> View Entry Titles & ID.
+                    2-> view All Entries.
+                    3-> Create New Entry.
+                    4-> Find Entry by Id.
+                    5-> Update Entry.
+                    6-> delete Entry.
+                    7-> back to main Menu.
+                    8-> Exit Program.
                     """;
             int userChoice = intInput(prompt2);
             switch (userChoice) {
-                case 1:display();
+                case 1: displayAllTitles();
                 break;
-                case 2:createNewEntry();
+                case 2: displayAllEntries();
                 break;
-                case 3:findEntryByID();
+                case 3:createNewEntry();
                 break;
-                case 4:updateEntry();
+                case 4:findEntryByID();
                 break;
-                case 5: deleteEntry();
+                case 5: updateEntry();
                 break;
-                case 6: backToMenu();
+                case 6: deleteEntry();
                 break;
-                case 7:System.exit(0);
+                case 7:backToMenu();
+                break;
+                case 8: System.exit(0);
+                break;
                 default : print("Invalid Choice");
             }
         }catch(IllegalArgumentException e){
@@ -114,10 +119,16 @@ public class DiaryApplication {
 
     }
 
-    private static void display() {
+    private static void displayAllTitles() {
+            Diary myDiary = diaries.findByUsername(username);
+            print(myDiary.getAllTitles());
+
+    }
+
+    private static void displayAllEntries() {
         try {
             Diary myDiary = diaries.findByUsername(username);
-            myDiary.getEntryTitles();
+            print(myDiary.getAllEntries());
         }catch(NullPointerException e){
             print("Entry is empty");
         }finally {

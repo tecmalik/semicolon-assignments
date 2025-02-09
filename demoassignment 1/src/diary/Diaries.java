@@ -1,5 +1,7 @@
 package diary;
 
+import bankaccount.InvalidAccountException;
+
 import java.util.ArrayList;
 
 public class Diaries {
@@ -20,9 +22,12 @@ public class Diaries {
     public void delete(String username, String password) {
         if(password == null) throw new NullPointerException("password cant be empty");
         if(username == null ) throw new NullPointerException("username cant be empty");
-        diaries.removeIf(diary -> diary.verifyPassword(password) && diary.getUserName().equals(username));
+        Diary diaryToBeDeleted = findByUsername(username);
+        if(!diaryToBeDeleted.verifyPassword(password)) throw new IllegalArgumentException("Invalid details");
+        diaries.remove(diaryToBeDeleted);
 
     }
+
 
     public Diary findByUsername(String username) {
         for (Diary diary : diaries) {

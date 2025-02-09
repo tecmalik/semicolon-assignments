@@ -30,7 +30,7 @@ public class Entry {
         this.Body = body;
     }
 
-    public LocalDate getDate() {
-        return date;
+    public String getDate() {
+        return date.toString();
     }
 }

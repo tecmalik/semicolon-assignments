@@ -78,12 +78,24 @@ public class Diary {
         return this.userName;
     }
 
-    public void getEntryTitles() {
+    public String getAllEntries() {
         if(isLocked) throw new IllegalArgumentException("Entry is Locked");
+        if(entries.isEmpty()) return "No entry in database";
         for(Entry entry : entries) {
-            System.out.println("ID"+ entry.getId()+": "+ entry.getTitle()+" - "+entry.getDate()+" \n "+entry.getBody());
+            return String.format("Id:- %d | %s \n  - %s \n %s",entry.getId(),entry.getDate(),entry.getTitle(),entry.getBody());
         }
+        throw new IllegalArgumentException("EntryIDNumber Does Not Exist");
 
+    }
+
+
+    public String getAllTitles() {
+        if(isLocked) throw new IllegalArgumentException("Entry is Locked");
+        if(entries.isEmpty()) return "No entry in database";
+        for(Entry entry : entries) {
+            return String.format("Id:- %d | %s  -  %s",entry.getId(),entry.getTitle(),entry.getDate());
+        }
+        throw new IllegalArgumentException("EntryIDNumber Does Not Exist");
     }
 }
 
