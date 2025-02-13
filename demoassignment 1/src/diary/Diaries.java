@@ -1,10 +1,10 @@
 package diary;
 
 import bankaccount.InvalidAccountException;
-
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Diaries {
+public class Diaries implements Serializable {
    private final ArrayList<Diary> diaries = new ArrayList<>();
 
 

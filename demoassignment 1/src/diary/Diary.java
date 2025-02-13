@@ -1,8 +1,9 @@
 package diary;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Diary {
+public class Diary implements Serializable {
     private final String userName;
     private final String password;
     private boolean isLocked;

@@ -2,9 +2,8 @@ package diary;
 
 import bankaccount.InvalidAccountException;
 
+import java.io.*;
 import java.util.Scanner;
-
-import static bankaccount.BankAtm.print;
 
 public class DiaryApplication {
 
@@ -12,8 +11,37 @@ public class DiaryApplication {
     static String username , password;
     public static void main(String[] args) {
 
-            menu();
+      //  readExistingDiaries();
+        menu();
 
+
+
+    }
+
+    private static void readExistingDiaries() {
+        diaries = null;
+        try(FileInputStream fileIn = new FileInputStream("diary.txt");
+            ObjectInputStream in = new ObjectInputStream(fileIn)){
+            diaries = (Diaries) in.readObject();
+            print("Reading previous files");
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+
+    private static void saveDiaries() {
+
+        try (FileOutputStream fileOutput = new FileOutputStream("diaries.txt");
+        ObjectOutputStream out = new ObjectOutputStream(fileOutput)){
+            out.writeObject(diaries);
+            print("Diaries saved");
+        }catch (IOException e){
+            e.printStackTrace();
+        }
     }
 
 
@@ -37,6 +65,7 @@ public class DiaryApplication {
                     deleteDiary();
                     break;
                 case 4:
+                    saveDiaries();
                     System.exit(0);
                     break;
                 default:
@@ -113,7 +142,8 @@ public class DiaryApplication {
                 break;
                 case 7:backToMenu();
                 break;
-                case 8: System.exit(0);
+                case 8:saveDiaries();
+                    System.exit(0);
                 break;
                 default : print("Invalid Choice");
             }

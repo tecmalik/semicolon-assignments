@@ -1,8 +1,9 @@
 package diary;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class Entry {
+public class Entry  implements Serializable {
     private int idNumber = 0;
     private String title;
     private String Body;
