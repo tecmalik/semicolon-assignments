@@ -6,6 +6,7 @@ public class Turtle {
     private Boolean penState = true;
     private Direction direction = EAST;
 
+
     public void movePenUp() {
         penState = true;
     }
@@ -41,8 +42,17 @@ public class Turtle {
             case WEST -> turn(SOUTH);
             case SOUTH -> turn(EAST);
 
-
-
         }
     }
+
+
+//    public Position currentPosition( int row , int column) {
+//        return row = p.row && p.colunm = newposition();
+//    }
+
+
+
 }
+
+
+

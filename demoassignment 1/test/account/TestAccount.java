@@ -1,3 +1,5 @@
+package account;
+
 import bankaccount.Account;
 import bankaccount.InsufficientFundsException;
 import org.junit.jupiter.api.BeforeEach;

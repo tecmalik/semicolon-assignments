@@ -1,3 +1,5 @@
+package account;
+
 import bankaccount.Bank;
 import bankaccount.InvalidAccountException;
 import org.junit.jupiter.api.BeforeEach;

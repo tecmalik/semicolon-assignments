@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a961995-cc16-44cd-9632-5908ec3f6de8" name="Changes" comment="updating files" />
+    <list default="true" id="1a961995-cc16-44cd-9632-5908ec3f6de8" name="Changes" comment="updating files">
+      <change afterPath="$PROJECT_DIR$/../TurtleGraphics/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TurtleGraphics/src/turtlegraphics/Position.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TurtleGraphics/src/turtlegraphics/Turtle.java" beforeDir="false" afterPath="$PROJECT_DIR$/../TurtleGraphics/src/turtlegraphics/Turtle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TurtleGraphics/test/turtlegraphicstest/TurtleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../TurtleGraphics/test/turtlegraphicstest/TurtleTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -99,8 +104,9 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/DELL/Documents/tecmalik-Git-Repo/semicolon- assignments java",
+    "last_opened_file_path": "C:/Users/DELL/Documents/tecmalik_Git_Repo/semicolonAssignmentsJava/bankAccount",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -209,6 +215,7 @@
       <workItem from="1738586271101" duration="7871000" />
       <workItem from="1738673285296" duration="931000" />
       <workItem from="1738691127584" duration="95000" />
+      <workItem from="1739711130117" duration="24000" />
     </task>
     <task id="LOCAL-00001" summary="updating files">
       <option name="closed" value="true" />

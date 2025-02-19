@@ -97,8 +97,10 @@ public class TurtleTest {
         assertEquals(EAST, turtle.getDirection());
     }
     @Test
-    public void TurtleDefaultPositionOfTurtleIsAt_0_0_Tests(){
-        assertEquals(new position(0,0),turtle.position());
+    public void TurtleCanMoveForwardWhenFacing_Tests(){
+        assertEquals(EAST, turtle.getDirection());
+        turtle.moveFoward(0,4);
+        assertEquals(new position(0,4),turtle.currentPosition());
 
     }
 
