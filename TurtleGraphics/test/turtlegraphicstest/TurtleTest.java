@@ -3,6 +3,7 @@ package turtlegraphicstest;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import turtlegraphics.Turtle;
+import turtlegraphics.Position;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static turtlegraphics.Direction.*;
@@ -97,9 +98,14 @@ public class TurtleTest {
         assertEquals(EAST, turtle.getDirection());
     }
     @Test
+    public void TurtleDirectionIsInitialStateIsAtRow_0_Column_0_Test(){
+        assertEquals(new Position(0,0), turtle.currentPosition());
+    }
+
+    @Test
     public void TurtleCanMoveForwardWhenFacing_Tests(){
         assertEquals(EAST, turtle.getDirection());
-        turtle.moveFoward(0,4);
+        turtle.moveForward(0,4);
         assertEquals(new position(0,4),turtle.currentPosition());
 
     }

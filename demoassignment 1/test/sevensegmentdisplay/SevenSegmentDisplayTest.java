@@ -12,15 +12,10 @@ public class SevenSegmentDisplayTest {
         sevenSegmentDisplay = new SevenSegmentDisplay();
     }
     @Test
-    public void checkingThatAll_ABCDEFGH_DisplaySegmentAreOffTest() {
-        assertTrue(sevenSegmentDisplay.isOff());
-    }
-    @Test
     public void CheckThatMySegment_A_canBeTurnedOnWithTheLastDigitTest() {
-        assertTrue(sevenSegmentDisplay.isOff());
-        sevenSegmentDisplay.DisplayOutPut("10000001");
-        assertFalse(sevenSegmentDisplay.isOff());
-
+        assertFalse(sevenSegmentDisplay.display());
+        sevenSegmentDisplay.userDisplayInput("10000001");
+        assertTrue(sevenSegmentDisplay.display());
     }
 
 }

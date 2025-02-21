@@ -3,18 +3,26 @@ package turtlegraphics;
 import static turtlegraphics.Direction.*;
 
 public class Turtle {
-    private Boolean penState = true;
-    private Direction direction = EAST;
+
+    private Boolean penUp;
+    private Direction direction;
+    private Position position;
+
+    public Turtle() {
+        position = new Position(0,0);
+        this.penUp = true;
+        this.direction = EAST;
+    }
 
 
     public void movePenUp() {
-        penState = true;
+        penUp = true;
     }
     public boolean isPenUp(){
-        return penState;
+        return penUp;
     }
     public void movePenDown() {
-        penState = false;
+        penUp = false;
     }
 
 
@@ -45,13 +53,19 @@ public class Turtle {
         }
     }
 
-
-//    public Position currentPosition( int row , int column) {
-//        return row = p.row && p.colunm = newposition();
-//    }
-
+    public Position currentPosition() {
+        return position;
+    }
 
 
+    public Position currentPosition( int row , int column) {
+        position = new Position(row, column);
+        return position;
+    }
+
+
+    public void moveForward(int i, int i1) {
+    }
 }
 
 

@@ -1,14 +1,21 @@
 package turtlegraphics;
 
 public class Position {
-    private int xCoordinate;
-    private int yCoordinate;
+    private int row;
+    private int column;
 
-    Position(int xCoordinate, int yCoordinate) {
-        this.xCoordinate = xCoordinate;
-        this.yCoordinate = yCoordinate;
+    public Position(int xCoordinate, int column) {
+        this.row = xCoordinate;
+        this.column = column;
     }
 
-
+    @Override
+    public boolean equals(Object obj) {
+        if(obj instanceof Position) {
+            Position p = (Position)obj;
+            return this.row == p.row && this.column == p.column;
+        }
+        return false;
+    }
 
 }
