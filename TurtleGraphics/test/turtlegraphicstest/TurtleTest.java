@@ -106,7 +106,7 @@ public class TurtleTest {
     public void TurtleCanMoveForwardWhenFacing_Tests(){
         assertEquals(EAST, turtle.getDirection());
         turtle.moveForward(0,4);
-        assertEquals(new position(0,4),turtle.currentPosition());
+        assertEquals(new Position(0,4),turtle.currentPosition());
 
     }
 

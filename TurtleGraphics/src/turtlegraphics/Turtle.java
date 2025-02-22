@@ -4,15 +4,9 @@ import static turtlegraphics.Direction.*;
 
 public class Turtle {
 
-    private Boolean penUp;
-    private Direction direction;
-    private Position position;
-
-    public Turtle() {
-        position = new Position(0,0);
-        this.penUp = true;
-        this.direction = EAST;
-    }
+    private boolean penUp= true;
+    private Direction direction = EAST;
+    private Position position = new Position(0,0);
 
 
     public void movePenUp() {
@@ -54,7 +48,7 @@ public class Turtle {
     }
 
     public Position currentPosition() {
-        return position;
+        return this.position;
     }
 
 
@@ -64,7 +58,11 @@ public class Turtle {
     }
 
 
-    public void moveForward(int i, int i1) {
+    public void moveForward( int ) {
+            if(direction == EAST) position.increaseColumn(column);
+            if(direction == SOUTH) position.increaseColumn();
+
+
     }
 }
 
