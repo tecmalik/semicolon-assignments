@@ -58,12 +58,15 @@ public class Turtle {
     }
 
 
-    public void moveForward( int ) {
-            if(direction == EAST) position.increaseColumn(column);
-            if(direction == SOUTH) position.increaseColumn();
-
+    public void moveForward( int moves) {
+            if(direction == EAST) position.moveEast(moves);
+            if(direction == SOUTH) position.moveSouth(moves);
+            if(direction == WEST) position.moveWest(moves);
+            if(direction == NORTH) position.moveNorth(moves);
 
     }
+
+
 }
 
 

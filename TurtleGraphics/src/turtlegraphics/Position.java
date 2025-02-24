@@ -4,8 +4,8 @@ public class Position {
     private int row;
     private int column;
 
-    public Position(int xCoordinate, int column) {
-        this.row = xCoordinate;
+    public Position(int row, int column) {
+        this.row = row;
         this.column = column;
     }
 
@@ -19,7 +19,7 @@ public class Position {
         return false;
     }
 
-    public void increaseColumn(int steps) {
+    public void moveEast(int steps) {
         for(int moves = 0; moves < steps; moves++) {
             this.column++;
         }
@@ -30,4 +30,21 @@ public class Position {
         return "Position [row:" + row + ", column:" + column + "]";
     }
 
+    public void moveSouth(int moves) {
+        for(int step = 0; step < moves; step++) {
+            this.row++;
+        }
+    }
+
+    public void moveWest(int moves) {
+        for(int step = 0; step < moves; step++) {
+            this.column--;
+        }
+    }
+
+    public void moveNorth(int moves) {
+        for(int step = 0; step < moves; step++) {
+            this.row--;
+        }
+    }
 }
