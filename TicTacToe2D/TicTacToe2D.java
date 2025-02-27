@@ -73,7 +73,7 @@ public class TicTacToe2D{
 	}
 
 
-	public static boolean checkvertical(String[][] board){
+	public static boolean checkVertical(String[][] board){
 		if(BOARD[0][0] == BOARD[1][0] && BOARD[0][0]  == BOARD[2][0] && BOARD[0][0] != "EMPTY"){
 			winner = BOARD[0][0];
 			return true ;
@@ -131,7 +131,7 @@ public class TicTacToe2D{
 	}
 
 	public static void checkWin(){
-		if (checkvertical(BOARD) || checkDiagonals(BOARD) || checkHorizontal(BOARD)){
+		if (checkVertical(BOARD) || checkDiagonals(BOARD) || checkHorizontal(BOARD)){
 			System.out.printf("the winner is %s%n",winner);		
 	
 		}

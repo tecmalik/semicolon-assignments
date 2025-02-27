@@ -1,7 +1,11 @@
 package sevensegmentdisplay;
 
 
-public class SevenSegments {
+import org.junit.platform.commons.util.StringUtils;
+
+public class
+
+SevenSegments {
 
     private SegmentA segmentA = new SegmentA(0,0);
     private SegmentB segmentB = new SegmentB(0,3);
@@ -19,6 +23,12 @@ public class SevenSegments {
     }
 
     public void display(String number) {
+//        for(char digit : number.toCharArray()) {
+//            if(false) {
+//                throw new IllegalArgumentException("invalid combination");
+//            }
+//        }
+
         if(number.length() != 8)throw new IllegalArgumentException("invalid Combination ");
         this.segmentH = number.charAt(7);
         if(number.charAt(0) == '1') this.segmentA.turnOn();
@@ -56,4 +66,6 @@ public class SevenSegments {
     public SegmentG getSegmentG() {
         return segmentG;
     }
+
+
 }
