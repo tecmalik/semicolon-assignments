@@ -9,8 +9,9 @@ public class SegmentD {
         this.column = column;
     }
 
-    public void turnOn(){
+    public void turnOn(char[][] board){
         for(int index = 0; index < 3; index++){
+            board[this.row][this.column] = '#';
             this.column--;
         }
     }

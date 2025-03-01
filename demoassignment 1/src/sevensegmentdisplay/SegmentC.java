@@ -1,7 +1,5 @@
 package sevensegmentdisplay;
 
-import java.util.Objects;
-
 public class SegmentC {
     private int row;
     private int column;
@@ -11,8 +9,9 @@ public class SegmentC {
         this.column = column;
     }
 
-    public void turnOn(){
+    public void turnOn(char[][] board){
         for(int index = 0; index < 2; index++){
+            board[this.row][this.column] = '#';
             this.row++;
         }
     }

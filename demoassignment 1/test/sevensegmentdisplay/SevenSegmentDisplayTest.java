@@ -6,10 +6,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class SevenSegmentDisplayTest {
-    SevenSegments sevenSegmentDisplay;
+    Board sevenSegmentDisplay;
     @BeforeEach
     public void startWith(){
-        sevenSegmentDisplay = new SevenSegments();
+        sevenSegmentDisplay = new Board();
     }
     @Test
     public void AllSegmentDisplayAreOffByDefaultTest(){
@@ -68,6 +68,26 @@ public class SevenSegmentDisplayTest {
         assertThrows(IllegalArgumentException.class, ()-> sevenSegmentDisplay.display("0O0000100"));
         assertThrows(IllegalArgumentException.class, ()-> sevenSegmentDisplay.display("0O0000"));
     }
+    @Test
+    public void boardCanDisplayFigureEight(){
+        char[][]  expectedBoard = {
+                {'#','#','#','#'},
+                {'#',' ',' ','#'},
+                {'#','#','#','#'},
+                {'#',' ',' ','#'},
+                {'#','#','#','#'}
+
+        };
+        assertEquals( expectedBoard ,sevenSegmentDisplay.display("11111111"));
+
+//        for(int index = 0; index < expectedBoard.length; index++) {
+//            for(int count = 0; count<expectedBoard[index].length; count++){
+//
+//            }
+//
+//        }
+    };
+
 //    @Test
 //    public void StringInputForAlphaNumericInput_Test(){
 //        assertThrows(IllegalArgumentException.class, ()-> sevenSegmentDisplay.display("0Osew00100"));

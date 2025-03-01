@@ -1,17 +1,19 @@
 package sevensegmentdisplay;
 
 public class SegmentA {
-    private int row = 0;
-    private int column = 0;
+    private int row ;
+    private int column ;
 
     SegmentA(int row, int column) {
         this.row = row;
         this.column = column;
     }
 
-    public void turnOn() {
+    public void turnOn(char[][] board) {
+
         for(int index = 0; index < 3; index++) {
-            this.column++;
+            board[row][column] = '#';
+            column++;
         }
     }
     @Override
