@@ -78,25 +78,142 @@ public class SevenSegmentDisplayTest {
                 {'#','#','#','#'}
 
         };
-        assertEquals( expectedBoard ,sevenSegmentDisplay.display("11111111"));
+        char[][] actualBoard = sevenSegmentDisplay.display("11111111");
+        assertArrayEquals( expectedBoard ,actualBoard);
 
-//        for(int index = 0; index < expectedBoard.length; index++) {
-//            for(int count = 0; count<expectedBoard[index].length; count++){
-//
-//            }
-//
-//        }
+    };
+    @Test
+    public void boardCanDisplayFigureNine(){
+        char[][]  expectedBoard = {
+                {'#','#','#','#'},
+                {'#',' ',' ','#'},
+                {'#','#','#','#'},
+                {' ',' ',' ','#'},
+                {'#','#','#','#'}
+
+        };
+        char[][] actualBoard = sevenSegmentDisplay.display("11110111");
+        assertArrayEquals( expectedBoard ,actualBoard);
+
+    };
+    @Test
+    public void boardCanDisplayFigureSeven(){
+        char[][]  expectedBoard = {
+                {'#','#','#','#'},
+                {' ',' ',' ','#'},
+                {' ',' ',' ','#'},
+                {' ',' ',' ','#'},
+                {' ',' ',' ','#'}
+
+        };
+        char[][] actualBoard = sevenSegmentDisplay.display("11100001");
+        assertArrayEquals( expectedBoard ,actualBoard);
+
+    };
+    @Test
+    public void boardCanDisplayFigureSix(){
+        char[][]  expectedBoard = {
+                {'#','#','#','#'},
+                {'#',' ',' ',' '},
+                {'#','#','#','#'},
+                {'#',' ',' ','#'},
+                {'#','#','#','#'}
+
+        };
+        char[][] actualBoard = sevenSegmentDisplay.display("10111111");
+        assertArrayEquals( expectedBoard ,actualBoard);
+
+    };
+    @Test
+    public void boardCanDisplayFigureFive(){
+        char[][]  expectedBoard = {
+                {'#','#','#','#'},
+                {'#',' ',' ',' '},
+                {'#','#','#','#'},
+                {' ',' ',' ','#'},
+                {'#','#','#','#'}
+
+        };
+        char[][] actualBoard = sevenSegmentDisplay.display("10110111");
+        assertArrayEquals( expectedBoard ,actualBoard);
+
+    };
+    @Test
+    public void boardCanDisplayFigureFour(){
+        char[][]  expectedBoard = {
+                {'#',' ',' ','#'},
+                {'#',' ',' ','#'},
+                {'#','#','#','#'},
+                {' ',' ',' ','#'},
+                {' ',' ',' ','#'}
+
+        };
+        char[][] actualBoard = sevenSegmentDisplay.display("01100111");
+        assertArrayEquals( expectedBoard ,actualBoard);
+
+    };
+    @Test
+    public void boardCanDisplayFigureThree(){
+        char[][]  expectedBoard = {
+                {'#','#','#','#'},
+                {' ',' ',' ','#'},
+                {'#','#','#','#'},
+                {' ',' ',' ','#'},
+                {'#','#','#','#'}
+
+        };
+        char[][] actualBoard = sevenSegmentDisplay.display("11110011");
+        assertArrayEquals( expectedBoard ,actualBoard);
+
+    };
+    @Test
+    public void boardCanDisplayFigureTwo(){
+        char[][]  expectedBoard = {
+                {'#','#','#','#'},
+                {' ',' ',' ','#'},
+                {'#','#','#','#'},
+                {'#',' ',' ',' '},
+                {'#','#','#','#'}
+
+        };
+        char[][] actualBoard = sevenSegmentDisplay.display("11011011");
+        assertArrayEquals( expectedBoard ,actualBoard);
+
+    };
+    @Test
+    public void boardCanDisplayFigureOne(){
+        char[][]  expectedBoard = {
+                {' ',' ',' ','#'},
+                {' ',' ',' ','#'},
+                {' ',' ',' ','#'},
+                {' ',' ',' ','#'},
+                {' ',' ',' ','#'}
+
+        };
+        char[][] actualBoard = sevenSegmentDisplay.display("01100001");
+        assertArrayEquals(expectedBoard ,actualBoard);
+
+    };
+    @Test
+    public void BoardShouldNotDisplayIfStringInputForTheLastDigitIsNotOne_Test(){
+        char[][]  expectedBoard = {
+                {' ',' ',' ',' '},
+                {' ',' ',' ',' '},
+                {' ',' ',' ',' '},
+                {' ',' ',' ',' '},
+                {' ',' ',' ',' '}
+
+        };
+        char[][] actualBoard = sevenSegmentDisplay.display("11111110");
+        assertArrayEquals(expectedBoard ,actualBoard);
+
     };
 
-//    @Test
-//    public void StringInputForAlphaNumericInput_Test(){
-//        assertThrows(IllegalArgumentException.class, ()-> sevenSegmentDisplay.display("0Osew00100"));
-//        assertThrows(IllegalArgumentException.class, ()-> sevenSegmentDisplay.display("0Osew001"));
-//    }
-
-
-
-
+    @Test
+    public void StringInputForAlphaNumericInput_Test(){
+        assertThrows(IllegalArgumentException.class, ()-> sevenSegmentDisplay.display("0Osew001"));
+        assertThrows(IllegalArgumentException.class, ()-> sevenSegmentDisplay.display("0Osew001"));
+    }
 
 
 

@@ -14,6 +14,7 @@ public class SegmentA {
         for(int index = 0; index < 3; index++) {
             board[row][column] = '#';
             column++;
+            board[row][column] = '#';
         }
     }
     @Override

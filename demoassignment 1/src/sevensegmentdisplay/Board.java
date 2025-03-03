@@ -27,21 +27,16 @@ Board {
     }
 
     public char[][] display(String number) {
-//        for(char digit : number.toCharArray()) {
-//            if(false) {
-//                throw new IllegalArgumentException("invalid combination");
-//            }
-//        }
-
         if (number.length() != 8) throw new IllegalArgumentException("invalid Combination");
         this.segmentH = number.charAt(7);
-        if (number.charAt(0) == '1') this.segmentA.turnOn(board);
-        if (number.charAt(1) == '1') this.segmentB.turnOn(board);
-        if (number.charAt(2) == '1') this.segmentC.turnOn(board);
-        if (number.charAt(3) == '1') this.segmentD.turnOn(board);
-        if (number.charAt(4) == '1') this.segmentE.turnOn(board);
-        if (number.charAt(5) == '1') this.segmentF.turnOn(board);
-        if (number.charAt(6) == '1') this.segmentG.turnOn(board);
+        //validateInput(number);
+        if (number.charAt(0) == '1' && !isOff()) this.segmentA.turnOn(board);
+        if (number.charAt(1) == '1' && !isOff()) this.segmentB.turnOn(board);
+        if (number.charAt(2) == '1' && !isOff()) this.segmentC.turnOn(board);
+        if (number.charAt(3) == '1' && !isOff()) this.segmentD.turnOn(board);
+        if (number.charAt(4) == '1' && !isOff()) this.segmentE.turnOn(board);
+        if (number.charAt(5) == '1' && !isOff()) this.segmentF.turnOn(board);
+        if (number.charAt(6) == '1' && !isOff()) this.segmentG.turnOn(board);
         return board;
     }
 
@@ -71,6 +66,20 @@ Board {
 
     public SegmentG getSegmentG() {
         return segmentG;
+    }
+
+//    private void validate(String numbers) {
+//        for(int index = 1; index < numbers.length(); index++) {
+//            if (numbers.charAt(index) != '1' && numbers.charAt(index) != '0') throw new IllegalArgumentException("invalid Combination");
+//        }
+//
+//    }
+
+    private void validateInput(String numbers) {
+        for (int i = 0; i < numbers.length(); i++) {
+            if (numbers.charAt(i) != '0' | numbers.charAt(i) != '1')
+                throw new IllegalArgumentException("invalid Combination");
+        }
     }
 
 

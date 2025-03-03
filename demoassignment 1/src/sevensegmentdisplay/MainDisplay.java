@@ -3,12 +3,12 @@ package sevensegmentdisplay;
 public class MainDisplay {
     public static void main(String[] args) {
         Board sevenSegmentDisplay = new Board();
-//        System.out.print(sevenSegmentDisplay.display("11111111")[3][4]);
+        System.out.print(sevenSegmentDisplay.display("11111111"));
 
         System.out.println();
 
-        for(int i=0; i<sevenSegmentDisplay.display("11111111").length-1; i++) {
-                System.out.print(" "+ sevenSegmentDisplay.display("11111111"));
+        for(int i=0; i<sevenSegmentDisplay.display("11111111").length; i++) {
+                System.out.print(sevenSegmentDisplay.display("11111111").length);
 
         }
 

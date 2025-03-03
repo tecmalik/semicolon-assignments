@@ -13,7 +13,7 @@ public class SegmentG {
         for (int index = 0 ; index < 3; index++){
             board[this.row][this.column] = '#';
             this.column++;
-
+            board[this.row][this.column] = '#';
         }
     }
 

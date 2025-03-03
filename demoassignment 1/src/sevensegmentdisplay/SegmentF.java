@@ -13,6 +13,7 @@ public class SegmentF {
         for (int index = 0 ; index < 2; index++){
             board[this.row][this.column] = '#';
             this.row--;
+            board[this.row][this.column] = '#';
         }
     }
    @Override
