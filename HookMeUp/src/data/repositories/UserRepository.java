@@ -6,12 +6,12 @@ import java.util.List;
 
 public interface UserRepository{
 
-    void Save(User user);
+    User save(User user);
     List<User> findAll();
     long count();
     void delete(int id);
-    Void delete(User user);
-    User findUserById(int id);
+    void delete(User user);
+    User findUserById(String id);
 
 }
 

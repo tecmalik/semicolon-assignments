@@ -8,16 +8,29 @@ import java.util.List;
 public class  Users implements UserRepository {
 
     final private List<User> users = new ArrayList<>();
+    int count;
 
-    public Users(String name, String email, String password) {
-        user
+    public Users(User user) {
     }
 
 
     @Override
-    public void Save(User user) {
+    public User save(User user) {
+        if (user == null) throw new IllegalArgumentException("user is null");
+        if (isDuplicate(user)) return null;
+        count+=1;
+        String countString = Integer.toString(count);
+        user.setUserID(countString);
         users.add(user);
+        return null;
+    }
 
+    private boolean isDuplicate(User user) {
+        if (user == null) throw new IllegalArgumentException("user is null");
+        for (User object : users) {
+            if (object.getEmail().equals(user.getEmail())) return true;
+        }
+        return false;
     }
 
     @Override
@@ -36,12 +49,18 @@ public class  Users implements UserRepository {
     }
 
     @Override
-    public Void delete(User user) {
-        return null;
+    public void delete(User user) {
+        for (User object : users) {
+            if (object.getUserID().equals(user.getUserID())) users.remove(object);
+        }
     }
 
     @Override
-    public User findUserById(int id) {
+    public User findUserById(String id) {
+        if (id == null) throw new IllegalArgumentException("user is null");
+        for (User user : users) {
+            if (user.getUserID().equals(id)) return user;
+        }
         return null;
     }
 
