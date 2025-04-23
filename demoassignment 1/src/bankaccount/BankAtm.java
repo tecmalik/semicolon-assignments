@@ -2,10 +2,12 @@
 package bankaccount;
 
 import java.awt.Component;
+import java.util.Scanner;
 import javax.swing.JOptionPane;
 
 public class BankAtm {
     static Bank bank = new Bank();
+//    static Scanner input = new Scanner(System.in);
 
     public BankAtm() {
     }
@@ -144,6 +146,8 @@ public class BankAtm {
 
     public static String input(String print) {
         return JOptionPane.showInputDialog(print);
+//        System.out.print(print);
+//        return input.nextLine();
     }
 
     public static void print(String print) {

@@ -21,7 +21,7 @@ public class TestMyArraylist {
         assertFalse(myArrayList.isEmpty());
     }
     @Test
-    public void test_myArrayListCanRemoveAnElement() {
+    public void test_myArrayCanAddMoreThanOneElement() {
         myArrayList.add("man");
         myArrayList.add("malik");
         assertEquals("man",myArrayList.get(0));
